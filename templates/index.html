@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ask LLaMA 3</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Ask LLaMA 3</h1>
+        
+        <!-- Form for user input -->
+        <form action="/ask" method="POST">
+            <label for="question">Your Question:</label>
+            <input type="text" id="question" name="question" placeholder="Type your question here..." required>
+            <button type="submit">Ask</button>
+        </form>
+
+        <!-- Display the user question and LLM answer -->
+        {% if question %}
+            <h2>Your Question: {{ question }}</h2>
+            <p><strong>LLaMA 3 Answer:</strong> {{ answer }}</p>
+        {% endif %}
+    </div>
+</body>
+</html>

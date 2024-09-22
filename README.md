@@ -15,6 +15,7 @@ Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy RemoteSigned
 ```
 
 **Run Application** 
+Make sure it runs on the right port, create config.yaml in ./ollama and add ´port: 11434´
 ```
 python app.py
 ```
@@ -24,4 +25,3 @@ ollmama serve
 ```
 ollama run llama3.1 (unsure if this is nessacary)
 ```
- 

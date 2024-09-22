@@ -22,6 +22,6 @@ python app.py
 ollmama serve
 ```
 ```
-ollama run llama3.2 (unsure if this is nessacary)
+ollama run llama3.1 (unsure if this is nessacary)
 ```
  

@@ -49,7 +49,7 @@ def ask():
         answer = f"Error: {str(e)}"
 
     # Pass the LLM response back to the UI
-    return render_template('index.html', question=user_input, answer=answer)
+    return render_template('indexa.html', question=user_input, answer=answer)
 
 if __name__ == '__main__':
     app.run(debug=True)

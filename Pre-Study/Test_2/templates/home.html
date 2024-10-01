@@ -1,0 +1,58 @@
+<!--Extend the base.html template-->
+<!--home.hmtl tamplate inhere the layout and structure of 'base.html'-->
+{% extends "base.html" %}
+
+<!--Define a block called 'content'-->
+{% block content %}
+<!--Render and h1 heading with the text 'Home Page'-->
+<h1>Home Page</h1>
+    <!--Check if and error_message variable is defined and has  a value-->
+    {% if error_message %}
+      <!--Render a paragraph with the error message in red color-->
+        <p style="color: red">{{ error_message }}</p>
+      <!--End the if block-->
+    {% endif %}
+
+  <!--Start a form with and empty action attribute and post method-->
+  <form action="" method="post">
+    <!--Render a label for the disk_image path-->
+    <label for="disk_image">Enter disk image path:</label>
+    <!--Render a text input filed with id and name 'disk_image' and required attribute-->
+    <input type="text" id="disk_image" name="disk_image" required>
+    <!--Render a submit button-->
+    <button type="submit">Submit</button>
+  <!--End the form-->
+  </form>
+
+
+ <!-- Add chat window HTML here -->
+<!--Start a div with id 'chat-window'-->
+<div id="chat-window">
+  <!--Render and h2 heading with the text 'Chat Window'-->
+  <h2>Chat Window</h2>
+  <!--Start a dive with class 'chat-form-container'-->
+  <div class="chat-form-container">
+    <!--Start a div with id and class 'chatbox' to hold chat messages-->
+    <div id="chatbox" class="chatbox"> <!-- Messages will be appended here --> </div> <!--End div with id and class 'chatbox'-->
+
+    <!--Render a text input field with id 'user-input'-->
+    <!--and placeholder text-->
+    <input type="text" id="user-input" class="user-input" placeholder="Type a message...">
+    <!--Render a file input field with  id 'file-input' and-->
+    <!--accept only CSV fiels-->
+    <input type="file" id="file-input" accept=".csv">
+
+    <!--Render a button with id 'send-btn' and text 'Send'-->
+    <button id="send-btn">Send</button>
+    <!--End the div with class 'chat-form-container'-->
+  </div>
+  <!--End div with id 'chat-window'-->
+</div>
+
+<!-- Add JavaScript code to handle chat window functionality -->
+ <!--Include the chat.js script from the static directory-->
+<script src="{{ url_for('static', filename='chat.js') }}"></script>
+
+<!--Ende  block content-->
+
+ {% endblock %}

@@ -1,0 +1,31 @@
+<!-- This line extends the current HTML file from a base template called "base.html" -->
+{% extends "base.html" %}
+
+<!-- This line defines a block called "content" that can be overridden in child templates -->
+{% block content %}
+
+ <!-- This line displays a paragraph of text that says "This is the Process page" -->
+ <p>This is the Process page</p>
+
+ <!-- This line starts a conditional statement that checks if the variable "error_message" is true -->
+ {% if error_message %}
+
+ <!-- If "error_message" is true, this line displays a paragraph of text with the error message in red color -->
+ <p style="color: red">{{ error_message }}</p>
+
+ <!-- If "error_message" is false, the code inside this else block will be executed -->
+{% else %}
+<!-- This line displays a paragraph of text that says "The disk image is being processed ..." -->
+<p>The disk image is being processed ...</p>
+
+<!-- This line displays a preformatted block of text with the contents of the "output" variable -->
+<pre>{{output}}</pre>
+
+<!-- This line displays a paragraph of text with a link to clear the session and go home -->
+<p>Processing complete. <a href="{{ url_for('clear_session')}}"> Clear Session and Go Home </a></p>
+
+<!-- This line ends the conditional statement -->
+{% endif%}
+
+<!-- This line ends the "content" block -->
+ {% endblock %}

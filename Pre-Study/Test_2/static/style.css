@@ -1,0 +1,200 @@
+/* This section styles the chat window */
+#chat-window {
+  /* This line sets the position of the chat window to fixed */
+  position: fixed;
+
+  /* This line sets the bottom and right margins of the chat window to 20px */
+  bottom: 20px;
+  right: 20px;
+  /* This line sets the width and height of the chat window */
+  width: 400px; /* adjust the width as needed */
+  height: 600px; /* adjust the height as needed */
+
+  /* This line sets the border, padding, and background color of the chat window */
+  border: 1px solid #ccc;
+  padding: 10px;
+  background-color: #fff; /* add a background color to distinguish from the rest of the page */
+  
+  /* This line sets the z-index of the chat window to ensure it's on top of other elements */
+  z-index: 1; /* add a z-index to ensure it's on top of other elements */
+  
+  /* This line sets the display property to flex and flex direction to column */
+  display: flex; 
+  flex-direction: column;
+}
+
+/* This section styles the chatbox */
+#chatbox {
+  /* This line sets the overflow-y property to auto to enable scrolling */
+  overflow-y: auto;
+  /* This line sets the max height of the chatbox */
+  max-height: 400px; /* adjust the max height to your liking */
+  
+  /* This line sets the padding of the chatbox */
+  padding: 10px;
+
+  /* This line sets the display property to flex and flex direction to column */
+  display: flex;
+  flex-direction: column;
+
+  /* This line sets the margin bottom to 0 */
+  margin-bottom: 0;
+}
+
+
+/* This section styles the chatbox children */
+#chatbox > * {
+   /* This line sets the margin bottom of each child element to 10px */
+  margin-bottom: 10px;
+}
+
+
+/* This section styles the chat form container */
+.chat-form-container {
+   /* This line sets the margin top to auto to push it to the bottom */
+  margin-top: auto;
+
+  /* This line sets the padding, background color, and border top of the chat form container */
+  padding: 10px;
+  background-color: #f0f0f0;
+  border-top: 1px solid #ccc;
+
+  /* This line sets the display property to flex and flex direction to column */
+  display: flex;
+  flex-direction: column;
+
+  /* This line sets the margin bottom to 0 */
+  margin-bottom: 0;
+}
+
+/* This section styles the chat form */
+.chat-form {
+  /* This line sets the position of the chat form to absolute */
+  position: absolute;
+
+  /* This line sets the bottom and left margins of the chat form to 0 */
+  bottom: 0;
+  left: 0;
+
+  /* This line sets the width of the chat form to 100% */
+  width: 100%;
+
+  /* This line sets the padding, background color, and border top of the chat form */
+  padding: 10px;
+  background-color: #f0f0f0;
+  border-top: 1px solid #ccc;
+}
+
+/* This section styles the user input field */
+.user-input {
+  /* This line sets the width of the user input field to accommodate the file input field */
+  width: calc(100% - 140px); /* adjust the width to accommodate the file input field */
+  
+  /* This line sets the padding, border, and border radius of the user input field */
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+
+/* This section styles the file input field */
+.file-input {
+  /* This line sets the width of the file input field */
+  width: 120px; /* adjust the width as needed */
+  
+  /* This line sets the padding, border, and border radius of the file input field */
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+
+  /* This line sets the margin right to 10px to add some space between the file input and send button */
+  margin-right: 10px; /* add some space between the file input and send button */
+  
+  /* This line sets the overflow property to hidden to hide the default file input button */
+  overflow: hidden; /* add this to hide the default file input button */
+}
+
+/* This section styles the file input button */
+.file-input input[type="file"] {
+  /* This line sets the position of the file input button to absolute */
+  position: absolute;
+
+  /* This line sets the top, right, bottom, and left margins of the file input button to 0 */
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+
+  /* This line sets the opacity of the file input button to 0 to make it transparent */
+  opacity: 0; /* make the file input button transparent */
+  
+  /* This line sets the cursor property to pointer to change the cursor to a pointer */
+  cursor: pointer; /* change the cursor to a pointer */
+}
+
+
+/* This section styles the custom file button */
+.custom-file-button {
+  /* This line sets the width of the custom file button */
+  width: 120px; /* adjust the width as needed */
+  
+  /* This line sets the padding, border, and border radius of the custom file button */
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  
+  /* This line sets the background color of the custom file button */
+  background-color: #f0f0f0;
+  /* This line sets the cursor property to pointer to change the cursor to a pointer */
+  cursor: pointer; /* change the cursor to a pointer */
+}
+
+/* This section styles the send button */
+#send-btn {
+  /* This line sets the width of the send button */
+  width: 80px;
+  
+  /* This line sets the padding, border, and border radius of the send button */
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  
+  /* This line sets the background color and text color of the send button */
+  background-color: #4CAF50;
+  color: #fff;
+  
+  /* This line sets the cursor property to pointer to change the cursor to a pointer */
+  cursor: pointer;
+}
+
+
+/* This section styles the message */
+.message {
+  
+  /* This line sets the margin bottom of each message to 20px */
+  margin-bottom: 20px;
+  padding: 10px;
+
+  /* This line sets the padding and border bottom of each message */
+  border-bottom: 1px solid #ccc;
+
+  /* This line sets the display property to block and clear to both */
+  display: block;
+  clear: both;
+}
+
+
+/* This section styles the user message */
+.user-message {
+
+  /* This line sets the text align of the user message to right */
+  text-align: right;
+}
+
+
+/* This section styles the LLM message */
+.llm-message {
+
+   /* This line sets the text align of the LLM message to left */
+  text-align: left;
+}

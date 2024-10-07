@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat App</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='css/home.css')}}">
+</head>
+<body>
+    <!-- Main container -->
+    <div class="container">
+        
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <!-- User greeting -->
+            <div class="greeting">
+                <button>Hi, &lt;USER&gt;</button>
+            </div>
+
+            <!-- Upload file -->
+            <div class="upload">
+                <form action="/upload" method="post" enctype="multipart/form-data">
+                    <input type="file" id="uploadFile" name="file">
+                    <label for="uploadFile">Upload File</label>
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
+
+            <!-- Logout button -->
+            <div class="logout">
+                <button>Log out</button>
+            </div>
+        </div>
+
+        <!-- Main Chat Section -->
+        <div class="main-content">
+            <!-- Chat window -->
+            <div class="chat-window">
+                <span>CHAT WINDOW</span>
+            </div>
+
+            <!-- Bottom Bar -->
+            <div class="bottom-bar">
+                <button>Download Chat</button>
+                <input type="text" placeholder="Write questions here">
+                <button>Send</button>
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>

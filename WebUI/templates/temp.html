@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>File Selection</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+  <form id="fileForm">
+    <input type="file" id="myFile" name="file"> <!-- Changed name to 'file' -->
+    <input type="submit" value="Submit">
+  </form>
+
+  <script>
+    document.getElementById('fileForm').onsubmit = function(event) {
+      event.preventDefault();
+      const fileInput = document.getElementById('myFile');
+      const file = fileInput.files[0];
+
+      if (file) {
+        // Create a FormData object
+        const formData = new FormData();
+        formData.append('file', file); // Append the file
+
+        // Send the file to the Flask server via AJAX
+        $.ajax({
+          type: 'POST',
+          url: '/submit-file',
+          data: formData,
+          contentType: false, // Prevent jQuery from overriding content type
+          processData: false, // Prevent jQuery from processing the data
+          success: function(response) {
+            console.log('File upload response:', response);
+          },
+          error: function(error) {
+            console.error('Error:', error);
+          }
+        });
+      }
+    }
+  </script>
+</body>
+</html>

@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chat App</title>
     <link rel="stylesheet" href="../static/home.css">
+    <!--file upload handling-->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="../static/file_submit.js" defer></script>
 </head>
 <body>
     <!-- Main container -->
@@ -14,12 +17,12 @@
         <div class="sidebar">
             <!-- User greeting -->
             <div class="greeting">
-                <button>Hi, &lt;USER&gt;</button>
+                <button>Hi, &lt;USER>;</button>
             </div>
 
             <!-- Upload file -->
             <div class="upload">
-                <form action="/upload" method="post" enctype="multipart/form-data">
+                <form id="uploadForm" enctype="multipart/form-data">
                     <input type="file" id="uploadFile" name="file">
                     <label for="uploadFile">Upload File</label>
                     <button type="submit">Submit</button>

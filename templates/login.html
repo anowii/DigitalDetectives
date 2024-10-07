@@ -2,23 +2,31 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="{{ url_for('static', filename= 'css/login.css') }}">
+    <link rel="stylesheet" href="../static/login.css">
     <title>FlaskBlog</title>
 </head>
 <body>
-   <h1>Welcome to LLM Tool</h1>
-   <form action="action_page.php" method="post">
-  
-    <div class="container">
-      <label for="uname"><b>Username</b></label>
-      <input type="text" placeholder="Enter Username" name="uname" required>
-  
-      <label for="psw"><b>Password</b></label>
-      <input type="password" placeholder="Enter Password" name="psw" required>
-  
-      <button type="submit">Login</button>
-    </div>
-  
-  </form>
+    <h1>Welcome to LLM Tool</h1>
+    <section>
+    <div class="signin">
+        <div class="content">
+            <h2>Sign In</h2> 
+            <div class ="form">
+            
+                <div class="inputBox">
+                <input type="text" name="uname" required><i>Username</i>
+                </div>
+                <div class="inputBox">
+                <input type="password" name="psw" required><i>Password</i>
+                </div>
+
+                <div class="inputBox"> 
+                    <input type="submit" value="Login"> 
+                </div>
+                
+            </div> 
+        </div> 
+        </div>
+    </section>
 </body>
 </html>

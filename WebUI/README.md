@@ -1,3 +1,8 @@
+Web ui
+*Host by running ui:host.py, access via localhost:PORT/home and localhost:PORT/
+
+
+
 
 WEB UI BACKEND
 *pip install flask

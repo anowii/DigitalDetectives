@@ -1,10 +1,14 @@
-from flask import Flask
+from flask import Flask, render_template
 
-app = Flask(__name__, static_folder='static', static_url_path='')
+app = Flask(__name__)
 
 @app.route('/home')
-def galaxy():
-    return app.send_static_file('temp.html')
+def home():
+    return render_template('index.html')
+
+@app.route('/')
+def login():
+    return render_template('login.html')
 
 if __name__ == '__main__':
-    app.run(threaded=True, port=5000)
+    app.run(threaded=True, port=4998)

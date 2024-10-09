@@ -77,7 +77,7 @@ body {
 }
 
 /* Styling for greeting, upload, and logout buttons */
-.greeting button, .upload label, .logout button {
+.greeting button, .upload label, .deleteSession button, .logout button {
     width: 100%;
     padding: 10px;
     border: none;

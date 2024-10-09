@@ -70,20 +70,21 @@ def submit_file():
 
 
 
-# Route to handle chat message submission
+# Route to handle chat message submission (internal)
 @app.route('/forward_message', methods=['POST'])
 def forward_message():
     data = request.get_json()  # Get the JSON data from the request
     message = data.get('message', '')  # Extract the message
+    is_external = data.get('external', False)  # Check if the message is external
 
     if message:
-        forward_message_llm(message)  # Call the function to process the message
-        messages.append(message)  # Store the message
-        return jsonify({'status': 'success', 'message': 'Message forwarded'})
+        # If the message is internal (from user input), forward it to the LLM
+        if not is_external:
+            forward_message_llm(message)  # Only forward internal messages to LLM
+        messages.append(message)  # Store the message regardless
+        return jsonify({'status': 'success', 'message': 'Message received'})
     else:
         return jsonify({'status': 'error', 'message': 'No message received'})
-
-
 
 # Route to retrieve new messages
 @app.route('/get_messages', methods=['GET'])
@@ -93,7 +94,7 @@ def get_messages():
 
 
 def main():
-    app.run(threaded=True, port=4980)
+    app.run(threaded=True, port=4976)
     return 0
 
 if __name__ == '__main__':

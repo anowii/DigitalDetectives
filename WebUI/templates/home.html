@@ -8,6 +8,8 @@
     <!--file upload handling-->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="../static/file_submit.js" defer></script>
+    <script src="../static/chat.js" defer></script>
+
 </head>
 <body>
     <!-- Main container -->
@@ -29,11 +31,11 @@
                 </form>
             </div>
 
-            <!-- Delet button -->
+            <!-- Delete button -->
             <div class="deleteSession">
                 <button>Delete Session</button>
              </div>
-            
+
             <!-- Logout button -->
             <div class="logout">
                 <button>Log out</button>
@@ -43,15 +45,15 @@
         <!-- Main Chat Section -->
         <div class="main-content">
             <!-- Chat window -->
-            <div class="chat-window">
+            <div id="chat-window" class="chat-window">
                 <span>CHAT WINDOW</span>
             </div>
 
             <!-- Bottom Bar -->
             <div class="bottom-bar">
                 <button>Download Chat</button>
-                <input type="text" placeholder="Write questions here">
-                <button>Send</button>
+                <input id="text-input" type="text" placeholder="Write questions here">
+                <button id="send-btn">Send</button>
             </div>
         </div>
 

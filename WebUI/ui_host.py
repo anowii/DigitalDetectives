@@ -1,11 +1,13 @@
 from flask import Flask, render_template, request, jsonify
 import os
-from ui_backend import send_iso, send_csv
+from ui_backend import send_iso, send_csv, forward_message_llm
 
 app = Flask(__name__)
 
 UPLOAD_FOLDER = 'tempfiles'  # Designated folder name
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
+# Store chat messages in memory for now (could use a database instead)
+messages = []
 
 @app.route('/home')
 def home():
@@ -43,9 +45,6 @@ def submit_file():
     print(f"Received file: {file.filename}")
 
 
-
-
-
     #If a filename match to already uploaded files to local tempfolder then dont upload or smthng
 
     # Call different functions based on file type
@@ -66,8 +65,35 @@ def submit_file():
     # Return a response to the client
     return jsonify({"status": "success", "filename": file.filename})
 
+
+
+
+
+
+# Route to handle chat message submission
+@app.route('/forward_message', methods=['POST'])
+def forward_message():
+    data = request.get_json()  # Get the JSON data from the request
+    message = data.get('message', '')  # Extract the message
+
+    if message:
+        forward_message_llm(message)  # Call the function to process the message
+        messages.append(message)  # Store the message
+        return jsonify({'status': 'success', 'message': 'Message forwarded'})
+    else:
+        return jsonify({'status': 'error', 'message': 'No message received'})
+
+
+
+# Route to retrieve new messages
+@app.route('/get_messages', methods=['GET'])
+def get_messages():
+    # Return the list of messages to the client
+    return jsonify(messages)
+
+
 def main():
-    app.run(threaded=True, port=4984)
+    app.run(threaded=True, port=4980)
     return 0
 
 if __name__ == '__main__':

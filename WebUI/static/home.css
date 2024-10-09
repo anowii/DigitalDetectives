@@ -93,7 +93,6 @@ body {
 .upload {
     display: flex;
     align-items: center;
-    gap: 10px; /* Space between upload input and submit button */
 }
 
 
@@ -106,22 +105,30 @@ body {
 /* Label for the file upload, styled as a button */
 .upload label {
     background-color: #18135d;
-    text-align: center;
     cursor: pointer;
-    padding: 10px 15px;
     color: white;
-    border-radius: 4px;
+    padding: 10px 15px;
+    
 }
 
 /* Add styling for the new Submit button */
 .upload button {
-    padding: 10px 15px;
     background-color: #18135d; /* Green color for the submit button */
     color: white;
-    border: none;
     cursor: pointer;
+    padding: 10px 15px;
 }
 /* Logout button has a different color */
 .logout button {
     background-color: #18135d;
+}
+/* Progressbar style*/
+#progressbar{
+    background-color: #18135d; /* Green color for the submit button */
+    color: white;
+    cursor: default;
+    padding: 10px 15px;
+}
+.upload{
+    font-size: 13px;
 }

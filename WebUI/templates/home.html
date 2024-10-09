@@ -4,7 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chat App</title>
-    <link rel="stylesheet" href="{{url_for('static', filename='home.css')}}">
+    <link rel="stylesheet" href="../static/home.css">
+    <!--file upload handling-->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="../static/file_submit.js" defer></script>
+    <script src="../static/chat.js" defer></script>
+
 </head>
 <body>
     <!-- Main container -->
@@ -14,20 +19,21 @@
         <div class="sidebar">
             <!-- User greeting -->
             <div class="greeting">
-                <button>Hi, &lt;USER&gt;</button>
+                <button>Hi, &lt;USER>;</button>
             </div>
 
             <!-- Upload file -->
             <div class="upload">
-                <form action="/upload" method="post" enctype="multipart/form-data">
+                <form id="uploadForm" enctype="multipart/form-data">
                     <input type="file" id="uploadFile" name="file">
                     <label for="uploadFile">Upload File</label>
                     <button type="submit">Submit</button>
                     <t id="progressbar">PROGRESSBAR PLACEHOLDER</t>
                 </form>
+                
             </div>
-            
-            <!-- Delet button -->
+           
+            <!-- Delete button -->
             <div class="deleteSession">
                 <button>Delete Session</button>
              </div>
@@ -41,7 +47,7 @@
         <!-- Main Chat Section -->
         <div class="main-content">
             <!-- Chat window -->
-            <div class="chat-window">
+            <div id="chat-window" class="chat-window">
                 <h2>Welcome to Digital Detective!</h2>
                 <p>🚀 <strong>Your investigative assistant powered by Llama 3.1</strong> 🚀</p>
                 <h3>🔍 What you can do:</h3>
@@ -60,8 +66,8 @@
             <!-- Bottom Bar -->
             <div class="bottom-bar">
                 <button>Download Chat</button>
-                <input type="text" placeholder="Write questions here">
-                <button>Send</button>
+                <input id="text-input" type="text" placeholder="Write questions here">
+                <button id="send-btn">Send</button>
             </div>
         </div>
 

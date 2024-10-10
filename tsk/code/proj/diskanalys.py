@@ -7,9 +7,9 @@ import sqlite3
 import csv
 import re
 
-DATA_DIR = "data/"
-SLEUTH_DB = "data/analys.db"
-CSV_PATH = "data/db.csv"
+DATA_DIR = "data\\"
+SLEUTH_DB = "data\\analys.db"
+CSV_PATH = "data\\db.csv"
 
 INTERESTING_TYPES =".exe|.msi|.docx|.png|.mp4|.jpeg"
 
@@ -24,8 +24,8 @@ def check_input_file(target):
 
 def run_sleuth_on_file(target):
     print("Check "+ target)
-    subprocess.run(["rm",SLEUTH_DB], text=True)
-    subprocess.run(["rm",CSV_PATH], text=True)
+    subprocess.run(["del",SLEUTH_DB], text=True)
+    subprocess.run(["del",CSV_PATH], text=True)
     res = subprocess.run(["tsk_loaddb","-d",DATA_DIR+"analys.db", target, "-h"], text=True)
     return res
 

@@ -11,18 +11,23 @@ $(document).ready(function () {
                     type: 'GET',
                     url: '/get_messages',
                     success: function (data) {
-                        // Clear the chat window and append all messages
+                        // Clear the chat window
                         $('#chat-window').empty();
+
+                        // Loop through the messages and format them for display
                         data.forEach(function (message) {
-                            var messageElement = $('<div></div>').text(message);
-                            $('#chat-window').append(messageElement);
+                            var userMessageElement = $('<div></div>').text("User: " + message.user);
+                            var responseMessageElement = $('<div></div>').text("AI: " + message.response);
+
+                            $('#chat-window').append(userMessageElement);
+                            $('#chat-window').append(responseMessageElement);
                         });
                     },
                     error: function (error) {
                         console.error('Error fetching messages:', error);
                     }
                 });
-            }, 3000);  // Poll every 3 seconds
+            }, 1000);  // Poll every 1 seconds
         }
     }
 
@@ -31,7 +36,7 @@ $(document).ready(function () {
         var message = $('#text-input').val();
 
         if (message.trim() !== "") {
-            var messageElement = $('<div></div>').text(message);
+            var messageElement = $('<div></div>').text("User: " + message);
             $('#chat-window').append(messageElement);
 
             // Send the message to the backend

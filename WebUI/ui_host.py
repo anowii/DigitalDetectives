@@ -6,7 +6,8 @@ app = Flask(__name__)
 
 UPLOAD_FOLDER = 'tempfiles'  # Designated folder name
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
-# Store chat messages in memory for now (could use a database instead)
+
+# Store chat messages in memory for now, per session
 messages = []
 
 @app.route('/home')
@@ -55,41 +56,32 @@ def submit_file():
     else:
         print("Non-valid file type")
 
-
-
-
-
-
-
-
     # Return a response to the client
     return jsonify({"status": "success", "filename": file.filename})
 
 
 
 
-
-
-# Route to handle chat message submission (internal)
 @app.route('/forward_message', methods=['POST'])
 def forward_message():
-    data = request.get_json()  # Get the JSON data from the request
+    data = request.get_json()  # Get JSON data from request
     message = data.get('message', '')  # Extract the message
-    is_external = data.get('external', False)  # Check if the message is external
 
     if message:
-        # If the message is internal (from user input), forward it to the LLM
-        if not is_external:
-            forward_message_llm(message)  # Only forward internal messages to LLM
-        messages.append(message)  # Store the message regardless
-        return jsonify({'status': 'success', 'message': 'Message received'})
+        response = forward_message_llm(message)  # Forward to Langchain-based LLM
+
+        # Append message and response to the chat history
+        messages.append({"user": message, "response": response})
+
+        return jsonify({'status': 'success', 'message': response})
     else:
         return jsonify({'status': 'error', 'message': 'No message received'})
 
-# Route to retrieve new messages
+
+
 @app.route('/get_messages', methods=['GET'])
 def get_messages():
-    # Return the list of messages to the client
+    # Return the list of user messages and LLM responses to the client
     return jsonify(messages)
 
 

@@ -6,6 +6,8 @@ Web ui
 
 WEB UI BACKEND
 *pip install flask
+*pip install -U langchain-ollama
+*pip install os
 
 
 

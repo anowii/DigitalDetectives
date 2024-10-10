@@ -49,6 +49,12 @@ body {
     background-color: #f9f9f9;
     border-bottom: 1px solid #ddd;
     overflow-y: auto; /* Adds scroll for long chat history */
+    /*text-align: center; /* Center the text horizontally*/
+}
+
+/* Optional: Center any specific headers or paragraphs if needed */
+.chat-window h2, .chat-window h3, .chat-window p {
+    margin: 10px 0; /* Add some margin for spacing */
 }
 
 /* Bottom bar stays at the bottom of the main content */
@@ -91,8 +97,10 @@ body {
 
 /* Updated .upload class to handle the new submit button */
 .upload {
-    display: flex;
-    align-items: center;
+    display: flex;/* Keep elements inline*/
+    /*align-items: center*/
+    flex-direction: column; /* Stack uppload, submit button, and progress bar vertically*/
+    gap: 5px; /* Space between the elements*/
 }
 
 
@@ -129,6 +137,21 @@ body {
     cursor: default;
     padding: 10px 15px;
 }
+
+/* Style for the message box */
+.message-box {
+    background-color: #e9ecef; /* Light gray background */
+    border: 1px solid #ccc; /* Border around the message box */
+    padding: 10px;
+    margin: 10px ; /* Adds space around the box */
+}
+
+/* Placeholder text style */
+.message-box p {
+    margin: 0; /* No margin for the paragraph inside the message box */
+    color: #333; /* Dark gray text color */
+}
+
 .upload{
     font-size: 13px;
 }

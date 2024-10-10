@@ -24,9 +24,9 @@ def check_input_file(target):
 
 def run_sleuth_on_file(target):
     print("Check "+ target)
-    subprocess.run(["del",SLEUTH_DB], text=True)
-    subprocess.run(["del",CSV_PATH], text=True)
-    res = subprocess.run(["tsk_loaddb","-d",DATA_DIR+"analys.db", target, "-h"], text=True)
+    subprocess.run(["DEL",SLEUTH_DB], shell = True)
+    subprocess.run(["DEL",CSV_PATH], shell=True)
+    res = subprocess.run(["C:/files/sleuthkit-4.12.1-win32/bin/tsk_loaddb.exe","-h","-d",SLEUTH_DB, target], shell=True)
     return res
 
 def db_to_csv():

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat App</title>
+    <link rel="stylesheet" href="../static/home.css">
+    <!--file upload handling-->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="../static/file_submit.js" defer></script>
+    <script src="../static/chat.js" defer></script>
+
+</head>
+<body>
+    <!-- Main container -->
+    <div class="container">
+        
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <!-- User greeting -->
+            <div class="greeting">
+                <button>Hi, &lt;USER>;</button>
+            </div>
+
+            <!-- Upload file -->
+            <div class="upload">
+                <form id="uploadForm" enctype="multipart/form-data">
+                    <input type="file" id="uploadFile" name="file">
+                    <label for="uploadFile">Upload File</label>
+                    <button type="submit">Submit</button>
+                    <t id="progressbar">PROGRESSBAR PLACEHOLDER</t>
+                </form>
+                
+            </div>
+           
+            <!-- Delete button -->
+            <div class="deleteSession">
+                <button>Delete Session</button>
+             </div>
+
+            <!-- Logout button -->
+            <div class="logout">
+                <button>Log out</button>
+            </div>
+        </div>
+
+        <!-- Main Chat Section -->
+        <div class="main-content">
+            <!-- Chat window -->
+            <div id="chat-window" class="chat-window">
+                <h2>Welcome to Digital Detective!</h2>
+                <p>🚀 <strong>Your investigative assistant powered by Llama 3.1</strong> 🚀</p>
+                <h3>🔍 What you can do:</h3>
+                <ul>
+                    <li>Upload a CSV file containing digital forensic data (from The Sleuth Kit).</li>
+                    <li>Ask questions related to the contents of the file, and get answers using cutting-edge AI technology.</li>
+                </ul>
+                <p>📁 <em>Start by uploading your CSV file, then ask relevant questions like:</em></p>
+                <ul>
+                    <li>"What are the most recent access times in the file?"</li>
+                    <li>"Can you summarize the file system information?"</li>
+                </ul>
+                <p><em>We're here to help you uncover the clues. Ask away!</em></p>
+            </div>
+
+            <!-- Bottom Bar -->
+            <div class="bottom-bar">
+                <button>Download Chat</button>
+                <input id="text-input" type="text" placeholder="Write questions here">
+                <button id="send-btn">Send</button>
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>

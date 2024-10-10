@@ -1,6 +1,6 @@
 from flask import Flask, render_template, request, jsonify
 import os
-from ui_backend import send_iso, send_csv, forward_message_llm
+from ui_backend import send_iso, send_csv, forward_message_llm, is_valid_disk_image
 
 app = Flask(__name__)
 
@@ -51,10 +51,10 @@ def submit_file():
     # Call different functions based on file type
     if file.filename.endswith('.csv'):
         send_csv(file_path)  # Call CSV handling function with file path
-    elif file.filename.endswith('.iso'):         
+    elif is_valid_disk_image(file_path) == True:
         send_iso(file_path)  # Call ISO handling function with file path
     else:
-        print("Non-valid file type")
+        print("Non-valid file type") #Do something more??????????
 
     # Return a response to the client
     return jsonify({"status": "success", "filename": file.filename})

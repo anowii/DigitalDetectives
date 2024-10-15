@@ -50,7 +50,6 @@ def handle_conversation():
         if user_input.lower() == "exit":
             break
         
-    
         result = chain.invoke({"context": context, "question": user_input})
         print("Bot:", result)
         # Save the new conversation to history

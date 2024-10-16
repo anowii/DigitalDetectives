@@ -1,3 +1,6 @@
+** Issues **
+- Prompt template is way to large, i've added template called small template (see templates.py) that also allows for testing with json format
+
 **Changes made 2024-10-16**
   - Change a little bit in forward_message_llm
   - Added load_json_data(filename), only static

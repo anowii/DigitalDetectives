@@ -1,10 +1,12 @@
-
+**Changes made 2024-10-16**
+  - Change a little bit in forward_message_llm
+  - Added load_json_data(filename), only static
 
 ```plaintext
-│   .flaskenv         //only if you wanna be able to use: flask run, without changeing the variable          
+│   .flaskenv                       //Only if you wanna be use: flask run (not needed)
 │   conversation_history.json
-│   diskanalys.py
-│   templates.py
+│   diskanalys.py    
+│   templates.py                    //Prompt templates are defined here
 │   ui_backend.py
 │   ui_host.py
 │

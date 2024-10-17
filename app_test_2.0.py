@@ -5,7 +5,7 @@ from langchain_ollama import OllamaLLM
 from langchain_core.prompts import ChatPromptTemplate
 
 # Define the LLaMA model
-model = OllamaLLM(model="phi3:3.8b")
+model = OllamaLLM(model="llama3.2")
 
 # Create a prompt template
 template = """
@@ -44,8 +44,6 @@ Each column in the example row can be interpreted as follows:
 - **parent_path**: `/USERS/Jimmy Wilson/AppData/Local/Microsoft/Windows/Temporary Internet Files/Low/Content.IE5/0YNVG0PM/` - This is the path to the directory containing the file.
 
 Answer the question below:
-
-Here is the conversation history: {context}
 
 Here is the CSV data: {csv_data}
 
@@ -96,10 +94,7 @@ def handle_conversation():
     if csv_file:
         csv_data = load_csv_data(csv_file)
 
-    # Build context from conversation history
-    if conversation_history:
-        for user_input, result in conversation_history.items():
-            context += f"\nUser: {user_input}\nAI: {result}"
+    
 
     print(f"CSV data being sent: {csv_data}")
     
@@ -115,7 +110,7 @@ def handle_conversation():
             print("Old Bot:", result)
         else:
             try:
-                result = chain.invoke({"context": context, "csv_data": csv_data, "question": user_input})
+                result = chain.invoke({"csv_data": csv_data, "question": user_input})
                 print("Bot:", result)
             except Exception as e:
                 print(f"Error occurred: {str(e)}")

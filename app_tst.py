@@ -5,7 +5,7 @@ from langchain_ollama import OllamaLLM
 from langchain_core.prompts import ChatPromptTemplate
 
 # Define the LLaMA model
-model = OllamaLLM(model="llama3.1:8b")
+model = OllamaLLM(model="llama3.2")
 
 # Create a prompt template
 template = """

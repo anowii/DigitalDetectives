@@ -19,17 +19,20 @@ $(document).ready(function () {
                             // Create user message box with user-message class
                             var userMessageElement = $('<div></div>')
                                 .addClass('message-box user-message')
-                                .text("User: " + message.user);
+                                .text(`User: ${message.user}`);
 
                             // Create AI message box with ai-message class
                             var responseMessageElement = $('<div></div>')
                                 .addClass('message-box ai-message')
-                                .text("AI: " + message.response);
+                                .html(`AI: ${message.response}`);
 
                             // Append the formatted messages to the chat window
                             $('#chat-window').append(userMessageElement);
                             $('#chat-window').append(responseMessageElement);
                         });
+
+                        // Scroll to the bottom of the chat window
+                        $('#chat-window').scrollTop($('#chat-window')[0].scrollHeight);
                     },
                     error: function (error) {
                         console.error('Error fetching messages:', error);
@@ -69,6 +72,8 @@ $(document).ready(function () {
 
             // Clear the input field after sending the message
             $('#text-input').val('');
+            // Scroll to the bottom of the chat window
+            $('#chat-window').scrollTop($('#chat-window')[0].scrollHeight);
         }
     });
 

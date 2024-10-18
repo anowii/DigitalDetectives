@@ -1,32 +1,13 @@
-import json
+import markdown2
 import os
 import pandas as pd
 from langchain_ollama import OllamaLLM
 from templates import json_template, simple_template
 
 
-model = OllamaLLM(model="llama3.1:8b")
-chain = simple_template | model
+model = OllamaLLM(model="llama3.2")
+chain = json_template | model
 #chain = simple_template | model
-
-# Helper functions for saving and loading conversation history
-def load_conversation_history(filename="conversation_history.json"):
-    if os.path.exists(filename):
-        with open(filename, "r") as file:
-            try:
-                return json.load(file)
-            except json.JSONDecodeError:
-                return {}  # Return empty dictionary if the file is corrupted
-    else:
-        # Create the file with an empty JSON object if it doesn't exist
-        with open(filename, "w") as file:
-            json.dump({}, file)
-        return {}
-
-
-def save_conversation_history(history, filename="conversation_history.json"):
-    with open(filename, "w") as file:
-        json.dump(history, file, indent=4)
 
 # Parse/Load CSV data to json format
 def load_json_data(filename):
@@ -48,7 +29,9 @@ def load_json_data(filename):
     else:
         print("File does not exist.")
         return []
-
+    
+def convert_to_html(markdown_text):
+    return markdown2.markdown(markdown_text)
 
 # Function to handle message forwarding to LLM
 def forward_message_llm(message):
@@ -61,7 +44,7 @@ def forward_message_llm(message):
     print("DEBUG ", result)
     # Save new conversation to history
 
-    return result  # Return the result to be used in Flask
+    return convert_to_html(result)  # Return the result to be used in Flask
 
 def send_iso(fileName): #vet ej om denna behövs eller kan köras direkt via TSK
     print(fileName)

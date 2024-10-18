@@ -82,6 +82,7 @@ body {
     border: 1px solid #ddd;
 }
 
+
 /* Styling for greeting, upload, and logout buttons */
 .greeting button, .upload label, .deleteSession button, .logout button {
     width: 100%;
@@ -92,7 +93,6 @@ body {
     cursor: pointer;
     margin-bottom: 10px; /* Adds space between buttons */
 }
-
 
 
 /* Updated .upload class to handle the new submit button */
@@ -156,55 +156,27 @@ body {
     font-size: 13px;
 }
 
-/*****new stufff****/
 
+/***** NEW  STUFF ****/
 
-/* Common message box styling */
-.message-box {
-    border-radius: 8px;
-    padding: 10px;
-    margin: 10px 0;
-    max-width: 70%;
-    word-wrap: break-word;
-    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
-}
-
-/* User message styling */
 .user-message {
-    background-color: #cfe9ff;
-    text-align: right;
-    margin-left: auto;
+    align-self: flex-end; /* Align user messages to the right */
+    background-color: #e0f7fa; /* Light blue background for user messages */
+    margin-bottom: 10px; /* Space between messages */
+    padding: 10px; /* Padding for the message boxes */
+    border-radius: 5px; /* Rounded corners for messages */
 }
 
-/* AI message styling */
 .ai-message {
-    background-color: #d4f4dd;
-    text-align: left;
-    margin-right: auto;
+    align-self: flex-start; /* Align AI messages to the left */
+    background-color: #e4ffb2; /* background for AI messages */
+    margin-bottom: 10px; /* Space between messages */
+    padding: 10px; /* Padding for the message boxes */
+    border-radius: 5px; /* Rounded corners for messages */
 }
 
-/* Style the bottom bar */
-.bottom-bar {
-    display: flex;
-    justify-content: space-between;
-    padding: 10px;
-    background-color: #fff;
-    border-top: 1px solid #ccc;
-}
-
-/* Style for input and buttons */
-#text-input {
-    flex-grow: 1;
-    padding: 8px;
-    border-radius: 4px;
-    border: 1px solid #ccc;
-    margin-right: 10px;
-}
-#send-btn, .bottom-bar button {
-    padding: 8px 15px;
-    border-radius: 4px;
-    border: none;
-    background-color:  #18135d;;
-    color: white;
-    cursor: pointer;
+ul li {
+    font-size: 14px; /* Adjust the font size */
+    padding-left: 20px; /* Indentation */
+    list-style-position: inside; /* Optional: make bullets inside the padding */
 }

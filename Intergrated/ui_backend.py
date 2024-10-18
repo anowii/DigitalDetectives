@@ -5,7 +5,7 @@ from langchain_ollama import OllamaLLM
 from templates import json_template, simple_template
 
 
-model = OllamaLLM(model="llama3.1:8b", num_ctx=4096)
+model = OllamaLLM(model="llama3.1:8b")
 #chain = json_template | model
 chain = simple_template | model
 
@@ -68,7 +68,7 @@ def forward_message_llm(message):
         return conversation_history[message]  # Return cached response
 
     # Use Langchain chain to get AI response
-    result = chain.invoke({"context": context, "json_data": json_data ,"question": message})
+    result = chain.invoke({"json_data": json_data ,"question": message})
 
     # Save new conversation to history
     conversation_history[message] = result

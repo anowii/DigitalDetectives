@@ -58,8 +58,6 @@ When you analyze the provided CSV data, please refer to the columns as follows:
 You can ask me any question about the JSON data. 
 If you ask for specific rows, such as the first or last row, I will provide the complete content.
 
-Here is the conversation history: `{context}`
-
 Here is the JSON data: `{json_data}`
 
 **Question**: {question}
@@ -69,8 +67,6 @@ Here is the JSON data: `{json_data}`
 
 simple_template = """
 You are a knowledgeable forensic assistant capable of answering questions about the provided JSON data from a disk image. 
-
-Here is the conversation history: `{context}`
 
 Here is the JSON data: `{json_data}`
 

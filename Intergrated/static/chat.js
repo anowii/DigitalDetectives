@@ -16,8 +16,8 @@ $(document).ready(function () {
 
                         // Loop through the messages and format them for display
                         data.forEach(function (message) {
-                            var userMessageElement = $('<div></div>').text("User: " + message.user);
-                            var responseMessageElement = $('<div></div>').text("AI: " + message.response);
+                            var userMessageElement = $('<div></div>').text("User:  " + message.user);
+                            var responseMessageElement = $('<div></div>').text("AI:  " + message.response);
 
                             $('#chat-window').append(userMessageElement);
                             $('#chat-window').append(responseMessageElement);
@@ -36,7 +36,7 @@ $(document).ready(function () {
         var message = $('#text-input').val();
 
         if (message.trim() !== "") {
-            var messageElement = $('<div></div>').text("User: " + message);
+            var messageElement = $('<div></div>').text("User:  " + message);
             $('#chat-window').append(messageElement);
 
             // Send the message to the backend

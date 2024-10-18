@@ -6,8 +6,8 @@ from templates import json_template, simple_template
 
 
 model = OllamaLLM(model="llama3.1:8b")
-#chain = json_template | model
-chain = simple_template | model
+chain = json_template | model
+#chain = simple_template | model
 
 # Helper functions for saving and loading conversation history
 def load_conversation_history(filename="conversation_history.json"):

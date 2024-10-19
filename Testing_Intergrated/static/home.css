@@ -28,7 +28,7 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-between; /* Spaces the items evenly, with logout at the bottom */
-    border-right: 2px solid #000; /* Make the border line between the sidebar and main content thicker and visible */
+    border-right: 1px solid #3836367a; /* Make the border line between the sidebar and main content thicker and visible */
     height: 100%;
 }
 
@@ -98,6 +98,7 @@ body {
 /* Updated .upload class to handle the new submit button */
 .upload {
     display: flex;/* Keep elements inline*/
+    font-size: 13px;
     /*align-items: center*/
     flex-direction: column; /* Stack uppload, submit button, and progress bar vertically*/
     gap: 5px; /* Space between the elements*/
@@ -109,30 +110,22 @@ body {
     display: none;
 }
 
-
 /* Label for the file upload, styled as a button */
-.upload label {
+.upload label, .upload button {
     background-color: #18135d;
     cursor: pointer;
     color: white;
-    padding: 10px 15px;
-    
+    padding: 10px 15px;   
 }
 
-/* Add styling for the new Submit button */
-.upload button {
-    background-color: #18135d; /* Green color for the submit button */
-    color: white;
-    cursor: pointer;
-    padding: 10px 15px;
-}
 /* Logout button has a different color */
 .logout button {
     background-color: #18135d;
 }
+
 /* Progressbar style*/
 #progressbar{
-    background-color: #18135d; /* Green color for the submit button */
+    background-color: #18135d; 
     color: white;
     cursor: default;
     padding: 10px 15px;
@@ -152,31 +145,28 @@ body {
     color: #333; /* Dark gray text color */
 }
 
-.upload{
-    font-size: 13px;
-}
-
 
 /***** NEW  STUFF ****/
-
-.user-message {
-    align-self: flex-end; /* Align user messages to the right */
-    background-color: #e0f7fa; /* Light blue background for user messages */
-    margin-bottom: 10px; /* Space between messages */
-    padding: 10px; /* Padding for the message boxes */
-    border-radius: 5px; /* Rounded corners for messages */
-}
-
-.ai-message {
-    align-self: flex-start; /* Align AI messages to the left */
-    background-color: #e4ffb2; /* background for AI messages */
-    margin-bottom: 10px; /* Space between messages */
-    padding: 10px; /* Padding for the message boxes */
-    border-radius: 5px; /* Rounded corners for messages */
-}
 
 ul li {
     font-size: 14px; /* Adjust the font size */
     padding-left: 20px; /* Indentation */
     list-style-position: inside; /* Optional: make bullets inside the padding */
+}
+
+/* Message styles */
+.message {
+    padding: 10px;
+    border-radius: 5px;
+    margin: 5px 0; /* Add some margin between messages */
+}
+
+.user-message {
+    background-color: #d1e7dd; /* Light green for user messages */
+    text-align: left; /* Align text to the left */
+}
+
+.ai-message {
+    background-color: #cfe2ff; /* Light blue for AI messages */
+    text-align: left; /* Align text to the left */
 }

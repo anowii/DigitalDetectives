@@ -16,7 +16,7 @@ def load_json_data(filename):
             df = pd.read_csv(filename)
 
             # Ensure the column headers match expected structure
-            df.columns = ['meta_addr', 'name', 'dir_type', 'size', 'crtime', 'parent_path', 'md5']
+            #df.columns = ['meta_addr', 'name', 'size', 'crtime', 'parent_path']
 
             # Convert to JSON string
             return df.to_dict(orient='records') 
@@ -35,16 +35,14 @@ def convert_to_html(markdown_text):
 
 # Function to handle message forwarding to LLM
 def forward_message_llm(message):
-    # Load previous conversation history
-    json_data = load_json_data("tempfiles/MOCK_DATA2.csv")  # Initialize JSON data as empty
+
+    json_data = load_json_data("tempfiles/MOCK_DATA2.csv")  
     #print(f"JSON Data: {json_data}")  # Log the JSON data for debugging
     
     # Use Langchain chain to get AI response
     result = chain.invoke({"json_data": json_data ,"question": message})
-    print("DEBUG ", result)
-    # Save new conversation to history
 
-    return convert_to_html(result)  # Return the result to be used in Flask
+    return result  # Return the result to be used in Flask
 
 def send_iso(fileName): #vet ej om denna behövs eller kan köras direkt via TSK
     print(fileName)

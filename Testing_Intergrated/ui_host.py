@@ -60,16 +60,17 @@ def submit_file():
 @app.route('/forward_message', methods=['POST'])
 def forward_message():
     data = request.get_json()  # Get JSON data from request
-    message = data.get('message', '')  # Extract the message
+    message = data.get('message', '').strip()  # Extract the message
     
     if message:
-        print("forward_message: ", message)
+        print("Received message:", message)
         response = forward_message_llm(message)  # Forward to Langchain-based LLM
+        print("Generated_response: ", response)
 
         # Append message and response to the chat history
         messages.append({"user": message, "response": response})
 
-        return jsonify({'status': 'success', 'message': response})
+        return jsonify({'status': 'success', 'id': len(messages), 'message': response})
     else:
         return jsonify({'status': 'error', 'message': 'No message received'})
 

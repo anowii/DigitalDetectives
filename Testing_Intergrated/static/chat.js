@@ -14,31 +14,22 @@ $(document).ready(function () {
                         // Clear the chat window
                         $('#chat-window').empty();
 
+                        console.log('Message forwarded :', data);
+
                         // Loop through the messages and format them for display
                         data.forEach(function (message) {
-                            // Create user message box with user-message class
-                            var userMessageElement = $('<div></div>')
-                                .addClass('message-box user-message')
-                                .text(`User: ${message.user}`);
+                            var userMessageElement = $('<div class="message user-message"></div>').text("User: " + message.user);
+                            var responseMessageElement = $('<div class="message ai-message"></div>').text("AI: " + message.response);
 
-                            // Create AI message box with ai-message class
-                            var responseMessageElement = $('<div></div>')
-                                .addClass('message-box ai-message')
-                                .html(`AI: ${message.response}`);
-
-                            // Append the formatted messages to the chat window
                             $('#chat-window').append(userMessageElement);
                             $('#chat-window').append(responseMessageElement);
                         });
-
-                        // Scroll to the bottom of the chat window
-                        $('#chat-window').scrollTop($('#chat-window')[0].scrollHeight);
                     },
                     error: function (error) {
                         console.error('Error fetching messages:', error);
                     }
                 });
-            }, 1000);  // Poll every 1 second
+            }, 1000);  // Poll every 1 seconds
         }
     }
 
@@ -47,10 +38,7 @@ $(document).ready(function () {
         var message = $('#text-input').val();
 
         if (message.trim() !== "") {
-            // Create and append user message box for the sent message
-            var messageElement = $('<div></div>')
-                .addClass('message-box user-message')
-                .text("User: " + message);
+            var messageElement = $('<div class="message user-message"></div>').text("User: " + message);
             $('#chat-window').append(messageElement);
 
             // Send the message to the backend
@@ -70,10 +58,7 @@ $(document).ready(function () {
                 }
             });
 
-            // Clear the input field after sending the message
-            $('#text-input').val('');
-            // Scroll to the bottom of the chat window
-            $('#chat-window').scrollTop($('#chat-window')[0].scrollHeight);
+            $('#text-input').val('');  // Clear input
         }
     });
 

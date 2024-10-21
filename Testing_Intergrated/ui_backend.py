@@ -1,11 +1,10 @@
-import markdown2
 import os
 import pandas as pd
 from langchain_ollama import OllamaLLM
 from templates import json_template, simple_template
 
 
-model = OllamaLLM(model="llama3.2")
+model = OllamaLLM(model="llama3.1:8b")
 chain = json_template | model
 #chain = simple_template | model
 
@@ -30,8 +29,6 @@ def load_json_data(filename):
         print("File does not exist.")
         return []
     
-def convert_to_html(markdown_text):
-    return markdown2.markdown(markdown_text)
 
 # Function to handle message forwarding to LLM
 def forward_message_llm(message):

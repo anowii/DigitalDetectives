@@ -12,7 +12,7 @@ DATA_DIR = "data\\"
 SLEUTH_DB = "data\\analys.db"
 CSV_PATH = "data\\db.csv"
 
-INTERESTING_TYPES =".exe|.msi|.docx|.png|.mp4|.jpeg"
+INTERESTING_TYPES =".exe|.msi|.docx|.png|.mp4|.jpeg" #files to put in the csv
 
 def connect():
     con = sqlite3.connect(SLEUTH_DB)

@@ -35,7 +35,7 @@ def load_json_data(filename):
             df = pd.read_csv(filename)
 
             # Ensure the column headers match expected structure
-            df.columns = ['meta_addr', 'name', 'dir_type', 'size', 'crtime', 'parent_path', 'md5']
+            df.columns = ['meta_addr', 'name', 'size', 'crtime', 'parent_path']
 
             # Convert to JSON string
             return df.to_dict(orient='records') 

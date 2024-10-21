@@ -38,26 +38,16 @@ def load_json_data(filename):
 # Function to handle message forwarding to LLM
 def forward_message_llm(message):
     # Load previous conversation history
-    conversation_history = load_conversation_history()
+
     context = ""
     json_data = load_json_data("tempfiles/MOCK_DATA2.csv")  # Initialize JSON data as empty
     print(f"JSON Data: {json_data}")  # Log the JSON data for debugging
-    
-    # Generate context from conversation history
-    if conversation_history:
-        for user_input, result in conversation_history.items():
-            context += f"\nUser: {user_input}\nAI: {result}"
-
-    # Check if the question has been asked before
-    if message in conversation_history:
-        return conversation_history[message]  # Return cached response
-
+  
     # Use Langchain chain to get AI response
     result = chain.invoke({"json_data": json_data ,"question": message})
 
     # Save new conversation to history
-    conversation_history[message] = result
-    save_conversation_history(conversation_history)
+    save_conversation_history()
 
     return result  # Return the result to be used in Flask
 

@@ -3,6 +3,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Quicksand', sans-serif; /*Match font with login page*/
 }
 
 /* Make the body fill the whole screen and use a simple font */
@@ -10,6 +11,7 @@ body {
     font-family: Arial, sans-serif;
     height: 100vh; /* Full viewport height */
     display: flex;
+    background: #000; /*Background color as in login page*/
 }
 
 /* Main container to divide the layout into sidebar and main content */
@@ -23,7 +25,7 @@ body {
 /* Sidebar takes up 25% of the width and full height */
 .sidebar {
     width: 25%;
-    background-color: #f4f4f4;
+    background-color: #222;
     padding: 20px;
     display: flex;
     flex-direction: column;
@@ -46,7 +48,7 @@ body {
 .chat-window {
     flex-grow: 1;
     padding: 20px;
-    background-color: #f9f9f9;
+    background-color: #646368;
     border-bottom: 1px solid #ddd;
     overflow-y: auto; /* Adds scroll for long chat history */
     /*text-align: center; /* Center the text horizontally*/
@@ -55,6 +57,22 @@ body {
 /* Optional: Center any specific headers or paragraphs if needed */
 .chat-window h2, .chat-window h3, .chat-window p {
     margin: 10px 0; /* Add some margin for spacing */
+    color: #ffffff;
+}
+
+.chat-window ul {
+    list-style: disc; /*This adds bullet points to the list items*/
+    padding-left: 20px;
+}
+
+.chat-window ul li {
+    color: #ffffff; /* White text color for better contrast*/
+    margin-bottom: 10px; /* Add some spacing between list items*/
+    font-size: 1em; /*Adjust the font size if needed*/
+}
+
+.chat-window ul li strong {
+    color: #ffffff;
 }
 
 /* Bottom bar stays at the bottom of the main content */
@@ -63,15 +81,15 @@ body {
     display: flex;
     gap: 10px;
     border-top: 1px solid #ddd;
-    background-color: #f4f4f4;
+    background-color: #333;
 }
 
 /* Buttons inside the bottom bar */
 .bottom-bar button {
     padding: 10px 15px;
     border: none;
-    background-color: #18135d;
-    color: white;
+    background-color: #ffffff;
+    color: #000;
     cursor: pointer;
 }
 
@@ -80,6 +98,8 @@ body {
     flex-grow: 1;
     padding: 10px;
     border: 1px solid #ddd;
+    background: #333;
+    color: #fff;
 }
 
 /* Styling for greeting, upload, and logout buttons */
@@ -87,8 +107,8 @@ body {
     width: 100%;
     padding: 10px;
     border: none;
-    background-color: #18135d;
-    color: white;
+    background-color: #ffffff;
+    color: #000;
     cursor: pointer;
     margin-bottom: 10px; /* Adds space between buttons */
 }
@@ -112,35 +132,36 @@ body {
 
 /* Label for the file upload, styled as a button */
 .upload label {
-    background-color: #18135d;
+    background-color: #ffffff;
     cursor: pointer;
-    color: white;
+    color: rgb(21, 20, 20);
     padding: 10px 15px;
     
 }
 
 /* Add styling for the new Submit button */
 .upload button {
-    background-color: #18135d; /* Green color for the submit button */
-    color: white;
+    background-color: #ffffff; /* Green color for the submit button */
+    color: #000;
     cursor: pointer;
     padding: 10px 15px;
 }
 /* Logout button has a different color */
 .logout button {
-    background-color: #18135d;
+    background-color: #ffffff;
+    color: #000;
 }
 /* Progressbar style*/
 #progressbar{
-    background-color: #18135d; /* Green color for the submit button */
-    color: white;
+    background-color: #ffffff; /* Green color for the submit button */
+    color: #000;
     cursor: default;
     padding: 10px 15px;
 }
 
 /* Style for the message box */
 .message-box {
-    background-color: #e9ecef; /* Light gray background */
+    background-color: #333; /* Light gray background */
     border: 1px solid #ccc; /* Border around the message box */
     padding: 10px;
     margin: 10px ; /* Adds space around the box */
@@ -149,7 +170,7 @@ body {
 /* Placeholder text style */
 .message-box p {
     margin: 0; /* No margin for the paragraph inside the message box */
-    color: #333; /* Dark gray text color */
+    color: #fff; /* Dark gray text color */
 }
 
 .upload{

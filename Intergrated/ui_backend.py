@@ -9,21 +9,6 @@ model = OllamaLLM(model="llama3.1:8b")
 chain = json_template | model
 #chain = simple_template | model
 
-# Helper functions for saving and loading conversation history
-def load_conversation_history(filename="conversation_history.json"):
-    if os.path.exists(filename):
-        with open(filename, "r") as file:
-            try:
-                return json.load(file)
-            except json.JSONDecodeError:
-                return {}  # Return empty dictionary if the file is corrupted
-    else:
-        # Create the file with an empty JSON object if it doesn't exist
-        with open(filename, "w") as file:
-            json.dump({}, file)
-        return {}
-
-
 def save_conversation_history(history, filename="conversation_history.json"):
     with open(filename, "w") as file:
         json.dump(history, file, indent=4)

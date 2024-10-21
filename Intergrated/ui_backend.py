@@ -5,7 +5,7 @@ from langchain_ollama import OllamaLLM
 from templates import json_template, simple_template
 
 
-model = OllamaLLM(model="llama3.1:8b")
+model = OllamaLLM(model="llama3.2")
 chain = json_template | model
 #chain = simple_template | model
 
@@ -41,14 +41,12 @@ def forward_message_llm(message):
 
     context = ""
     json_data = load_json_data("tempfiles/MOCK_DATA2.csv")  # Initialize JSON data as empty
-    print(f"JSON Data: {json_data}")  # Log the JSON data for debugging
+    print(f"JSON Data: {json_data}")  # Log the JSON data
   
     # Use Langchain chain to get AI response
     result = chain.invoke({"json_data": json_data ,"question": message})
-
-    # Save new conversation to history
-    save_conversation_history()
-
+    print('bye')
+    
     return result  # Return the result to be used in Flask
 
 def send_iso(fileName): #vet ej om denna behövs eller kan köras direkt via TSK

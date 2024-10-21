@@ -39,12 +39,12 @@ def db_to_csv():
     res = cur.execute("SELECT * FROM tsk_files")
     db_files = res.fetchall()
     print("\ntsk_files\n")
-    fields = ["meta_addr", "name", "dir_type", "size", "crtime", "parent_path","md5"]
+    fields = ["meta_addr", "name", "dir_type", "size", "crtime", "parent_path"]
     files = []
     for file in db_files:
         name = file[5]
         if re.search(INTERESTING_TYPES,file[5]):
-            files.append({"meta_addr":file[6], "name":file[5], "dir_type": file[12], "size":file[14], "crtime":file[16], "parent_path":file[25],"md5":file[23]})
+            files.append({"meta_addr":file[6], "name":file[5], "dir_type": file[12], "size":file[14], "crtime":file[16], "parent_path":file[25]})
         
     with open(CSV_PATH, 'w', newline='') as csvfile:
         writer = csv.DictWriter(csvfile, fieldnames=fields)

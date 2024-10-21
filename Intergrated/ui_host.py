@@ -4,6 +4,7 @@ import os
 from ui_backend import send_iso, send_csv, forward_message_llm, is_valid_disk_image
 
 app = Flask(__name__)
+app.secret_key = "The Sectret key"
 
 UPLOAD_FOLDER = 'tempfiles'  # Designated folder name
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER

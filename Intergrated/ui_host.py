@@ -4,7 +4,7 @@ import os
 from ui_backend import send_iso, send_csv, forward_message_llm, is_valid_disk_image
 
 app = Flask(__name__)
-app.secret_key = "The Sectret key"
+#app.secret_key = "The Sectret key"
 
 UPLOAD_FOLDER = 'tempfiles'  # Designated folder name
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
@@ -81,7 +81,6 @@ def get_messages():
 
 def main():
     app.run(threaded=True, port=4976)
-    return 0
 
 if __name__ == '__main__':
     main()

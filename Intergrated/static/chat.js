@@ -16,8 +16,8 @@ $(document).ready(function () {
 
                         // Loop through the messages and format them for display
                         data.forEach(function (message) {
-                            var userMessageElement = $('<div></div>').text("User:  " + message.user);
-                            var responseMessageElement = $('<div></div>').text("AI:  " + message.response);
+                            var userMessageElement = $('<div class="message user-message"></div>').text("User: " + message.user);
+                            var responseMessageElement = $('<div class="message ai-message"></div>').text("AI: " + message.response);
 
                             $('#chat-window').append(userMessageElement);
                             $('#chat-window').append(responseMessageElement);

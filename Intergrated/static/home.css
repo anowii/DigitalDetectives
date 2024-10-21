@@ -176,3 +176,28 @@ body {
 .upload{
     font-size: 13px;
 }
+
+/***** NEW  STUFF ****/
+
+ul li {
+    font-size: 14px; /* Adjust the font size */
+    padding-left: 20px; /* Indentation */
+    list-style-position: inside; /* Optional: make bullets inside the padding */
+}
+
+/* Message styles */
+.message {
+    padding: 10px;
+    border-radius: 5px;
+    margin: 5px 0; /* Add some margin between messages */
+}
+
+.user-message {
+    background-color: #d1e7dd; /* Light green for user messages */
+    text-align: left; /* Align text to the left */
+}
+
+.ai-message {
+    background-color: #cfe2ff; /* Light blue for AI messages */
+    text-align: left; /* Align text to the left */
+}

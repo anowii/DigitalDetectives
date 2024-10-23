@@ -14,7 +14,7 @@ $(document).ready(function () {
                         // Clear the chat window
                         $('#chat-window').empty();
 
-                        console.log('Message forwarded :', data);
+                        console.log('Message forwarded: ', data);
 
                         // Loop through the messages and format them for display
                         data.forEach(function (message) {

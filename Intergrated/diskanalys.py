@@ -70,7 +70,7 @@ def run_sleuth_on_file(target):
     # subprocess.run(["rm",CSV_PATH], text=True)
     if os.path.exists(CSV_PATH):
         os.remove(CSV_PATH)
-    res = subprocess.run(["tsk_loaddb.exe","-h","-d",SLEUTH_DB, DATA_DIR+target], shell=True)
+    res = subprocess.run(["tsk_loaddb.exe","-h","-d",SLEUTH_DB, target], shell=True)
     return res
 
 def db_to_csv():

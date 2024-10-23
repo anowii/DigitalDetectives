@@ -133,6 +133,8 @@ def create_a_csv(csv_file_path="test.csv", length=10):
     
 
     data = [[]]
+
+    data[0] = ["name", "size", "crtime", "path", "virus", "virus_type"]
     for i in range(length):
         temp_data = []
         temp = random.choice(name_arg)

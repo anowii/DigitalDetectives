@@ -1,11 +1,11 @@
-
-Sunset_Beach_California_2024-07-18.jpeg,1432642832,2048,/,0,
-schema_definition.sql,1432643612,512,/Documents,0,
-Nimda.exe,1432645261,512,/,1,Spyware
-Vim.exe,1432643407,512,/Documents/School,0,
-Beach_Vacation_Florida_2024-03-15.jpeg,1432643160,4096,/Temp,0,
-Stuxnet.exe,1432643013,1024,/Music,1,Keylogger
-Gamarue.exe,1432642778,512,/Downloads,1,Trojan
-Pineapple_in_Garden.jpeg,1432642980,512,/Temp,0,
-Divinity: Original Sin 2.exe,1432644549,8192,/Music,1,Trojan
-Sekiro: Shadows Die Twice.exe,1432643300,64,/,0,
+name,size,crtime,path,virus,virus_type
+Picnic_in_the_Park_2023-07-20.jpeg,1432644707,128,/Temp,0,
+Watermelon_Slices_on_Summer_Picnic.jpeg,1432642637,128,/Documents/School,0,
+Grapes_on_Vine.jpeg,1432643105,1273,/,0,
+Baby_Shower_Susan_2024-03-25.jpeg,1432644505,8192,/Downloads,0,
+banana.png,1432644234,1273,/Music,0,
+Fruit_Smoothie_Bowl.jpeg,1432643885,1268,/Documents,0,
+api_server.js,1432643051,1024,/Music,0,
+Skyrim.exe,1432645276,4096,/,1,Ransomware
+package_frontend.json,1432644900,2048,/Documents,0,
+Sasser.exe,1432644823,128,/Documents/School,1,Adware

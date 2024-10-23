@@ -1,31 +1,31 @@
-
-Weekend_Getaway_to_NYC_2024-04-28.jpeg,1432643431,4096,/Documents/School,0,
-Bluefish.exe,1432644401,8192,/,1,Keylogger
-Ransomware.exe,1432643332,1273,/,0,
-Ransomware.exe,1432643796,1024,/,1,Trojan
-Sunset_Beach_California_2024-07-18.jpeg,1432643133,128,/Documents,0,
-Final Fantasy VII Remake.exe,1432643460,1273,/Documents,1,Trojan
-Wedding_Ceremony_Jane_&_Mark_2024-05-22.jpeg,1432643105,8192,/Documents,0,
-New_Year_Celebration_2024-01-01.jpeg,1432645228,4096,/Downloads,0,
-Call of Duty: Modern Warfare.exe,1432644537,8192,/Music,1,Adware
-Coda.exe,1432642974,1273,/Documents,1,Adware
-Skiing_Trip_Colorado_2024-02-10.jpeg,1432644827,2048,/Documents,0,
-Graduation_Ceremony_Emma_2024-05-01.jpeg,1432644361,1268,/,0,
-Visit_to_Grandparents_2023-10-10.jpeg,1432643862,4096,/Downloads,0,
-Cyberpunk 2077.exe,1432644763,1273,/Downloads,1,Worm
-Dark Souls III.exe,1432645173,512,/,1,Trojan
-Birthday_Surprise_For_Alice_2024-10-01.jpeg,1432644896,128,/Documents,0,
-ILOVEYOU.exe,1432643961,128,/Downloads,0,
-Concert_Night_Rock_Band_2024-04-12.jpeg,1432644627,64,/,0,
-Vacation_Paris_2024-06-15.jpeg,1432643148,1024,/Downloads,0,
-package_frontend.json,1432644851,8192,/Documents,0,
-Vim.exe,1432644012,512,/Documents,1,Keylogger
-Counter-Strike: Global Offensive.exe,1432643866,1024,/Music,1,Trojan
-Blueberry_Bush_Harvest.jpeg,1432644005,8192,/Downloads,0,
-Baby_Shower_Susan_2024-03-25.jpeg,1432643274,1024,/Downloads,0,
-schema_definition.sql,1432644313,4096,/Downloads,0,
-Camping_Weekend_Lake_2024-06-18.jpeg,1432643833,1268,/Documents/School,0,
-Locky.exe,1432645007,1273,/,0,
-The Witcher 3: Wild Hunt.exe,1432643720,1268,/,0,
-WannaCry.exe,1432645204,64,/Documents,0,
-Divinity: Original Sin 2.exe,1432644785,8192,/Downloads,1,Ransomware
+name,size,crtime,path,virus,virus_type
+Zeus.exe,1432643031,1273,/Documents,0,
+New_Year_Celebration_2024-01-01.jpeg,1432642645,4096,/,0,
+Zeus.exe,1432643686,4096,/Downloads,1,Adware
+Thanksgiving_Dinner_2023-11-23.jpeg,1432644214,4096,/,0,
+Dridex.exe,1432643543,512,/Documents,0,
+Bait and Switch.exe,1432643333,1024,/,1,Trojan
+New_Year_Celebration_2024-01-01.jpeg,1432642545,128,/Music,0,
+banana.png,1432644891,1347,/Music,0,
+Picnic_in_the_Park_2023-07-20.jpeg,1432642634,512,/Documents,0,
+Summer_Festival_2024-08-01.jpeg,1432642583,64,/,0,
+Picnic_in_the_Park_2023-07-20.jpeg,1432644583,2048,/,0,
+Nimda.exe,1432644279,512,/Documents/School,0,
+Tinba.exe,1432643057,8192,/Music,0,
+Dockerfile_service,1432645087,1347,/Temp,0,
+Locky.exe,1432642710,1347,/Downloads,0,
+Kiwi_Cut_in_Half.jpeg,1432642915,64,/Documents,0,
+Halloween_Costume_Party_2023-10-31.jpeg,1432644904,2048,/,0,
+Graduation_Party_Mike_2024-05-30.jpeg,1432644656,64,/,0,
+WannaCry.exe,1432643293,1347,/Documents,0,
+Vim.exe,1432643257,64,/Temp,0,
+TrickBot.exe,1432644150,1347,/,0,
+Dridex.exe,1432642883,512,/Temp,0,
+Colorful_Fruit_Platter_for_Party.jpeg,1432644891,2048,/,0,
+Qakbot.exe,1432643261,1024,/Temp,0,
+Sasser.exe,1432645178,1024,/Music,1,Spyware
+NetBeans.exe,1432644851,512,/,0,
+Graduation_Ceremony_Emma_2024-05-01.jpeg,1432643678,1273,/Documents/School,0,
+Colorful_Fruit_Platter_for_Party.jpeg,1432644910,8192,/Temp,0,
+Dridex.exe,1432643733,1024,/Temp,1,Worm
+Bad Rabbit.exe,1432644512,1024,/Documents,0,

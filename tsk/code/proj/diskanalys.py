@@ -7,16 +7,55 @@ import sqlite3
 import csv
 import re
 import os
+import requests
 
 
-DATA_DIR = "data\\"
-SLEUTH_DB = "data\\analys.db"
-CSV_PATH = "data\\db.csv"
+# DATA_DIR = "data\\"
+# SLEUTH_DB = "data\\analys.db"
+# CSV_PATH = "data\\db.csv"
+DATA_DIR = "data/"
+SLEUTH_DB = "data/analys.db"
+CSV_PATH = "data/db.csv"
 
-INTERESTING_TYPES =".exe|.msi|.docx|.png|.mp4|.jpeg" #files to put in the csv
+INTERESTING_TYPES =".exe|.msi|.docx|.png|.jpeg|.txt" #files to put in the csv
 
 VIRUSTOTAL_TYPES =".exe|.msi"
 VIRUSTOTAL_APIKEY = "4e4140ca9678a7e353a618f2f9aa7dd3a1ff5d70c6eaf812391bb5649b80039e"
+
+def check_with_virustotal(hash):
+    # Send request
+    url = "https://www.virustotal.com/api/v3/files/" + hash
+    headers = {
+        "accept": "application/json",
+        "x-apikey": VIRUSTOTAL_APIKEY
+    }
+    response = (requests.get(url, headers=headers)).json()
+
+    # If virustotal returns an error, return undetected
+    try:
+        vendor_results = response['data']['attributes']['last_analysis_results']
+        popular_threat_classification = response['data']['attributes']['popular_threat_classification']['popular_threat_category']
+    except:
+        return "undetected", None
+
+    # Get all vendor results, along with their frequency
+    result_list = []
+    count_list = []
+    for vendor in vendor_results.items():
+        category = vendor[1]['category']
+        if category not in result_list:
+            result_list.append(category)
+            count_list.append(0)
+        count_list[result_list.index(category)] += 1
+    categories = sorted(zip(result_list, count_list), key=lambda x: x[1], reverse=True)
+    prime_category = categories[0]
+
+    # Prioritize malicious then suspicious category, if they have a count over 5 (arbitrary)
+    for category, count in categories:
+        if (category == 'malicious' or category == 'suspicious') and count > 5:
+            prime_category = category
+            break
+    return prime_category, popular_threat_classification[0]['value']
 
 def connect():
     con = sqlite3.connect(SLEUTH_DB)
@@ -35,7 +74,7 @@ def run_sleuth_on_file(target):
     # subprocess.run(["rm",CSV_PATH], text=True)
     if os.path.exists(CSV_PATH):
         os.remove(CSV_PATH)
-    res = subprocess.run(["C:\\files\\sleuthkit-4.12.1-win32\\bin\\tsk_loaddb.exe","-h","-d",SLEUTH_DB, target], shell=True)
+    res = subprocess.run(["tsk_loaddb","-h","-d",SLEUTH_DB, target], text=True)
     return res
 
 def db_to_csv():
@@ -45,10 +84,12 @@ def db_to_csv():
     print("\ntsk_files\n")
     fields = ["name","size", "crtime", "parent_path", "mal", "mal_type"]
     files = []
-    for file in db_files:
+    for file in db_files[:400]:
         name = file[5]
-        if re.search(INTERESTING_TYPES,file[5]):
-            files.append({"name":file[5], "size":file[14], "crtime":file[16], "parent_path":file[25]})
+        if re.search(INTERESTING_TYPES,file[5]) and file[5].find("slack") == -1:
+            print(check_with_virustotal(file[23]))
+            prime_category, popular_threat_classification = check_with_virustotal(file[23])
+            files.append({"name":file[5], "size":file[14], "crtime":file[16], "parent_path":file[25], "mal": prime_category, "mal_type":popular_threat_classification})
         
     with open(CSV_PATH, 'w', newline='') as csvfile:
         writer = csv.DictWriter(csvfile, fieldnames=fields)
@@ -64,4 +105,4 @@ def run(disk_image_path):
 
     return CSV_PATH
 
-run("data\\2020JimmyWilson.dd")
+run("data/2020JimmyWilson.dd")

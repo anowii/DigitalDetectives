@@ -108,7 +108,8 @@ body {
     background-color: #ffffff;
     color: #000;
     cursor: pointer;
-    margin-bottom: 10px; /* Adds space between buttons */
+    transition: #222 0.3s; /* Smooth transition for hover effect */
+    
 }
 
 
@@ -118,6 +119,7 @@ body {
     /*align-items: center*/
     flex-direction: column; /* Stack uppload, submit button, and progress bar vertically*/
     gap: 5px; /* Space between the elements*/
+    font-size: 13px;
 }
 
 
@@ -132,17 +134,18 @@ body {
     background-color: #ffffff;
     cursor: pointer;
     color: rgb(21, 20, 20);
-    padding: 10px 15px;
+    padding: 7px 22px;
     
 }
 
 /* Add styling for the new Submit button */
 .upload button {
-    background-color: #ffffff; /* Green color for the submit button */
+    background-color: #ffffff; 
     color: #000;
     cursor: pointer;
-    padding: 10px 15px;
+    padding: 7px 15px;
 }
+
 /* Logout button has a different color */
 .logout button {
     background-color: #ffffff;
@@ -164,9 +167,6 @@ body {
     color: #fff; /* Dark gray text color */
 }
 
-.upload{
-    font-size: 13px;
-}
 
 
 /***** NEW  STUFF ****/

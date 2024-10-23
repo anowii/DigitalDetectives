@@ -2,7 +2,7 @@ import json
 import os
 import pandas as pd
 from langchain_ollama import OllamaLLM
-from templates import json_template, simple_template
+from prompt_templates import json_template, simple_template
 from diskanalys import run
 
 

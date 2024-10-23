@@ -1,13 +1,14 @@
 
 from flask import Flask, render_template, request, jsonify
 import os
-from ui_backend import send_iso, send_csv, forward_message_llm, is_valid_disk_image
+from ui_backend import send_iso,forward_message_llm, is_valid_disk_image
 
 app = Flask(__name__)
-#app.secret_key = "The Sectret key"
+#app.secret_key = "The Secret key"
 
-UPLOAD_FOLDER = 'tempfiles'  # Designated folder name
+UPLOAD_FOLDER = 'data'  # Designated folder name
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
+UPLOADED_CSV = '' #filepath for CSV
 
 # Store chat messages in memory for now, per session
 messages = []
@@ -48,7 +49,9 @@ def submit_file():
     
     # Call different functions based on file type
     if file.filename.endswith('.csv'):
-        send_csv(file_path)  # Call CSV handling function with file path
+        global UPLOADED_CSV
+        UPLOADED_CSV = file_path
+        #send_csv(file_path)  # Call CSV handling function with file path
     elif is_valid_disk_image(file_path) == True:
         send_iso(file_path)  # Call ISO handling function with file path
     else:
@@ -64,7 +67,7 @@ def forward_message():
     message = data.get('message', '')  # Extract the message
 
     if message:
-        response = forward_message_llm(message)  # Forward to Langchain-based LLM
+        response = forward_message_llm(message,UPLOADED_CSV)  # Forward to Langchain-based LLM
 
         # Append message and response to the chat history
         messages.append({"user": message, "response": response})

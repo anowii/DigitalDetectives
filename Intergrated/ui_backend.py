@@ -3,6 +3,7 @@ import os
 import pandas as pd
 from langchain_ollama import OllamaLLM
 from templates import json_template, simple_template
+from diskanalys import run
 
 
 model = OllamaLLM(model="llama3.2")
@@ -36,26 +37,23 @@ def load_json_data(filename):
 
 
 # Function to handle message forwarding to LLM
-def forward_message_llm(message):
+def forward_message_llm(message, filepath):
     # Load previous conversation history
 
-    context = ""
-    json_data = load_json_data("tempfiles/MOCK_DATA2.csv")  # Initialize JSON data as empty
+    json_data = load_json_data(filepath)  # Initialize JSON data as empty
     print(f"JSON Data: {json_data}")  # Log the JSON data
   
     # Use Langchain chain to get AI response
     result = chain.invoke({"json_data": json_data ,"question": message})
-    print('bye')
+    #print('bye')
     
     return result  # Return the result to be used in Flask
 
 def send_iso(fileName): #vet ej om denna behövs eller kan köras direkt via TSK
+    run(fileName)
     print(fileName)
     return 0
 
-def send_csv(fileName):  #vet ej om denna behövs eller kan köras direkt via OLLAMA
-    print(fileName)
-    return 0
 
 def is_valid_disk_image(disk_image):
     """
@@ -63,7 +61,7 @@ def is_valid_disk_image(disk_image):
     Returns True if the file extension is valid, False otherwise.
     """
     valid_extensions =[".img",  ".iso", ".vdi", ".vmdk", ".vhd", ".dmg",
-                       ".qcow2"] # Add more file types
+                       ".qcow2", ".dd"] # Add more file types
     _,ext = os.path.splitext(disk_image)
     if ext.lower() not in valid_extensions:
         return False

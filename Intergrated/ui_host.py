@@ -1,5 +1,5 @@
 
-from flask import Flask, render_template, request, jsonify
+from flask import Flask, render_template, request, jsonify,redirect,url_for
 import os
 from ui_backend import send_iso,forward_message_llm, is_valid_disk_image
 
@@ -13,13 +13,20 @@ UPLOADED_CSV = '' #filepath for CSV
 # Store chat messages in memory for now, per session
 messages = []
 
-@app.route('/home')
-def home():
-    return render_template('home.html')
+
 
 @app.route('/')
 def login():
     return render_template('login.html')
+
+#Login handling
+@app.route('/login', methods=['POST'])        #CURRENTLY NOT WORKING, SHOULD REDIRECT USER TO HOME WHEN PRESSING SUBMIT (TEMPORARY WHEN NO LOGIN DETAILS)
+def handle_login():
+    return redirect(url_for('home'))
+
+@app.route('/home')
+def home():
+    return render_template('home.html')
 
 # Route to handle file upload
 @app.route('/submit-file', methods=['POST'])

@@ -1,23 +1,32 @@
 
-from flask import Flask, render_template, request, jsonify
+from flask import Flask, render_template, request, jsonify,redirect,url_for, json
 import os
-from ui_backend import send_iso, send_csv, forward_message_llm, is_valid_disk_image
+from ui_backend import send_iso,forward_message_llm, is_valid_disk_image
 
 app = Flask(__name__)
+#app.secret_key = "The Secret key"
 
-UPLOAD_FOLDER = 'tempfiles'  # Designated folder name
+UPLOAD_FOLDER = 'data'  # Designated folder name
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
+UPLOADED_CSV = '' #filepath for CSV
 
 # Store chat messages in memory for now, per session
 messages = []
-
-@app.route('/home')
-def home():
-    return render_template('home.html')
+MESSAGE_FILE = 'messages.json'
+next_id = 1  # Initialize the message ID
 
 @app.route('/')
 def login():
     return render_template('login.html')
+
+#Login handling
+@app.route('/login', methods=['POST'])        #CURRENTLY NOT WORKING, SHOULD REDIRECT USER TO HOME WHEN PRESSING SUBMIT (TEMPORARY WHEN NO LOGIN DETAILS)
+def handle_login():
+    return redirect(url_for('home'))
+
+@app.route('/home')
+def home():
+    return render_template('home.html')
 
 # Route to handle file upload
 @app.route('/submit-file', methods=['POST'])
@@ -36,7 +45,7 @@ def submit_file():
     if file.filename == '':
         return jsonify({"status": "error", "message": "No selected file"})
 
-    # Save file to tempfiles directory
+    # Save file to data directory
     file_path = os.path.join(app.config['UPLOAD_FOLDER'], file.filename)
     file.save(file_path)
 
@@ -47,7 +56,9 @@ def submit_file():
     
     # Call different functions based on file type
     if file.filename.endswith('.csv'):
-        send_csv(file_path)  # Call CSV handling function with file path
+        global UPLOADED_CSV
+        UPLOADED_CSV = file_path
+
     elif is_valid_disk_image(file_path) == True:
         send_iso(file_path)  # Call ISO handling function with file path
     else:
@@ -56,21 +67,36 @@ def submit_file():
     # Return a response to the client
     return jsonify({"status": "success", "filename": file.filename})
 
+# Helper function to save a message to the file
+def save_message_to_file(message_object):
+    with open(MESSAGE_FILE, 'a') as f:
+        f.write(json.dumps(message_object) + '\n')
 
 @app.route('/forward_message', methods=['POST'])
 def forward_message():
+    global next_id
     data = request.get_json()  # Get JSON data from request
-    message = data.get('message', '').strip()  # Extract the message
-    
+    message = data.get('message', '')  # Extract the message
+
     if message:
-        print("Received message:", message)
-        response = forward_message_llm(message)  # Forward to Langchain-based LLM
-        print("Generated_response: ", response)
+        response = forward_message_llm(message,UPLOADED_CSV)  # Forward to Langchain-based LLM
+        
+        #Mostly for loggin/debug purposes 
+        message_object = {
+            "id": next_id, 
+            "csv": UPLOADED_CSV if UPLOADED_CSV else "empty",
+            "user": message,
+            "response": response
+        }
 
         # Append message and response to the chat history
-        messages.append({"user": message, "response": response})
+        messages.append({"id": next_id, "user": message, "response": response})
 
-        return jsonify({'status': 'success', 'id': len(messages), 'message': response})
+        #Mostly for loggin/debug purposes
+        save_message_to_file(message_object)
+        next_id += 1      
+
+        return jsonify({'status': 'success', 'message': response})
     else:
         return jsonify({'status': 'error', 'message': 'No message received'})
 

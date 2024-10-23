@@ -48,6 +48,7 @@ When you analyze the provided CSV data, please refer to the columns as follows:
 
 ### Instructions:
 You can ask me any question about the JSON data. 
+If you ask for specific rows, such as the first or last row, I will provide the complete content.
 
 Here is the JSON data: `{json_data}`
 
@@ -64,6 +65,5 @@ Here is the JSON data: `{json_data}`
 **Question**: {question}
 
 **Answer**: """
-
 json_template = ChatPromptTemplate.from_template(template)
 simple_template = ChatPromptTemplate.from_template(template)

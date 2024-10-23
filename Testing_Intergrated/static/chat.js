@@ -2,20 +2,32 @@ $(document).ready(function () {
     var pollingActive = false;  // Polling is inactive initially
     var pollInterval = null;    // Poll interval holder
 
+     // Function to show loading indicator
+     function showLoadingIndicator() {
+        $('#loading-indicator').show();
+    }
+
+    // Function to hide loading indicator
+    function hideLoadingIndicator() {
+        $('#loading-indicator').hide();
+    }
+
     // Function to start polling after the first internal message
     function startPolling() {
         if (!pollingActive) {
             pollingActive = true;  // Activate polling
+            showLoadingIndicator(); // Show loading indicator when polling starts
+
             pollInterval = setInterval(function () {
+                console.log('Sending AJAX request to /get_messages'); 
                 $.ajax({
                     type: 'GET',
                     url: '/get_messages',
-                    success: function (data) {
+                    success: function (data) {    
+                        console.log('Message fetched:', data); 
                         // Clear the chat window
                         $('#chat-window').empty();
-
-                        console.log('Message forwarded: ', data);
-
+    
                         // Loop through the messages and format them for display
                         data.forEach(function (message) {
                             var userMessageElement = $('<div class="message user-message"></div>').text("User: " + message.user);
@@ -24,12 +36,18 @@ $(document).ready(function () {
                             $('#chat-window').append(userMessageElement);
                             $('#chat-window').append(responseMessageElement);
                         });
+
+                        clearInterval(pollInterval); // Stop polling after receiving a response
+                        pollingActive = false; // Reset polling state
+                        hideLoadingIndicator(); // Hide loading indicator after receiving response
+
                     },
                     error: function (error) {
                         console.error('Error fetching messages:', error);
+                        hideLoadingIndicator(); // Hide loading indicator on error
                     }
                 });
-            }, 1000);  // Poll every 1 seconds
+            }, 1000);  // Poll every 1 second
         }
     }
 
@@ -38,8 +56,11 @@ $(document).ready(function () {
         var message = $('#text-input').val();
 
         if (message.trim() !== "") {
-            var messageElement = $('<div class="message user-message"></div>').text("User: " + message);
-            $('#chat-window').append(messageElement);
+            // Clear the input field
+            $('#text-input').val('');
+
+            // Show loading indicator when sending message
+            showLoadingIndicator();
 
             // Send the message to the backend
             $.ajax({
@@ -49,16 +70,15 @@ $(document).ready(function () {
                 contentType: 'application/json',
                 success: function (response) {
                     console.log('Message forwarded to backend:', response);
-                    
-                    // Start polling after the first message is sent
+
+                    // Once the AI responds, start polling if not active
                     startPolling();
                 },
                 error: function (error) {
                     console.error('Error forwarding message:', error);
+                    hideLoadingIndicator(); // Hide loading indicator on error
                 }
             });
-
-            $('#text-input').val('');  // Clear input
         }
     });
 

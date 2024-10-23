@@ -1,12 +1,18 @@
+import json
 import os
 import pandas as pd
 from langchain_ollama import OllamaLLM
 from templates import json_template, simple_template
+from diskanalys import run
 
 
-model = OllamaLLM(model="llama3.1:8b")
-chain = json_template | model
-#chain = simple_template | model
+model = OllamaLLM(model="llama3.2")
+#chain = json_template | model
+chain = simple_template | model
+
+def save_conversation_history(history, filename="conversation_history.json"):
+    with open(filename, "w") as file:
+        json.dump(history, file, indent=4)
 
 # Parse/Load CSV data to json format
 def load_json_data(filename):
@@ -15,7 +21,7 @@ def load_json_data(filename):
             df = pd.read_csv(filename)
 
             # Ensure the column headers match expected structure
-            #df.columns = ['meta_addr', 'name', 'size', 'crtime', 'parent_path']
+            df.columns = ['name', 'size', 'crtime', 'path', 'virus', 'virus_type']
 
             # Convert to JSON string
             return df.to_dict(orient='records') 
@@ -28,34 +34,34 @@ def load_json_data(filename):
     else:
         print("File does not exist.")
         return []
-    
+
 
 # Function to handle message forwarding to LLM
-def forward_message_llm(message):
+def forward_message_llm(message, filepath):
+    # Load previous conversation history
 
-    json_data = load_json_data("tempfiles/MOCK_DATA2.csv")  
-    #print(f"JSON Data: {json_data}")  # Log the JSON data for debugging
-    
+    json_data = load_json_data(filepath)  # Initialize JSON data as empty
+    print(f"JSON Data: {json_data}")  # Log the JSON data
+  
     # Use Langchain chain to get AI response
     result = chain.invoke({"json_data": json_data ,"question": message})
-
+    #print('bye')
+    
     return result  # Return the result to be used in Flask
 
-def send_iso(fileName): #vet ej om denna behövs eller kan köras direkt via TSK
+def send_iso(fileName): #Runs TSK on disk image file (".dd")
+    run(fileName)
     print(fileName)
     return 0
 
-def send_csv(fileName):  #vet ej om denna behövs eller kan köras direkt via OLLAMA
-    print(fileName)
-    return 0
 
 def is_valid_disk_image(disk_image):
     """
     Checks if a given disk image path is valid by verifying its file extension.
     Returns True if the file extension is valid, False otherwise.
     """
-    valid_extensions =[".img",  ".iso", ".vdi", ".vmdk", ".vhd", ".dmg",
-                       ".qcow2"] # Add more file types
+    #valid_extensions =[".img",  ".iso", ".vdi", ".vmdk", ".vhd", ".dmg",".qcow2", ".dd"] # Add more file types
+    valid_extensions = [".dd"]
     _,ext = os.path.splitext(disk_image)
     if ext.lower() not in valid_extensions:
         return False

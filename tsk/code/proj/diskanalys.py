@@ -6,12 +6,17 @@ import subprocess
 import sqlite3
 import csv
 import re
+import os
+
 
 DATA_DIR = "data\\"
 SLEUTH_DB = "data\\analys.db"
 CSV_PATH = "data\\db.csv"
 
-INTERESTING_TYPES =".exe|.msi|.docx|.png|.mp4|.jpeg"
+INTERESTING_TYPES =".exe|.msi|.docx|.png|.mp4|.jpeg" #files to put in the csv
+
+VIRUSTOTAL_TYPES =".exe|.msi"
+VIRUSTOTAL_APIKEY = "4e4140ca9678a7e353a618f2f9aa7dd3a1ff5d70c6eaf812391bb5649b80039e"
 
 def connect():
     con = sqlite3.connect(SLEUTH_DB)
@@ -24,9 +29,13 @@ def check_input_file(target):
 
 def run_sleuth_on_file(target):
     print("Check "+ target)
-    subprocess.run(["DEL",SLEUTH_DB], shell = True)
-    subprocess.run(["DEL",CSV_PATH], shell=True)
-    res = subprocess.run(["C:/files/sleuthkit-4.12.1-win32/bin/tsk_loaddb.exe","-h","-d",SLEUTH_DB, target], shell=True)
+    # subprocess.run(["rm",SLEUTH_DB], text=True)
+    if os.path.exists(SLEUTH_DB):
+        os.remove(SLEUTH_DB)
+    # subprocess.run(["rm",CSV_PATH], text=True)
+    if os.path.exists(CSV_PATH):
+        os.remove(CSV_PATH)
+    res = subprocess.run(["C:\\files\\sleuthkit-4.12.1-win32\\bin\\tsk_loaddb.exe","-h","-d",SLEUTH_DB, target], shell=True)
     return res
 
 def db_to_csv():
@@ -34,14 +43,14 @@ def db_to_csv():
     res = cur.execute("SELECT * FROM tsk_files")
     db_files = res.fetchall()
     print("\ntsk_files\n")
-    fields = ["meta_addr", "name", "dir_type", "size", "crtime", "parent_path","md5"]
+    fields = ["name","size", "crtime", "parent_path", "mal", "mal_type"]
     files = []
     for file in db_files:
         name = file[5]
         if re.search(INTERESTING_TYPES,file[5]):
-            files.append({"meta_addr":file[6], "name":file[5], "dir_type": file[12], "size":file[14], "crtime":file[16], "parent_path":file[25],"md5":file[23]})
+            files.append({"name":file[5], "size":file[14], "crtime":file[16], "parent_path":file[25]})
         
-    with open(CSV_PATH, 'w') as csvfile:
+    with open(CSV_PATH, 'w', newline='') as csvfile:
         writer = csv.DictWriter(csvfile, fieldnames=fields)
         writer.writeheader()
         writer.writerows(files)
@@ -54,3 +63,5 @@ def run(disk_image_path):
     db_to_csv()
 
     return CSV_PATH
+
+run("data\\2020JimmyWilson.dd")

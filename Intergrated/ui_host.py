@@ -90,7 +90,7 @@ def get_messages():
     return jsonify(messages)
 
 def main():
-    app.run(threaded=True, port=4976)
+    app.run(debug=True, threaded=True, port=4976)
 
 if __name__ == '__main__':
     main()

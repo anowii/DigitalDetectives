@@ -8,7 +8,7 @@
 
 /* Make the body fill the whole screen and use a simple font */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Quicksand', sans-serif; /*Match font with login page*/
     height: 100vh; /* Full viewport height */
     display: flex;
     background: #000; /*Background color as in login page*/
@@ -30,7 +30,7 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-between; /* Spaces the items evenly, with logout at the bottom */
-    border-right: 2px solid #000; /* Make the border line between the sidebar and main content thicker and visible */
+    border-right: 2px solid #2927279d; /* Make the border line between the sidebar and main content thicker and visible */
     height: 100%;
 }
 
@@ -48,8 +48,8 @@ body {
 .chat-window {
     flex-grow: 1;
     padding: 20px;
-    background-color: #646368;
-    border-bottom: 1px solid #ddd;
+    background-color: #5e5d61cb;
+    border-bottom: 2px solid  #5e5d61cb;
     overflow-y: auto; /* Adds scroll for long chat history */
     /*text-align: center; /* Center the text horizontally*/
 }
@@ -67,20 +67,19 @@ body {
 
 .chat-window ul li {
     color: #ffffff; /* White text color for better contrast*/
-    margin-bottom: 10px; /* Add some spacing between list items*/
+    margin-bottom: 7px; /* Add some spacing between list items*/
     font-size: 1em; /*Adjust the font size if needed*/
+    padding-left: 20px; /* Indentation */
+    list-style-position: inside; /* Optional: make bullets inside the padding */
 }
 
-.chat-window ul li strong {
-    color: #ffffff;
-}
+
 
 /* Bottom bar stays at the bottom of the main content */
 .bottom-bar {
     padding: 10px;
     display: flex;
     gap: 10px;
-    border-top: 1px solid #ddd;
     background-color: #333;
 }
 
@@ -153,7 +152,7 @@ body {
 }
 /* Progressbar style*/
 #progressbar{
-    background-color: #ffffff; /* Green color for the submit button */
+    background-color: #ffffff; 
     color: #000;
     cursor: default;
     padding: 10px 15px;
@@ -179,11 +178,7 @@ body {
 
 /***** NEW  STUFF ****/
 
-ul li {
-    font-size: 14px; /* Adjust the font size */
-    padding-left: 20px; /* Indentation */
-    list-style-position: inside; /* Optional: make bullets inside the padding */
-}
+
 
 /* Message styles */
 .message {

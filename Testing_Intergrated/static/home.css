@@ -28,7 +28,7 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-between; /* Spaces the items evenly, with logout at the bottom */
-    border-right: 1px solid #3836367a; /* Make the border line between the sidebar and main content thicker and visible */
+    border-right: 1px solid #ff0606; /* Make the border line between the sidebar and main content thicker and visible */
     height: 100%;
 }
 

@@ -139,7 +139,7 @@ def create_a_csv(csv_file_path="test.csv", length=10):
         temp_data = []
         temp = random.choice(name_arg)
         temp_data.append(temp)
-        temp_data.append(crtime_arg+randrange(-2000, 1000))
+        temp_data.append(crtime_arg+randrange(-2000, 2000))
         temp_data.append(random.choice(size_arg))
         temp_data.append(random.choice(path_arg))
 

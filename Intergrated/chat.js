@@ -1,0 +1,67 @@
+$(document).ready(function () {
+    var pollingActive = false;  // Polling is inactive initially
+    var pollInterval = null;    // Poll interval holder
+
+    // Function to start polling after the first internal message
+    function startPolling() {
+        if (!pollingActive) {
+            pollingActive = true;  // Activate polling
+            pollInterval = setInterval(function () {
+                $.ajax({
+                    type: 'GET',
+                    url: '/get_messages',
+                    success: function (data) {
+                        // Clear the chat window
+                        $('#chat-window').empty();
+
+                        // Loop through the messages and format them for display
+                        data.forEach(function (message) {
+                            var userMessageElement = $('<div class="message user-message"></div>').text("User: " + message.user);
+                            var responseMessageElement = $('<div class="message ai-message"></div>').text("AI: " + message.response);
+
+                            $('#chat-window').append(userMessageElement);
+                            $('#chat-window').append(responseMessageElement);
+                        });
+                    },
+                    error: function (error) {
+                        console.error('Error fetching messages:', error);
+                    }
+                });
+            }, 1000);  // Poll every 1 second
+        }
+    }
+
+    // Send the message to the chat window and backend
+    $('#send-btn').click(function () {
+        var message = $('#text-input').val();
+
+        if (message.trim() !== "") {
+            // Clear the input field
+            $('#text-input').val('');
+
+            // Send the message to the backend
+            $.ajax({
+                type: 'POST',
+                url: '/forward_message',
+                data: JSON.stringify({ message: message }),
+                contentType: 'application/json',
+                success: function (response) {
+                    console.log('Message forwarded to backend:', response);
+
+                    // Once the AI responds, start polling if not active
+                    startPolling();
+                },
+                error: function (error) {
+                    console.error('Error forwarding message:', error);
+                }
+            });
+        }
+    });
+
+    // Enable sending the message by pressing 'Enter'
+    $('#text-input').keypress(function (e) {
+        if (e.which === 13) {  // Enter key
+            $('#send-btn').click();
+        }
+    });
+});

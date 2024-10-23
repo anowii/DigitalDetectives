@@ -38,7 +38,7 @@ def submit_file():
     if file.filename == '':
         return jsonify({"status": "error", "message": "No selected file"})
 
-    # Save file to tempfiles directory
+    # Save file to data directory
     file_path = os.path.join(app.config['UPLOAD_FOLDER'], file.filename)
     file.save(file_path)
 
@@ -51,7 +51,7 @@ def submit_file():
     if file.filename.endswith('.csv'):
         global UPLOADED_CSV
         UPLOADED_CSV = file_path
-        #send_csv(file_path)  # Call CSV handling function with file path
+
     elif is_valid_disk_image(file_path) == True:
         send_iso(file_path)  # Call ISO handling function with file path
     else:

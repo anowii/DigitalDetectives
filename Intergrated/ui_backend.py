@@ -7,8 +7,8 @@ from diskanalys import run
 
 
 model = OllamaLLM(model="llama3.2")
-chain = json_template | model
-#chain = simple_template | model
+#chain = json_template | model
+chain = simple_template | model
 
 def save_conversation_history(history, filename="conversation_history.json"):
     with open(filename, "w") as file:
@@ -21,7 +21,7 @@ def load_json_data(filename):
             df = pd.read_csv(filename)
 
             # Ensure the column headers match expected structure
-            df.columns = ['meta_addr', 'name', 'size', 'crtime', 'parent_path']
+            df.columns = ['name', 'size', 'crtime', 'path', 'virus', 'virus_type']
 
             # Convert to JSON string
             return df.to_dict(orient='records') 
@@ -49,7 +49,7 @@ def forward_message_llm(message, filepath):
     
     return result  # Return the result to be used in Flask
 
-def send_iso(fileName): #vet ej om denna behövs eller kan köras direkt via TSK
+def send_iso(fileName): #Runs TSK on disk image file (".dd")
     run(fileName)
     print(fileName)
     return 0
@@ -60,8 +60,8 @@ def is_valid_disk_image(disk_image):
     Checks if a given disk image path is valid by verifying its file extension.
     Returns True if the file extension is valid, False otherwise.
     """
-    valid_extensions =[".img",  ".iso", ".vdi", ".vmdk", ".vhd", ".dmg",
-                       ".qcow2", ".dd"] # Add more file types
+    #valid_extensions =[".img",  ".iso", ".vdi", ".vmdk", ".vhd", ".dmg",".qcow2", ".dd"] # Add more file types
+    valid_extensions = [".dd"]
     _,ext = os.path.splitext(disk_image)
     if ext.lower() not in valid_extensions:
         return False

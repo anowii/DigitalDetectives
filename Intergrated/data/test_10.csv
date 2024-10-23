@@ -1,11 +1,11 @@
-name,size,crtime,path,virus,virus_type
-Picnic_in_the_Park_2023-07-20.jpeg,1432644707,128,/Temp,0,
-Watermelon_Slices_on_Summer_Picnic.jpeg,1432642637,128,/Documents/School,0,
-Grapes_on_Vine.jpeg,1432643105,1273,/,0,
-Baby_Shower_Susan_2024-03-25.jpeg,1432644505,8192,/Downloads,0,
-banana.png,1432644234,1273,/Music,0,
-Fruit_Smoothie_Bowl.jpeg,1432643885,1268,/Documents,0,
-api_server.js,1432643051,1024,/Music,0,
-Skyrim.exe,1432645276,4096,/,1,Ransomware
-package_frontend.json,1432644900,2048,/Documents,0,
-Sasser.exe,1432644823,128,/Documents/School,1,Adware
+name,size,crtime,parent_path,virus,virus_type
+The Witcher 3: Wild Hunt.exe,1273,1432646341,/,0,
+Ramnit.exe,8192,1432643792,/Music,1,Trojan
+Cooking_Class_2024-03-10.jpeg,1268,1432646317,/,0,
+Bouncy.exe,1024,1432645589,/,0,
+Ransomware.exe,1024,1432645498,/Temp,1,Adware
+passionfruit.png,1347,1432642882,/Documents/School,0,
+Shylock.exe,64,1432642817,/Documents,0,
+Brackets.exe,8192,1432644899,/Documents/School,0,
+Counter-Strike: Global Offensive.exe,64,1432644965,/,0,
+Family_Reunion_2023-08-13.jpeg,512,1432645081,/Music,0,

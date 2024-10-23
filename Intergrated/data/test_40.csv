@@ -1,41 +1,41 @@
-name,size,crtime,path,virus,virus_type
-Mango_Orchard_Visit.jpeg,1432643352,4096,/Music,0,
-Baby_Shower_Susan_2024-03-25.jpeg,1432644953,1024,/Documents/School,0,
-script_utilities.js,1432642470,4096,/Documents,0,
-Mango_Orchard_Visit.jpeg,1432643212,1273,/Temp,0,
-banana.png,1432643226,1024,/,0,
-main_controller.java,1432643931,1347,/Documents/School,0,
-Avocado_Garden_Photos.jpeg,1432644350,1273,/,0,
-Ransomware.exe,1432642697,1268,/Downloads,0,
-Flower_Show_2024-06-25.jpeg,1432644429,1024,/,0,
-Skiing_Trip_Colorado_2024-02-10.jpeg,1432642469,1268,/Downloads,0,
-Bait and Switch.exe,1432643463,64,/,0,
-Locky.exe,1432643900,1024,/Temp,1,Spyware
-data_analysis.py,1432644937,4096,/Music,0,
-First_Day_of_School_Jake_2024-09-01.jpeg,1432644627,2048,/Documents/School,0,
-NetBeans.exe,1432643314,4096,/Documents/School,1,Spyware
-First_Day_of_School_Jake_2024-09-01.jpeg,1432644991,8192,/Music,0,
-Mango_Orchard_Visit.jpeg,1432643306,512,/Downloads,0,
-Cherry_Blossoms_and_Fruit.jpeg,1432644416,128,/Temp,0,
-Persona 5.exe,1432645222,64,/Music,1,Worm
-Call of Duty: Modern Warfare.exe,1432643208,128,/Downloads,1,Trojan
-app_styles.scss,1432644590,512,/,0,
-banana.png,1432643948,1273,/Downloads,0,
-Kiwi_Cut_in_Half.jpeg,1432644762,1273,/Documents,0,
-Easter_Egg_Hunt_2024-04-20.jpeg,1432644278,4096,/Documents,0,
-Ripe_Bananas_on_Tree.jpeg,1432642961,1273,/Documents/School,0,
-Blaster.exe,1432644467,128,/,1,Spyware
-SpyEye.exe,1432644241,128,/Documents,1,Spyware
-Visual Studio Code.exe,1432644085,512,/Documents/School,0,
-banana.png,1432643450,1347,/Downloads,0,
-script_utilities.js,1432643657,512,/Documents/School,0,
-SpyEye.exe,1432642659,2048,/Documents,1,Worm
-requirements_project.txt,1432644026,1347,/Documents,0,
-WannaCry.exe,1432644885,1024,/Music,0,
-Shylock.exe,1432643873,1347,/Documents,0,
-Kronos.exe,1432645133,512,/Documents/School,1,Worm
-Halloween_Costume_Party_2023-10-31.jpeg,1432643321,1268,/,0,
-Cyberpunk 2077.exe,1432644277,1268,/,0,
-Emotet.exe,1432643158,1024,/Temp,0,
-Vacation_Paris_2024-06-15.jpeg,1432644725,1273,/Downloads,0,
-Skyrim.exe,1432644657,1268,/Temp,1,Keylogger
+name,size,crtime,parent_path,virus,virus_type
+Emotet.exe,2048,1432644816,/,0,
+Brackets.exe,8192,1432643179,/,0,
+Persona 5.exe,512,1432644371,/Temp,1,Keylogger
+Hiking_Trip_Mountains_2024-09-10.jpeg,1273,1432645154,/,0,
+Valentine's_Day_Dinner_2024-02-14.jpeg,2048,1432645167,/,0,
+Juicy_Oranges_on_Stand.jpeg,8192,1432645842,/Documents/School,0,
+Baby_Shower_Susan_2024-03-25.jpeg,128,1432645071,/Temp,0,
+requirements_project.txt,1268,1432642977,/Temp,0,
+style_main.css,128,1432644228,/,0,
+NetBeans.exe,8192,1432643486,/Temp,0,
+Blaster.exe,2048,1432645039,/Documents,0,
+Skyrim.exe,128,1432643630,/Documents/School,0,
+Call of Duty: Modern Warfare.exe,1273,1432642845,/Temp,0,
+Locky.exe,64,1432643880,/Documents/School,0,
+Visual Studio Code.exe,1268,1432645630,/,1,Ransomware
+Final Fantasy VII Remake.exe,4096,1432646279,/,0,
+Wedding_Ceremony_Jane_&_Mark_2024-05-22.jpeg,1347,1432642968,/Music,0,
+Picnic_in_the_Park_2023-07-20.jpeg,4096,1432642580,/Documents,0,
+Dridex.exe,2048,1432643619,/Temp,1,Adware
+Vim.exe,1024,1432643670,/Music,0,
+Kronos.exe,128,1432645022,/Documents/School,1,Trojan
+Graduation_Party_Mike_2024-05-30.jpeg,64,1432645889,/Documents/School,0,
+Camping_Weekend_Lake_2024-06-18.jpeg,2048,1432642464,/Documents,0,
+Cooking_Class_2024-03-10.jpeg,512,1432642764,/Documents,0,
+Atom.exe,1273,1432643961,/,0,
+script_utilities.js,1024,1432643272,/Music,0,
+Counter-Strike: Global Offensive.exe,2048,1432645693,/Documents,0,
+MyDoom.exe,1268,1432644940,/Downloads,0,
+Sasser.exe,2048,1432644370,/Music,1,Adware
+ILOVEYOU.exe,4096,1432644759,/Temp,0,
+WannaCry.exe,1273,1432644657,/Documents/School,0,
+Skiing_Trip_Colorado_2024-02-10.jpeg,1268,1432644291,/Documents,0,
+Conficker.exe,4096,1432644715,/Documents,1,Trojan
+TextMate.exe,1347,1432642655,/,1,Ransomware
+Klez.exe,1273,1432644513,/Downloads,1,Keylogger
+Qakbot.exe,1347,1432644487,/,1,Adware
+Summer_Festival_2024-08-01.jpeg,128,1432646344,/Documents/School,0,
+Family_Reunion_2023-08-13.jpeg,1268,1432645873,/,0,
+Melissa.exe,2048,1432642365,/,1,Adware
+api_server.js,512,1432643487,/,0,

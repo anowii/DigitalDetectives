@@ -1,16 +1,16 @@
-name,size,crtime,path,virus,virus_type
-Persona 5.exe,1432643888,512,/Downloads,0,
-app_config.yaml,1432644584,1273,/Documents,0,
-First_Day_of_School_Jake_2024-09-01.jpeg,1432643004,1347,/,0,
-Strawberry_Picking_Adventure.jpeg,1432643627,1347,/Downloads,0,
-Bouncy.exe,1432644428,2048,/Music,0,
-Kate.exe,1432642957,64,/Documents/School,0,
-Call of Duty: Modern Warfare.exe,1432643059,1273,/,0,
-SpyEye.exe,1432644212,128,/Temp,1,Keylogger
-Weekend_Getaway_to_NYC_2024-04-28.jpeg,1432644065,1347,/Downloads,0,
-MyDoom.exe,1432644567,8192,/Music,0,
-Graduation_Ceremony_Emma_2024-05-01.jpeg,1432643911,1273,/,0,
-Valentine's_Day_Dinner_2024-02-14.jpeg,1432645036,1273,/,0,
-Kate.exe,1432643755,8192,/Music,1,Adware
-NetBeans.exe,1432643842,512,/Downloads,0,
-Camping_Weekend_Lake_2024-06-18.jpeg,1432644232,4096,/Music,0,
+name,size,crtime,parent_path,virus,virus_type
+Skiing_Trip_Colorado_2024-02-10.jpeg,512,1432645580,/Documents,0,
+banana.png,1347,1432644693,/,0,
+user_data.json,128,1432643603,/,0,
+Kiwi_Cut_in_Half.jpeg,128,1432642598,/Documents,0,
+Hiking_Trip_Mountains_2024-09-10.jpeg,8192,1432645805,/Downloads,0,
+Ramnit.exe,4096,1432645371,/Downloads,0,
+api_server.js,8192,1432642487,/,0,
+Dockerfile_service,1273,1432644854,/,0,
+Blueberry_Bush_Harvest.jpeg,1024,1432643010,/Temp,0,
+Family_Photo_Thanksgiving_2023-11-24.jpeg,1273,1432643119,/Temp,0,
+WannaCry.exe,1268,1432645114,/,1,Spyware
+Bluefish.exe,2048,1432642679,/,1,Keylogger
+Nimda.exe,1024,1432644190,/Documents,1,Adware
+The Witcher 3: Wild Hunt.exe,1347,1432642590,/Temp,1,Worm
+Pineapple_in_Garden.jpeg,512,1432642540,/Documents,0,

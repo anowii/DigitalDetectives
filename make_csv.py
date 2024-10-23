@@ -134,13 +134,24 @@ def create_a_csv(csv_file_path="test.csv", length=10):
 
     data = [[]]
 
-    data[0] = ["name", "size", "crtime", "path", "virus", "virus_type"]
+    data[0] = ["name", "size", "crtime", "parent_path", "virus", "virus_type"]
     for i in range(length):
         temp_data = []
+        
         temp = random.choice(name_arg)
+        while(True):
+            exists = False
+            for i in data:
+                if i[0] == temp:
+                    exists = True
+            if exists == False:
+                break
+            else:
+                temp = random.choice(name_arg)
+
         temp_data.append(temp)
-        temp_data.append(crtime_arg+randrange(-2000, 2000))
         temp_data.append(random.choice(size_arg))
+        temp_data.append(crtime_arg+randrange(-2000, 2000))
         temp_data.append(random.choice(path_arg))
 
         #if file is .exe random if virus

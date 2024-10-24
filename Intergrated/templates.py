@@ -1,6 +1,6 @@
 from langchain_core.prompts import ChatPromptTemplate
 
-#Defines template
+#Defines json_template
 template = """
 # Task: Analyze JSON Data
 
@@ -56,7 +56,36 @@ Here is the JSON data: `{json_data}`
 
 **Answer**: """
 
+#Defines json2_template: made some changes from json_template
+template_2 = """
+# Task: Analyze JSON Data
 
+## Overview
+You are a knowledgeable forensic assistant capable of answering questions about the provided JSON data from a disk image. 
+
+### JSON File Structure:
+The JSON object consists of the following fields:
+
+| Field Name     | Data Type    | Description                                                         |
+|--------------- |--------------|---------------------------------------------------------------------|
+| **name**       | String       | The name of the file, including its extension and any suffixes.     |
+| **size**       | Integer      | The size of the file in bytes.                                      |
+| **crtime**     | Integer      | The creation time of the file (Unix timestamp).                     |
+| **parent_path**| String       | The path to the parent directory where the file is located.         |
+| **virus**      | Integer      | An indicator for virus (e.g., 1 for virus, 0 for no virus).         |
+| **virus_type** | String       | The type of the virus                                               | 
+
+### Instructions:
+You can ask me any question about the JSON data. 
+
+Here is the JSON data: `{json_data}`
+
+**Question**: {question}
+
+**Answer**: """
+
+
+#Defines simple_template: no rows and colums expectations
 simple_template = """
 You are a knowledgeable forensic assistant capable of answering questions about the provided JSON data from a disk image. 
 
@@ -65,5 +94,7 @@ Here is the JSON data: `{json_data}`
 **Question**: {question}
 
 **Answer**: """
+
 json_template = ChatPromptTemplate.from_template(template)
-simple_template = ChatPromptTemplate.from_template(template)
+json2_template = ChatPromptTemplate.from_template(template_2)
+simple_template = ChatPromptTemplate.from_template(simple_template)

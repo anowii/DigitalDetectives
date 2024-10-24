@@ -2,13 +2,12 @@ import json
 import os
 import pandas as pd
 from langchain_ollama import OllamaLLM
-from prompt_templates import json_template, simple_template
+from prompt_templates import json2_template, simple_template
 from diskanalys import run
 
 
 model = OllamaLLM(model="llama3.2")
-#chain = json_template | model
-chain = simple_template | model
+chain = json2_template | model
 
 def save_conversation_history(history, filename="conversation_history.json"):
     with open(filename, "w") as file:

@@ -22,27 +22,28 @@ body {
     border: 1px solid #ccc; /* Add border to visualize the entire container */
 }
 
+/* Main content takes 75% of the width and full height */
+.main-content {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: #333; /* A lighter gray for contrast */
+    height: 100%; /* Ensure the main content takes full height */
+    position: relative; /* Allows absolute positioning of elements inside */
+}
+
+
 /* Sidebar takes up 25% of the width and full height */
 .sidebar {
-    width: 25%;
+    width: 20%;
     background-color: #222;
     padding: 20px;
     display: flex;
     flex-direction: column;
     justify-content: space-between; /* Spaces the items evenly, with logout at the bottom */
-    border-right: 2px solid #2927279d; /* Make the border line between the sidebar and main content thicker and visible */
     height: 100%;
-}
-
-/* Main content takes 75% of the width and full height */
-.main-content {
-    width: 75%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    background-color: #5e5d61cb;
-    height: 100%; /* Ensure the main content takes full height */
-    position: relative; /* Allows absolute positioning of elements inside */
+    box-shadow: 4px 0 8px rgba(0, 0, 0, 0.5); /* Add shadow to the right side of the sidebar */
 }
 
 /* Chat window takes up most of the main content area */
@@ -134,7 +135,7 @@ body {
     background-color: #ffffff;
     cursor: pointer;
     color: rgb(21, 20, 20);
-    padding: 7px 22px;
+    padding: 10px 15px;
     
 }
 
@@ -143,7 +144,7 @@ body {
     background-color: #ffffff; 
     color: #000;
     cursor: pointer;
-    padding: 7px 15px;
+    padding: 10px 15px;
 }
 
 /* Logout button has a different color */
@@ -156,7 +157,7 @@ body {
 /* Style for the message box */
 .message-box {
     background-color: #333; /* Light gray background */
-    border: 1px solid #ccc; /* Border around the message box */
+    border: 0.5px solid #ccc; /* Border around the message box */
     padding: 10px;
     margin: 10px ; /* Adds space around the box */
 }
@@ -166,8 +167,6 @@ body {
     margin: 0; /* No margin for the paragraph inside the message box */
     color: #fff; /* Dark gray text color */
 }
-
-
 
 /***** NEW  STUFF ****/
 
@@ -179,13 +178,16 @@ body {
 }
 
 .user-message {
-    background-color: #d1e7dd; /* Light green for user messages */
+    background-color: #00000080; /* Light green for user messages */
     text-align: left; /* Align text to the left */
+    color: #dad7d7;
 }
 
 .ai-message {
-    background-color: #cfe2ff; /* Light blue for AI messages */
+    background-color: #0e1b2eb5; /* Light blue for AI messages */
     text-align: left; /* Align text to the left */
+    color: #dad7d7;
+
 }
 
 /* Progressbar style*/
@@ -243,3 +245,4 @@ body {
         opacity: 0;
     }
 }
+

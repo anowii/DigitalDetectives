@@ -1,26 +1,29 @@
-# Digital Detectives 
+**Issues**
+- Prompt template is way to large, i've added smaller template (see templates.py) that also allows for testing with json format
 
+**Changes made 2024-10-16**
+  - Change a little bit in forward_message_llm
+  - Added load_json_data(filename), only static
 
-**Everytime I open a new terminal I have to add the following:**
-```
-Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy RemoteSigned
-```
-```
-.\.venv\Scripts\activate       
-```
-## Virtual Enviroment 
+```plaintext
+│   .flaskenv                       //Only if you wanna be use: flask run (not needed)
+│   conversation_history.json
+│   diskanalys.py    
+│   templates.py                    //Prompt templates are defined here
+│   ui_backend.py
+│   ui_host.py
+│
+├───static
+│       chat.js
+│       file_submit.js
+│       home.css
+│       login.css
+│
+├───tempfiles
+│       MOCK_DATA2.csv
+│
+├───templates
+│       home.html
+│       login.html
 
-In a virtual environment, you can generate a `requirements.txt` file that lists all the dependencies of your project (`pip freeze > requirements.txt`). Anyone else can use that file to install the exact same versions of the packages (`pip install -r requirements.txt`), ensuring reproducibility.
-
-### Recreate the Virtual Environment on Another Machine (Windows):
-**1. Create a Virtual Environment:**
-  ```
-  python -m venv venv
-  ```
-  ```
-  venv\Scripts\activate
-  ```
-**2. Install the Dependencies from `requirements.txt`:**
-  ```
-  pip install -r requirements.txt
-  ```
+```

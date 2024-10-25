@@ -1,0 +1,51 @@
+name,size,crtime,parent_path,mal,mal_type
+CryptoLocker.exe,1268,1432645749,/Music,Suspicious,Worm
+Coconut_Open_on_Beach.jpeg,1347,1432646244,/Music,Undetected,None
+Mango_Orchard_Visit.jpeg,64,1432643947,/Documents,Undetected,None
+Divinity: Original Sin 2.exe,8192,1432646254,/Temp,Detected,Ransomware
+Grapes_on_Vine.jpeg,64,1432645207,/Documents,Undetected,None
+Bad Rabbit.exe,1273,1432644166,/Temp,Undetected,None
+Weekend_Getaway_to_NYC_2024-04-28.jpeg,512,1432644745,/,Undetected,None
+Family_Reunion_2023-08-13.jpeg,512,1432645835,/Documents/School,Undetected,None
+John_Doe_Birthday_Party_2024-10-09.jpeg,1268,1432646321,/,Undetected,None
+Locky.exe,8192,1432646139,/Documents,Undetected,None
+Christmas_Eve_Family_2023-12-24.jpeg,512,1432646264,/Temp,Undetected,None
+Coda.exe,1273,1432645668,/Temp,Undetected,None
+Dog_Park_Day_2023-09-05.jpeg,1347,1432644641,/Documents/School,Undetected,None
+app_styles.scss,64,1432642369,/Temp,Undetected,None
+Pet_Birthday_Party_Fido_2024-09-15.jpeg,4096,1432645115,/,Undetected,None
+schema_definition.sql,1347,1432643521,/Documents,Undetected,None
+Strawberry_Picking_Adventure.jpeg,2048,1432644500,/Temp,Undetected,None
+Fruit_Smoothie_Bowl.jpeg,1347,1432645950,/Temp,Undetected,None
+MyDoom.exe,1024,1432645102,/Documents/School,Undetected,None
+Brackets.exe,1024,1432643993,/Documents,Detected,Worm
+TrickBot.exe,1024,1432646097,/Temp,Undetected,None
+TextMate.exe,1347,1432644295,/Temp,Undetected,None
+Thanksgiving_Dinner_2023-11-23.jpeg,8192,1432645540,/Music,Undetected,None
+Dridex.exe,1273,1432645350,/Downloads,Undetected,None
+Ramnit.exe,1268,1432643117,/,Detected,Worm
+Persona 5.exe,64,1432642994,/,Undetected,None
+Dragon Age: Inquisition.exe,1268,1432646296,/Temp,Suspicious,Ransomware
+Nimda.exe,1273,1432643293,/,Detected,Trojan
+Final Fantasy VII Remake.exe,4096,1432646243,/Music,Undetected,None
+Shylock.exe,1347,1432644194,/,Undetected,None
+Valentine's_Day_Dinner_2024-02-14.jpeg,2048,1432645280,/Downloads,Undetected,None
+Berries_Collection_in_Garden.jpeg,1347,1432642381,/,Undetected,None
+Cooking_Class_2024-03-10.jpeg,2048,1432642700,/Music,Undetected,None
+totally_legit.exe,1273,1432642531,/,Undetected,None
+Skyrim.exe,1268,1432644667,/Temp,Suspicious,Ransomware
+Ransomware.exe,1273,1432642993,/,Detected,Adware
+Atom.exe,1024,1432645388,/Documents/School,Undetected,None
+Easter_Egg_Hunt_2024-04-20.jpeg,1273,1432645657,/Documents,Undetected,None
+Sekiro: Shadows Die Twice.exe,128,1432643358,/,Undetected,None
+Pineapple_in_Garden.jpeg,1273,1432645049,/Documents/School,Undetected,None
+Melissa.exe,1273,1432642703,/Documents,Suspicious,Worm
+Blueberry_Bush_Harvest.jpeg,512,1432643305,/Music,Undetected,None
+style_main.css,1273,1432644089,/Documents/School,Undetected,None
+Picnic_in_the_Park_2023-07-20.jpeg,1347,1432645708,/Temp,Undetected,None
+Counter-Strike: Global Offensive.exe,128,1432644956,/Temp,Suspicious,Keylogger
+Graduation_Party_Mike_2024-05-30.jpeg,4096,1432644159,/Music,Undetected,None
+Sasser.exe,1268,1432645531,/Documents,Undetected,None
+Dockerfile_service,4096,1432643295,/,Undetected,None
+Blaster.exe,512,1432642781,/Temp,Undetected,None
+Graduation_Ceremony_Emma_2024-05-01.jpeg,1024,1432642622,/Downloads,Undetected,None

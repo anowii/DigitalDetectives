@@ -1,0 +1,31 @@
+name,size,crtime,parent_path,mal,mal_type
+style_main.css,4096,1432644972,/Temp,Undetected,None
+Emotet.exe,1347,1432644306,/,Detected,Adware
+Cherry_Blossoms_and_Fruit.jpeg,64,1432646100,/Documents,Undetected,None
+passionfruit.png,128,1432644009,/Documents/School,Undetected,None
+CryptoLocker.exe,64,1432645519,/Documents/School,Undetected,None
+Atom.exe,1347,1432645631,/Temp,Undetected,None
+WannaCry.exe,1024,1432645030,/Music,Undetected,None
+Counter-Strike: Global Offensive.exe,1347,1432643458,/,Undetected,None
+banana.png,64,1432643453,/,Undetected,None
+Fresh_Apples_on_Kitchen_Counter.jpeg,512,1432645084,/Music,Undetected,None
+Nimda.exe,4096,1432642451,/,Undetected,None
+Bluefish.exe,1347,1432642922,/Music,Detected,Keylogger
+The Witcher 3: Wild Hunt.exe,2048,1432645925,/Temp,Undetected,None
+Divinity: Original Sin 2.exe,4096,1432643196,/Temp,Undetected,None
+Concert_Night_Rock_Band_2024-04-12.jpeg,8192,1432643891,/Downloads,Undetected,None
+data_analysis.py,2048,1432643337,/,Undetected,None
+John_Doe_Birthday_Party_2024-10-09.jpeg,1273,1432645692,/Documents,Undetected,None
+Skyrim.exe,1268,1432643243,/Music,Undetected,None
+Sasser.exe,1268,1432642869,/,Undetected,None
+Picnic_in_the_Park_2023-07-20.jpeg,512,1432642970,/,Undetected,None
+Eclipse.exe,1024,1432644663,/Documents,Detected,Adware
+MyDoom.exe,1268,1432646145,/Music,Undetected,None
+Avocado_Garden_Photos.jpeg,8192,1432644476,/Documents/School,Undetected,None
+Berries_Collection_in_Garden.jpeg,1024,1432644439,/,Undetected,None
+Dridex.exe,512,1432644913,/Documents,Undetected,None
+Ransomware.exe,4096,1432643744,/Downloads,Undetected,None
+Coda.exe,64,1432645707,/Documents,Undetected,None
+NetBeans.exe,8192,1432642648,/Downloads,Detected,Keylogger
+Sunset_Beach_California_2024-07-18.jpeg,4096,1432645868,/Documents/School,Undetected,None
+Conficker.exe,1024,1432645789,/Temp,Undetected,None

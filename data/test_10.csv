@@ -1,0 +1,11 @@
+name,size,crtime,parent_path,mal,mal_type
+Valentine's_Day_Dinner_2024-02-14.jpeg,64,1432643789,/Documents,Undetected,None
+Persona 5.exe,128,1432642452,/Documents,Undetected,None
+Colorful_Fruit_Platter_for_Party.jpeg,512,1432645060,/Music,Undetected,None
+Brackets.exe,128,1432642630,/Downloads,Suspicious,Worm
+Gamarue.exe,64,1432644554,/Documents/School,Undetected,None
+Concert_Night_Rock_Band_2024-04-12.jpeg,2048,1432644682,/,Undetected,None
+Emotet.exe,1268,1432646290,/Temp,Detected,Trojan
+Bad Rabbit.exe,8192,1432643689,/,Detected,Worm
+NetBeans.exe,4096,1432645143,/Downloads,Suspicious,Spyware
+Vim.exe,1347,1432645111,/Downloads,Undetected,None

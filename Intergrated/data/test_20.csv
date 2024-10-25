@@ -1,21 +1,21 @@
-name,size,crtime,parent_path,virus,virus_type
-Final Fantasy VII Remake.exe,1268,1432643497,/Documents,1,Trojan
-Graduation_Ceremony_Emma_2024-05-01.jpeg,1273,1432644676,/Documents/School,0,
-Skyrim.exe,1024,1432645311,/Documents,1,Worm
-Coconut_Open_on_Beach.jpeg,512,1432645941,/Music,0,
-Sasser.exe,1024,1432644154,/Music,0,
-Grapes_on_Vine.jpeg,8192,1432645419,/Documents/School,0,
-Sekiro: Shadows Die Twice.exe,8192,1432643190,/,1,Ransomware
-Baby_Shower_Susan_2024-03-25.jpeg,64,1432643268,/Temp,0,
-Dridex.exe,128,1432646259,/,0,
-user_data.json,128,1432645762,/,0,
-Birthday_Surprise_For_Alice_2024-10-01.jpeg,512,1432645404,/Temp,0,
-Wedding_Ceremony_Jane_&_Mark_2024-05-22.jpeg,64,1432645046,/Music,0,
-Gamarue.exe,64,1432645410,/Documents,0,
-Blaster.exe,128,1432642622,/,0,
-Christmas_Eve_Family_2023-12-24.jpeg,2048,1432644492,/Documents,0,
-totally_legit.exe,512,1432644185,/Downloads,0,
-homepage.html,64,1432642954,/Documents/School,0,
-Bowl_of_Fresh_Fruit_Salad.jpeg,128,1432644898,/Downloads,0,
-Ripe_Bananas_on_Tree.jpeg,1024,1432644525,/Temp,0,
-Visit_to_Grandparents_2023-10-10.jpeg,512,1432646166,/Documents/School,0,
+name,size,crtime,parent_path,mal,mal_type
+Divinity: Original Sin 2.exe,64,1432645478,/Downloads,Suspicious,Spyware
+Beach_Vacation_Florida_2024-03-15.jpeg,1268,1432643429,/Temp,Undetected,
+Gamarue.exe,128,1432644876,/Documents,Undetected,
+Coconut_Open_on_Beach.jpeg,4096,1432643258,/Music,Undetected,
+Blueberry_Bush_Harvest.jpeg,128,1432643070,/,Undetected,
+Bad Rabbit.exe,1347,1432643009,/Documents/School,Undetected,
+api_server.js,128,1432646098,/Music,Undetected,
+Road_Trip_to_Grand_Canyon_2024-07-05.jpeg,1273,1432644290,/Downloads,Undetected,
+Easter_Egg_Hunt_2024-04-20.jpeg,2048,1432642613,/Downloads,Undetected,
+Bluefish.exe,1347,1432644543,/Downloads,Undetected,
+Fruit_Smoothie_Bowl.jpeg,1268,1432642819,/,Undetected,
+John_Doe_Birthday_Party_2024-10-09.jpeg,64,1432644019,/Documents/School,Undetected,
+Kate.exe,128,1432645811,/Downloads,Undetected,
+data_analysis.py,2048,1432643537,/Music,Undetected,
+Colorful_Fruit_Platter_for_Party.jpeg,1268,1432645980,/Music,Undetected,
+passionfruit.png,4096,1432642803,/,Undetected,
+Zeus.exe,1273,1432643675,/,Detected,Spyware
+Pineapple_in_Garden.jpeg,1024,1432646307,/Music,Undetected,
+Dragon Age: Inquisition.exe,2048,1432643716,/,Suspicious,Adware
+Notepad++.exe,4096,1432644580,/Documents,Undetected,

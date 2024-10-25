@@ -1,41 +1,41 @@
-name,size,crtime,parent_path,virus,virus_type
-Emotet.exe,2048,1432644816,/,0,
-Brackets.exe,8192,1432643179,/,0,
-Persona 5.exe,512,1432644371,/Temp,1,Keylogger
-Hiking_Trip_Mountains_2024-09-10.jpeg,1273,1432645154,/,0,
-Valentine's_Day_Dinner_2024-02-14.jpeg,2048,1432645167,/,0,
-Juicy_Oranges_on_Stand.jpeg,8192,1432645842,/Documents/School,0,
-Baby_Shower_Susan_2024-03-25.jpeg,128,1432645071,/Temp,0,
-requirements_project.txt,1268,1432642977,/Temp,0,
-style_main.css,128,1432644228,/,0,
-NetBeans.exe,8192,1432643486,/Temp,0,
-Blaster.exe,2048,1432645039,/Documents,0,
-Skyrim.exe,128,1432643630,/Documents/School,0,
-Call of Duty: Modern Warfare.exe,1273,1432642845,/Temp,0,
-Locky.exe,64,1432643880,/Documents/School,0,
-Visual Studio Code.exe,1268,1432645630,/,1,Ransomware
-Final Fantasy VII Remake.exe,4096,1432646279,/,0,
-Wedding_Ceremony_Jane_&_Mark_2024-05-22.jpeg,1347,1432642968,/Music,0,
-Picnic_in_the_Park_2023-07-20.jpeg,4096,1432642580,/Documents,0,
-Dridex.exe,2048,1432643619,/Temp,1,Adware
-Vim.exe,1024,1432643670,/Music,0,
-Kronos.exe,128,1432645022,/Documents/School,1,Trojan
-Graduation_Party_Mike_2024-05-30.jpeg,64,1432645889,/Documents/School,0,
-Camping_Weekend_Lake_2024-06-18.jpeg,2048,1432642464,/Documents,0,
-Cooking_Class_2024-03-10.jpeg,512,1432642764,/Documents,0,
-Atom.exe,1273,1432643961,/,0,
-script_utilities.js,1024,1432643272,/Music,0,
-Counter-Strike: Global Offensive.exe,2048,1432645693,/Documents,0,
-MyDoom.exe,1268,1432644940,/Downloads,0,
-Sasser.exe,2048,1432644370,/Music,1,Adware
-ILOVEYOU.exe,4096,1432644759,/Temp,0,
-WannaCry.exe,1273,1432644657,/Documents/School,0,
-Skiing_Trip_Colorado_2024-02-10.jpeg,1268,1432644291,/Documents,0,
-Conficker.exe,4096,1432644715,/Documents,1,Trojan
-TextMate.exe,1347,1432642655,/,1,Ransomware
-Klez.exe,1273,1432644513,/Downloads,1,Keylogger
-Qakbot.exe,1347,1432644487,/,1,Adware
-Summer_Festival_2024-08-01.jpeg,128,1432646344,/Documents/School,0,
-Family_Reunion_2023-08-13.jpeg,1268,1432645873,/,0,
-Melissa.exe,2048,1432642365,/,1,Adware
-api_server.js,512,1432643487,/,0,
+name,size,crtime,parent_path,mal,mal_type
+Bait and Switch.exe,1024,1432646112,/Temp,Undetected,
+Cabal.exe,512,1432642827,/Temp,Undetected,
+Kronos.exe,1268,1432645195,/Documents,Suspicious,Keylogger
+Eclipse.exe,1024,1432643027,/,Detected,Keylogger
+TextMate.exe,4096,1432645793,/Downloads,Undetected,
+Shylock.exe,1024,1432642543,/Documents/School,Undetected,
+Picnic_in_the_Park_2023-07-20.jpeg,2048,1432645762,/,Undetected,
+Coconut_Open_on_Beach.jpeg,2048,1432646167,/Temp,Undetected,
+homepage.html,1347,1432644627,/,Undetected,
+Bluefish.exe,64,1432644905,/Downloads,Undetected,
+Bad Rabbit.exe,1024,1432643570,/Music,Suspicious,Ransomware
+Dragon Age: Inquisition.exe,1273,1432642879,/Documents/School,Undetected,
+Strawberry_Picking_Adventure.jpeg,1273,1432643500,/,Undetected,
+Wedding_Ceremony_Jane_&_Mark_2024-05-22.jpeg,512,1432644430,/Temp,Undetected,
+totally_legit.exe,1024,1432645246,/Music,Detected,Worm
+Nimda.exe,8192,1432642430,/,Undetected,
+Ramnit.exe,1273,1432645710,/Downloads,Suspicious,Keylogger
+Pet_Birthday_Party_Fido_2024-09-15.jpeg,2048,1432642973,/Documents,Undetected,
+Dark Souls III.exe,1347,1432644963,/Downloads,Undetected,
+Cyberpunk 2077.exe,512,1432644094,/Downloads,Undetected,
+Halloween_Costume_Party_2023-10-31.jpeg,1273,1432644339,/Documents,Undetected,
+TrickBot.exe,1347,1432642770,/Documents,Suspicious,Spyware
+Bowl_of_Fresh_Fruit_Salad.jpeg,1273,1432643672,/Temp,Undetected,
+Sasser.exe,512,1432646192,/Music,Undetected,
+Weekend_Getaway_to_NYC_2024-04-28.jpeg,2048,1432644337,/Documents/School,Undetected,
+app_config.yaml,2048,1432643962,/Documents,Undetected,
+Flower_Show_2024-06-25.jpeg,128,1432644835,/,Undetected,
+Kiwi_Cut_in_Half.jpeg,128,1432645519,/Temp,Undetected,
+Bouncy.exe,8192,1432645130,/Documents/School,Undetected,
+Dridex.exe,128,1432644056,/Downloads,Detected,Worm
+SpyEye.exe,4096,1432643883,/Temp,Undetected,
+John_Doe_Birthday_Party_2024-10-09.jpeg,1268,1432644786,/Downloads,Undetected,
+schema_definition.sql,2048,1432642486,/Downloads,Undetected,
+requirements_project.txt,2048,1432644670,/,Undetected,
+Fresh_Apples_on_Kitchen_Counter.jpeg,64,1432643469,/,Undetected,
+ILOVEYOU.exe,512,1432642535,/Music,Undetected,
+Camping_Weekend_Lake_2024-06-18.jpeg,4096,1432644312,/Music,Undetected,
+app_styles.scss,64,1432645703,/Temp,Undetected,
+passionfruit.png,2048,1432643029,/Documents,Undetected,
+Conficker.exe,512,1432642583,/Music,Detected,Adware

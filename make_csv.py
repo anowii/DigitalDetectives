@@ -128,13 +128,13 @@ def create_a_csv(csv_file_path="test.csv", length=10):
     size_arg = [64, 128, 4096, 1024, 512, 2048, 8192, 1347, 1273, 1268]
     crtime_arg = 1432644354 #make a random minus or plus for this number
     path_arg = ["/", "/Documents", "/Music", "/Downloads", "/Documents/School", "/Temp", "/"]
-    virus_arg = [0,1]
-    virus_type_arg = ["Trojan", "Worm", "Keylogger", "Adware", "Ransomware", "Spyware", ]
+    mal_arg = ["Undetected", "Detected", "Suspicious"]
+    mal_type_arg = ["Trojan", "Worm", "Keylogger", "Adware", "Ransomware", "Spyware", ]
     
 
     data = [[]]
 
-    data[0] = ["name", "size", "crtime", "parent_path", "virus", "virus_type"]
+    data[0] = ["name", "size", "crtime", "parent_path", "mal", "mal_type"]
     for i in range(length):
         temp_data = []
         
@@ -157,13 +157,13 @@ def create_a_csv(csv_file_path="test.csv", length=10):
         #if file is .exe random if virus
         if (temp[temp.find(".")::] == ".exe"):
             if (randrange(0, 100) < 40):
-                temp_data.append(1)
-                temp_data.append(random.choice(virus_type_arg))
+                temp_data.append(mal_arg[randrange(1, 3)])
+                temp_data.append(random.choice(mal_type_arg))
             else:
-                temp_data.append(0)
+                temp_data.append(mal_arg[0])
                 temp_data.append("")
         else:
-            temp_data.append(0)
+            temp_data.append(mal_arg[0])
             temp_data.append("")
 
 
@@ -180,5 +180,10 @@ def create_a_csv(csv_file_path="test.csv", length=10):
     print(f"CSV file '{csv_file_path}' created successfully.")
 
 if __name__ == "__main__":
+
     
     create_a_csv("test_10.csv", 10)
+    create_a_csv("test_15.csv", 15)
+    create_a_csv("test_20.csv", 20)
+    create_a_csv("test_40.csv", 40)
+    create_a_csv("test_50.csv", 50)

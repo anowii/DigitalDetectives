@@ -13,9 +13,9 @@ import requests
 # DATA_DIR = "data\\"
 # SLEUTH_DB = "data\\analys.db"
 # CSV_PATH = "data\\db.csv"
-DATA_DIR = "data/"
-SLEUTH_DB = "data/analys.db"
-CSV_PATH = "data/db.csv"
+DATA_DIR = "data\\"
+SLEUTH_DB = "data\\analys.db"
+CSV_PATH = "data\\db.csv"
 
 INTERESTING_TYPES =".exe|.msi|.docx|.png|.jpeg|.txt" #files to put in the csv
 
@@ -104,5 +104,3 @@ def run(disk_image_path):
     db_to_csv()
 
     return CSV_PATH
-
-run("data/2020JimmyWilson.dd")

@@ -161,10 +161,10 @@ def create_a_csv(csv_file_path="test.csv", length=10):
                 temp_data.append(random.choice(mal_type_arg))
             else:
                 temp_data.append(mal_arg[0])
-                temp_data.append("")
+                temp_data.append("None")
         else:
             temp_data.append(mal_arg[0])
-            temp_data.append("")
+            temp_data.append("None")
 
 
         data.append(temp_data)
@@ -185,5 +185,6 @@ if __name__ == "__main__":
     create_a_csv("test_10.csv", 10)
     create_a_csv("test_15.csv", 15)
     create_a_csv("test_20.csv", 20)
+    create_a_csv("test_30.csv", 30)
     create_a_csv("test_40.csv", 40)
     create_a_csv("test_50.csv", 50)

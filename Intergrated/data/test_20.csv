@@ -1,21 +1,21 @@
 name,size,crtime,parent_path,mal,mal_type
-Divinity: Original Sin 2.exe,64,1432645478,/Downloads,Suspicious,Spyware
-Beach_Vacation_Florida_2024-03-15.jpeg,1268,1432643429,/Temp,Undetected,
-Gamarue.exe,128,1432644876,/Documents,Undetected,
-Coconut_Open_on_Beach.jpeg,4096,1432643258,/Music,Undetected,
-Blueberry_Bush_Harvest.jpeg,128,1432643070,/,Undetected,
-Bad Rabbit.exe,1347,1432643009,/Documents/School,Undetected,
-api_server.js,128,1432646098,/Music,Undetected,
-Road_Trip_to_Grand_Canyon_2024-07-05.jpeg,1273,1432644290,/Downloads,Undetected,
-Easter_Egg_Hunt_2024-04-20.jpeg,2048,1432642613,/Downloads,Undetected,
-Bluefish.exe,1347,1432644543,/Downloads,Undetected,
-Fruit_Smoothie_Bowl.jpeg,1268,1432642819,/,Undetected,
-John_Doe_Birthday_Party_2024-10-09.jpeg,64,1432644019,/Documents/School,Undetected,
-Kate.exe,128,1432645811,/Downloads,Undetected,
-data_analysis.py,2048,1432643537,/Music,Undetected,
-Colorful_Fruit_Platter_for_Party.jpeg,1268,1432645980,/Music,Undetected,
-passionfruit.png,4096,1432642803,/,Undetected,
-Zeus.exe,1273,1432643675,/,Detected,Spyware
-Pineapple_in_Garden.jpeg,1024,1432646307,/Music,Undetected,
-Dragon Age: Inquisition.exe,2048,1432643716,/,Suspicious,Adware
-Notepad++.exe,4096,1432644580,/Documents,Undetected,
+Christmas_Eve_Family_2023-12-24.jpeg,1268,1432644571,/,Undetected,None
+NetBeans.exe,4096,1432642667,/Music,Undetected,None
+Call of Duty: Modern Warfare.exe,512,1432642485,/Documents/School,Undetected,None
+Graduation_Party_Mike_2024-05-30.jpeg,1268,1432642745,/Temp,Undetected,None
+Pet_Birthday_Party_Fido_2024-09-15.jpeg,1268,1432646038,/Documents,Undetected,None
+Ransomware.exe,4096,1432642490,/Temp,Undetected,None
+Hiking_Trip_Mountains_2024-09-10.jpeg,64,1432644664,/,Undetected,None
+Sunset_Beach_California_2024-07-18.jpeg,1273,1432642926,/Downloads,Undetected,None
+app_config.yaml,1024,1432642874,/,Undetected,None
+Final Fantasy VII Remake.exe,4096,1432645025,/,Undetected,None
+Cyberpunk 2077.exe,512,1432645554,/Downloads,Suspicious,Trojan
+Cabal.exe,4096,1432643883,/Documents,Suspicious,Keylogger
+Camping_Weekend_Lake_2024-06-18.jpeg,1347,1432642502,/Music,Undetected,None
+CryptoLocker.exe,1268,1432644842,/,Undetected,None
+Notepad++.exe,8192,1432644052,/,Undetected,None
+Family_Photo_Thanksgiving_2023-11-24.jpeg,1273,1432642867,/Music,Undetected,None
+Thanksgiving_Dinner_2023-11-23.jpeg,2048,1432646063,/Temp,Undetected,None
+Bluefish.exe,1273,1432644815,/Temp,Undetected,None
+Fruit_Smoothie_Bowl.jpeg,1347,1432643666,/,Undetected,None
+TextMate.exe,1273,1432644878,/Downloads,Undetected,None

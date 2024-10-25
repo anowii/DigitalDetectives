@@ -130,11 +130,10 @@ def create_a_csv(csv_file_path="test.csv", length=10):
     path_arg = ["/", "/Documents", "/Music", "/Downloads", "/Documents/School", "/Temp", "/"]
     mal_arg = ["Undetected", "Detected", "Suspicious"]
     mal_type_arg = ["Trojan", "Worm", "Keylogger", "Adware", "Ransomware", "Spyware", ]
+
     
-
     data = [[]]
-
-    data[0] = ["name", "size", "crtime", "parent_path", "mal", "mal_type"]
+    data[0] = ["name", "size", "crtime", "parent_path", "mal", "malware_type"]
     for i in range(length):
         temp_data = []
         

@@ -80,7 +80,7 @@ def db_to_csv():
     print("\ntsk_files\n")
     fields = ["meta_addr", "name","size", "crtime", "parent_path"]
     files = []
-    for file in db_files:
+    for file in db_files[:800]:
         name = file[5]
         if re.search(INTERESTING_TYPES,file[5]):
             files.append({"meta_addr":file[6], "name":file[5], "size":file[14], "crtime":file[16], "parent_path":file[25]})

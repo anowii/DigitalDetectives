@@ -125,7 +125,7 @@ def create_a_csv(csv_file_path="test.csv", length=10):
                 "Coda.exe"
                 
                 ]
-    size_arg = [64, 128, 4096, 1024, 512, 2048, 8192, 1347, 1273, 1268]
+    size_arg = 4096
     crtime_arg = 1432644354 #make a random minus or plus for this number
     path_arg = ["/", "/Documents", "/Music", "/Downloads", "/Documents/School", "/Temp", "/"]
     mal_arg = ["Undetected", "Detected", "Suspicious"]
@@ -149,8 +149,8 @@ def create_a_csv(csv_file_path="test.csv", length=10):
                 temp = random.choice(name_arg)
 
         temp_data.append(temp)
-        temp_data.append(random.choice(size_arg))
-        temp_data.append(crtime_arg+randrange(-2000, 2000))
+        temp_data.append(size_arg+ randrange(-4000, 4000))
+        temp_data.append(crtime_arg+randrange(-5000, 10000))
         temp_data.append(random.choice(path_arg))
 
         #if file is .exe random if virus

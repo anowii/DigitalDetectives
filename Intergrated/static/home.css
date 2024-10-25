@@ -190,14 +190,6 @@ body {
 
 }
 
-/* Progressbar style*/
-#progressbar{
-    background-color: #ffffff; 
-    color: #000;
-    cursor: default;
-    padding: 10px 15px;
-}
-
 /*-- mby  --*/
 #loading-indicator {
     position: absolute;

@@ -1,5 +1,5 @@
 
-from flask import Flask, render_template, request, jsonify,redirect,url_for
+from flask import Flask, render_template, request, jsonify,redirect,url_for, json
 import os
 from ui_backend import send_iso,forward_message_llm, is_valid_disk_image
 
@@ -12,8 +12,8 @@ UPLOADED_CSV = '' #filepath for CSV
 
 # Store chat messages in memory for now, per session
 messages = []
-
-
+MESSAGE_FILE = 'messages.json'
+next_id = 1  # Initialize the message ID
 
 @app.route('/')
 def login():
@@ -67,17 +67,34 @@ def submit_file():
     # Return a response to the client
     return jsonify({"status": "success", "filename": file.filename})
 
+# Helper function to save a message to the file
+def save_message_to_file(message_object):
+    with open(MESSAGE_FILE, 'a') as f:
+        f.write(json.dumps(message_object) + '\n')
 
 @app.route('/forward_message', methods=['POST'])
 def forward_message():
+    global next_id
     data = request.get_json()  # Get JSON data from request
     message = data.get('message', '')  # Extract the message
 
     if message:
         response = forward_message_llm(message,UPLOADED_CSV)  # Forward to Langchain-based LLM
+        
+        #Mostly for loggin/debug purposes 
+        message_object = {
+            "id": next_id, 
+            "csv": UPLOADED_CSV if UPLOADED_CSV else "empty",
+            "user": message,
+            "response": response
+        }
 
         # Append message and response to the chat history
-        messages.append({"user": message, "response": response})
+        messages.append({"id": next_id, "user": message, "response": response})
+
+        #Mostly for loggin/debug purposes
+        save_message_to_file(message_object)
+        next_id += 1      
 
         return jsonify({'status': 'success', 'message': response})
     else:

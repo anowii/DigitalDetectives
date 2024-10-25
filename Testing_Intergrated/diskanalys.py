@@ -84,7 +84,7 @@ def db_to_csv():
     print("\ntsk_files\n")
     fields = ["name","size", "crtime", "parent_path", "mal", "mal_type"]
     files = []
-    for file in db_files[:400]:
+    for file in db_files:
         name = file[5]
         if re.search(INTERESTING_TYPES,file[5]) and file[5].find("slack") == -1:
             print(check_with_virustotal(file[23]))

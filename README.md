@@ -24,7 +24,7 @@ In a virtual environment, you can generate a `requirements.txt` file that lists 
   python -m venv .venv
   ```
   ```
-  venv\Scripts\activate
+ .\.venv\Scripts\activate
   ```
 **2. Install the Dependencies from `requirements.txt`:**
   ```

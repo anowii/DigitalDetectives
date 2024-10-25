@@ -27,7 +27,7 @@ $(document).ready(function () {
                         console.error('Error fetching messages:', error);
                     }
                 });
-            }, 1000);  // Poll every 1 seconds
+            }, 1000);  // Poll every 1 second
         }
     }
 
@@ -36,8 +36,8 @@ $(document).ready(function () {
         var message = $('#text-input').val();
 
         if (message.trim() !== "") {
-            var messageElement = $('<div></div>').text("User:  " + message);
-            $('#chat-window').append(messageElement);
+            // Clear the input field
+            $('#text-input').val('');
 
             // Send the message to the backend
             $.ajax({
@@ -47,16 +47,14 @@ $(document).ready(function () {
                 contentType: 'application/json',
                 success: function (response) {
                     console.log('Message forwarded to backend:', response);
-                    
-                    // Start polling after the first message is sent
+
+                    // Once the AI responds, start polling if not active
                     startPolling();
                 },
                 error: function (error) {
                     console.error('Error forwarding message:', error);
                 }
             });
-
-            $('#text-input').val('');  // Clear input
         }
     });
 

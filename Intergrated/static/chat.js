@@ -33,7 +33,7 @@ $(document).ready(function () {
                             message.user = message.user.replace(/\n/g, "<br/>")
                             message.response = message.response.replace(/\n/g, "<br/>")
                             var userMessageElement = $('<div class="message user-message"></div>').html("User: " + message.user);
-                            var responseMessageElement = $('<div class="message ai-message"></div>').html("AI: " + message.response);
+                            var responseMessageElement = $('<div class="message ai-message"></div>').html("🕵️: " + message.response);
 
                             $('#chat-window').append(userMessageElement);
                             $('#chat-window').append(responseMessageElement);

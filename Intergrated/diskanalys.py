@@ -9,10 +9,6 @@ import re
 import os
 import requests
 
-
-# DATA_DIR = "data\\"
-# SLEUTH_DB = "data\\analys.db"
-# CSV_PATH = "data\\db.csv"
 DATA_DIR = "data\\"
 SLEUTH_DB = "data\\analys.db"
 CSV_PATH = "data\\db.csv"

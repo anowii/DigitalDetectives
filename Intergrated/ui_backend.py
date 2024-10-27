@@ -5,16 +5,12 @@ from langchain_ollama import OllamaLLM
 from templates import json_template, simple_template
 from diskanalys import run
 
-
 model = OllamaLLM(model="llama3.2")
 #chain = json_template | model
 chain = simple_template | model
 
-def save_conversation_history(history, filename="conversation_history.json"):
-    with open(filename, "w") as file:
-        json.dump(history, file, indent=4)
 
-# Parse/Load CSV data to json format
+# Load CSV data from filename/filepath returns it in JSON format 
 def load_json_data(filename):
     if os.path.exists(filename):
         try:
@@ -38,14 +34,13 @@ def load_json_data(filename):
 
 # Function to handle message forwarding to LLM
 def forward_message_llm(message, filepath):
-    # Load previous conversation history
 
-    json_data = load_json_data(filepath)  # Initialize JSON data as empty
-    print(f"JSON Data: {json_data}")  # Log the JSON data
+    # Load JSON data from 'current csv file'
+    json_data = load_json_data(filepath) 
+    print(f"JSON Data: {json_data}")    # Print for debug/checking purposes only
   
     # Use Langchain chain to get AI response
     result = chain.invoke({"json_data": json_data ,"question": message})
-    #print('bye')
     
     return result  # Return the result to be used in Flask
 
@@ -53,7 +48,6 @@ def send_iso(fileName): #Runs TSK on disk image file (".dd")
     run(fileName)
     print(fileName)
     return 0
-
 
 def is_valid_disk_image(disk_image):
     """

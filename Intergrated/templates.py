@@ -1,6 +1,6 @@
 from langchain_core.prompts import ChatPromptTemplate
 
-#Defines json_template
+# Defines json_template
 template = """
 # Task: Analyze JSON Data
 
@@ -56,7 +56,7 @@ Here is the JSON data: `{json_data}`
 
 **Answer**: """
 
-#Defines json2_template: made some changes from json_template
+# Defines json2_template: made some changes from json_template
 template_2 = """
 # Task: Analyze JSON Data
 
@@ -85,7 +85,7 @@ Here is the JSON data: `{json_data}`
 **Answer**: """
 
 
-#Defines simple_template: no rows and colums expectations
+# Defines simple_template: no rows and colums expectations
 simple_template = """
 You are a knowledgeable forensic assistant capable of answering questions about the provided JSON data from a disk image. 
 

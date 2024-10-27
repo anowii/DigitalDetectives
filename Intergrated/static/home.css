@@ -108,19 +108,20 @@ body {
 /***********************************/
 
 .empty-one{
+    display: flex;
     width: 100%;
     padding: 10px;
-    display: flex;
     gap: 3px; /* Space between the elements*/
     flex-direction: column;
 }
 
 .empty-two{
+    display: flex;
     width: 100%;
     padding: 10px;
-    display: flex;
-    gap: 5px; /* Space between the elements*/
-    flex-direction: column;
+    gap: 10px; /* Space between the elements*/
+    flex-direction: row;
+    flex-wrap: wrap;
 }
 
 
@@ -136,38 +137,102 @@ body {
     background-color: #ffffff;
     color: #000000d2;
     cursor: default;
-    font-family: inherit;
     font-weight: bold;
-    cursor: default;  
 }
 
-/* Styling for  upload, and logout buttons */
-.deleteSession button, .logout button {
-    width: 100%;
+.logout{
+    display: flex; 
+    flex-grow: 1;
+}
+
+/* Styling for logout button */
+.logout button {
+    width: 100%; 
     padding: 10px;
     border: none;
-    background-color: #ffffff;
-    color: #000000d2;
+    background-color:#e9e9f0;
     cursor: pointer;
-    transition: #222 0.3s; /* Smooth transition for hover effect */
-    font-family: inherit;
     font-weight: bold;
     border-radius: 10px;  
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    color: #252424;
+    text-transform: uppercase;
+    font-size: 1.3em;
 }
 
+.logout button:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+/*Remove?*/
 .deleteSession button{
     background-color: #ffffff;
     margin-bottom: 5px;
     margin-top: 10px;
 }
 
-/* Logout button has a different color */
-.logout button {
-    background-color: #ffffff;
-    margin-top: 5px;
-    margin-bottom: 10px;
+/******************************************/
+/********  Trash button Styling  **********/
+/*****************************************/
+
+/* Trash button styling */
+.trash-button {
+    background-color: #ff4d4d;        /* Red color for the button */
+    border: none;
+    border-radius: 50%;               /* Make it circular */
+    width: 50px;                      /* Larger width */
+    height: 50px;                     /* Larger height */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4); /* Add shadow for depth */
 }
 
+/* SVG icon styling */
+.trash-button svg {
+    fill: none;
+    stroke: white;
+    width: 24px;                    
+    height: 24px;
+}
+
+/* Hover effect for button */
+.trash-button:hover {
+    background-color: #ff6666;       /* Lighter red on hover */
+    transform: translateY(-2px);     /* Slight upward motion */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.6); /* Stronger shadow on hover */
+}
+
+/* Active state for click effect */
+.trash-button:active {
+    transform: scale(0.95);
+}
+
+/* Tooltip styling */
+.tooltip {
+    visibility: hidden;                /* Hide by default */
+    background-color: #222;            /* Dark background */
+    color: #fff;                       /* White text */
+    text-align: center;
+    padding: 5px 8px;
+    border-radius: 5px;
+    position: absolute;
+    bottom: 70px;                      /* Position above the button */
+    left: 50%;
+    transform: translateX(-50%);
+    white-space: nowrap;
+    font-size: 14px;
+    opacity: 0;
+    transition: opacity 0.2s;
+}
+
+/* Show tooltip on hover */
+.trash-button:hover .tooltip {
+    visibility: visible;
+    opacity: 1;
+}
 
 /***************************************************/
 /********  File upload and Error messages *********/
@@ -181,11 +246,17 @@ body {
 /* Updated .upload class to handle the new submit button */
 .upload {
     display: flex;
-    flex-direction: column; /* Stack uppload, submit button, and progress bar vertically*/
-    gap: 5px; /* Space between the elements*/
+    flex-direction: row; /* Stack uppload, submit button, and progress bar vertically*/
     margin-top: 10px;
     margin-bottom: 10px;
     font-size: 13px;
+}
+
+.upload form{
+    display: flex;
+    flex-wrap: wrap;
+    flex-grow: 1;
+    gap: 5px; /* Space between the elements*/
 }
 
 /* Label (Choose file) for the file upload, styled as a button */
@@ -193,9 +264,10 @@ body {
     background-color: #1E1E1E;
     cursor: pointer;
     padding: 10px 15px; 
-   /* border: 1px solid #007bff; */
     border-radius: 5px; 
-    color: #E0E0E0;    
+    color: #E0E0E0;  
+    flex-grow: 1;
+    text-align: center;
 }
 
 /* Change background on hover */
@@ -212,7 +284,8 @@ body {
     border: none;             
     border-radius: 5px;       
     font-weight:bold;          
-    font-size: 15px;           
+    font-size: 1em;     
+    text-transform: uppercase; 
 }
 
 /* Change background on hover for the submit button */
@@ -257,7 +330,6 @@ body {
     background-color: #0e1b2eb5; 
     text-align: left; /* Align text to the left */
     color: #dad7d7;
-
 }
 
 

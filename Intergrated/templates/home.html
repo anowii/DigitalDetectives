@@ -5,10 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chat App</title>
     <link rel="stylesheet" href="../static/home.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <!--file upload handling-->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="../static/file_submit.js" defer></script>
     <script src="../static/chat.js" defer></script>
+    <script src="../static/delete_button.js" defer></script>
 
 </head>
 <body>
@@ -33,19 +35,22 @@
                 <div class="upload">
                     <form id="uploadForm" enctype="multipart/form-data">
                         <input type="file" id="uploadFile" name="file">
-                        <label for="uploadFile">Choose File</label>
-                        <button type="submit">Submit</button>
-                            
+                        <label for="uploadFile", id="uploadLable">Choose File</label>
+                        <button type="submit">Submit</button>           
                     </form>
                 </div> 
             </div>
             
             <!-- Margin aligner -->
             <div class="empty-two">
-                <!-- Delete button -->
-                <div class="deleteSession">
-                <button>🚮Delete Session </button>
-                </div>
+                 <!-- Delete Button -->
+                <button class="trash-button" aria-label="Delete">
+                    <span class="tooltip">Delete Session</span>
+                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M3 6h18M8 6V4a2 2 0 012-2h4a2 2 0 012 2v2m1 0v14a2 2 0 01-2 2H9a2 2 0 01-2-2V6h10zM10 11v6M14 11v6"
+                              stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>   
+                </button>
     
                 <!-- Logout button -->
                 <div class="logout">

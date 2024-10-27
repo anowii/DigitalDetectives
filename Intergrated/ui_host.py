@@ -15,15 +15,17 @@ messages = []
 MESSAGE_FILE = 'messages.json'
 next_id = 1  # Initialize the message ID
 
+# Default route 
 @app.route('/')
 def login():
     return render_template('login.html')
 
-#Login handling
-@app.route('/login', methods=['POST'])        #CURRENTLY NOT WORKING, SHOULD REDIRECT USER TO HOME WHEN PRESSING SUBMIT (TEMPORARY WHEN NO LOGIN DETAILS)
+# Login handling
+@app.route('/login', methods=['POST'])      #CURRENTLY NOT WORKING, SHOULD REDIRECT USER TO HOME WHEN PRESSING SUBMIT (TEMPORARY WHEN NO LOGIN DETAILS)
 def handle_login():
     return redirect(url_for('home'))
 
+# Home page 
 @app.route('/home')
 def home():
     return render_template('home.html')
@@ -72,6 +74,7 @@ def save_message_to_file(message_object):
     with open(MESSAGE_FILE, 'a') as f:
         f.write(json.dumps(message_object) + '\n')
 
+# Forwards message to LLM
 @app.route('/forward_message', methods=['POST'])
 def forward_message():
     global next_id
@@ -101,6 +104,7 @@ def forward_message():
         return jsonify({'status': 'error', 'message': 'No message received'})
 
 
+# Get messages
 @app.route('/get_messages', methods=['GET'])
 def get_messages():
     # Return the list of user messages and LLM responses to the client

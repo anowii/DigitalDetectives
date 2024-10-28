@@ -1,3 +1,4 @@
+
 /* Reset some default browser margins and paddings */
 * {
     margin: 0;
@@ -48,6 +49,8 @@ body {
 
 /* Chat window takes up most of the main content area */
 .chat-window {
+    display: flex;
+    flex-direction: column;
     flex-grow: 1;
     padding: 40px;
     background-color: #333;
@@ -315,14 +318,19 @@ body {
 
 /* Message styles */
 .message {
+    display: flex;
+    flex-direction: column;
     padding: 10px;
     border-radius: 5px;
-    margin: 5px 0; /* Add some margin between messages */
+    word-wrap: break-word;
+    margin: 5px 0;
+    gap: 5px; /*Create a GAP between element in the message box ex Ai-lable and plain text*/
 }
 
 .user-message {
     background-color: #00000073; 
-    text-align: left; 
+    text-align: left;
+    /*align-self: flex-end; Aligns user-messages to the right*/
     color: #dad7d7;
 }
 
@@ -330,8 +338,14 @@ body {
     background-color: #0e1b2eb5; 
     text-align: left; /* Align text to the left */
     color: #dad7d7;
+    /*align-self: flex-start;  Align AI messages to the left */
 }
 
+.ai-label {
+    font-weight: bold; /* Make the AI label bold */
+    color: #00b0ff;
+    padding: 3px;
+}
 
 /*************************************/
 /********  Progressbar chat  ********/

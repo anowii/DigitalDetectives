@@ -72,7 +72,7 @@ def submit_file():
 # Helper function to save a message to the file
 def save_message_to_file(message_object):
     with open(MESSAGE_FILE, 'a') as f:
-        f.write(json.dumps(message_object) + '\n')
+        f.write(json.dumps(message_object) + ',\n')
 
 # Forwards message to LLM
 @app.route('/forward_message', methods=['POST'])

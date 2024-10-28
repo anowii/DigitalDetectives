@@ -27,16 +27,18 @@ $(document).ready(function () {
                         console.log('Message fetched:', data); 
                         // Clear the chat window
                         $('#chat-window').empty();
-    
+
                         // Loop through the messages and format them for display
                         data.forEach(function (message) {
                             message.user = message.user.replace(/\n/g, "<br/>")
                             message.response = message.response.replace(/\n/g, "<br/>")
+                           
                             var userMessageElement = $('<div class="message user-message"></div>').html("User: " + message.user);
-                            var responseMessageElement = $('<div class="message ai-message"></div>').html("🕵️: " + message.response);
+                            var responseMessageElement = $('<div class="message ai-message"></div>').html('<span class="ai-label">AI: </span>' + message.response);
 
                             $('#chat-window').append(userMessageElement);
                             $('#chat-window').append(responseMessageElement);
+
                         });
 
                         clearInterval(pollInterval); // Stop polling after receiving a response

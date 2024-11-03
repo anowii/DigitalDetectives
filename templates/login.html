@@ -8,27 +8,25 @@
 <body>
     <h1>Welcome to LLM Tool</h1>
     <section>
-    
-    <div class="signin">
-        <div class="content">
-            <h2>Sign In</h2> 
-            <div class ="form">
-                <form action="login.html" method="POST"></form>
-                <div class="inputBox">
-                    <input type="text" name="username" required><i>Username</i>
+        <div class="signin">
+            <div class="content">
+                <h2>Sign In</h2>
+                <div class="form">
+                    <!-- Updated form action to use handle_login route -->
+                    <form action="/login" method="POST">
+                        <div class="inputBox">
+                            <input type="text" name="username" required><i>Username</i>
+                        </div>
+                        <div class="inputBox">
+                            <input type="password" name="password" required><i>Password</i>
+                        </div>
+                        <div class="inputBox">
+                            <input type="submit" value="Login">
+                        </div>
+                    </form>
                 </div>
-                <div class="inputBox">
-                    <input type="password" name="password" required><i>Password</i>
-                </div>
-
-                <div class="inputBox"> 
-                    <input type="submit" value="Login">
-                </div>
-                </form>
-            </div> 
-        </div> 
+            </div>
         </div>
-    
     </section>
 </body>
 </html>

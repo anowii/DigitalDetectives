@@ -74,6 +74,8 @@ section .signin .content .form .inputBox
 {
   position: relative;
   width: 100%;
+  padding: 10px;
+
 }
 
 section .signin .content .form .inputBox input 

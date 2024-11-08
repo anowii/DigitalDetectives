@@ -89,7 +89,7 @@ def db_to_csv():
     db_files = res.fetchall()
     con.close()
     print("\ntsk_files\n")
-    fields = ["name","size", "crtime", "parent_path", "mal", "mal_type","unallocated"]
+    fields = ["name","size", "crtime", "parent_path", "mal", "mal_type","delete_flag"]
     files = []
     for file in db_files:
         name = file[5]
@@ -104,7 +104,7 @@ def db_to_csv():
                 "parent_path": file[25],
                 "mal": prime_category, 
                 "mal_type": popular_threat_classification,
-                "unallocated": file[13]
+                "delete_flag": file[13]
             }
 
             files.append(csv_row)
@@ -116,7 +116,7 @@ def db_to_csv():
     csvfile.close()
 
 def create_database_from_csv(csv_file):
-    
+
    # Remove the database file if it already exists
     if os.path.exists(USER_DB):
         os.remove(USER_DB)

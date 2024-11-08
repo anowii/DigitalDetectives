@@ -2,14 +2,11 @@ import json
 import os
 from langchain_ollama import OllamaLLM
 from langchain_core.prompts import ChatPromptTemplate
-import csv
 
 template = """
 Answer the question below:
 
 Here is the conversation history: {context}
-
-Here is the file structure, important to save enerything as this is a copy of a file system: {file}
 
 Question: {question}
 
@@ -37,42 +34,29 @@ def save_conversation_history(history, filename="conversation_history.json"):
     with open(filename, "w") as file:
         json.dump(history, file, indent=4)
 
-def saving_test(history, filename="test.json"):
-    with open(filename, "w") as file:
-        json.dump(history, file, indent=4)
-
 def handle_conversation():
     conversation_history = load_conversation_history()
     context = ""
     if conversation_history:
         for user_input, result in conversation_history.items():
             context += f"\nUser: {user_input}\nAI: {result}"
-        chain.invoke({"context": context, "question": user_input})
-        context = ""
 
     print("Welcome to chat with Llama3! Type 'exit' to quit.")
-    data = ""
     while True:
-        
         user_input = input("You: ")
         if user_input.lower() == "exit":
             break
-        if user_input.lower() == "load":
-            with open("tsk/code/proj/db.csv") as file:
-                for line in file:
-                    data += line + "\n"
-            print(data)
-        if user_input.lower() == "test":
-            with open("test.json") as file:
-                context += "The following is a json file that you will need to save as you will need to answer a couple of questions about the data set. You will need to save it as a csv or collection of json atributes of files. "
-                for line in file:
-                    context += line
-
-
-        result = chain.invoke({"context": context, "question": user_input, "file":data})
-        print("Bot:", result)
-        # Save the new conversation to history
-        conversation_history[user_input] = result
+        
+        # Check if the question has been asked before
+        if user_input in conversation_history:
+            result = conversation_history[user_input]
+            print("Bot:", result)
+        else:
+            result = chain.invoke({"context": context, "question": user_input})
+            print("Bot:", result)
+            # Save the new conversation to history
+            conversation_history[user_input] = result
+        
         context += f"\nUser: {user_input}\nAI: {result}"
 
     # Save the conversation history when the chat ends

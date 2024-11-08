@@ -1,0 +1,11 @@
+name,size,crtime,parent_path,mal,malware_type
+package_frontend.json,2466,1432645759,/Documents/School,Undetected,None
+Cooking_Class_2024-03-10.jpeg,302,1432641444,/Downloads,Undetected,None
+Grapes_on_Vine.jpeg,1558,1432651874,/Downloads,Undetected,None
+Weekend_Getaway_to_NYC_2024-04-28.jpeg,2901,1432652435,/Documents/School,Undetected,None
+Pet_Birthday_Party_Fido_2024-09-15.jpeg,2171,1432652018,/Temp,Undetected,None
+CryptoLocker.exe,755,1432641568,/,Undetected,None
+Fresh_Apples_on_Kitchen_Counter.jpeg,1083,1432642952,/Documents/School,Undetected,None
+Persona 5.exe,6925,1432654009,/Documents,Detected,Trojan
+Blaster.exe,139,1432652784,/Downloads,Undetected,None
+Gamarue.exe,4148,1432653643,/,Undetected,None

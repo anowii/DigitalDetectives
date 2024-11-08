@@ -1,0 +1,16 @@
+name,size,crtime,parent_path,mal,malware_type
+Sekiro: Shadows Die Twice.exe,3208,1432652112,/Downloads,Undetected,None
+Pet_Birthday_Party_Fido_2024-09-15.jpeg,3997,1432651107,/Documents/School,Undetected,None
+Coconut_Open_on_Beach.jpeg,2514,1432645787,/Documents,Undetected,None
+Watermelon_Slices_on_Summer_Picnic.jpeg,2189,1432650243,/Documents/School,Undetected,None
+main_controller.java,7024,1432645196,/Temp,Undetected,None
+TextMate.exe,4305,1432640671,/Temp,Suspicious,Worm
+MyDoom.exe,6711,1432652299,/Music,Undetected,None
+Camping_Weekend_Lake_2024-06-18.jpeg,1811,1432641077,/Downloads,Undetected,None
+Cyberpunk 2077.exe,7884,1432647610,/,Undetected,None
+Cabal.exe,4576,1432654330,/Downloads,Suspicious,Spyware
+Divinity: Original Sin 2.exe,4398,1432651914,/Downloads,Detected,Keylogger
+Dragon Age: Inquisition.exe,1021,1432639571,/Music,Undetected,None
+Melissa.exe,3781,1432646379,/,Undetected,None
+Halloween_Costume_Party_2023-10-31.jpeg,840,1432652825,/Documents/School,Undetected,None
+data_analysis.py,3306,1432649460,/Documents,Undetected,None

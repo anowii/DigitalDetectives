@@ -60,3 +60,11 @@ Desktop.ini
 
 # Python Virtual Environment specific
 .vscode/
+
+# Virtual env
+.venv/
+/.venv
+
+# All disk images
+*.dd
+Program/**/*.dd

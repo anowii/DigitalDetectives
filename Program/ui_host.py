@@ -84,7 +84,7 @@ def forward_message():
     if message:
         response = forward_message_llm(message,UPLOADED_CSV)  # Forward to Langchain-based LLM
         
-        #Mostly for loggin/debug purposes 
+        # Mostly for loggin/debug purposes 
         message_object = {
             "id": next_id, 
             "csv": UPLOADED_CSV if UPLOADED_CSV else "empty",
@@ -95,7 +95,7 @@ def forward_message():
         # Append message and response to the chat history
         messages.append({"id": next_id, "user": message, "response": response})
 
-        #Mostly for loggin/debug purposes
+        # Mostly for loggin/debug purposes
         save_message_to_file(message_object)
         next_id += 1      
 

@@ -11,9 +11,11 @@ import requests
 
 DATA_DIR = "data\\"
 SLEUTH_DB = "data\\analys.db"
+USER_DB = "data\\user.db"
 CSV_PATH = "data\\db.csv"
 
-INTERESTING_TYPES =".exe|.msi|.docx|.png|.jpeg|.txt" #files to put in the csv
+# Files types that will be included in CSV
+INTERESTING_TYPES =".exe|.msi|.docx|.png|.jpeg|.txt|.dat" 
 
 VIRUSTOTAL_TYPES =".exe|.msi"
 VIRUSTOTAL_APIKEY = "4e4140ca9678a7e353a618f2f9aa7dd3a1ff5d70c6eaf812391bb5649b80039e"
@@ -32,7 +34,7 @@ def check_with_virustotal(hash):
         vendor_results = response['data']['attributes']['last_analysis_results']
         popular_threat_classification = response['data']['attributes']['popular_threat_classification']['popular_threat_category']
     except:
-        return "undetected", None
+        return "undetected", "NaN"
 
     # Get all vendor results, along with their frequency
     result_list = []
@@ -53,12 +55,20 @@ def check_with_virustotal(hash):
             break
     return prime_category, popular_threat_classification[0]['value']
 
+# Connects to Slueth_kit database
 def connect():
     con = sqlite3.connect(SLEUTH_DB)
     cur = con.cursor()
     return con, cur
 
-#Check if the input file is valid
+# Diconnects from ANY database 
+def disconnect(connection):
+    try:
+        connection.close()
+    except Exception as e:
+        print(f"Error closing connection: {e}")
+
+# Check if the input file is valid
 def check_input_file(target):
     print("Check "+ target)
 
@@ -77,15 +87,27 @@ def db_to_csv():
     con, cur = connect()
     res = cur.execute("SELECT * FROM tsk_files")
     db_files = res.fetchall()
+    con.close()
     print("\ntsk_files\n")
-    fields = ["name","size", "crtime", "parent_path", "mal", "mal_type"]
+    fields = ["name","size", "crtime", "parent_path", "mal", "mal_type","unallocated"]
     files = []
     for file in db_files:
         name = file[5]
         if re.search(INTERESTING_TYPES,file[5]) and file[5].find("slack") == -1:
             print(check_with_virustotal(file[23]))
             prime_category, popular_threat_classification = check_with_virustotal(file[23])
-            files.append({"name":file[5], "size":file[14], "crtime":file[16], "parent_path":file[25], "mal": prime_category, "mal_type":popular_threat_classification})
+
+            csv_row = {
+                "name": file[5], 
+                "size": file[15], 
+                "crtime": file[17], 
+                "parent_path": file[25],
+                "mal": prime_category, 
+                "mal_type": popular_threat_classification,
+                "unallocated": file[13]
+            }
+
+            files.append(csv_row)
         
     with open(CSV_PATH, 'w', newline='') as csvfile:
         writer = csv.DictWriter(csvfile, fieldnames=fields)
@@ -93,10 +115,42 @@ def db_to_csv():
         writer.writerows(files)
     csvfile.close()
 
+def create_database_from_csv(csv_file):
+    
+   # Remove the database file if it already exists
+    if os.path.exists(USER_DB):
+        os.remove(USER_DB)
+        print(f"Existing database '{USER_DB}' has been removed.")
+
+    # Connect to SQLite database (it will create a new database if it doesn't exist)
+    conn = sqlite3.connect(USER_DB)
+    cursor = conn.cursor()
+
+    # Open the CSV file and read data
+    with open(csv_file, 'r') as f:
+        reader = csv.reader(f)
+        header = next(reader)  # Skip header row
+        # Create table based on the CSV header
+        columns = ', '.join([col.replace(' ', '_') for col in header])  # Clean column names
+        cursor.execute(f"CREATE TABLE IF NOT EXISTS data ({columns})")
+
+        # Insert data into the table
+        for row in reader:
+            placeholders = ', '.join(['?'] * len(row))  # Create placeholders for the values
+            cursor.execute(f"INSERT INTO data ({', '.join(header)}) VALUES ({placeholders})", row)
+
+    # Commit changes and close the connection
+    conn.commit()
+    conn.close()
+    print(f"Database '{USER_DB}' created successfully from '{csv_file}'.")
+
+
+
 def run(disk_image_path):
     
     check_input_file(disk_image_path)
     run_sleuth_on_file(disk_image_path)
     db_to_csv()
+    create_database_from_csv(CSV_PATH)
 
     return CSV_PATH

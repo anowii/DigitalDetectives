@@ -20,10 +20,10 @@ You'll need to add the folder containing The Sleuth Kit's `.exe` files to your e
 
 Otherwise, search for Edit the system environment variables in the Windows search bar and start from step 4. If that doesn't work for any reason, follow the step-by-step guide below.
 
-**Step 1.** Once installed, extract and move the folder to `C:\Program Files (x86)\sleuthkit-4.12.1-win32` \
-**Step 2.** Enter `windows key + X` and choose System in the menue that pops up which takes you to Settings/System/About \
-**Step 3.** Here you navigate to Advanced System Settings, which pop ups a new window System Properties \
-**Step 4.** Click the Enviroment Variables and add the following 
+**Step 1.** After installation, extract the files and move the folder to `C:\Program Files (x86)\sleuthkit-4.12.1-win32` \
+**Step 2.** Press the `Windows key + X` and select _System_ from the menu, which takes you to _Settings_>_System_>_About_ \
+**Step 3.** Navigate to _Advanced System Settings_, which will open a new window titled _System Properties_ \
+**Step 4.** Click _Enviroment Variables_ and add the following path
 ```
 Variable name: Choose and apporpriate one 
 Variable value: C:\Program Files (x86)\sleuthkit-4.12.1-win32\bin

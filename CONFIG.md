@@ -55,6 +55,7 @@ When the installation is ready open up a powershell and run:
 C:\Users\USERNAME> ollama pull llama3.1:8b 
 ```
 
+\newpage
 ## Virtual Enviroment 
 To replicate the environment our program was run in, download the code from (link to code) and open the code folder with VS Code. Inside, you'll find a file called `requirements.txt`, which you can use to set up the environment. This file ensures you have the exact same versions of packages and dependencies as we do.
 

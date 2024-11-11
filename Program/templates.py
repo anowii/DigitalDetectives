@@ -95,6 +95,18 @@ Here is the JSON data: `{json_data}`
 
 **Answer**: """
 
+
+template_sql = """
+You are an sql agent, turn the following question into a sql query nothing else: {question}
+
+file_table:
+name,size,crtime,parent_path,mal,mal_type,deleted,hash
+pong.exe,4,2023-08-12 09:45:22,/user/onedrive,malicious,trojan,0,129733231238917
+car.png,23,2012-01-04 04:12:13,/user/pictures,suspicious,virus,1,12123412
+dir.dll, 12, 2012-11-03 02:22:23,/user/dev,undetected,,1,12123412
+"""
+
 json_template = ChatPromptTemplate.from_template(template)
 json2_template = ChatPromptTemplate.from_template(template_2)
 simple_template = ChatPromptTemplate.from_template(simple_template)
+sql_template = ChatPromptTemplate.from_template(template_sql)

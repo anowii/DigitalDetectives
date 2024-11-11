@@ -10,11 +10,13 @@ You will configure and install the following:
 ## The Sleuth Kit
 **Installation**: Follow the link (https://www.sleuthkit.org/sleuthkit/download.php) and download **Windows Binaries**
 
-You have to add the folder where TheSleuthKit keeps all the exe files to your Enviroment variables. If you already know how to do this, you can go ahead and do it, otherwise follow the step-by-step guide. 
+You have to add the folder where TheSleuthKit keeps all the exe files to your Enviroment variables. If you already know how to do this, you can go ahead and do it.
+
+In the windows serach bar search and choose `Edit the system enviroment variables` and continue from step 4, if that for some reason does not work follow the step-by-step guide. 
 
 **Step 1.** Once installed, extract and move the folder to `C:\Program Files (x86)\sleuthkit-4.12.1-win32` \
-**Step 2.** Enter `windows key + X` and choose system in the menue that pops up which takes you to Settings/System/About \
-**Step 3.** Here you navigate to Advanced System Settings which pop ups a new window System Properties \
+**Step 2.** Enter `windows key + X` and choose System in the menue that pops up which takes you to Settings/System/About \
+**Step 3.** Here you navigate to Advanced System Settings, which pop ups a new window System Properties \
 **Step 4.** Click the Enviroment Variables and add the following 
 ```
 Variable name: Choose and apporpriate one 

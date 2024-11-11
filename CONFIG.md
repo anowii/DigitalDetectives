@@ -27,7 +27,7 @@ In the windows serach bar search and choose `Edit the system enviroment variable
 Variable name: Choose and apporpriate one 
 Variable value: C:\Program Files (x86)\sleuthkit-4.12.1-win32\bin
 ```
-To make sure everything works as it should open up a powershell and run `fls -v` and it should look like this:
+Make sure everything that everything works, Open up a powershell and run `fls -v`. The result should look like this: 
 
 --- Add picture later ---
 
@@ -57,10 +57,10 @@ As long as the environment is activated in the terminal, you can install depende
   ```
   pip install -r requirements.txt
   ```
-**3. Run the code:** Everything should now be set up, and you can run the code using the command `python ui_host.py`. Follow the link that appears in the terminal. When you're finished, remember to deactivate the virtual environment by `running the deactivate` command in the terminal.
+**3. Run the code:** Everything should now be set up, and you can run the code with the command `python ui_host.py`. Follow the link that appears in the terminal. When you're finished, deactivate the virtual environment by entering the `deactivate` command in the terminal.
 
 **Remove virtual enviroment:**
-  If you would like to remove the enviroment when you're done just run the command below.
+ To remove the enviroment completely, run the command below.
   ```
     Remove-Item -Recurse -Force venv
   ```

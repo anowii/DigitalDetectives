@@ -23,11 +23,8 @@ Otherwise, search for Edit the system environment variables in the Windows searc
 **Step 1.** After installation, extract the files and move the folder to `C:\Program Files (x86)\sleuthkit-4.12.1-win32` \
 **Step 2.** Press the `Windows key + X` and select _System_ from the menu, which takes you to _Settings_>_System_>_About_ \
 **Step 3.** Navigate to _Advanced System Settings_, which will open a new window titled _System Properties_ \
-**Step 4.** Click _Enviroment Variables_ and add the following path
-```
-Variable name: Choose and apporpriate one 
-Variable value: C:\Program Files (x86)\sleuthkit-4.12.1-win32\bin
-```
+**Step 4.** Click _Enviroment Variables_ and add the following path ` C:\Program Files (x86)\sleuthkit-4.12.1-win32\bin `
+
 Make sure everything that everything works, Open up a powershell and run `fls -v`. The result should look somthing like this: 
 ```
 system> fls -v
@@ -52,7 +49,7 @@ usage: C:\Program Files (x86)\sleuthkit-4.12.1-win32\bin\fls.exe
 Start by dowloading and installing Ollama from the link (https://ollama.com/download). 
 When the installation is ready open up a powershell and run:
 ```
-C:\Users\USERNAME> ollama pull llama3.1:8b 
+> ollama pull llama3.1:8b 
 ```
 
 ## Virtual Enviroment 

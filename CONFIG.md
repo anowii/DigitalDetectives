@@ -1,4 +1,11 @@
-# Digital Detectives 
+# Install and Configuration
+
+This documentation is tailored for a Windows system already configure with VScode and Python.
+
+You will configure and install the following:
+1. The Sleuth Kit
+2. Ollama and the model llama3.18b
+3. A virtual enviroment (Optional)
 
 
 **Just in case I forget:**

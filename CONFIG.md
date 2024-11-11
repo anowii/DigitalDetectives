@@ -28,6 +28,7 @@ Variable name: Choose and apporpriate one
 Variable value: C:\Program Files (x86)\sleuthkit-4.12.1-win32\bin
 ```
 To make sure everything works as it should open up a powershell and run `fls -v` and it should look like this:
+
 --- Add picture later ---
 
 ## Ollama 
@@ -48,8 +49,7 @@ You are going to want to replicate the enviroment that our program has been run 
   ``` 
 
 **2. Install the Dependencies from `requirements.txt`:**
-  Before you install the dependencies you'll want to activate the enviromnent by running in the terminal, beware that you might have to change the   
-  command depening on your folder structure.
+Before you install the dependencies you'll want to activate the enviromnent by running the command below in the terminal, beware that you might have to change the command depending on your folder structure.
   ```
    venv\Scripts\activate
   ```
@@ -61,7 +61,7 @@ You are going to want to replicate the enviroment that our program has been run 
 **3. Run the code:** Everything should now be setup and you can run the code with the command `python ui_host.py` and follow the link that comes up in the terminal. When you're done remeber to deactivte the virtual enviroment by issuing the command deactivate in the terminal.
 
 **Remove virtual enviroment:**
-  If you would like to remove the enviroment when you're done just run the command: 
+  If you would like to remove the enviroment when you're done just run the command
   ```
     Remove-Item -Recurse -Force venv
   ```

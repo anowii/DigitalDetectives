@@ -10,11 +10,18 @@ You will configure and install the following:
 ## The Sleuth Kit
 **Installation**: Follow the link (https://www.sleuthkit.org/sleuthkit/download.php) and download **Windows Binaries**
 
-You have to add the folder where TheSleuthKit keeps all it´s exe files to you're Systems variables. If you already know how to do this you can go ahead otherwivse follow the step-by-step guide. 
+You have to add the folder where TheSleuthKit keeps all the exe files to your Enviroment variables. If you already know how to do this, you can go ahead and do it, otherwise follow the step-by-step guide. 
 
-1. Once installed, extract and move the folder to `C:\Program Files (x86)\sleuthkit-4.12.1-win32`
-2. Enter windows key + X and choose system in the menue that pops up which takes you to Settings/System/About
-3. Here you navigate to Advanced System Settings 
+**Step 1.** Once installed, extract and move the folder to `C:\Program Files (x86)\sleuthkit-4.12.1-win32` \
+**Step 2.** Enter `windows key + X` and choose system in the menue that pops up which takes you to Settings/System/About \
+**Step 3.** Here you navigate to Advanced System Settings which pop ups a new window System Properties \
+**Step 4.** Click the Enviroment Variables and add the following 
+```
+Variable name: Choose and apporpriate one 
+Variable value: C:\Program Files (x86)\sleuthkit-4.12.1-win32\bin
+```
+To make sure everything works as it should open up a powershell and run `fls -v` and it should look like this:
+--- Add picture later ---
 
 ## Virtual Enviroment 
 

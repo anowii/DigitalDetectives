@@ -1,6 +1,6 @@
 # Installation and Configuration Manual
 
-This documentation is tailored for a Windows system already configure with vscode and Python.
+This documentation is tailored for a Windows system already configured with VSCode and Python.
 
 You will configure and install the following:
 1. The Sleuth Kit
@@ -14,11 +14,11 @@ Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy RemoteSigned
 This command sets the execution policy for the current user to allow running scripts, which may help clear up common permission-related issues.
 
 ## The Sleuth Kit
-**Installation**: Follow the link (https://www.sleuthkit.org/sleuthkit/download.php) and download **Windows Binaries**
+**Installation**: Follow the link (https://www.sleuthkit.org/sleuthkit/download.php) and download **Windows Binaries**.
 
-You have to add the folder where TheSleuthKit keeps all the exe files to your Enviroment variables. If you already know how to do this, you can go ahead and do it.
+You'll need to add the folder containing The Sleuth Kit's `.exe` files to your environment variables. If you're already familiar with this process, you can go ahead and do it.
 
-In the windows serach bar search and choose `Edit the system enviroment variables` and continue from step 4, if that for some reason does not work follow the step-by-step guide. 
+Otherwise, search for Edit the system environment variables in the Windows search bar and start from step 4. If that doesn't work for any reason, follow the step-by-step guide below.
 
 **Step 1.** Once installed, extract and move the folder to `C:\Program Files (x86)\sleuthkit-4.12.1-win32` \
 **Step 2.** Enter `windows key + X` and choose System in the menue that pops up which takes you to Settings/System/About \

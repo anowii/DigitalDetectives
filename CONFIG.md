@@ -1,4 +1,4 @@
-# Install and Configuration
+# Installation and Configuration Manual
 
 This documentation is tailored for a Windows system already configure with vscode and Python.
 
@@ -6,6 +6,11 @@ You will configure and install the following:
 1. The Sleuth Kit
 2. Ollama and the model llama3.18b
 3. A virtual enviroment (Optional)
+
+**Windows Powershell**: Can complain quite alot, make sure you run it as ADMIN. Sometimes it complains even if you are running it as admin, then this little code snippet might just solve your problems. 
+```
+Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy RemoteSigned
+```
 
 ## The Sleuth Kit
 **Installation**: Follow the link (https://www.sleuthkit.org/sleuthkit/download.php) and download **Windows Binaries**
@@ -25,32 +30,38 @@ Variable value: C:\Program Files (x86)\sleuthkit-4.12.1-win32\bin
 To make sure everything works as it should open up a powershell and run `fls -v` and it should look like this:
 --- Add picture later ---
 
+## Ollama 
+Start by dowloading and installing Ollama from the link (https://ollama.com/download). 
+When the installation is ready open up a powershell and run:
+```
+C:\Users\USERNAME> ollama pull llama3.1:8b 
+```
+
 ## Virtual Enviroment 
+You are going to want to replicate the enviroment that our program has been run in, the simplest way to do this is by downloading the code from (link to code) and open the code folder with vscode. The folder will contain a text file called `requirements.txt` which you will use to set up the enviroment. The text file ensures you have the exact same versions of the packages and dependencies as us. 
 
-In a virtual environment, you can generate a `requirements.txt` file that lists all the dependencies of your project (`pip freeze > requirements.txt`). Anyone else can use that file to install the exact same versions of the packages (`pip install -r requirements.txt`), ensuring reproducibility.
-
-**Just in case I forget:**
-```
-Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy RemoteSigned
-```
-
-**Remove virtual enviroment:**
-  ```
-    Remove-Item -Recurse -Force .venv
-  ```
-**List all dependencies to file:**
-  ```
-  pip freeze > requirements.txt
-  ```
 ### Recreate the Virtual Environment on Another Machine (Windows):
 **1. Create a Virtual Environment:**
+  Open a terminal in vscode and run
   ```
-  python -m venv .venv
-  ```
-  ```
- .\.venv\Scripts\activate
-  ```
+  python -m venv venv
+  ``` 
+
 **2. Install the Dependencies from `requirements.txt`:**
+  Before you install the dependencies you'll want to activate the enviromnent by running in the terminal, beware that you might have to change the   
+  command depening on your folder structure.
+  ```
+   venv\Scripts\activate
+  ```
+  As long as the enviroment is activated in the terminal you can install the dependencies from whatever folder you like, so navigate to the code       
+  folder and run the command below. 
   ```
   pip install -r requirements.txt
+  ```
+**3. Run the code:** Everything should now be setup and you can run the code with the command `python ui_host.py` and follow the link that comes up in the terminal. When you're done remeber to deactivte the virtual enviroment by issuing the command deactivate in the terminal.
+
+**Remove virtual enviroment:**
+  If you would like to remove the enviroment when you're done just run the command: 
+  ```
+    Remove-Item -Recurse -Force venv
   ```

@@ -1,7 +1,8 @@
 
-from flask import Flask, render_template, request, jsonify,redirect,url_for, json, session, abort, flash
+from flask import Flask, render_template, request, jsonify,redirect,url_for, json, session, flash
 from flask_login import login_user
 import os
+import hashlib
 from ui_backend import send_iso,forward_message_llm, is_valid_disk_image
 
 app = Flask(__name__)
@@ -19,9 +20,7 @@ next_id = 1  # Initialize the message ID
 # Default route 
 @app.route('/')
 def home():
-    print("TEST2")
     if not session.get('logged_in'):
-        print("TEST3")
         return render_template('login.html')
     
     return render_template('home.html')
@@ -36,20 +35,38 @@ def login():
 # Login handling
 @app.route('/login', methods=['POST'])      #CURRENTLY NOT WORKING, SHOULD REDIRECT USER TO HOME WHEN PRESSING SUBMIT (TEMPORARY WHEN NO LOGIN DETAILS)
 def login_post():
-
-    print(str(request.form['username']))
+    result = request.form['password']
+    result = hashlib.md5(result.encode())
+    result = result.hexdigest()
+    user = request.form['username']
     
+    #default users
+    #User = password
+    #Admin = muchmoresecure
+    Users = {"User":"5f4dcc3b5aa765d61d8327deb882cf99", "Admin":"0c768dfef098837ed8a1ea70be211e38"}
 
-
-    print("TEST")
-    if request.form['password'] == 'password' and request.form['username'] == 'admin':
-        session['logged_in'] = True
-        return render_template('home.html')
+    if user in Users:
+        print("user exist")
+        if result == Users[user]:
+            session['logged_in'] = True
+        else:
+            print("Wrong password")
+            flash('Wrong password or Username')
     else:
-        flash('Wrong password')
+        print("Wrong username")
+        flash('Wrong password or Username')
 
 
     return home()
+
+
+
+@app.route('/logout', methods=['POST'])
+def logout_post():
+    session['logged_in'] = False
+    
+    return render_template('login.html')
+
 
 # Home page 
 @app.route('/home')

@@ -13,12 +13,12 @@
         <div class="content">
             <h2>Sign In</h2> 
             <div class ="form">
-                <form action="login.html" method="POST"></form>
+                <form action="/login" method="POST">
                 <div class="inputBox">
-                    <input type="text" name="username" required><i>Username</i>
+                    <input type="text" name="username" value="{{request.form.username}}"><i>Username</i>
                 </div>
                 <div class="inputBox">
-                    <input type="password" name="password" required><i>Password</i>
+                    <input type="password" name="password" value="{{request.form.password}}"><i>Password</i>
                 </div>
 
                 <div class="inputBox"> 

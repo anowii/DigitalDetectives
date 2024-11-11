@@ -1,5 +1,6 @@
 
-from flask import Flask, render_template, request, jsonify,redirect,url_for, json
+from flask import Flask, render_template, request, jsonify,redirect,url_for, json, session, abort, flash
+from flask_login import login_user
 import os
 from ui_backend import send_iso,forward_message_llm, is_valid_disk_image
 
@@ -17,17 +18,42 @@ next_id = 1  # Initialize the message ID
 
 # Default route 
 @app.route('/')
+def home():
+    print("TEST2")
+    if not session.get('logged_in'):
+        print("TEST3")
+        return render_template('login.html')
+    
+    return render_template('home.html')
+
+
+
+@app.route('/login')      #CURRENTLY NOT WORKING, SHOULD REDIRECT USER TO HOME WHEN PRESSING SUBMIT (TEMPORARY WHEN NO LOGIN DETAILS)
 def login():
     return render_template('login.html')
 
+
 # Login handling
 @app.route('/login', methods=['POST'])      #CURRENTLY NOT WORKING, SHOULD REDIRECT USER TO HOME WHEN PRESSING SUBMIT (TEMPORARY WHEN NO LOGIN DETAILS)
-def handle_login():
-    return redirect(url_for('home'))
+def login_post():
+
+    print(str(request.form['username']))
+    
+
+
+    print("TEST")
+    if request.form['password'] == 'password' and request.form['username'] == 'admin':
+        session['logged_in'] = True
+        return render_template('home.html')
+    else:
+        flash('Wrong password')
+
+
+    return home()
 
 # Home page 
 @app.route('/home')
-def home():
+def chat():
     return render_template('home.html')
 
 # Route to handle file upload
@@ -111,7 +137,9 @@ def get_messages():
     return jsonify(messages)
 
 def main():
-    app.run(debug=True, threaded=True, port=4976)
+    app.secret_key = os.urandom(12)
+    app.run('localhost', 4976)
+    
 
 if __name__ == '__main__':
     main()

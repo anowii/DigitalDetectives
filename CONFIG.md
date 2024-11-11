@@ -39,7 +39,7 @@ C:\Users\USERNAME> ollama pull llama3.1:8b
 ```
 
 ## Virtual Enviroment 
-You are going to want to replicate the enviroment that our program has been run in, the simplest way to do this is by downloading the code from (link to code) and open the code folder with vscode. The folder will contain a text file called `requirements.txt` which you will use to set up the enviroment. The text file ensures you have the exact same versions of the packages and dependencies as us. 
+To replicate the environment our program was run in, download the code from (link to code) and open the code folder with VS Code. Inside, you'll find a file called `requirements.txt`, which you can use to set up the environment. This file ensures you have the exact same versions of packages and dependencies as we do.
 
 ### Recreate the Virtual Environment on Another Machine (Windows):
 **1. Create a Virtual Environment:**
@@ -49,19 +49,18 @@ You are going to want to replicate the enviroment that our program has been run 
   ``` 
 
 **2. Install the Dependencies from `requirements.txt`:**
-Before you install the dependencies you'll want to activate the enviromnent by running the command below in the terminal, beware that you might have to change the command depending on your folder structure.
+Before installing the dependencies, activate the environment by running the command below in the terminal. Note that you may need to adjust the command based on your folder structure.
   ```
    venv\Scripts\activate
   ```
-  As long as the enviroment is activated in the terminal you can install the dependencies from whatever folder you like, so navigate to the code       
-  folder and run the command below. 
+As long as the environment is activated in the terminal, you can install dependencies from any folder. Navigate to the code folder and run the command below.
   ```
   pip install -r requirements.txt
   ```
-**3. Run the code:** Everything should now be setup and you can run the code with the command `python ui_host.py` and follow the link that comes up in the terminal. When you're done remeber to deactivte the virtual enviroment by issuing the command deactivate in the terminal.
+**3. Run the code:** Everything should now be set up, and you can run the code using the command `python ui_host.py`. Follow the link that appears in the terminal. When you're finished, remember to deactivate the virtual environment by `running the deactivate` command in the terminal.
 
 **Remove virtual enviroment:**
-  If you would like to remove the enviroment when you're done just run the command
+  If you would like to remove the enviroment when you're done just run the command below.
   ```
     Remove-Item -Recurse -Force venv
   ```

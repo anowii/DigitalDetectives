@@ -7,10 +7,11 @@ You will configure and install the following:
 2. Ollama and the model llama3.18b
 3. A virtual enviroment (Optional)
 
-**Windows Powershell**: Can complain quite alot, make sure you run it as ADMIN. Sometimes it complains even if you are running it as admin, then this little code snippet might just solve your problems. 
+**Windows Powershell** can sometimes be finicky, so make sure to run it as an administrator. If you still encounter issues even with admin privileges, try running the following command to resolve them:
 ```
 Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy RemoteSigned
 ```
+This command sets the execution policy for the current user to allow running scripts, which may help clear up common permission-related issues.
 
 ## The Sleuth Kit
 **Installation**: Follow the link (https://www.sleuthkit.org/sleuthkit/download.php) and download **Windows Binaries**

@@ -28,9 +28,25 @@ Otherwise, search for Edit the system environment variables in the Windows searc
 Variable name: Choose and apporpriate one 
 Variable value: C:\Program Files (x86)\sleuthkit-4.12.1-win32\bin
 ```
-Make sure everything that everything works, Open up a powershell and run `fls -v`. The result should look like this: 
-
---- Add picture later ---
+Make sure everything that everything works, Open up a powershell and run `fls -v`. The result should look somthing like this: 
+```
+system> fls -v
+Missing image name
+usage: C:\Program Files (x86)\sleuthkit-4.12.1-win32\bin\fls.exe
+[-adDFlhpruvV] [-f fstype] [-i imgtype] [-b dev_sector_size]
+[-m dir/] [-o imgoffset] [-z ZONE] [-s seconds] image [images] [inode]
+        If [inode] is not given, the root directory is used
+        -a: Display "." and ".." entries
+        -d: Display deleted entries only
+        -D: Display only directories
+            ....
+            ....
+            ....
+        -V: Print version
+        -z: Time zone of original machine (i.e. EST5EDT or GMT) (only useful with -l)
+        -s seconds: Time skew of original machine (in seconds) (only useful with -l & -m)
+        -k password: Decryption password for encrypted volumes
+```
 
 ## Ollama 
 Start by dowloading and installing Ollama from the link (https://ollama.com/download). 

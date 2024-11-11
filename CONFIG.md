@@ -1,21 +1,29 @@
 # Install and Configuration
 
-This documentation is tailored for a Windows system already configure with VScode and Python.
+This documentation is tailored for a Windows system already configure with vscode and Python.
 
 You will configure and install the following:
 1. The Sleuth Kit
 2. Ollama and the model llama3.18b
 3. A virtual enviroment (Optional)
 
+## The Sleuth Kit
+**Installation**: Follow the link (https://www.sleuthkit.org/sleuthkit/download.php) and download **Windows Binaries**
+
+You have to add the folder where TheSleuthKit keeps all it´s exe files to you're Systems variables. If you already know how to do this you can go ahead otherwivse follow the step-by-step guide. 
+
+1. Once installed, extract and move the folder to `C:\Program Files (x86)\sleuthkit-4.12.1-win32`
+2. Enter windows key + X and choose system in the menue that pops up which takes you to Settings/System/About
+3. Here you navigate to Advanced System Settings 
+
+## Virtual Enviroment 
+
+In a virtual environment, you can generate a `requirements.txt` file that lists all the dependencies of your project (`pip freeze > requirements.txt`). Anyone else can use that file to install the exact same versions of the packages (`pip install -r requirements.txt`), ensuring reproducibility.
 
 **Just in case I forget:**
 ```
 Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy RemoteSigned
 ```
-
-## Virtual Enviroment 
-
-In a virtual environment, you can generate a `requirements.txt` file that lists all the dependencies of your project (`pip freeze > requirements.txt`). Anyone else can use that file to install the exact same versions of the packages (`pip install -r requirements.txt`), ensuring reproducibility.
 
 **Remove virtual enviroment:**
   ```

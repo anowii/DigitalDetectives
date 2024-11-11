@@ -7,7 +7,7 @@ You will configure and install the following:
 2. Ollama and the model llama3.18b
 3. A virtual enviroment (Optional)
 
-**Windows Powershell** can sometimes be finicky, so make sure to run it as an administrator. If you still encounter issues even with admin privileges, try running the following command to resolve them:
+**Windows Powershell** can sometimes be fussy, so make sure to run it as an administrator. If you still encounter issues even with admin privileges, try running the following command to resolve them:
 ```
 Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy RemoteSigned
 ```

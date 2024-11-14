@@ -20,7 +20,7 @@ def load_json_data(filename):
             df = pd.read_csv(filename)
 
             # Ensure the column headers match expected structure
-            df.columns = ['name', 'size', 'crtime', 'path', 'virus', 'virus_type']
+            df.columns = ['name', 'size', 'crtime', 'path', 'mal','mal_type','delete_flag']
 
             # Convert to JSON string
             return df.to_dict(orient='records') 
@@ -79,16 +79,15 @@ def forward_message_llm(message, filepath):
         query = chain_sql.invoke({"question": message})
         result, sql_success, column_headers = send_query_to_db(query)
         if sql_success:
-            
+
             result = "Result generated from " + query + ":<br><br>" + db_response_to_html(result, column_headers).replace("\n", "")
 
     # If sql query fails or it dosn't start with "list" answer the question normally with json data
     if message.lower().startswith("list") == False or sql_success == False:
         result = chain.invoke({"json_data": json_data ,"question": message})
     
-    # Use Langchain chain to get AI response
+    # Use Langchain chain to get AI response <-- ??
     
-    #print('bye')
     
     return result
 

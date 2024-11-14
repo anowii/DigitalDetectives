@@ -21,39 +21,44 @@ VIRUSTOTAL_TYPES =".exe|.msi"
 VIRUSTOTAL_APIKEY = "4e4140ca9678a7e353a618f2f9aa7dd3a1ff5d70c6eaf812391bb5649b80039e"
 
 def check_with_virustotal(hash):
-    # Send request
-    url = "https://www.virustotal.com/api/v3/files/" + hash
-    headers = {
-        "accept": "application/json",
-        "x-apikey": VIRUSTOTAL_APIKEY
-    }
-    response = (requests.get(url, headers=headers)).json()
-
-    # If virustotal returns an error, return undetected
+   
     try:
-        vendor_results = response['data']['attributes']['last_analysis_results']
-        popular_threat_classification = response['data']['attributes']['popular_threat_classification']['popular_threat_category']
-    except:
+        # Send request
+        url = "https://www.virustotal.com/api/v3/files/" + hash
+        headers = {
+            "accept": "application/json",
+            "x-apikey": VIRUSTOTAL_APIKEY
+        }
+        response = (requests.get(url, headers=headers)).json()
+
+        # If virustotal returns an error, return undetected
+        try:
+            vendor_results = response['data']['attributes']['last_analysis_results']
+            popular_threat_classification = response['data']['attributes']['popular_threat_classification']['popular_threat_category']
+        except:
+            return "undetected", "NaN"
+
+        # Get all vendor results, along with their frequency
+        result_list = []
+        count_list = []
+        for vendor in vendor_results.items():
+            category = vendor[1]['category']
+            if category not in result_list:
+                result_list.append(category)
+                count_list.append(0)
+            count_list[result_list.index(category)] += 1
+        categories = sorted(zip(result_list, count_list), key=lambda x: x[1], reverse=True)
+        prime_category = categories[0]
+
+        # Prioritize malicious then suspicious category, if they have a count over 5 (arbitrary)
+        for category, count in categories:
+            if (category == 'malicious' or category == 'suspicious') and count > 5:
+                prime_category = category
+                break
+        return prime_category, popular_threat_classification[0]['value']
+    except TypeError:
+        print("Error: Hash value is None and cannot be concatenated to the URL")
         return "undetected", "NaN"
-
-    # Get all vendor results, along with their frequency
-    result_list = []
-    count_list = []
-    for vendor in vendor_results.items():
-        category = vendor[1]['category']
-        if category not in result_list:
-            result_list.append(category)
-            count_list.append(0)
-        count_list[result_list.index(category)] += 1
-    categories = sorted(zip(result_list, count_list), key=lambda x: x[1], reverse=True)
-    prime_category = categories[0]
-
-    # Prioritize malicious then suspicious category, if they have a count over 5 (arbitrary)
-    for category, count in categories:
-        if (category == 'malicious' or category == 'suspicious') and count > 5:
-            prime_category = category
-            break
-    return prime_category, popular_threat_classification[0]['value']
 
 # Connects to Slueth_kit database
 def connect():
@@ -94,8 +99,9 @@ def db_to_csv():
     for file in db_files:
         name = file[5]
         if re.search(INTERESTING_TYPES,file[5]) and file[5].find("slack") == -1:
-            print(check_with_virustotal(file[23]))
+      
             prime_category, popular_threat_classification = check_with_virustotal(file[23])
+            print(prime_category, popular_threat_classification)
 
             csv_row = {
                 "name": file[5], 

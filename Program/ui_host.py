@@ -26,8 +26,6 @@ def home():
     
     return render_template('home.html')
 
-
-
 @app.route('/login')      #CURRENTLY NOT WORKING, SHOULD REDIRECT USER TO HOME WHEN PRESSING SUBMIT (TEMPORARY WHEN NO LOGIN DETAILS)
 def login():
     return render_template('login.html')

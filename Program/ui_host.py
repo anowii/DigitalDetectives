@@ -42,21 +42,19 @@ def login_post():
     user = request.form['username']
     
     #default users
-    #User = password
+    #user = password
     #Admin = muchmoresecure
-    Users = {"User":"5f4dcc3b5aa765d61d8327deb882cf99", "Admin":"0c768dfef098837ed8a1ea70be211e38"}
+    Users = {"user":"5f4dcc3b5aa765d61d8327deb882cf99", "Admin":"0c768dfef098837ed8a1ea70be211e38"}
 
     if user in Users:
         print("user exist")
         if result == Users[user]:
             session['logged_in'] = True
+            return home()
         else:
-            print("Wrong password")
             flash('Wrong password or Username')
     else:
-        print("Wrong username")
         flash('Wrong password or Username')
-
 
     return home()
 
@@ -72,6 +70,9 @@ def logout_post():
 # Home page 
 @app.route('/home')
 def chat():
+    if not session.get('logged_in'):
+        return home()
+    
     return render_template('home.html')
 
 # Route to handle file upload

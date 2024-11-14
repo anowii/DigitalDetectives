@@ -110,7 +110,8 @@ def db_to_csv():
                 "parent_path": file[25],
                 "mal": prime_category, 
                 "mal_type": popular_threat_classification,
-                "delete_flag": file[13]
+                "delete_flag": file[13] 
+                #delete_flag == dir_flag
             }
 
             files.append(csv_row)

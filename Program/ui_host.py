@@ -3,6 +3,7 @@ from flask import Flask, render_template, request, jsonify,redirect,url_for, jso
 from flask_login import login_user
 import os
 import hashlib
+from diskanalys import create_database_from_csv
 from ui_backend import send_iso,forward_message_llm, is_valid_disk_image
 
 app = Flask(__name__)
@@ -103,6 +104,7 @@ def submit_file():
     if file.filename.endswith('.csv'):
         global UPLOADED_CSV
         UPLOADED_CSV = file_path
+        create_database_from_csv(UPLOADED_CSV)
 
     elif is_valid_disk_image(file_path) == True:
         send_iso(file_path)  # Call ISO handling function with file path

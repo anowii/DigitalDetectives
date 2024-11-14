@@ -132,12 +132,12 @@ def create_database_from_csv(csv_file):
         header = next(reader)  # Skip header row
         # Create table based on the CSV header
         columns = ', '.join([col.replace(' ', '_') for col in header])  # Clean column names
-        cursor.execute(f"CREATE TABLE IF NOT EXISTS data ({columns})")
+        cursor.execute(f"CREATE TABLE IF NOT EXISTS file_table ({columns})")
 
         # Insert data into the table
         for row in reader:
             placeholders = ', '.join(['?'] * len(row))  # Create placeholders for the values
-            cursor.execute(f"INSERT INTO data ({', '.join(header)}) VALUES ({placeholders})", row)
+            cursor.execute(f"INSERT INTO file_table ({', '.join(header)}) VALUES ({placeholders})", row)
 
     # Commit changes and close the connection
     conn.commit()

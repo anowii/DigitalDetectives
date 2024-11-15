@@ -2,7 +2,7 @@
 *
 {
   margin: 0;
-  padding: 0;
+  padding: 4px;
   box-sizing: border-box;
   font-family: 'Quicksand', sans-serif;
 }
@@ -55,7 +55,7 @@ section .signin .content
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  gap: 40px;
+
 }
 section .signin .content h2 
 {

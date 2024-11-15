@@ -2,7 +2,7 @@ import json
 import os
 import pandas as pd
 from langchain_ollama import OllamaLLM
-from templates import json_template, simple_template, sql_template
+from templates import json_template2, sql_template
 from diskanalys import run, USER_DB, create_database_from_csv
 import sqlite3
 from tabulate import tabulate
@@ -10,7 +10,7 @@ from tabulate import tabulate
 
 model = OllamaLLM(model="llama3.2")
 #chain = json_template | model
-chain = simple_template | model
+chain = json_template2 | model
 chain_sql = sql_template | model
 
 # Load CSV data from filename/filepath returns it in JSON format 
@@ -33,7 +33,8 @@ def load_json_data(filename):
     else:
         print("File does not exist.")
         return []
-    
+
+  
 def db_response_to_html(response, column_headers):
     if not response:
         return "No result"
@@ -43,6 +44,7 @@ def db_response_to_html(response, column_headers):
         text = tabulate(response, headers=column_headers, tablefmt="html", numalign="left")
         print(text)
         return text
+
 
 def send_query_to_db(query):
     print("Query: ", query)

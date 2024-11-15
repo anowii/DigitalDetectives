@@ -107,6 +107,7 @@ def submit_file():
 
     elif is_valid_disk_image(file_path) == True:
         send_iso(file_path)  # Call ISO handling function with file path
+        UPLOADED_CSV = 'data\\db.csv'
     else:
         print("Non-valid file type") #Do something more??????????
 

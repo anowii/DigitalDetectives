@@ -122,29 +122,33 @@ def db_to_csv():
         writer.writerows(files)
     csvfile.close()
 
-def create_database_from_csv(csv_file):
+def create_database_from_csv(csv_path):
 
    # Remove the database file if it already exists
     if os.path.exists(USER_DB):
         os.remove(USER_DB)
         print(f"Existing database '{USER_DB}' has been removed.")
-
+    fields = ["name","size", "crtime", "parent_path", "mal", "mal_type","delete_flag"]
+    
     # Connect to SQLite database (it will create a new database if it doesn't exist)
     conn = sqlite3.connect(USER_DB)
     cursor = conn.cursor()
 
     # Open the CSV file and read data
-    with open(csv_file, 'r') as f:
-        reader = csv.reader(f)
+    with open(csv_path, 'r') as csv_file:
+        reader = csv.reader(csv_file)
         header = next(reader)  # Skip header row
-        # Create table based on the CSV header
-        columns = ', '.join([col.replace(' ', '_') for col in header])  # Clean column names
-        cursor.execute(f"CREATE TABLE IF NOT EXISTS file_table ({columns})")
+        
+        if(fields == header):
+            # Create table based on the CSV header
+            columns = ', '.join([col.replace(' ', '_') for col in header])  # Clean column names
+            cursor.execute(f"CREATE TABLE IF NOT EXISTS file_table ({columns})")
 
-        # Insert data into the table
-        for row in reader:
-            placeholders = ', '.join(['?'] * len(row))  # Create placeholders for the values
-            cursor.execute(f"INSERT INTO file_table ({', '.join(header)}) VALUES ({placeholders})", row)
+            # Insert data into the table
+            for row in reader:
+                placeholders = ', '.join(['?'] * len(row))  # Create placeholders for the values
+                cursor.execute(f"INSERT INTO file_table ({', '.join(header)}) VALUES ({placeholders})", row)
+    csv_file.close()
 
     # Commit changes and close the connection
     conn.commit()

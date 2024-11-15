@@ -1,6 +1,7 @@
 from langchain_core.prompts import ChatPromptTemplate
 
-# Defines json_template
+# Defines json_template 
+# Not usable anymore
 template = """
 # Task: Analyze JSON Data
 
@@ -66,14 +67,15 @@ You are a knowledgeable forensic assistant capable of answering questions about 
 ### JSON File Structure:
 The JSON object consists of the following fields:
 
-| Field Name     | Data Type    | Description                                                         |
-|--------------- |--------------|---------------------------------------------------------------------|
-| **name**       | String       | The name of the file, including its extension and any suffixes.     |
-| **size**       | Integer      | The size of the file in bytes.                                      |
-| **crtime**     | Integer      | The creation time of the file (Unix timestamp).                     |
-| **parent_path**| String       | The path to the parent directory where the file is located.         |
-| **virus**      | Integer      | An indicator for virus (e.g., 1 for virus, 0 for no virus).         |
-| **virus_type** | String       | The type of the virus                                               | 
+| Field Name         | Data Type    | Description                                                                      |
+|--------------------|--------------|----------------------------------------------------------------------------------|
+| **name**           | String       | The name of the file, including its extension and any suffixes.                  |
+| **size**           | Integer      | The size of the file in bytes.                                                   |
+| **crtime**         | Integer      | The creation time of the file (Unix timestamp).                                  |
+| **parent_path**    | String       | The path to the parent directory where the file is located.                      |
+| **mal**            | Integer      | An indicator if malware was detected or undetected                               |
+| **mal_type**       | String       | The name of the malware type  (Keylogger, Adware)                                |
+| **delete_flag **   | String       | Indicates if files has been deleted or not (1 for not deleted and 2 for deleted) |  
 
 ### Instructions:
 You can ask me any question about the JSON data. 
@@ -100,13 +102,13 @@ template_sql = """
 You are an sql agent, turn the following question into a sql query nothing else: {question}
 
 file_table:
-name,size,crtime,parent_path,virus,virus_type,deleted
+name,size,crtime,parent_path,virus,virus_type,delete_flag
 pong.exe,4,1432645070,/user/onedrive,malicious,trojan,0
 car.png,23,1432650259,/user/pictures,suspicious,virus,1
 dir.dll, 12, 1432653585,/user/dev,undetected,,1
 """
 
 json_template = ChatPromptTemplate.from_template(template)
-json2_template = ChatPromptTemplate.from_template(template_2)
+json_template2 = ChatPromptTemplate.from_template(template_2)
 simple_template = ChatPromptTemplate.from_template(simple_template)
 sql_template = ChatPromptTemplate.from_template(template_sql)

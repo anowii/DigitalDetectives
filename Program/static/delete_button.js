@@ -1,17 +1,22 @@
-/* Detta är bara en start punkt, den som forstätter arbeta på detta kan ändra det som behövs*/
+document.querySelector(".trash-button").addEventListener("click", function () {
+    if (confirm("Are you sure you want to delete this session? This will clear the chat and unload any uploaded files.")) {
+        fetch('/delete_session', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+        })
+            .then((response) => response.json())
+            .then((data) => {
+                if (data.status === "success") {
+                    // Clear chat window
+                    const chatWindow = document.getElementById("chat-window");
+                    chatWindow.innerHTML = "<p>Session cleared. Start a new session by uploading a file.</p>";
 
-document.addEventListener("DOMContentLoaded", () => {
-    const trashButton = document.querySelector('.trash-button');
-    if (trashButton) {
-        trashButton.addEventListener('click', () => {
-            console.log("Trash button clicked!");
-            const confirmed = confirm("Are you sure you want to delete this?");
-            if (confirmed) {
-                console.log("Item deleted.");
-                // Additional deletion logic here
-            }
-        });
-    } else {
-        console.warn("Trash button not found in the DOM.");
+                } else {
+                    alert("Failed to clear session. Please try again.");
+                }
+            })
+            .catch((error) => console.error("Error:", error));
     }
 });

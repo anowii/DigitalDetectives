@@ -1,10 +1,11 @@
 
-from flask import Flask, render_template, request, jsonify,redirect,url_for, json, session, flash
+from flask import Flask, render_template, request, jsonify,redirect,url_for, json, session, flash, send_file
 from flask_login import login_user
 import os
 import hashlib
 from diskanalys import create_database_from_csv
-from ui_backend import send_iso,forward_message_llm, is_valid_disk_image
+from ui_backend import send_iso,forward_message_llm, is_valid_disk_image, generate_pdf, delete_session
+
 
 app = Flask(__name__)
 #app.secret_key = "The Secret key"
@@ -140,7 +141,7 @@ def forward_message():
         # Append message and response to the chat history
         messages.append({"id": next_id, "user": message, "response": response})
 
-        # Mostly for loggin/debug purposes
+        # Mostly for logging/debug purposes
         save_message_to_file(message_object)
         next_id += 1      
 
@@ -154,6 +155,18 @@ def forward_message():
 def get_messages():
     # Return the list of user messages and LLM responses to the client
     return jsonify(messages)
+
+@app.route('/download_chat', methods=['GET'])
+def download_chat():
+    pdf_buffer = generate_pdf(messages)
+    return send_file(pdf_buffer,as_attachment=True,download_name="chat_history.pdf",mimetype="application/pdf")
+
+@app.route('/delete_session', methods=['POST'])
+def delete_session_route():
+    global messages, UPLOADED_CSV
+
+    # Call the delete_session function from ui_backend
+    return delete_session(messages, UPLOADED_CSV)
 
 def main():
     app.secret_key = os.urandom(12)

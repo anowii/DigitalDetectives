@@ -6,6 +6,13 @@ from templates import json_template2, sql_template
 from diskanalys import run, USER_DB, create_database_from_csv
 import sqlite3
 from tabulate import tabulate
+from flask import jsonify
+
+from io import BytesIO #chat download
+from reportlab.lib.pagesizes import letter #chat download
+from reportlab.lib.styles import getSampleStyleSheet #chat download
+from reportlab.platypus import SimpleDocTemplate, Paragraph, Spacer #chat download
+
 
 
 model = OllamaLLM(model="llama3.2")
@@ -95,7 +102,8 @@ def forward_message_llm(message, filepath):
 
 def send_iso(fileName): #Runs TSK on disk image file (".dd")
     run(fileName)
-    print(fileName)
+    print(f"Disk image {fileName} processed successfully.")
+
     return 0
 
 def is_valid_disk_image(disk_image):
@@ -110,3 +118,40 @@ def is_valid_disk_image(disk_image):
         return False
 
     return True
+
+
+def generate_pdf(messages):
+    pdf_buffer = BytesIO()
+    doc = SimpleDocTemplate(pdf_buffer, pagesize=letter)
+    styles = getSampleStyleSheet()
+
+    elements = []
+
+    # doc title
+    title = Paragraph("Chat History", styles["Title"])
+    elements.append(title)
+    elements.append(Spacer(1, 20))  #space after title
+
+    # add messages
+    for msg in messages:
+        user_message = f"<b>User ({msg['id']}):</b> {msg['user']}"
+        ai_response = f"<b>AI:</b> {msg['response']}"
+
+        elements.append(Paragraph(user_message, styles["BodyText"]))
+        elements.append(Spacer(1, 10))  # space between messages
+        elements.append(Paragraph(ai_response, styles["BodyText"]))
+        elements.append(Spacer(1, 20))  # space between entries
+
+    # build pdf
+    doc.build(elements)
+    pdf_buffer.seek(0)
+
+    return pdf_buffer
+
+
+def delete_session(messages, uploaded_csv_path):
+    # Clear messages array
+    messages.clear()
+    uploaded_csv_path = ''
+
+    return jsonify({"status": "success", "message": "Session cleared successfully"})

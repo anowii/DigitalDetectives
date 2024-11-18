@@ -102,12 +102,26 @@ template_sql = """
 You are an sql agent, turn the following question into a sql query nothing else: {question}
 
 file_table:
-name,size,crtime,parent_path,virus,virus_type,delete_flag
+name,size,crtime,parent_path,mal,mal_type,delete_flag
 pong.exe,4,1432645070,/user/onedrive,malicious,trojan,0
 car.png,23,1432650259,/user/pictures,suspicious,virus,1
 dir.dll, 12, 1432653585,/user/dev,undetected,,1
 """
 
+template_correction = """
+This is the incorrect query: {query}
+The following error was returned by sqlite {error}
+Correct the query and write nothing else
+It has to be a select query
+
+file_table:
+name,size,crtime,parent_path,malware_class,delete_flag
+pong.exe,4,1432645070,/user/onedrive,malicious,trojan,0
+car.png,23,1432650259,/user/pictures,suspicious,virus,1
+dir.dll, 12, 1432653585,/user/dev,undetected,,1
+"""
+
+sql_correction_template = ChatPromptTemplate.from_template(template_correction)
 json_template = ChatPromptTemplate.from_template(template)
 json_template2 = ChatPromptTemplate.from_template(template_2)
 simple_template = ChatPromptTemplate.from_template(simple_template)

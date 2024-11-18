@@ -2,8 +2,8 @@ import json
 import os
 import pandas as pd
 from langchain_ollama import OllamaLLM
-from templates import json_template2, sql_template
-from diskanalys import run, USER_DB, create_database_from_csv
+from templates import json_template2, sql_template, sql_correction_template
+from diskanalys import run, USER_DB
 import sqlite3
 from tabulate import tabulate
 from flask import jsonify
@@ -19,6 +19,7 @@ model = OllamaLLM(model="llama3.2")
 #chain = json_template | model
 chain = json_template2 | model
 chain_sql = sql_template | model
+chain_sql_correction = sql_correction_template | model
 
 # Load CSV data from filename/filepath returns it in JSON format 
 def load_json_data(filename):
@@ -55,48 +56,56 @@ def db_response_to_html(response, column_headers):
 
 def send_query_to_db(query):
     print("Query: ", query)
-    # Connect to the db
-    success = True
+    if query.lower().startswith("select") == False: # Select check
+        return "Error: query has to be a select", False, []
+    # Connect to the db'
     try:
         con = sqlite3.connect(USER_DB)
         cursor = con.cursor()
     except sqlite3.Error as e:
         print(f"An error occurred while connecting to the database: {e}")
         return "", False, []
-    
     # Query the DB
     try: 
+        cursor.execute("SELECT * FROM sqlite_master")
+        print("tables:", cursor.fetchall())
         cursor.execute(query)
         response = cursor.fetchall()
         # Get headers
         column_headers = [description[0] for description in cursor.description]
     except sqlite3.Error as e:
         print(f"An error occurred while querying the database: {e}")
-        return "", False, []
-    return response, success, column_headers
+        con.close()
+        return e, False, []
+    con.close()
+    return response, True, column_headers
+def call_sql_agent(message):
+    query = chain_sql.invoke({"question": message})
+    result, sql_success, column_headers = send_query_to_db(query)
+    if sql_success:
+        result = "Result generated from " + query + ":<br><br>" + db_response_to_html(result, column_headers).replace("\n", "")
+    elif result != "": # Try again (empty result means db connection failed)
+        print(query, "failed asking LLM to correct it")
+        query = chain_sql_correction.invoke({"query": query, "error": result})
+        result, sql_success, column_headers = send_query_to_db(query)
+        if sql_success:
+            result = "Result generated from " + query + ":<br><br>" + db_response_to_html(result, column_headers).replace("\n", "")
+    return result, sql_success
 
 # Function to handle message forwarding to LLM
 def forward_message_llm(message, filepath):
-    # Load previous conversation history
     
     json_data = load_json_data(filepath)  # Initialize JSON data as empty
     print(f"JSON Data: {json_data}")  # Log the JSON data
 
-    # Determine weather to invoke sql agent or json chain (determining this using llm is too much trouble for what its worth)
+    # Determine weather to invoke sql agent or json chain
     if message.lower().startswith("list"):
         print("List detected in question: running sql agent")
-        query = chain_sql.invoke({"question": message})
-        result, sql_success, column_headers = send_query_to_db(query)
-        if sql_success:
-
-            result = "Result generated from " + query + ":<br><br>" + db_response_to_html(result, column_headers).replace("\n", "")
+        result, sql_success = call_sql_agent(message)
 
     # If sql query fails or it dosn't start with "list" answer the question normally with json data
     if message.lower().startswith("list") == False or sql_success == False:
-        result = chain.invoke({"json_data": json_data ,"question": message})
-    
-    # Use Langchain chain to get AI response <-- ??
-    
+        result = chain.invoke({"json_data": json_data ,"question": message})    
     
     return result
 

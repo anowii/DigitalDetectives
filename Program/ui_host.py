@@ -1,6 +1,6 @@
 
 from flask import Flask, render_template, request, jsonify,redirect,url_for, json, session, flash, send_file
-from flask_login import login_user
+
 import os
 import hashlib
 from diskanalys import create_database_from_csv
@@ -23,9 +23,9 @@ next_id = 1  # Initialize the message ID
 @app.route('/')
 def home():
     if not session.get('logged_in'):
-        return render_template('login.html')
+        return redirect(url_for('login'))
     
-    return render_template('home.html')
+    return redirect(url_for('chat'))
 
 @app.route('/login')      #CURRENTLY NOT WORKING, SHOULD REDIRECT USER TO HOME WHEN PRESSING SUBMIT (TEMPORARY WHEN NO LOGIN DETAILS)
 def login():
@@ -46,14 +46,13 @@ def login_post():
     Users = {"user":"5f4dcc3b5aa765d61d8327deb882cf99", "admin":"0c768dfef098837ed8a1ea70be211e38"}
 
     if user in Users:
-        print("user exist")
         if result == Users[user]:
             session['logged_in'] = True
             return home()
         else:
-            flash('Wrong password or Username')
+            flash('Wrong password or Username', 'error')
     else:
-        flash('Wrong password or Username')
+        flash('Wrong password or Username', 'error')
 
     return home()
 
@@ -61,9 +60,11 @@ def login_post():
 
 @app.route('/logout', methods=['POST'])
 def logout_post():
-    session['logged_in'] = False
-    
-    return render_template('login.html')
+    if session['logged_in'] == False:
+        return redirect(url_for('home'))
+    else:
+        session['logged_in'] = False
+        return redirect(url_for('home'))
 
 
 # Home page 

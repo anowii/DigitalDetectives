@@ -42,8 +42,8 @@ def login_post():
     
     #default users
     #user = password
-    #Admin = muchmoresecure
-    Users = {"user":"5f4dcc3b5aa765d61d8327deb882cf99", "Admin":"0c768dfef098837ed8a1ea70be211e38"}
+    #admin = muchmoresecure
+    Users = {"user":"5f4dcc3b5aa765d61d8327deb882cf99", "admin":"0c768dfef098837ed8a1ea70be211e38"}
 
     if user in Users:
         print("user exist")

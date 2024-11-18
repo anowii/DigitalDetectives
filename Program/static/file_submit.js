@@ -1,4 +1,3 @@
-
 // Update the label text when a file is selected
 function updateFileName() {
     const fileInput = document.getElementById('uploadFile');
@@ -14,13 +13,17 @@ function updateFileName() {
 // Add event listener to the file input
 document.getElementById('uploadFile').addEventListener('change', updateFileName);
 
-// Handle from submisson 
+// Handle form submission
 document.getElementById('uploadForm').onsubmit = function(event) {
     event.preventDefault();
     const fileInput = document.getElementById('uploadFile');
     const file = fileInput.files[0];
+    const uploadButton = document.getElementById('upload-btn'); // The upload button
 
     if (file) {
+        // Disable the button to prevent multiple submissions
+        uploadButton.disabled = true;
+
         // Create a FormData object
         const formData = new FormData();
         formData.append('file', file); // Append the file
@@ -35,7 +38,8 @@ document.getElementById('uploadForm').onsubmit = function(event) {
             success: function(response) {
                 if (response.status === "success") {
                     alert(`File "${response.filename}" uploaded successfully!`);
-                   
+
+                    // Reset file input and label
                     document.querySelector('label[for="uploadFile"]').textContent = 'Choose File';
                     fileInput.value = ''; // Clear the file input
                 } else {
@@ -45,6 +49,10 @@ document.getElementById('uploadForm').onsubmit = function(event) {
             error: function(error) {
                 console.error('Error:', error);
                 alert('File upload failed.');
+            },
+            complete: function() {
+                // Re-enable the button once the upload is complete
+                uploadButton.disabled = false;
             }
         });
     } else {

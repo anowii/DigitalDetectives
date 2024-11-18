@@ -2,9 +2,11 @@
 from flask import Flask, render_template, request, jsonify,redirect,url_for, json, session, flash, send_file
 
 import os
+import io
 import hashlib
 from diskanalys import create_database_from_csv
 from ui_backend import send_iso,forward_message_llm, is_valid_disk_image, generate_pdf, delete_session
+
 
 
 app = Flask(__name__)
@@ -48,6 +50,7 @@ def login_post():
     if user in Users:
         if result == Users[user]:
             session['logged_in'] = True
+            session['username'] = user  # Store the username in the session
             return home()
         else:
             flash('Wrong password or Username', 'error')
@@ -61,6 +64,7 @@ def login_post():
 @app.route('/logout', methods=['POST'])
 def logout_post():
     if session['logged_in'] == False:
+        session.pop('username', None)
         return redirect(url_for('home'))
     else:
         session['logged_in'] = False
@@ -97,9 +101,6 @@ def submit_file():
     file.save(file_path)
 
     print(f"Received file: {file.filename}")
-
-
-    #If a filename match to already uploaded files to local tempfolder then dont upload or smthng
     
     # Call different functions based on file type
     if file.filename.endswith('.csv'):
@@ -111,7 +112,7 @@ def submit_file():
         send_iso(file_path)  # Call ISO handling function with file path
         UPLOADED_CSV = 'data\\db.csv'
     else:
-        print("Non-valid file type") #Do something more??????????
+        print("Non-valid file type")
 
     # Return a response to the client
     return jsonify({"status": "success", "filename": file.filename})
@@ -171,7 +172,7 @@ def delete_session_route():
 
 def main():
     app.secret_key = os.urandom(12)
-    app.run('localhost', 4976)
+    app.run('localhost', 5000)
     
 
 if __name__ == '__main__':

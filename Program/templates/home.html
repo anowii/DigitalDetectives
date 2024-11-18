@@ -13,6 +13,7 @@
     <script src="../static/delete_button.js" defer></script>
     <script src="../static/download_chat.js" defer></script>
 
+
 </head>
 <body>
     <!-- Main container -->
@@ -22,7 +23,11 @@
         <div class="sidebar">
             <!-- User greeting -->
             <div class="greeting">
-                <button>Hi, &lt;USER>;</button>
+                {% if session.get('logged_in') %}
+                    <button>Hi, {{ session['username'] }};</button>
+                {% else %}
+                    <button>Hi, Guest;</button>
+                {% endif %}
             </div>
   
             <!-- Margin aligner -->
@@ -37,7 +42,7 @@
                     <form id="uploadForm" enctype="multipart/form-data">
                         <input type="file" id="uploadFile" name="file">
                         <label for="uploadFile", id="uploadLable">Choose File</label>
-                        <button type="submit">Submit</button>           
+                        <button type="submit" id="upload-btn">Submit</button>
                     </form>
                 </div> 
             </div>

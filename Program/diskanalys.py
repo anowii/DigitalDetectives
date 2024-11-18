@@ -9,6 +9,7 @@ import re
 import os
 import requests
 
+
 DATA_DIR = "data\\"
 SLEUTH_DB = "data\\analys.db"
 USER_DB = "data\\user.db"
@@ -158,10 +159,10 @@ def create_database_from_csv(csv_path):
 
 
 def run(disk_image_path):
-    
     check_input_file(disk_image_path)
     run_sleuth_on_file(disk_image_path)
     db_to_csv()
     create_database_from_csv(CSV_PATH)
+
 
     return CSV_PATH

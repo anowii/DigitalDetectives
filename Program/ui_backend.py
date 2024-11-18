@@ -11,6 +11,7 @@ from flask import jsonify
 from io import BytesIO #chat download
 from reportlab.lib.pagesizes import letter #chat download
 from reportlab.lib.styles import getSampleStyleSheet #chat download
+import html
 from reportlab.platypus import SimpleDocTemplate, Paragraph, Spacer #chat download
 
 
@@ -109,11 +110,15 @@ def forward_message_llm(message, filepath):
     
     return result
 
+
+
 def send_iso(fileName): #Runs TSK on disk image file (".dd")
     run(fileName)
     print(f"Disk image {fileName} processed successfully.")
 
     return 0
+
+
 
 def is_valid_disk_image(disk_image):
     """
@@ -136,26 +141,36 @@ def generate_pdf(messages):
 
     elements = []
 
-    # doc title
+    # Title
     title = Paragraph("Chat History", styles["Title"])
     elements.append(title)
-    elements.append(Spacer(1, 20))  #space after title
+    elements.append(Spacer(1, 20))
 
-    # add messages
+    # Add messages
     for msg in messages:
+        # Sanitize the message by replacing <br> with a new line or Spacer
         user_message = f"<b>User ({msg['id']}):</b> {msg['user']}"
         ai_response = f"<b>AI:</b> {msg['response']}"
+
+        # Escape HTML to avoid conflicts with reportlab's parser
+        user_message = html.escape(user_message)
+        ai_response = html.escape(ai_response)
+
+        # Replace <br> tags with a Spacer or simply remove them
+        user_message = user_message.replace('<br>', '&#10;')  # Replace <br> with new line
+        ai_response = ai_response.replace('<br>', '&#10;')
 
         elements.append(Paragraph(user_message, styles["BodyText"]))
         elements.append(Spacer(1, 10))  # space between messages
         elements.append(Paragraph(ai_response, styles["BodyText"]))
         elements.append(Spacer(1, 20))  # space between entries
 
-    # build pdf
+    # Build the PDF
     doc.build(elements)
     pdf_buffer.seek(0)
 
     return pdf_buffer
+
 
 
 def delete_session(messages, uploaded_csv_path):

@@ -67,15 +67,14 @@ You are a knowledgeable forensic assistant capable of answering questions about 
 ### JSON File Structure:
 The JSON object consists of the following fields:
 
-| Field Name         | Data Type    | Description                                                                      |
-|--------------------|--------------|----------------------------------------------------------------------------------|
-| **name**           | String       | The name of the file, including its extension and any suffixes.                  |
-| **size**           | Integer      | The size of the file in bytes.                                                   |
-| **crtime**         | Integer      | The creation time of the file (Unix timestamp).                                  |
-| **parent_path**    | String       | The path to the parent directory where the file is located.                      |
-| **mal**            | Integer      | An indicator if malware was detected or undetected                               |
-| **mal_type**       | String       | The name of the malware type  (Keylogger, Adware)                                |
-| **delete_flag **   | String       | Indicates if files has been deleted or not (1 for not deleted and 2 for deleted) |  
+| Field Name              | Data Type    | Description                                                                      |
+|-------------------------|--------------|----------------------------------------------------------------------------------|
+| **name**                | String       | The name of the file, including its extension and any suffixes.                  |
+| **size**                | Integer      | The size of the file in bytes.                                                   |
+| **crtime**              | Integer      | The creation time of the file (Unix timestamp).                                  |
+| **parent_path**         | String       | The path to the parent directory where the file is located.                      |
+| **malware_class**       | String       | The name of the malware type (Keylogger, Adware)                                 |
+| **delete_flag **        | Integer      | Indicates if files has been deleted or not (1 for not deleted and 0 for deleted) |  
 
 ### Instructions:
 You can ask me any question about the JSON data. 

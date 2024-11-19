@@ -141,7 +141,18 @@ body {
     color: #000000d2;
     cursor: default;
     font-weight: bold;
+    text-transform: uppercase;
+    font-size: 1.3em;
 }
+
+
+.logout form{
+    display: flex;
+    flex-wrap: wrap;
+    flex-grow: 1;
+}
+
+
 
 .logout{
     display: flex; 

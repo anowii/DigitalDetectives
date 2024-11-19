@@ -9,7 +9,6 @@ import re
 import os
 import requests
 
-
 DATA_DIR = "data\\"
 SLEUTH_DB = "data\\analys.db"
 USER_DB = "data\\user.db"
@@ -20,6 +19,17 @@ INTERESTING_TYPES =".exe|.msi|.docx|.png|.jpeg|.txt|.dat"
 
 VIRUSTOTAL_TYPES =".exe|.msi"
 VIRUSTOTAL_APIKEY = "4e4140ca9678a7e353a618f2f9aa7dd3a1ff5d70c6eaf812391bb5649b80039e"
+ALLOWED_FILEDS = ["name","size", "crtime", "parent_path", "malware_class","delete_flag"]
+
+    ############################################
+    #  delete_flag == dir_flag in tsk_files    #
+    #  tsk_files {allocated, 1} = NOT deleted  #
+    #  in malware_class: 1 == not deleted      #
+    #                                          #
+    #  tsk_files {unallocated, 2} = deleted    #
+    #  in malware_class: 0 == deleted          #     
+    ############################################
+
 
 def check_with_virustotal(hash):
    
@@ -37,7 +47,8 @@ def check_with_virustotal(hash):
             vendor_results = response['data']['attributes']['last_analysis_results']
             popular_threat_classification = response['data']['attributes']['popular_threat_classification']['popular_threat_category']
         except:
-            return "undetected", "NaN"
+            print("Exept 2")
+            return "None"
 
         # Get all vendor results, along with their frequency
         result_list = []
@@ -56,10 +67,10 @@ def check_with_virustotal(hash):
             if (category == 'malicious' or category == 'suspicious') and count > 5:
                 prime_category = category
                 break
-        return prime_category, popular_threat_classification[0]['value']
+        return prime_category
     except TypeError:
         print("Error: Hash value is None and cannot be concatenated to the URL")
-        return "undetected", "NaN"
+        return "None"
 
 # Connects to Slueth_kit database
 def connect():
@@ -74,7 +85,8 @@ def disconnect(connection):
     except Exception as e:
         print(f"Error closing connection: {e}")
 
-# Check if the input file is valid
+# Check if the input file is 
+# ?? Print input file ??
 def check_input_file(target):
     print("Check "+ target)
 
@@ -95,26 +107,25 @@ def db_to_csv():
     db_files = res.fetchall()
     con.close()
     print("\ntsk_files\n")
-    fields = ["name","size", "crtime", "parent_path", "mal", "mal_type","delete_flag"]
+    fields = ["name","size", "crtime", "parent_path", "malware_class","delete_flag"]
     files = []
     for file in db_files:
         name = file[5]
         if re.search(INTERESTING_TYPES,file[5]) and file[5].find("slack") == -1:
       
-            prime_category, popular_threat_classification = check_with_virustotal(file[23])
-            print(prime_category, popular_threat_classification)
+            prime_category = check_with_virustotal(file[23])
+            print(prime_category)
 
             csv_row = {
                 "name": file[5], 
                 "size": file[15], 
                 "crtime": file[17], 
                 "parent_path": file[25],
-                "mal": prime_category, 
-                "mal_type": popular_threat_classification,
-                "delete_flag": file[13] 
-                #delete_flag == dir_flag
+                "malware_class" : prime_category,
+                "delete_flag": file[13] if file[13] == 1 else 0
             }
-
+          
+            
             files.append(csv_row)
         
     with open(CSV_PATH, 'w', newline='') as csvfile:
@@ -129,7 +140,7 @@ def create_database_from_csv(csv_path):
     if os.path.exists(USER_DB):
         os.remove(USER_DB)
         print(f"Existing database '{USER_DB}' has been removed.")
-    fields = ["name","size", "crtime", "parent_path", "mal", "mal_type","delete_flag"]
+    fields = ["name","size", "crtime", "parent_path", "malware_class","delete_flag"]
     
     # Connect to SQLite database (it will create a new database if it doesn't exist)
     conn = sqlite3.connect(USER_DB)
@@ -163,6 +174,5 @@ def run(disk_image_path):
     run_sleuth_on_file(disk_image_path)
     db_to_csv()
     create_database_from_csv(CSV_PATH)
-
 
     return CSV_PATH

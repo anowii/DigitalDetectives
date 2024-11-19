@@ -1,17 +1,14 @@
-import json
-import os
 import pandas as pd
 from langchain_ollama import OllamaLLM
 from templates import json_template2, sql_template, sql_correction_template
 from diskanalys import run, USER_DB
-import sqlite3
 from tabulate import tabulate
 from flask import jsonify
 
 from io import BytesIO #chat download
 from reportlab.lib.pagesizes import letter #chat download
 from reportlab.lib.styles import getSampleStyleSheet #chat download
-import html
+import html, os, sqlite3
 from reportlab.platypus import SimpleDocTemplate, Paragraph, Spacer #chat download
 
 
@@ -29,7 +26,7 @@ def load_json_data(filename):
             df = pd.read_csv(filename)
 
             # Ensure the column headers match expected structure
-            df.columns = ['name', 'size', 'crtime', 'path', 'mal','mal_type','delete_flag']
+            df.columns = ['name', 'size', 'crtime', 'path', 'malware_class','delete_flag']
 
             # Convert to JSON string
             return df.to_dict(orient='records') 
@@ -80,6 +77,7 @@ def send_query_to_db(query):
         return e, False, []
     con.close()
     return response, True, column_headers
+
 def call_sql_agent(message):
     query = chain_sql.invoke({"question": message})
     result, sql_success, column_headers = send_query_to_db(query)
@@ -115,8 +113,9 @@ def forward_message_llm(message, filepath):
 def send_iso(fileName): #Runs TSK on disk image file (".dd")
     run(fileName)
     print(f"Disk image {fileName} processed successfully.")
+    
+    return 0 
 
-    return 0
 
 
 

@@ -12,7 +12,7 @@
     <script src="../static/chat.js" defer></script>
     <script src="../static/delete_button.js" defer></script>
     <script src="../static/download_chat.js" defer></script>
-
+    <title>Digital Detective</title>
 
 </head>
 <body>
@@ -49,7 +49,7 @@
             
             <!-- Margin aligner -->
             <div class="empty-two">
-                 <!-- Delete Button -->
+                <!-- Delete Button -->
                 <button class="trash-button" aria-label="Delete">
                     <span class="tooltip">Delete Session</span>
                     <svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -59,11 +59,9 @@
                 </button>
     
                 <!-- Logout button -->
-                <form action="/logout" method="POST">
                 <div class="logout">
-                    
+                    <form action="/logout" method="POST">
                     <button type="submit" value="Login">Log out</button>
-                    
                 </div>
                 </form>
             </div>

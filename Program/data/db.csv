@@ -1,8 +1,540 @@
 name,size,crtime,parent_path,malware_class,delete_flag
-_rag1.dat,1584,1076759448,/,None,0
-_rag2.dat,3873,1076759461,/,None,0
-_ing.dat,780,1076759524,/,None,0
-_ult1.dat,3801,1076759545,/,None,0
-frag3.dat,2027,1076759646,/_ir1/dir2/,None,0
-mult2.dat,1715,1076759660,/_ir1/,None,0
-frag3.dat,2027,1076759646,/System Volume Information/_restore{A25F48CA-6632-4143-8EF8-3586A84AB5AF}/_P1/,None,0
+Device Metadata,360,1392129778,/USERS/Jimmy Wilson/AppData/Local/Microsoft/,None,1
+USA~dgov Updates~c News and Features~.feed-ms,28672,1432644378,/USERS/Jimmy Wilson/AppData/Local/Microsoft/Feeds/Feeds for United States~/,None,1
+container.dat,0,1432644378,/USERS/Jimmy Wilson/AppData/Local/Microsoft/Feeds Cache/,None,1
+brndlog.txt,5964,1432644378,/USERS/Jimmy Wilson/AppData/Local/Microsoft/Internet Explorer/,None,1
+iecompatdata.xml,515509,1432644378,/USERS/Jimmy Wilson/AppData/Local/Microsoft/Internet Explorer/IECompatData/,None,1
+imagestore.dat,91527,1432644355,/USERS/Jimmy Wilson/AppData/Local/Microsoft/Internet Explorer/imagestore/y3hpiab/,None,1
+RecoveryStore.{FB0EE295-9262-11E3-9A25-001641E7BB6B}.dat,6656,1432644356,/USERS/Jimmy Wilson/AppData/Local/Microsoft/Internet Explorer/Recovery/Last Active/,None,1
+{BB298927-9320-11E3-9237-001641E7BB6B}.dat,30208,1432644356,/USERS/Jimmy Wilson/AppData/Local/Microsoft/Internet Explorer/Recovery/Last Active/,None,1
+ContactsLog.txt,22696,1432644375,/USERS/Jimmy Wilson/AppData/Local/Microsoft/Messenger/,None,1
+container.dat,0,1432644378,/USERS/Jimmy Wilson/AppData/Local/Microsoft/Windows/History/History.IE5/,None,1
+container.dat,0,1432644372,/USERS/Jimmy Wilson/AppData/Local/Microsoft/Windows/History/History.IE5/MSHist012014021020140217/,None,1
+container.dat,0,1432644355,/USERS/Jimmy Wilson/AppData/Local/Microsoft/Windows/History/History.IE5/MSHist012014021920140220/,None,1
+container.dat,0,1432644354,/USERS/Jimmy Wilson/AppData/Local/Microsoft/Windows/History/Low/History.IE5/,None,1
+container.dat,0,1432644378,/USERS/Jimmy Wilson/AppData/Local/Microsoft/Windows/Temporary Internet Files/Content.IE5/,None,1
+counters.dat,128,1432644378,/USERS/Jimmy Wilson/AppData/Local/Microsoft/Windows/Temporary Internet Files/,None,1
+4A72F430-B40C-4D36-A068-CE33ADA5ADF9.dat,123016,1432644355,/USERS/Jimmy Wilson/AppData/Local/Microsoft/Windows/Temporary Internet Files/Low/AntiPhishing/,None,1
+08df0d2dff81c1bc6770a1a1a68a13[1].png,8741,1432644355,/USERS/Jimmy Wilson/AppData/Local/Microsoft/Windows/Temporary Internet Files/Low/Content.IE5/0YNVG0PM/,None,1
+1373889353714[1].png,91610,1432644356,/USERS/Jimmy Wilson/AppData/Local/Microsoft/Windows/Temporary Internet Files/Low/Content.IE5/0YNVG0PM/,None,1
+40389557511343f360c93fe994d3aa[1].png,752,1432644355,/USERS/Jimmy Wilson/AppData/Local/Microsoft/Windows/Temporary Internet Files/Low/Content.IE5/0YNVG0PM/,None,1
+4WSewcWboV8[1].png,316,1432644360,/USERS/Jimmy Wilson/AppData/Local/Microsoft/Windows/Temporary Internet Files/Low/Content.IE5/0YNVG0PM/,None,1
+gawker-touch-icon-d0e816e6184576368974b073e1ea5a3e[1].png,6013,1432644360,/USERS/Jimmy Wilson/AppData/Local/Microsoft/Windows/Temporary Internet Files/Low/Content.IE5/0YNVG0PM/,None,1
+gizmodo-touch-icon-ea43ab864494cdb2ddd702139283cd44[1].png,4545,1432644360,/USERS/Jimmy Wilson/AppData/Local/Microsoft/Windows/Temporary Internet Files/Low/Content.IE5/0YNVG0PM/,None,1
+googleplus1[1].png,602,1432644361,/USERS/Jimmy Wilson/AppData/Local/Microsoft/Windows/Temporary Internet Files/Low/Content.IE5/0YNVG0PM/,None,1
+hereandnow_1203_frank-ahearn-privacy[1].dat,196608,1432644360,/USERS/Jimmy Wilson/AppData/Local/Microsoft/Windows/Temporary Internet Files/Low/Content.IE5/0YNVG0PM/,None,1
+icon-map[1].png,1437,1432644356,/USERS/Jimmy Wilson/AppData/Local/Microsoft/Windows/Temporary Internet Files/Low/Content.IE5/0YNVG0PM/,None,1
+icon-part_row-2side[1].png,1155,1432644357,/USERS/Jimmy Wilson/AppData/Local/Microsoft/Windows/Temporary Internet Files/Low/Content.IE5/0YNVG0PM/,None,1
+icon-print[1].png,982,1432644356,/USERS/Jimmy Wilson/AppData/Local/Microsoft/Windows/Temporary Internet Files/Low/Content.IE5/0YNVG0PM/,None,1
+icon_cart[1].png,1179,1432644357,/USERS/Jimmy Wilson/AppData/Local/Microsoft/Windows/Temporary Internet Files/Low/Content.IE5/0YNVG0PM/,None,1
+pinterest[1].png,624,1432644361,/USERS/Jimmy Wilson/AppData/Local/Microsoft/Windows/Temporary Internet Files/Low/Content.IE5/0YNVG0PM/,None,1
+pixel[1].png,170,1432644360,/USERS/Jimmy Wilson/AppData/Local/Microsoft/Windows/Temporary Internet Files/Low/Content.IE5/0YNVG0PM/,None,1
+pixel[2].png,170,1432644361,/USERS/Jimmy Wilson/AppData/Local/Microsoft/Windows/Temporary Internet Files/Low/Content.IE5/0YNVG0PM/,None,1
+prev[1].png,884,1432644357,/USERS/Jimmy Wilson/AppData/Local/Microsoft/Windows/Temporary Internet Files/Low/Content.IE5/0YNVG0PM/,None,1
+902c8bdd[1].png,3245,1432644359,/USERS/Jimmy Wilson/AppData/Local/Microsoft/Windows/Temporary Internet Files/Low/Content.IE5/0YNVG0PM/,None,1
+1390411367089.png.pagespeed.ce.Zcq8nRxnsB[1].png,867,1432644356,/USERS/Jimmy Wilson/AppData/Local/Microsoft/Windows/Temporary Internet Files/Low/Content.IE5/0YNVG0PM/,None,1
+bbb[1].png,6125,1432644357,/USERS/Jimmy Wilson/AppData/Local/Microsoft/Windows/Temporary Internet Files/Low/Content.IE5/0YNVG0PM/,None,1
+bg-zbtn-shadow-mid[1].png,125,1432644356,/USERS/Jimmy Wilson/AppData/Local/Microsoft/Windows/Temporary Internet Files/Low/Content.IE5/0YNVG0PM/,None,1
+wplogo[1].png,12466,1432644360,/USERS/Jimmy Wilson/AppData/Local/Microsoft/Windows/Temporary Internet Files/Low/Content.IE5/0YNVG0PM/,None,1
+x1390411367123.png.pagespeed.ic.sVSplOENXI[1].png,1038,1432644356,/USERS/Jimmy Wilson/AppData/Local/Microsoft/Windows/Temporary Internet Files/Low/Content.IE5/0YNVG0PM/,None,1
+xbg-arrow-blue-side.png.pagespeed.ic.7-xH1tagXY[1].png,128,1432644356,/USERS/Jimmy Wilson/AppData/Local/Microsoft/Windows/Temporary Internet Files/Low/Content.IE5/0YNVG0PM/,None,1
+xbg-arrow-white.png.pagespeed.ic.pPG89cBiPH[1].png,174,1432644356,/USERS/Jimmy Wilson/AppData/Local/Microsoft/Windows/Temporary Internet Files/Low/Content.IE5/0YNVG0PM/,None,1
+xbg-circular-arrow-light-blue.png.pagespeed.ic.Zu40bthLMe[1].png,455,1432644356,/USERS/Jimmy Wilson/AppData/Local/Microsoft/Windows/Temporary Internet Files/Low/Content.IE5/0YNVG0PM/,None,1
+xbg-squares-content.png.pagespeed.ic.afQKV9_A3L[1].png,2179,1432644356,/USERS/Jimmy Wilson/AppData/Local/Microsoft/Windows/Temporary Internet Files/Low/Content.IE5/0YNVG0PM/,None,1
+xbg-tab-gradient-gray.png.pagespeed.ic.NjPxZyA_JI[1].png,128,1432644356,/USERS/Jimmy Wilson/AppData/Local/Microsoft/Windows/Temporary Internet Files/Low/Content.IE5/0YNVG0PM/,None,1
+xbg-zebra-btn-hover.png.pagespeed.ic.UN0gfN5A_X[1].png,107,1432644356,/USERS/Jimmy Wilson/AppData/Local/Microsoft/Windows/Temporary Internet Files/Low/Content.IE5/0YNVG0PM/,None,1
+ximg-flag-brazil.png.pagespeed.ic.euVtnuwaxB[1].png,1191,1432644356,/USERS/Jimmy Wilson/AppData/Local/Microsoft/Windows/Temporary Internet Files/Low/Content.IE5/0YNVG0PM/,None,1
+ximg-flag-finland.png.pagespeed.ic.Ia0fLK0xQf[1].png,395,1432644356,/USERS/Jimmy Wilson/AppData/Local/Microsoft/Windows/Temporary Internet Files/Low/Content.IE5/0YNVG0PM/,None,1
+ximg-flag-japan.png.pagespeed.ic.C5JtcyheuZ[1].png,561,1432644356,/USERS/Jimmy Wilson/AppData/Local/Microsoft/Windows/Temporary Internet Files/Low/Content.IE5/0YNVG0PM/,None,1
+ximg-flag-korea.png.pagespeed.ic.aEy-6BxtKb[1].png,907,1432644356,/USERS/Jimmy Wilson/AppData/Local/Microsoft/Windows/Temporary Internet Files/Low/Content.IE5/0YNVG0PM/,None,1
+ximg-flag-russia.png.pagespeed.ic.5hUaUoeYbv[1].png,384,1432644356,/USERS/Jimmy Wilson/AppData/Local/Microsoft/Windows/Temporary Internet Files/Low/Content.IE5/0YNVG0PM/,None,1
+ximg-flag-uk.png.pagespeed.ic.1Sr3aKTHB3[1].png,1120,1432644356,/USERS/Jimmy Wilson/AppData/Local/Microsoft/Windows/Temporary Internet Files/Low/Content.IE5/0YNVG0PM/,None,1
+xsoftware-placeholder.png.pagespeed.ic.oDaS8dedqY[1].jpg,4075,1432644356,/USERS/Jimmy Wilson/AppData/Local/Microsoft/Windows/Temporary Internet Files/Low/Content.IE5/0YNVG0PM/,None,1
+chrome-48[1].png,1834,1432644356,/USERS/Jimmy Wilson/AppData/Local/Microsoft/Windows/Temporary Internet Files/Low/Content.IE5/0YNVG0PM/,None,1
+seal-free7day[1].png,4612,1432644360,/USERS/Jimmy Wilson/AppData/Local/Microsoft/Windows/Temporary Internet Files/Low/Content.IE5/0YNVG0PM/,None,1
+search-results-bar_bg[1].png,951,1432644357,/USERS/Jimmy Wilson/AppData/Local/Microsoft/Windows/Temporary Internet Files/Low/Content.IE5/0YNVG0PM/,None,1
+srp-sprite-201311141711[1].png,2444,1432644358,/USERS/Jimmy Wilson/AppData/Local/Microsoft/Windows/Temporary Internet Files/Low/Content.IE5/0YNVG0PM/,None,1
+bg-link-arrow-white[1].png,987,1432644356,/USERS/Jimmy Wilson/AppData/Local/Microsoft/Windows/Temporary Internet Files/Low/Content.IE5/0YNVG0PM/,None,1
+bg-main-nav-dropdown-sol-selector[1].png,1069,1432644356,/USERS/Jimmy Wilson/AppData/Local/Microsoft/Windows/Temporary Internet Files/Low/Content.IE5/0YNVG0PM/,None,1
+bg-product-tooltip[1].png,200,1432644356,/USERS/Jimmy Wilson/AppData/Local/Microsoft/Windows/Temporary Internet Files/Low/Content.IE5/0YNVG0PM/,None,1
+bg-rightside[1].png,88,1432644357,/USERS/Jimmy Wilson/AppData/Local/Microsoft/Windows/Temporary Internet Files/Low/Content.IE5/0YNVG0PM/,None,1
+bg-search-input[1].png,2103,1432644356,/USERS/Jimmy Wilson/AppData/Local/Microsoft/Windows/Temporary Internet Files/Low/Content.IE5/0YNVG0PM/,None,1
+btn-get-started-bg-left[1].png,1415,1432644356,/USERS/Jimmy Wilson/AppData/Local/Microsoft/Windows/Temporary Internet Files/Low/Content.IE5/0YNVG0PM/,None,1
+btn-topnav-search[1].png,1891,1432644361,/USERS/Jimmy Wilson/AppData/Local/Microsoft/Windows/Temporary Internet Files/Low/Content.IE5/0YNVG0PM/,None,1
+mgyhp_sm[1].png,331,1432644356,/USERS/Jimmy Wilson/AppData/Local/Microsoft/Windows/Temporary Internet Files/Low/Content.IE5/0YNVG0PM/,None,1
+olympics-NBC-1x[1].png,1068,1432644358,/USERS/Jimmy Wilson/AppData/Local/Microsoft/Windows/Temporary Internet Files/Low/Content.IE5/0YNVG0PM/,None,1
+down-arrow[1].png,241,1432644358,/USERS/Jimmy Wilson/AppData/Local/Microsoft/Windows/Temporary Internet Files/Low/Content.IE5/0YNVG0PM/,None,1
+ehownow_article_logo_small[1].png,3851,1432644360,/USERS/Jimmy Wilson/AppData/Local/Microsoft/Windows/Temporary Internet Files/Low/Content.IE5/0YNVG0PM/,None,1
+featured-subcat-title[1].png,1024,1432644357,/USERS/Jimmy Wilson/AppData/Local/Microsoft/Windows/Temporary Internet Files/Low/Content.IE5/0YNVG0PM/,None,1
+finance_icons_sprite[1].png,580,1432644358,/USERS/Jimmy Wilson/AppData/Local/Microsoft/Windows/Temporary Internet Files/Low/Content.IE5/0YNVG0PM/,None,1
+footer_shadow[1].png,2670,1432644357,/USERS/Jimmy Wilson/AppData/Local/Microsoft/Windows/Temporary Internet Files/Low/Content.IE5/0YNVG0PM/,None,1
+statefundedradio[1].png,1342,1432644362,/USERS/Jimmy Wilson/AppData/Local/Microsoft/Windows/Temporary Internet Files/Low/Content.IE5/0YNVG0PM/,None,1
+stayconnected-EmailUpdates_overBig[1].jpg,23836,1432644358,/USERS/Jimmy Wilson/AppData/Local/Microsoft/Windows/Temporary Internet Files/Low/Content.IE5/0YNVG0PM/,None,1
+tumblr[1].png,742,1432644361,/USERS/Jimmy Wilson/AppData/Local/Microsoft/Windows/Temporary Internet Files/Low/Content.IE5/0YNVG0PM/,None,1
+twitter[1].png,523,1432644361,/USERS/Jimmy Wilson/AppData/Local/Microsoft/Windows/Temporary Internet Files/Low/Content.IE5/0YNVG0PM/,None,1
+RadioShack_CustomButton_V2[1].png,9243,1432644362,/USERS/Jimmy Wilson/AppData/Local/Microsoft/Windows/Temporary Internet Files/Low/Content.IE5/0YNVG0PM/,None,1
+reddit[1].png,881,1432644361,/USERS/Jimmy Wilson/AppData/Local/Microsoft/Windows/Temporary Internet Files/Low/Content.IE5/0YNVG0PM/,None,1
+logo11w[1].png,14022,1432644356,/USERS/Jimmy Wilson/AppData/Local/Microsoft/Windows/Temporary Internet Files/Low/Content.IE5/0YNVG0PM/,None,1
+logo[1].png,18707,1432644361,/USERS/Jimmy Wilson/AppData/Local/Microsoft/Windows/Temporary Internet Files/Low/Content.IE5/0YNVG0PM/,None,1
+logo_spinningaround_large_purple[1].png,12153,1432644358,/USERS/Jimmy Wilson/AppData/Local/Microsoft/Windows/Temporary Internet Files/Low/Content.IE5/0YNVG0PM/,None,1
+17jcxp06aqnkmpng[1].png,245,1432644360,/USERS/Jimmy Wilson/AppData/Local/Microsoft/Windows/Temporary Internet Files/Low/Content.IE5/0YNVG0PM/,None,1
+arrow_blue-guide[1].png,1270,1432644357,/USERS/Jimmy Wilson/AppData/Local/Microsoft/Windows/Temporary Internet Files/Low/Content.IE5/0YNVG0PM/,None,1
+nav-modvagabond[1].png,3338,1432644361,/USERS/Jimmy Wilson/AppData/Local/Microsoft/Windows/Temporary Internet Files/Low/Content.IE5/0YNVG0PM/,None,1
+navbar_bg[1].png,998,1432644357,/USERS/Jimmy Wilson/AppData/Local/Microsoft/Windows/Temporary Internet Files/Low/Content.IE5/0YNVG0PM/,None,1
+noavatar92.675fb4b91ca717db030507f2d84bcfdf[1].png,1644,1432644360,/USERS/Jimmy Wilson/AppData/Local/Microsoft/Windows/Temporary Internet Files/Low/Content.IE5/0YNVG0PM/,None,1
+original[1].png,1928,1432644360,/USERS/Jimmy Wilson/AppData/Local/Microsoft/Windows/Temporary Internet Files/Low/Content.IE5/0YNVG0PM/,None,1
+facebook[1].png,568,1432644361,/USERS/Jimmy Wilson/AppData/Local/Microsoft/Windows/Temporary Internet Files/Low/Content.IE5/0YNVG0PM/,None,1
+fancybox-y[1].png,176,1432644356,/USERS/Jimmy Wilson/AppData/Local/Microsoft/Windows/Temporary Internet Files/Low/Content.IE5/0YNVG0PM/,None,1
+xbg-main-nav-dropdown-sol-selector.png.pagespeed.ic.CSRECnPHYK[1].png,105,1432644356,/USERS/Jimmy Wilson/AppData/Local/Microsoft/Windows/Temporary Internet Files/Low/Content.IE5/0YNVG0PM/,None,1
+share-linkedin[1].png,821,1432644356,/USERS/Jimmy Wilson/AppData/Local/Microsoft/Windows/Temporary Internet Files/Low/Content.IE5/0YNVG0PM/,None,1
+bg-zbtn-shadow-right[1].png,249,1432644356,/USERS/Jimmy Wilson/AppData/Local/Microsoft/Windows/Temporary Internet Files/Low/Content.IE5/0YNVG0PM/,None,1
+productfamily.img.teaser[1].png,3939,1432644356,/USERS/Jimmy Wilson/AppData/Local/Microsoft/Windows/Temporary Internet Files/Low/Content.IE5/0YNVG0PM/,None,1
+xbg-link-arrow-yellow.png.pagespeed.ic.pTcxSLxx3D[1].png,138,1432644356,/USERS/Jimmy Wilson/AppData/Local/Microsoft/Windows/Temporary Internet Files/Low/Content.IE5/0YNVG0PM/,None,1
+ximg-flag-australia.png.pagespeed.ic.rUBKWHB9Br[1].png,1101,1432644356,/USERS/Jimmy Wilson/AppData/Local/Microsoft/Windows/Temporary Internet Files/Low/Content.IE5/0YNVG0PM/,None,1
+investing[1].png,730,1432644362,/USERS/Jimmy Wilson/AppData/Local/Microsoft/Windows/Temporary Internet Files/Low/Content.IE5/0YNVG0PM/,None,1
+io9-touch-icon-6534ae1cdd3f1e6a653852bfd8be4963[1].png,2703,1432644360,/USERS/Jimmy Wilson/AppData/Local/Microsoft/Windows/Temporary Internet Files/Low/Content.IE5/0YNVG0PM/,None,1
+1390411366955.png.pagespeed.ce.dSGsfzdSa3[1].png,1037,1432644356,/USERS/Jimmy Wilson/AppData/Local/Microsoft/Windows/Temporary Internet Files/Low/Content.IE5/CBU4KX3T/,None,1
+16x16_100_xyQso8AK7f86j-WYq8Qqew[1].png,1057,1432644358,/USERS/Jimmy Wilson/AppData/Local/Microsoft/Windows/Temporary Internet Files/Low/Content.IE5/CBU4KX3T/,None,1
+17818101630012977128[1].png,20118,1432644361,/USERS/Jimmy Wilson/AppData/Local/Microsoft/Windows/Temporary Internet Files/Low/Content.IE5/CBU4KX3T/,None,1
+17jcxldy9dbzapng[1].png,249,1432644361,/USERS/Jimmy Wilson/AppData/Local/Microsoft/Windows/Temporary Internet Files/Low/Content.IE5/CBU4KX3T/,None,1
+17jcxm3lnjqwmpng[1].png,161,1432644361,/USERS/Jimmy Wilson/AppData/Local/Microsoft/Windows/Temporary Internet Files/Low/Content.IE5/CBU4KX3T/,None,1
+icon_navbar_guide[1].png,1410,1432644357,/USERS/Jimmy Wilson/AppData/Local/Microsoft/Windows/Temporary Internet Files/Low/Content.IE5/CBU4KX3T/,None,1
+icon_navbar_quote[1].png,1422,1432644357,/USERS/Jimmy Wilson/AppData/Local/Microsoft/Windows/Temporary Internet Files/Low/Content.IE5/CBU4KX3T/,None,1
+avatar-default-color@2x[1].png,1384,1432644360,/USERS/Jimmy Wilson/AppData/Local/Microsoft/Windows/Temporary Internet Files/Low/Content.IE5/CBU4KX3T/,None,1
+banner_callout-ebook[1].png,5705,1432644357,/USERS/Jimmy Wilson/AppData/Local/Microsoft/Windows/Temporary Internet Files/Low/Content.IE5/CBU4KX3T/,None,1
+bg-arrow-blue-side[1].png,969,1432644356,/USERS/Jimmy Wilson/AppData/Local/Microsoft/Windows/Temporary Internet Files/Low/Content.IE5/CBU4KX3T/,None,1
+bg-circular-arrow[1].png,1197,1432644356,/USERS/Jimmy Wilson/AppData/Local/Microsoft/Windows/Temporary Internet Files/Low/Content.IE5/CBU4KX3T/,None,1
+bg-link-arrow-blue[1].png,1002,1432644356,/USERS/Jimmy Wilson/AppData/Local/Microsoft/Windows/Temporary Internet Files/Low/Content.IE5/CBU4KX3T/,None,1
+bg-nav[1].png,1893,1432644356,/USERS/Jimmy Wilson/AppData/Local/Microsoft/Windows/Temporary Internet Files/Low/Content.IE5/CBU4KX3T/,None,1
+bg-sidebar-btn-gray[1].png,962,1432644356,/USERS/Jimmy Wilson/AppData/Local/Microsoft/Windows/Temporary Internet Files/Low/Content.IE5/CBU4KX3T/,None,1
+QwX8zsil-LN[1].png,2764,1432644360,/USERS/Jimmy Wilson/AppData/Local/Microsoft/Windows/Temporary Internet Files/Low/Content.IE5/CBU4KX3T/,None,1
+successstory_a8ac.img.teaserImage[2].png,8913,1432644356,/USERS/Jimmy Wilson/AppData/Local/Microsoft/Windows/Temporary Internet Files/Low/Content.IE5/CBU4KX3T/,None,1
+tia[1].png,387,1432644356,/USERS/Jimmy Wilson/AppData/Local/Microsoft/Windows/Temporary Internet Files/Low/Content.IE5/CBU4KX3T/,None,1
+x1390411366988.png.pagespeed.ic.dqLDlTwcRe[1].png,973,1432644356,/USERS/Jimmy Wilson/AppData/Local/Microsoft/Windows/Temporary Internet Files/Low/Content.IE5/CBU4KX3T/,None,1
+x1390411367022.png.pagespeed.ic.dkj8TzTGh3[1].png,968,1432644356,/USERS/Jimmy Wilson/AppData/Local/Microsoft/Windows/Temporary Internet Files/Low/Content.IE5/CBU4KX3T/,None,1
+x1390411367055.png.pagespeed.ic.41x5QjnOLr[1].png,1070,1432644356,/USERS/Jimmy Wilson/AppData/Local/Microsoft/Windows/Temporary Internet Files/Low/Content.IE5/CBU4KX3T/,None,1
+xbg-circular-arrow.png.pagespeed.ic.U7NUwSDqvg[1].png,402,1432644356,/USERS/Jimmy Wilson/AppData/Local/Microsoft/Windows/Temporary Internet Files/Low/Content.IE5/CBU4KX3T/,None,1
+F6D97624A1F3B0AEC8AE8C81604F[1].png,5443,1432644355,/USERS/Jimmy Wilson/AppData/Local/Microsoft/Windows/Temporary Internet Files/Low/Content.IE5/CBU4KX3T/,None,1
+facebook-logo[1].png,1368,1432644357,/USERS/Jimmy Wilson/AppData/Local/Microsoft/Windows/Temporary Internet Files/Low/Content.IE5/CBU4KX3T/,None,1
+footer_pdf_icon[1].png,2061,1432644356,/USERS/Jimmy Wilson/AppData/Local/Microsoft/Windows/Temporary Internet Files/Low/Content.IE5/CBU4KX3T/,None,1
+hn_logo_new[1].png,11288,1432644354,/USERS/Jimmy Wilson/AppData/Local/Microsoft/Windows/Temporary Internet Files/Low/Content.IE5/CBU4KX3T/,None,1
+icon_buying-guide[1].png,1304,1432644354,/USERS/Jimmy Wilson/AppData/Local/Microsoft/Windows/Temporary Internet Files/Low/Content.IE5/CBU4KX3T/,None,1
+xbg-nav-body.png.pagespeed.ic.yWeukh14Rd[1].png,139,1432644356,/USERS/Jimmy Wilson/AppData/Local/Microsoft/Windows/Temporary Internet Files/Low/Content.IE5/CBU4KX3T/,None,1
+xbg-select-box.png.pagespeed.ic.y687zOGEup[1].png,200,1432644356,/USERS/Jimmy Wilson/AppData/Local/Microsoft/Windows/Temporary Internet Files/Low/Content.IE5/CBU4KX3T/,None,1
+xbg-tab-gradient-yellow.png.pagespeed.ic.AUyF9tUOsT[1].png,147,1432644356,/USERS/Jimmy Wilson/AppData/Local/Microsoft/Windows/Temporary Internet Files/Low/Content.IE5/CBU4KX3T/,None,1
+xbg-zebra-btn.png.pagespeed.ic.ClfeD5N-Gk[1].png,102,1432644356,/USERS/Jimmy Wilson/AppData/Local/Microsoft/Windows/Temporary Internet Files/Low/Content.IE5/CBU4KX3T/,None,1
+xclear.png.pagespeed.ic.6FYvfDz77t[1].png,97,1432644356,/USERS/Jimmy Wilson/AppData/Local/Microsoft/Windows/Temporary Internet Files/Low/Content.IE5/CBU4KX3T/,None,1
+xicon-map.png.pagespeed.ic.PqiKCXEUtS[1].png,426,1432644356,/USERS/Jimmy Wilson/AppData/Local/Microsoft/Windows/Temporary Internet Files/Low/Content.IE5/CBU4KX3T/,None,1
+ximg-flag-norway.png.pagespeed.ic.NKyWRUGTIX[1].png,537,1432644356,/USERS/Jimmy Wilson/AppData/Local/Microsoft/Windows/Temporary Internet Files/Low/Content.IE5/CBU4KX3T/,None,1
+ximg-flag-portugal.png.pagespeed.ic.zzJCyFQtRf[1].png,1027,1432644356,/USERS/Jimmy Wilson/AppData/Local/Microsoft/Windows/Temporary Internet Files/Low/Content.IE5/CBU4KX3T/,None,1
+ximg-flag-usa.png.pagespeed.ic.KyfiWINuPP[1].png,545,1432644356,/USERS/Jimmy Wilson/AppData/Local/Microsoft/Windows/Temporary Internet Files/Low/Content.IE5/CBU4KX3T/,None,1
+ximg-flag-nederlands.png.pagespeed.ic.HUv0ua8-kR[1].png,389,1432644356,/USERS/Jimmy Wilson/AppData/Local/Microsoft/Windows/Temporary Internet Files/Low/Content.IE5/CBU4KX3T/,None,1
+bg-subnav[1].png,2806,1432644358,/USERS/Jimmy Wilson/AppData/Local/Microsoft/Windows/Temporary Internet Files/Low/Content.IE5/CBU4KX3T/,None,1
+bg-tab-secondary[1].png,142,1432644356,/USERS/Jimmy Wilson/AppData/Local/Microsoft/Windows/Temporary Internet Files/Low/Content.IE5/CBU4KX3T/,None,1
+bg-zbtn-shadow-right.png.pagespeed.ce.bs0u1wHZrn[1].png,249,1432644356,/USERS/Jimmy Wilson/AppData/Local/Microsoft/Windows/Temporary Internet Files/Low/Content.IE5/CBU4KX3T/,None,1
+btn-get-started-bg-right[1].png,1331,1432644356,/USERS/Jimmy Wilson/AppData/Local/Microsoft/Windows/Temporary Internet Files/Low/Content.IE5/CBU4KX3T/,None,1
+button_search[1].png,3926,1432644357,/USERS/Jimmy Wilson/AppData/Local/Microsoft/Windows/Temporary Internet Files/Low/Content.IE5/CBU4KX3T/,None,1
+can-1685486[1].png,4585,1432644358,/USERS/Jimmy Wilson/AppData/Local/Microsoft/Windows/Temporary Internet Files/Low/Content.IE5/CBU4KX3T/,None,1
+close-x[1].png,1340,1432644356,/USERS/Jimmy Wilson/AppData/Local/Microsoft/Windows/Temporary Internet Files/Low/Content.IE5/CBU4KX3T/,None,1
+layout_011f504e[1].png,105372,1432644360,/USERS/Jimmy Wilson/AppData/Local/Microsoft/Windows/Temporary Internet Files/Low/Content.IE5/CBU4KX3T/,None,1
+lifehacker-300[1].png,15201,1432644360,/USERS/Jimmy Wilson/AppData/Local/Microsoft/Windows/Temporary Internet Files/Low/Content.IE5/CBU4KX3T/,None,1
+LinkedIn[1].png,1182,1432644357,/USERS/Jimmy Wilson/AppData/Local/Microsoft/Windows/Temporary Internet Files/Low/Content.IE5/CBU4KX3T/,None,1
+sw_mg_l_4d_lg[1].png,5849,1432644359,/USERS/Jimmy Wilson/AppData/Local/Microsoft/Windows/Temporary Internet Files/Low/Content.IE5/CBU4KX3T/,None,1
+check-big[1].png,1829,1432644357,/USERS/Jimmy Wilson/AppData/Local/Microsoft/Windows/Temporary Internet Files/Low/Content.IE5/CBU4KX3T/,None,1
+transparent-1093278[1].png,98,1432644358,/USERS/Jimmy Wilson/AppData/Local/Microsoft/Windows/Temporary Internet Files/Low/Content.IE5/CBU4KX3T/,None,1
+usa-1685486[1].png,6142,1432644358,/USERS/Jimmy Wilson/AppData/Local/Microsoft/Windows/Temporary Internet Files/Low/Content.IE5/CBU4KX3T/,None,1
+video_15x11[1].png,161,1432644358,/USERS/Jimmy Wilson/AppData/Local/Microsoft/Windows/Temporary Internet Files/Low/Content.IE5/CBU4KX3T/,None,1
+view-mobile[1].png,3211,1432644360,/USERS/Jimmy Wilson/AppData/Local/Microsoft/Windows/Temporary Internet Files/Low/Content.IE5/CBU4KX3T/,None,1
+news[1].png,678,1432644362,/USERS/Jimmy Wilson/AppData/Local/Microsoft/Windows/Temporary Internet Files/Low/Content.IE5/CBU4KX3T/,None,1
+next[1].png,900,1432644357,/USERS/Jimmy Wilson/AppData/Local/Microsoft/Windows/Temporary Internet Files/Low/Content.IE5/CBU4KX3T/,None,1
+noavatar92[1].png,1644,1432644360,/USERS/Jimmy Wilson/AppData/Local/Microsoft/Windows/Temporary Internet Files/Low/Content.IE5/CBU4KX3T/,None,1
+olympics-logo-1x-v2[1].png,414,1432644358,/USERS/Jimmy Wilson/AppData/Local/Microsoft/Windows/Temporary Internet Files/Low/Content.IE5/CBU4KX3T/,None,1
+olympics-logotype-1x-v2[1].png,1245,1432644358,/USERS/Jimmy Wilson/AppData/Local/Microsoft/Windows/Temporary Internet Files/Low/Content.IE5/CBU4KX3T/,None,1
+other[1].png,581,1432644362,/USERS/Jimmy Wilson/AppData/Local/Microsoft/Windows/Temporary Internet Files/Low/Content.IE5/CBU4KX3T/,None,1
+pixel[1].png,170,1432644361,/USERS/Jimmy Wilson/AppData/Local/Microsoft/Windows/Temporary Internet Files/Low/Content.IE5/CBU4KX3T/,None,1
+set-16[1].png,14667,1432644361,/USERS/Jimmy Wilson/AppData/Local/Microsoft/Windows/Temporary Internet Files/Low/Content.IE5/CBU4KX3T/,None,1
+gplus_icons_sprite[1].png,1473,1432644360,/USERS/Jimmy Wilson/AppData/Local/Microsoft/Windows/Temporary Internet Files/Low/Content.IE5/CBU4KX3T/,None,1
+Gqb0XYJrQkS[1].png,11945,1432644360,/USERS/Jimmy Wilson/AppData/Local/Microsoft/Windows/Temporary Internet Files/Low/Content.IE5/CBU4KX3T/,None,1
+GuaranteedSeal_BLL[1].png,8459,1432644357,/USERS/Jimmy Wilson/AppData/Local/Microsoft/Windows/Temporary Internet Files/Low/Content.IE5/CBU4KX3T/,None,1
+successstory_a8ac.img.teaserImage[1].png,5110,1432644356,/USERS/Jimmy Wilson/AppData/Local/Microsoft/Windows/Temporary Internet Files/Low/Content.IE5/CBU4KX3T/,None,1
+mathworks_new[1].png,19238,1432644354,/USERS/Jimmy Wilson/AppData/Local/Microsoft/Windows/Temporary Internet Files/Low/Content.IE5/CBU4KX3T/,None,1
+nav-features-hover[1].png,3035,1432644361,/USERS/Jimmy Wilson/AppData/Local/Microsoft/Windows/Temporary Internet Files/Low/Content.IE5/CBU4KX3T/,None,1
+navbar_bg_hover[1].png,1018,1432644357,/USERS/Jimmy Wilson/AppData/Local/Microsoft/Windows/Temporary Internet Files/Low/Content.IE5/CBU4KX3T/,None,1
+content_b4eb503e[1].png,44010,1432644360,/USERS/Jimmy Wilson/AppData/Local/Microsoft/Windows/Temporary Internet Files/Low/Content.IE5/CBU4KX3T/,None,1
+e11d29f4d1a4aefcc0ce3016fd4d3e7d[1].png,2550,1432644360,/USERS/Jimmy Wilson/AppData/Local/Microsoft/Windows/Temporary Internet Files/Low/Content.IE5/CBU4KX3T/,None,1
+economic-collapse[1].png,1012,1432644362,/USERS/Jimmy Wilson/AppData/Local/Microsoft/Windows/Temporary Internet Files/Low/Content.IE5/CBU4KX3T/,None,1
+productfamily.img.teaser[1].png,12538,1432644356,/USERS/Jimmy Wilson/AppData/Local/Microsoft/Windows/Temporary Internet Files/Low/Content.IE5/CBU4KX3T/,None,1
+productfamily.img.teaser[2].png,15369,1432644356,/USERS/Jimmy Wilson/AppData/Local/Microsoft/Windows/Temporary Internet Files/Low/Content.IE5/CBU4KX3T/,None,1
+HH9N502O.png,34820,1432644362,/USERS/Jimmy Wilson/AppData/Local/Microsoft/Windows/Temporary Internet Files/Low/Content.IE5/CBU4KX3T/,None,1
+hjsal[1].txt,150933,1432644358,/USERS/Jimmy Wilson/AppData/Local/Microsoft/Windows/Temporary Internet Files/Low/Content.IE5/CBU4KX3T/,None,1
+shadow_body770[1].png,1444,1432644357,/USERS/Jimmy Wilson/AppData/Local/Microsoft/Windows/Temporary Internet Files/Low/Content.IE5/CBU4KX3T/,None,1
+shadow_narrowbox[1].png,1340,1432644357,/USERS/Jimmy Wilson/AppData/Local/Microsoft/Windows/Temporary Internet Files/Low/Content.IE5/CBU4KX3T/,None,1
+share-facebook[1].png,840,1432644356,/USERS/Jimmy Wilson/AppData/Local/Microsoft/Windows/Temporary Internet Files/Low/Content.IE5/CBU4KX3T/,None,1
+top-selling[1].png,3495,1432644357,/USERS/Jimmy Wilson/AppData/Local/Microsoft/Windows/Temporary Internet Files/Low/Content.IE5/CBU4KX3T/,None,1
+xbg-country-dropdown.png.pagespeed.ic.AmNIFgjwxm[1].png,2875,1432644356,/USERS/Jimmy Wilson/AppData/Local/Microsoft/Windows/Temporary Internet Files/Low/Content.IE5/CBU4KX3T/,None,1
+ximg-flag-italy.png.pagespeed.ic.JY2kNV-amT[1].png,571,1432644356,/USERS/Jimmy Wilson/AppData/Local/Microsoft/Windows/Temporary Internet Files/Low/Content.IE5/CBU4KX3T/,None,1
+container.dat,0,1432644354,/USERS/Jimmy Wilson/AppData/Local/Microsoft/Windows/Temporary Internet Files/Low/Content.IE5/,None,1
+120x45ucnrxr7vw[1].png,2527,1432644358,/USERS/Jimmy Wilson/AppData/Local/Microsoft/Windows/Temporary Internet Files/Low/Content.IE5/S9GG14FF/,None,1
+1704-17-LMBinsurance_logo[1].png,723,1432644360,/USERS/Jimmy Wilson/AppData/Local/Microsoft/Windows/Temporary Internet Files/Low/Content.IE5/S9GG14FF/,None,1
+17jcxgagdkuylpng[1].png,259,1432644360,/USERS/Jimmy Wilson/AppData/Local/Microsoft/Windows/Temporary Internet Files/Low/Content.IE5/S9GG14FF/,None,1
+17jcxk0ml1k8qpng[1].png,249,1432644361,/USERS/Jimmy Wilson/AppData/Local/Microsoft/Windows/Temporary Internet Files/Low/Content.IE5/S9GG14FF/,None,1
+17mbzc7axo3z3png[1].png,1193,1432644361,/USERS/Jimmy Wilson/AppData/Local/Microsoft/Windows/Temporary Internet Files/Low/Content.IE5/S9GG14FF/,None,1
+20e1cd4c-ba79-4b50-8c0c-e40a5e17f1fa_7[1].dat,327680,1432644355,/USERS/Jimmy Wilson/AppData/Local/Microsoft/Windows/Temporary Internet Files/Low/Content.IE5/S9GG14FF/,None,1
+logo-zebra-bg[1].png,1554,1432644356,/USERS/Jimmy Wilson/AppData/Local/Microsoft/Windows/Temporary Internet Files/Low/Content.IE5/S9GG14FF/,None,1
+logov2[1].png,2764,1432644360,/USERS/Jimmy Wilson/AppData/Local/Microsoft/Windows/Temporary Internet Files/Low/Content.IE5/S9GG14FF/,None,1
+bg-zbtn-shadow-left.png.pagespeed.ce.x8DkJtUdak[1].png,262,1432644356,/USERS/Jimmy Wilson/AppData/Local/Microsoft/Windows/Temporary Internet Files/Low/Content.IE5/S9GG14FF/,None,1
+bg-zebra-btn[1].png,164,1432644356,/USERS/Jimmy Wilson/AppData/Local/Microsoft/Windows/Temporary Internet Files/Low/Content.IE5/S9GG14FF/,None,1
+65705d24-cb65-450a-9ecd-fe57bc585923_7[1].dat,327680,1432644355,/USERS/Jimmy Wilson/AppData/Local/Microsoft/Windows/Temporary Internet Files/Low/Content.IE5/S9GG14FF/,None,1
+8AB37AF75A335D76E4DDD2C025688B[1].png,6024,1432644355,/USERS/Jimmy Wilson/AppData/Local/Microsoft/Windows/Temporary Internet Files/Low/Content.IE5/S9GG14FF/,None,1
+979b3fb9-70d7-430a-9cae-601c0459e1e0_7[1].dat,393216,1432644355,/USERS/Jimmy Wilson/AppData/Local/Microsoft/Windows/Temporary Internet Files/Low/Content.IE5/S9GG14FF/,None,1
+icon-hamburger[1].png,138,1432644360,/USERS/Jimmy Wilson/AppData/Local/Microsoft/Windows/Temporary Internet Files/Low/Content.IE5/S9GG14FF/,None,1
+icon-share[1].png,1056,1432644356,/USERS/Jimmy Wilson/AppData/Local/Microsoft/Windows/Temporary Internet Files/Low/Content.IE5/S9GG14FF/,None,1
+ra1-icoset[1].png,4089,1432644361,/USERS/Jimmy Wilson/AppData/Local/Microsoft/Windows/Temporary Internet Files/Low/Content.IE5/S9GG14FF/,None,1
+relationships[1].png,1283,1432644362,/USERS/Jimmy Wilson/AppData/Local/Microsoft/Windows/Temporary Internet Files/Low/Content.IE5/S9GG14FF/,None,1
+Rose%20Foundation%20150[1].jpg,50905,1432644357,/USERS/Jimmy Wilson/AppData/Local/Microsoft/Windows/Temporary Internet Files/Low/Content.IE5/S9GG14FF/,None,1
+social_footer_google[1].png,1930,1432644356,/USERS/Jimmy Wilson/AppData/Local/Microsoft/Windows/Temporary Internet Files/Low/Content.IE5/S9GG14FF/,None,1
+social_footer_linkedin[1].png,2112,1432644356,/USERS/Jimmy Wilson/AppData/Local/Microsoft/Windows/Temporary Internet Files/Low/Content.IE5/S9GG14FF/,None,1
+social_footer_twitter[1].png,2527,1432644356,/USERS/Jimmy Wilson/AppData/Local/Microsoft/Windows/Temporary Internet Files/Low/Content.IE5/S9GG14FF/,None,1
+49687970df83a59c6c4b11edd41879[1].png,9755,1432644355,/USERS/Jimmy Wilson/AppData/Local/Microsoft/Windows/Temporary Internet Files/Low/Content.IE5/S9GG14FF/,None,1
+twitter-logo[1].png,1507,1432644357,/USERS/Jimmy Wilson/AppData/Local/Microsoft/Windows/Temporary Internet Files/Low/Content.IE5/S9GG14FF/,None,1
+uh_sprite[1].png,26011,1432644358,/USERS/Jimmy Wilson/AppData/Local/Microsoft/Windows/Temporary Internet Files/Low/Content.IE5/S9GG14FF/,None,1
+v1_53a1fa6a[1].png,59173,1432644356,/USERS/Jimmy Wilson/AppData/Local/Microsoft/Windows/Temporary Internet Files/Low/Content.IE5/S9GG14FF/,None,1
+xbg-arrow-blue-down.png.pagespeed.ic.f_PC2nfp7X[1].png,144,1432644356,/USERS/Jimmy Wilson/AppData/Local/Microsoft/Windows/Temporary Internet Files/Low/Content.IE5/S9GG14FF/,None,1
+xbg-link-arrow-blue.png.pagespeed.ic.3DsUGSoout[1].png,188,1432644356,/USERS/Jimmy Wilson/AppData/Local/Microsoft/Windows/Temporary Internet Files/Low/Content.IE5/S9GG14FF/,None,1
+xbg-link-arrow-white.png.pagespeed.ic.awQcCpbjbe[1].png,177,1432644356,/USERS/Jimmy Wilson/AppData/Local/Microsoft/Windows/Temporary Internet Files/Low/Content.IE5/S9GG14FF/,None,1
+xbg-zbtn-shadow-mid.png.pagespeed.ic.Dx6BLEpjlx[1].png,78,1432644356,/USERS/Jimmy Wilson/AppData/Local/Microsoft/Windows/Temporary Internet Files/Low/Content.IE5/S9GG14FF/,None,1
+xbtn-get-started-bg-left.png.pagespeed.ic.JdH3UWKLeU[1].png,542,1432644356,/USERS/Jimmy Wilson/AppData/Local/Microsoft/Windows/Temporary Internet Files/Low/Content.IE5/S9GG14FF/,None,1
+xbtn-get-started-bg-mid.png.pagespeed.ic.StwEzX57KM[1].png,392,1432644356,/USERS/Jimmy Wilson/AppData/Local/Microsoft/Windows/Temporary Internet Files/Low/Content.IE5/S9GG14FF/,None,1
+ximg-flag-espana.png.pagespeed.ic.JLNFFmUqJy[1].png,703,1432644356,/USERS/Jimmy Wilson/AppData/Local/Microsoft/Windows/Temporary Internet Files/Low/Content.IE5/S9GG14FF/,None,1
+ximg-flag-sweden.png.pagespeed.ic.FWXCmPXTly[1].png,538,1432644356,/USERS/Jimmy Wilson/AppData/Local/Microsoft/Windows/Temporary Internet Files/Low/Content.IE5/S9GG14FF/,None,1
+xlogo-zebra-bg.png.pagespeed.ic.4f6JQ00yqw[1].png,584,1432644356,/USERS/Jimmy Wilson/AppData/Local/Microsoft/Windows/Temporary Internet Files/Low/Content.IE5/S9GG14FF/,None,1
+bps1[1].png,1847,1432644360,/USERS/Jimmy Wilson/AppData/Local/Microsoft/Windows/Temporary Internet Files/Low/Content.IE5/S9GG14FF/,None,1
+checkmark2[1].png,186,1432644362,/USERS/Jimmy Wilson/AppData/Local/Microsoft/Windows/Temporary Internet Files/Low/Content.IE5/S9GG14FF/,None,1
+spreadingthemessage[1].png,874,1432644362,/USERS/Jimmy Wilson/AppData/Local/Microsoft/Windows/Temporary Internet Files/Low/Content.IE5/S9GG14FF/,None,1
+sprite-v6[1].png,23091,1432644354,/USERS/Jimmy Wilson/AppData/Local/Microsoft/Windows/Temporary Internet Files/Low/Content.IE5/S9GG14FF/,None,1
+story-button[1].png,6240,1432644357,/USERS/Jimmy Wilson/AppData/Local/Microsoft/Windows/Temporary Internet Files/Low/Content.IE5/S9GG14FF/,None,1
+successstory.img.teaserImage[1].png,7842,1432644356,/USERS/Jimmy Wilson/AppData/Local/Microsoft/Windows/Temporary Internet Files/Low/Content.IE5/S9GG14FF/,None,1
+successstory_9181.img.teaserImage[1].png,4415,1432644356,/USERS/Jimmy Wilson/AppData/Local/Microsoft/Windows/Temporary Internet Files/Low/Content.IE5/S9GG14FF/,None,1
+philosophy[1].png,817,1432644362,/USERS/Jimmy Wilson/AppData/Local/Microsoft/Windows/Temporary Internet Files/Low/Content.IE5/S9GG14FF/,None,1
+pinterest_counter[1].png,3663,1432644358,/USERS/Jimmy Wilson/AppData/Local/Microsoft/Windows/Temporary Internet Files/Low/Content.IE5/S9GG14FF/,None,1
+xbtn-search-submit.png.pagespeed.ic.3me4cW0_2M[1].png,1065,1432644356,/USERS/Jimmy Wilson/AppData/Local/Microsoft/Windows/Temporary Internet Files/Low/Content.IE5/S9GG14FF/,None,1
+ximg-flag-denmark.png.pagespeed.ic.0pfo6h1d2H[1].png,468,1432644356,/USERS/Jimmy Wilson/AppData/Local/Microsoft/Windows/Temporary Internet Files/Low/Content.IE5/S9GG14FF/,None,1
+dot[1].png,74,1432644357,/USERS/Jimmy Wilson/AppData/Local/Microsoft/Windows/Temporary Internet Files/Low/Content.IE5/S9GG14FF/,None,1
+ehownow_article_logo_small_white[1].png,2523,1432644360,/USERS/Jimmy Wilson/AppData/Local/Microsoft/Windows/Temporary Internet Files/Low/Content.IE5/S9GG14FF/,None,1
+email[1].png,1476,1432644357,/USERS/Jimmy Wilson/AppData/Local/Microsoft/Windows/Temporary Internet Files/Low/Content.IE5/S9GG14FF/,None,1
+finance_icons_sprite2_01[1].png,222,1432644358,/USERS/Jimmy Wilson/AppData/Local/Microsoft/Windows/Temporary Internet Files/Low/Content.IE5/S9GG14FF/,None,1
+nav-features[1].png,2976,1432644361,/USERS/Jimmy Wilson/AppData/Local/Microsoft/Windows/Temporary Internet Files/Low/Content.IE5/S9GG14FF/,None,1
+nav-news[1].png,3277,1432644361,/USERS/Jimmy Wilson/AppData/Local/Microsoft/Windows/Temporary Internet Files/Low/Content.IE5/S9GG14FF/,None,1
+nav-photo[1].png,3016,1432644361,/USERS/Jimmy Wilson/AppData/Local/Microsoft/Windows/Temporary Internet Files/Low/Content.IE5/S9GG14FF/,None,1
+nav-shadow-lt.png.pagespeed.ce.hg3j3fJvno[1].png,248,1432644356,/USERS/Jimmy Wilson/AppData/Local/Microsoft/Windows/Temporary Internet Files/Low/Content.IE5/S9GG14FF/,None,1
+nav-shadow-rt.png.pagespeed.ce.OEwQNLnNH_[1].png,363,1432644356,/USERS/Jimmy Wilson/AppData/Local/Microsoft/Windows/Temporary Internet Files/Low/Content.IE5/S9GG14FF/,None,1
+navbar_spacer[1].png,1074,1432644357,/USERS/Jimmy Wilson/AppData/Local/Microsoft/Windows/Temporary Internet Files/Low/Content.IE5/S9GG14FF/,None,1
+nav_logo170_hr[1].png,29887,1432644356,/USERS/Jimmy Wilson/AppData/Local/Microsoft/Windows/Temporary Internet Files/Low/Content.IE5/S9GG14FF/,None,1
+nor-1685486[1].png,3854,1432644358,/USERS/Jimmy Wilson/AppData/Local/Microsoft/Windows/Temporary Internet Files/Low/Content.IE5/S9GG14FF/,None,1
+pattern[1].png,71141,1432644360,/USERS/Jimmy Wilson/AppData/Local/Microsoft/Windows/Temporary Internet Files/Low/Content.IE5/S9GG14FF/,None,1
+pc_icons_btns_sprite_0122_1215pm[1].png,57825,1432644358,/USERS/Jimmy Wilson/AppData/Local/Microsoft/Windows/Temporary Internet Files/Low/Content.IE5/S9GG14FF/,None,1
+pc_icons_video_sprite_0624_9pm[1].png,3271,1432644358,/USERS/Jimmy Wilson/AppData/Local/Microsoft/Windows/Temporary Internet Files/Low/Content.IE5/S9GG14FF/,None,1
+successstory_a8ac.img.teaserImage[1].png,5110,1432644356,/USERS/Jimmy Wilson/AppData/Local/Microsoft/Windows/Temporary Internet Files/Low/Content.IE5/S9GG14FF/,None,1
+successstory_a8ac.img.teaserImage[2].png,5110,1432644356,/USERS/Jimmy Wilson/AppData/Local/Microsoft/Windows/Temporary Internet Files/Low/Content.IE5/S9GG14FF/,None,1
+successstory_a8ac.img.teaserImage[3].png,5110,1432644356,/USERS/Jimmy Wilson/AppData/Local/Microsoft/Windows/Temporary Internet Files/Low/Content.IE5/S9GG14FF/,None,1
+f3694a3c-28f7-4409-bb28-be7ae081f160_7[1].dat,458752,1432644355,/USERS/Jimmy Wilson/AppData/Local/Microsoft/Windows/Temporary Internet Files/Low/Content.IE5/S9GG14FF/,None,1
+facebook_counter[1].png,1850,1432644357,/USERS/Jimmy Wilson/AppData/Local/Microsoft/Windows/Temporary Internet Files/Low/Content.IE5/S9GG14FF/,None,1
+fancybox[1].png,15287,1432644356,/USERS/Jimmy Wilson/AppData/Local/Microsoft/Windows/Temporary Internet Files/Low/Content.IE5/S9GG14FF/,None,1
+featured-subcat-question[1].png,1804,1432644357,/USERS/Jimmy Wilson/AppData/Local/Microsoft/Windows/Temporary Internet Files/Low/Content.IE5/S9GG14FF/,None,1
+share-email[1].png,733,1432644356,/USERS/Jimmy Wilson/AppData/Local/Microsoft/Windows/Temporary Internet Files/Low/Content.IE5/S9GG14FF/,None,1
+social_footer_facebook[1].png,2156,1432644356,/USERS/Jimmy Wilson/AppData/Local/Microsoft/Windows/Temporary Internet Files/Low/Content.IE5/S9GG14FF/,None,1
+contact-me-btn[1].png,1951,1432644357,/USERS/Jimmy Wilson/AppData/Local/Microsoft/Windows/Temporary Internet Files/Low/Content.IE5/S9GG14FF/,None,1
+corporate_cfd9eac7[1].png,129696,1432644360,/USERS/Jimmy Wilson/AppData/Local/Microsoft/Windows/Temporary Internet Files/Low/Content.IE5/S9GG14FF/,None,1
+css_sprite[1].png,5966,1432644362,/USERS/Jimmy Wilson/AppData/Local/Microsoft/Windows/Temporary Internet Files/Low/Content.IE5/S9GG14FF/,None,1
+4300ae64-546c-4bbe-9026-6779b3684fb8_32[1].png,3844,1432644355,/USERS/Jimmy Wilson/AppData/Local/Microsoft/Windows/Temporary Internet Files/Low/Content.IE5/S9GG14FF/,None,1
+missing-author-image[1].png,5332,1432644360,/USERS/Jimmy Wilson/AppData/Local/Microsoft/Windows/Temporary Internet Files/Low/Content.IE5/S9GG14FF/,None,1
+avatar-big[1].png,411,1432644360,/USERS/Jimmy Wilson/AppData/Local/Microsoft/Windows/Temporary Internet Files/Low/Content.IE5/S9GG14FF/,None,1
+bg-arrow-blue-down[1].png,974,1432644356,/USERS/Jimmy Wilson/AppData/Local/Microsoft/Windows/Temporary Internet Files/Low/Content.IE5/S9GG14FF/,None,1
+bg-country-dropdown[1].png,3773,1432644356,/USERS/Jimmy Wilson/AppData/Local/Microsoft/Windows/Temporary Internet Files/Low/Content.IE5/S9GG14FF/,None,1
+bg-link-arrow-yellow[1].png,998,1432644356,/USERS/Jimmy Wilson/AppData/Local/Microsoft/Windows/Temporary Internet Files/Low/Content.IE5/S9GG14FF/,None,1
+bg-select-box-arrow-yellow[1].png,1299,1432644356,/USERS/Jimmy Wilson/AppData/Local/Microsoft/Windows/Temporary Internet Files/Low/Content.IE5/S9GG14FF/,None,1
+bg-unapproved[1].png,1383,1432644360,/USERS/Jimmy Wilson/AppData/Local/Microsoft/Windows/Temporary Internet Files/Low/Content.IE5/S9GG14FF/,None,1
+horz-rule-nav[1].png,1067,1432644361,/USERS/Jimmy Wilson/AppData/Local/Microsoft/Windows/Temporary Internet Files/Low/Content.IE5/S9GG14FF/,None,1
+hpc12[1].png,5574,1432644358,/USERS/Jimmy Wilson/AppData/Local/Microsoft/Windows/Temporary Internet Files/Low/Content.IE5/S9GG14FF/,None,1
+IcelandIceberg_GettyRR_157855754_EN-US[1].dat,1703936,1432644358,/USERS/Jimmy Wilson/AppData/Local/Microsoft/Windows/Temporary Internet Files/Low/Content.IE5/S9GG14FF/,None,1
+jezebel-touch-icon-c60ae03e9470fde593e8269539e205f8[1].png,1122,1432644360,/USERS/Jimmy Wilson/AppData/Local/Microsoft/Windows/Temporary Internet Files/Low/Content.IE5/S9GG14FF/,None,1
+product-circle[1].png,434,1432644356,/USERS/Jimmy Wilson/AppData/Local/Microsoft/Windows/Temporary Internet Files/Low/Content.IE5/S9GG14FF/,None,1
+xbtn-get-started-bg-right.png.pagespeed.ic.2l6_YUXoKB[1].png,467,1432644356,/USERS/Jimmy Wilson/AppData/Local/Microsoft/Windows/Temporary Internet Files/Low/Content.IE5/S9GG14FF/,None,1
+ireland1[1].png,1845,1432644361,/USERS/Jimmy Wilson/AppData/Local/Microsoft/Windows/Temporary Internet Files/Low/Content.IE5/S9GG14FF/,None,1
+jalopnik-touch-icon-946e1323f70552fabc76af3d3c2ec4e4[1].png,2562,1432644360,/USERS/Jimmy Wilson/AppData/Local/Microsoft/Windows/Temporary Internet Files/Low/Content.IE5/S9GG14FF/,None,1
+1599219778[1].txt,334,1432644360,/USERS/Jimmy Wilson/AppData/Local/Microsoft/Windows/Temporary Internet Files/Low/Content.IE5/WMB1SJEE/,None,1
+17jcxip9se2h9png[1].png,249,1432644361,/USERS/Jimmy Wilson/AppData/Local/Microsoft/Windows/Temporary Internet Files/Low/Content.IE5/WMB1SJEE/,None,1
+2f261ed8-171b-4163-923c-8694302901ef_36[1].png,4861,1432644355,/USERS/Jimmy Wilson/AppData/Local/Microsoft/Windows/Temporary Internet Files/Low/Content.IE5/WMB1SJEE/,None,1
+googleplus1[1].png,602,1432644362,/USERS/Jimmy Wilson/AppData/Local/Microsoft/Windows/Temporary Internet Files/Low/Content.IE5/WMB1SJEE/,None,1
+arrow_down[1].png,94,1432644362,/USERS/Jimmy Wilson/AppData/Local/Microsoft/Windows/Temporary Internet Files/Low/Content.IE5/WMB1SJEE/,None,1
+avatar-default@2x[1].png,15274,1432644360,/USERS/Jimmy Wilson/AppData/Local/Microsoft/Windows/Temporary Internet Files/Low/Content.IE5/WMB1SJEE/,None,1
+bg-select-box[1].png,983,1432644356,/USERS/Jimmy Wilson/AppData/Local/Microsoft/Windows/Temporary Internet Files/Low/Content.IE5/WMB1SJEE/,None,1
+red-small[1].png,654,1432644360,/USERS/Jimmy Wilson/AppData/Local/Microsoft/Windows/Temporary Internet Files/Low/Content.IE5/WMB1SJEE/,None,1
+ryanc[1].png,30327,1432644357,/USERS/Jimmy Wilson/AppData/Local/Microsoft/Windows/Temporary Internet Files/Low/Content.IE5/WMB1SJEE/,None,1
+sharethis_counter[1].png,2597,1432644358,/USERS/Jimmy Wilson/AppData/Local/Microsoft/Windows/Temporary Internet Files/Low/Content.IE5/WMB1SJEE/,None,1
+kotaku-touch-icon-ddd3b0de4c79a0de2c04dbcddc091188[1].png,3111,1432644360,/USERS/Jimmy Wilson/AppData/Local/Microsoft/Windows/Temporary Internet Files/Low/Content.IE5/WMB1SJEE/,None,1
+lifehacker-touch-icon-c30217b742a2c42124a912f3b5830706[1].png,1826,1432644360,/USERS/Jimmy Wilson/AppData/Local/Microsoft/Windows/Temporary Internet Files/Low/Content.IE5/WMB1SJEE/,None,1
+linkedin_counter[1].png,2032,1432644358,/USERS/Jimmy Wilson/AppData/Local/Microsoft/Windows/Temporary Internet Files/Low/Content.IE5/WMB1SJEE/,None,1
+sprite.8fe43e54fc77abab41e1dbc74c535d83[1].png,7955,1432644360,/USERS/Jimmy Wilson/AppData/Local/Microsoft/Windows/Temporary Internet Files/Low/Content.IE5/WMB1SJEE/,None,1
+stumbleupon[1].png,638,1432644361,/USERS/Jimmy Wilson/AppData/Local/Microsoft/Windows/Temporary Internet Files/Low/Content.IE5/WMB1SJEE/,None,1
+success-a9395d796d73290c808dc2e7c43370d2[1].png,1402,1432644362,/USERS/Jimmy Wilson/AppData/Local/Microsoft/Windows/Temporary Internet Files/Low/Content.IE5/WMB1SJEE/,None,1
+successstory_a8ac.img.teaserImage[1].png,5438,1432644356,/USERS/Jimmy Wilson/AppData/Local/Microsoft/Windows/Temporary Internet Files/Low/Content.IE5/WMB1SJEE/,None,1
+successstory_a8ac.img.teaserImage[2].png,5110,1432644356,/USERS/Jimmy Wilson/AppData/Local/Microsoft/Windows/Temporary Internet Files/Low/Content.IE5/WMB1SJEE/,None,1
+successstory_a8ac.img.teaserImage[3].png,8046,1432644356,/USERS/Jimmy Wilson/AppData/Local/Microsoft/Windows/Temporary Internet Files/Low/Content.IE5/WMB1SJEE/,None,1
+btn-search-submit[1].png,1684,1432644356,/USERS/Jimmy Wilson/AppData/Local/Microsoft/Windows/Temporary Internet Files/Low/Content.IE5/WMB1SJEE/,None,1
+fancybox-x[1].png,203,1432644356,/USERS/Jimmy Wilson/AppData/Local/Microsoft/Windows/Temporary Internet Files/Low/Content.IE5/WMB1SJEE/,None,1
+twitter_counter[1].png,3279,1432644358,/USERS/Jimmy Wilson/AppData/Local/Microsoft/Windows/Temporary Internet Files/Low/Content.IE5/WMB1SJEE/,None,1
+xbg-sidebar-btn-gray.png.pagespeed.ic.lMA4imkrJh[1].png,108,1432644356,/USERS/Jimmy Wilson/AppData/Local/Microsoft/Windows/Temporary Internet Files/Low/Content.IE5/WMB1SJEE/,None,1
+ximg-flag-poland.png.pagespeed.ic.4-pnUQ4UXp[1].png,337,1432644356,/USERS/Jimmy Wilson/AppData/Local/Microsoft/Windows/Temporary Internet Files/Low/Content.IE5/WMB1SJEE/,None,1
+wizard[1].png,11131,1432644357,/USERS/Jimmy Wilson/AppData/Local/Microsoft/Windows/Temporary Internet Files/Low/Content.IE5/WMB1SJEE/,None,1
+wpcom-admin-bar-icons[1].png,3446,1432644361,/USERS/Jimmy Wilson/AppData/Local/Microsoft/Windows/Temporary Internet Files/Low/Content.IE5/WMB1SJEE/,None,1
+xbg-nav.png.pagespeed.ic.jRmBJhmEin[1].png,870,1432644356,/USERS/Jimmy Wilson/AppData/Local/Microsoft/Windows/Temporary Internet Files/Low/Content.IE5/WMB1SJEE/,None,1
+xbg-page-background-fade.png.pagespeed.ic.VU2z8hXSGd[1].jpg,49352,1432644356,/USERS/Jimmy Wilson/AppData/Local/Microsoft/Windows/Temporary Internet Files/Low/Content.IE5/WMB1SJEE/,None,1
+xbg-search-input.png.pagespeed.ic.r43MX-MlQW[1].png,1325,1432644356,/USERS/Jimmy Wilson/AppData/Local/Microsoft/Windows/Temporary Internet Files/Low/Content.IE5/WMB1SJEE/,None,1
+xbg-select-box-arrow-yellow.png.pagespeed.ic.Bw1ltdlYnR[1].png,411,1432644356,/USERS/Jimmy Wilson/AppData/Local/Microsoft/Windows/Temporary Internet Files/Low/Content.IE5/WMB1SJEE/,None,1
+xbg-share-drop.png.pagespeed.ic.6k0dNFJG0h[1].png,157,1432644356,/USERS/Jimmy Wilson/AppData/Local/Microsoft/Windows/Temporary Internet Files/Low/Content.IE5/WMB1SJEE/,None,1
+ximg-flag-germany.png.pagespeed.ic.hcbJrmlyCF[1].png,484,1432644356,/USERS/Jimmy Wilson/AppData/Local/Microsoft/Windows/Temporary Internet Files/Low/Content.IE5/WMB1SJEE/,None,1
+ximg-flag-mexico.png.pagespeed.ic.EV71lTIDvE[1].png,905,1432644356,/USERS/Jimmy Wilson/AppData/Local/Microsoft/Windows/Temporary Internet Files/Low/Content.IE5/WMB1SJEE/,None,1
+xclose-x.png.pagespeed.ic.138XnjrP6-[1].png,468,1432644356,/USERS/Jimmy Wilson/AppData/Local/Microsoft/Windows/Temporary Internet Files/Low/Content.IE5/WMB1SJEE/,None,1
+xicon-print.png.pagespeed.ic.nSjtPwqT-C[1].png,129,1432644356,/USERS/Jimmy Wilson/AppData/Local/Microsoft/Windows/Temporary Internet Files/Low/Content.IE5/WMB1SJEE/,None,1
+xicon-share.png.pagespeed.ic.7hhwwEZf9t[1].png,220,1432644356,/USERS/Jimmy Wilson/AppData/Local/Microsoft/Windows/Temporary Internet Files/Low/Content.IE5/WMB1SJEE/,None,1
+ximg-flag-china.png.pagespeed.ic.w9ZCC3KzNG[1].png,587,1432644356,/USERS/Jimmy Wilson/AppData/Local/Microsoft/Windows/Temporary Internet Files/Low/Content.IE5/WMB1SJEE/,None,1
+ximg-flag-france.png.pagespeed.ic.ZvU2sYXqXp[1].png,557,1432644356,/USERS/Jimmy Wilson/AppData/Local/Microsoft/Windows/Temporary Internet Files/Low/Content.IE5/WMB1SJEE/,None,1
+ximg-flag-poland.png.pagespeed.ic.4-pnUQ4UXp[1].png,0,0,/USERS/Jimmy Wilson/AppData/Local/Microsoft/Windows/Temporary Internet Files/Low/Content.IE5/WMB1SJEE/,None,0
+xlogo-zebra.png.pagespeed.ic.MVyatenJzS[1].png,1656,1432644356,/USERS/Jimmy Wilson/AppData/Local/Microsoft/Windows/Temporary Internet Files/Low/Content.IE5/WMB1SJEE/,None,1
+xproductview.img.productimage.png.pagespeed.ic.pCnzo2hh81[1].jpg,6892,1432644356,/USERS/Jimmy Wilson/AppData/Local/Microsoft/Windows/Temporary Internet Files/Low/Content.IE5/WMB1SJEE/,None,1
+zxp8-datasheet-en-us[1].pdf,1156716,1432644356,/USERS/Jimmy Wilson/AppData/Local/Microsoft/Windows/Temporary Internet Files/Low/Content.IE5/WMB1SJEE/,None,1
+chat[1].png,1635,1432644357,/USERS/Jimmy Wilson/AppData/Local/Microsoft/Windows/Temporary Internet Files/Low/Content.IE5/WMB1SJEE/,None,1
+contact_box_bg[1].png,985,1432644357,/USERS/Jimmy Wilson/AppData/Local/Microsoft/Windows/Temporary Internet Files/Low/Content.IE5/WMB1SJEE/,None,1
+contact_title_bg[1].png,986,1432644357,/USERS/Jimmy Wilson/AppData/Local/Microsoft/Windows/Temporary Internet Files/Low/Content.IE5/WMB1SJEE/,None,1
+deadspin-touch-icon-6caeab5a3f12e806fdd7d72d6b8029d8[1].png,6863,1432644360,/USERS/Jimmy Wilson/AppData/Local/Microsoft/Windows/Temporary Internet Files/Low/Content.IE5/WMB1SJEE/,None,1
+digg[1].png,530,1432644361,/USERS/Jimmy Wilson/AppData/Local/Microsoft/Windows/Temporary Internet Files/Low/Content.IE5/WMB1SJEE/,None,1
+yahoo_en-US_f_p_142x37[1].png,5301,1432644358,/USERS/Jimmy Wilson/AppData/Local/Microsoft/Windows/Temporary Internet Files/Low/Content.IE5/WMB1SJEE/,None,1
+bg-share-drop[1].png,198,1432644356,/USERS/Jimmy Wilson/AppData/Local/Microsoft/Windows/Temporary Internet Files/Low/Content.IE5/WMB1SJEE/,None,1
+bg-squares-content[1].png,4055,1432644356,/USERS/Jimmy Wilson/AppData/Local/Microsoft/Windows/Temporary Internet Files/Low/Content.IE5/WMB1SJEE/,None,1
+bg-tab-gradient-gray[1].png,942,1432644356,/USERS/Jimmy Wilson/AppData/Local/Microsoft/Windows/Temporary Internet Files/Low/Content.IE5/WMB1SJEE/,None,1
+bg-tab-gradient-yellow[1].png,946,1432644356,/USERS/Jimmy Wilson/AppData/Local/Microsoft/Windows/Temporary Internet Files/Low/Content.IE5/WMB1SJEE/,None,1
+bg-zbtn-shadow-left[1].png,262,1432644356,/USERS/Jimmy Wilson/AppData/Local/Microsoft/Windows/Temporary Internet Files/Low/Content.IE5/WMB1SJEE/,None,1
+border[1].png,1185,1432644361,/USERS/Jimmy Wilson/AppData/Local/Microsoft/Windows/Temporary Internet Files/Low/Content.IE5/WMB1SJEE/,None,1
+btn-get-started-bg-mid[1].png,1113,1432644356,/USERS/Jimmy Wilson/AppData/Local/Microsoft/Windows/Temporary Internet Files/Low/Content.IE5/WMB1SJEE/,None,1
+thief[1].png,22555,1432644357,/USERS/Jimmy Wilson/AppData/Local/Microsoft/Windows/Temporary Internet Files/Low/Content.IE5/WMB1SJEE/,None,1
+verisign[1].png,6019,1432644357,/USERS/Jimmy Wilson/AppData/Local/Microsoft/Windows/Temporary Internet Files/Low/Content.IE5/WMB1SJEE/,None,1
+mappins_grey[1].png,1621,1432644362,/USERS/Jimmy Wilson/AppData/Local/Microsoft/Windows/Temporary Internet Files/Low/Content.IE5/WMB1SJEE/,None,1
+nav-dispatches[1].png,2810,1432644361,/USERS/Jimmy Wilson/AppData/Local/Microsoft/Windows/Temporary Internet Files/Low/Content.IE5/WMB1SJEE/,None,1
+nav_logo170[1].png,16217,1432644356,/USERS/Jimmy Wilson/AppData/Local/Microsoft/Windows/Temporary Internet Files/Low/Content.IE5/WMB1SJEE/,None,1
+49392504fcb75a0304a4da68a1c6f43d[1].png,2222,1432644361,/USERS/Jimmy Wilson/AppData/Local/Microsoft/Windows/Temporary Internet Files/Low/Content.IE5/WMB1SJEE/,None,1
+5a7873a1-fd4e-4462-8ab2-32bd729117c6_7[1].png,344,1432644355,/USERS/Jimmy Wilson/AppData/Local/Microsoft/Windows/Temporary Internet Files/Low/Content.IE5/WMB1SJEE/,None,1
+ad516503a11cd5ca435acc9bb6523536[1].png,1534,1432644361,/USERS/Jimmy Wilson/AppData/Local/Microsoft/Windows/Temporary Internet Files/Low/Content.IE5/WMB1SJEE/,None,1
+adchoice_1.4[1].png,331,1432644358,/USERS/Jimmy Wilson/AppData/Local/Microsoft/Windows/Temporary Internet Files/Low/Content.IE5/WMB1SJEE/,None,1
+shadow_sidebox[1].png,1188,1432644357,/USERS/Jimmy Wilson/AppData/Local/Microsoft/Windows/Temporary Internet Files/Low/Content.IE5/WMB1SJEE/,None,1
+share-twitter[1].png,869,1432644356,/USERS/Jimmy Wilson/AppData/Local/Microsoft/Windows/Temporary Internet Files/Low/Content.IE5/WMB1SJEE/,None,1
+icon-facebook[1].png,581,1432644362,/USERS/Jimmy Wilson/AppData/Local/Microsoft/Windows/Temporary Internet Files/Low/Content.IE5/WMB1SJEE/,None,1
+icon-twitter[1].png,523,1432644362,/USERS/Jimmy Wilson/AppData/Local/Microsoft/Windows/Temporary Internet Files/Low/Content.IE5/WMB1SJEE/,None,1
+icon-wordpress[1].png,666,1432644362,/USERS/Jimmy Wilson/AppData/Local/Microsoft/Windows/Temporary Internet Files/Low/Content.IE5/WMB1SJEE/,None,1
+icons-base[1].png,3418,1432644357,/USERS/Jimmy Wilson/AppData/Local/Microsoft/Windows/Temporary Internet Files/Low/Content.IE5/WMB1SJEE/,None,1
+phone[1].png,1946,1432644357,/USERS/Jimmy Wilson/AppData/Local/Microsoft/Windows/Temporary Internet Files/Low/Content.IE5/WMB1SJEE/,None,1
+pin_it_button[1].png,909,1432644360,/USERS/Jimmy Wilson/AppData/Local/Microsoft/Windows/Temporary Internet Files/Low/Content.IE5/WMB1SJEE/,None,1
+pixel[1].png,170,1432644360,/USERS/Jimmy Wilson/AppData/Local/Microsoft/Windows/Temporary Internet Files/Low/Content.IE5/WMB1SJEE/,None,1
+post-native[1].png,2447,1432644361,/USERS/Jimmy Wilson/AppData/Local/Microsoft/Windows/Temporary Internet Files/Low/Content.IE5/WMB1SJEE/,None,1
+productfamily.img.teaser[1].png,10748,1432644356,/USERS/Jimmy Wilson/AppData/Local/Microsoft/Windows/Temporary Internet Files/Low/Content.IE5/WMB1SJEE/,None,1
+productfamily.img.teaser[2].png,14912,1432644356,/USERS/Jimmy Wilson/AppData/Local/Microsoft/Windows/Temporary Internet Files/Low/Content.IE5/WMB1SJEE/,None,1
+ebook-id-card-printers[1].png,26823,1432644357,/USERS/Jimmy Wilson/AppData/Local/Microsoft/Windows/Temporary Internet Files/Low/Content.IE5/WMB1SJEE/,None,1
+email_counter[1].png,1895,1432644358,/USERS/Jimmy Wilson/AppData/Local/Microsoft/Windows/Temporary Internet Files/Low/Content.IE5/WMB1SJEE/,None,1
+fancybox-x[1].png,0,0,/USERS/Jimmy Wilson/AppData/Local/Microsoft/Windows/Temporary Internet Files/Low/Content.IE5/WMB1SJEE/,None,0
+fbk-btn-icon-eeb6258c27e3e6d9ec2a970ca70fc9dc[1].png,1165,1432644362,/USERS/Jimmy Wilson/AppData/Local/Microsoft/Windows/Temporary Internet Files/Low/Content.IE5/WMB1SJEE/,None,1
+file[1].png,126,1432644360,/USERS/Jimmy Wilson/AppData/Local/Microsoft/Windows/Temporary Internet Files/Low/Content.IE5/WMB1SJEE/,None,1
+file[2].png,126,1432644360,/USERS/Jimmy Wilson/AppData/Local/Microsoft/Windows/Temporary Internet Files/Low/Content.IE5/WMB1SJEE/,None,1
+Foundation3-en-US-84645189cd9818dc7c008c1cb359f17f[1].js,17852,1432644360,/USERS/Jimmy Wilson/AppData/Local/Microsoft/Windows/Temporary Internet Files/Low/Content.IE5/WMB1SJEE/,None,1
+bg-arrow-white[1].png,1014,1432644356,/USERS/Jimmy Wilson/AppData/Local/Microsoft/Windows/Temporary Internet Files/Low/Content.IE5/WMB1SJEE/,None,1
+bg-nav-body[1].png,967,1432644356,/USERS/Jimmy Wilson/AppData/Local/Microsoft/Windows/Temporary Internet Files/Low/Content.IE5/WMB1SJEE/,None,1
+bg-page-background-fade[1].png,96795,1432644356,/USERS/Jimmy Wilson/AppData/Local/Microsoft/Windows/Temporary Internet Files/Low/Content.IE5/WMB1SJEE/,None,1
+bg-product-tooltip-arrow[1].png,1113,1432644356,/USERS/Jimmy Wilson/AppData/Local/Microsoft/Windows/Temporary Internet Files/Low/Content.IE5/WMB1SJEE/,None,1
+logo-slogan[1].png,19501,1432644357,/USERS/Jimmy Wilson/AppData/Local/Microsoft/Windows/Temporary Internet Files/Low/Content.IE5/WMB1SJEE/,None,1
+LVx-xkvaJ0b[1].png,1329,1432644355,/USERS/Jimmy Wilson/AppData/Local/Microsoft/Windows/Temporary Internet Files/Low/Content.IE5/WMB1SJEE/,None,1
+nav-guides[1].png,3259,1432644361,/USERS/Jimmy Wilson/AppData/Local/Microsoft/Windows/Temporary Internet Files/Low/Content.IE5/WMB1SJEE/,None,1
+nav-top[1].png,84,1432644361,/USERS/Jimmy Wilson/AppData/Local/Microsoft/Windows/Temporary Internet Files/Low/Content.IE5/WMB1SJEE/,None,1
+feedback_icon_passive-7435724815f671c329bc69faeb058a2b[1].png,1205,1432644362,/USERS/Jimmy Wilson/AppData/Local/Microsoft/Windows/Temporary Internet Files/Low/Content.IE5/WMB1SJEE/,None,1
+"jquery.validate.min.js,Mjm.-5goO_6Bbw.js+hashdata.js,Mjm.OnoV2h-7uD.js+jquery.cookie.js,Mjm.5xnu1VG4Ul.js+jquery.paging.js,Mjm.sBVmHNmG4x.js.pagespe[1].js",31533,1432644356,/USERS/Jimmy Wilson/AppData/Local/Microsoft/Windows/Temporary Internet Files/Low/Content.IE5/WMB1SJEE/,None,1
+img-flag-turkey.png.pagespeed.ce.74yLuyCrk_[1].png,624,1432644356,/USERS/Jimmy Wilson/AppData/Local/Microsoft/Windows/Temporary Internet Files/Low/Content.IE5/WMB1SJEE/,None,1
+UsrClass.dat,524288,1432644376,/USERS/Jimmy Wilson/AppData/Local/Microsoft/Windows/,None,1
+UsrClass.dat.LOG1,254976,1432644376,/USERS/Jimmy Wilson/AppData/Local/Microsoft/Windows/,None,1
+UsrClass.dat.LOG2,0,1432644376,/USERS/Jimmy Wilson/AppData/Local/Microsoft/Windows/,None,1
+UsrClass.dat{30f0885a-85ed-11e3-b557-001641e7bb6b}.TM.blf,65536,1432644376,/USERS/Jimmy Wilson/AppData/Local/Microsoft/Windows/,None,1
+UsrClass.dat{30f0885a-85ed-11e3-b557-001641e7bb6b}.TMContainer00000000000000000001.regtrans-ms,524288,1432644376,/USERS/Jimmy Wilson/AppData/Local/Microsoft/Windows/,None,1
+UsrClass.dat{30f0885a-85ed-11e3-b557-001641e7bb6b}.TMContainer00000000000000000002.regtrans-ms,524288,1432644376,/USERS/Jimmy Wilson/AppData/Local/Microsoft/Windows/,None,1
+WebCacheV01.dat,33619968,1432644378,/USERS/Jimmy Wilson/AppData/Local/Microsoft/Windows/WebCache/,None,1
+WebCacheLock.dat,0,1432644376,/USERS/Jimmy Wilson/AppData/Local/Microsoft/Windows/,None,1
+WindowsUpdate.log,0,1432644373,/USERS/Jimmy Wilson/AppData/Local/Microsoft/Windows/,None,1
+286d8432f63568456bb92a5d63ea970a.png,130680,1432644369,/USERS/Jimmy Wilson/AppData/Local/Mozilla/Firefox/Profiles/8pp14cbi.default/thumbnails/,None,1
+4478810b9181922a9d6b8806bd05b109.png,133945,1432644369,/USERS/Jimmy Wilson/AppData/Local/Mozilla/Firefox/Profiles/8pp14cbi.default/thumbnails/,None,1
+447c1d819532470f427483b5c2ad32a6.png,190540,1432644369,/USERS/Jimmy Wilson/AppData/Local/Mozilla/Firefox/Profiles/8pp14cbi.default/thumbnails/,None,1
+4517111b3eb44b5268bc0a9b39095020.png,133945,1432644369,/USERS/Jimmy Wilson/AppData/Local/Mozilla/Firefox/Profiles/8pp14cbi.default/thumbnails/,None,1
+74df5160b4a35079979129c491d5d736.png,19254,1432644370,/USERS/Jimmy Wilson/AppData/Local/Mozilla/Firefox/Profiles/8pp14cbi.default/thumbnails/,None,1
+9294853175f532d0b72365d3ddba3d57.png,190540,1432644369,/USERS/Jimmy Wilson/AppData/Local/Mozilla/Firefox/Profiles/8pp14cbi.default/thumbnails/,None,1
+updates,272,1392125487,/USERS/Jimmy Wilson/AppData/Local/Mozilla/,None,1
+dd_vcredistMSI11AA.txt,423480,1432644372,/USERS/Jimmy Wilson/AppData/Local/Temp/,None,1
+dd_vcredistMSI1288.txt,433776,1432644372,/USERS/Jimmy Wilson/AppData/Local/Temp/,None,1
+dd_vcredistUI11AA.txt,11732,1432644372,/USERS/Jimmy Wilson/AppData/Local/Temp/,None,1
+dd_vcredistUI1288.txt,11652,1432644372,/USERS/Jimmy Wilson/AppData/Local/Temp/,None,1
+FXSAPIDebugLogFile.txt,0,1432644378,/USERS/Jimmy Wilson/AppData/Local/Temp/,None,1
+Updates.xml,446,1432644376,/USERS/Jimmy Wilson/AppData/Local/Windows Live Writer/ResourceCache/live/,None,1
+container.dat,0,1432644355,/USERS/Jimmy Wilson/AppData/LocalLow/Microsoft/Internet Explorer/DOMStore/,None,1
+container.dat,0,1432644354,/USERS/Jimmy Wilson/AppData/LocalLow/Microsoft/Windows/AppCache/,None,1
+container.dat,0,1432644354,/USERS/Jimmy Wilson/AppData/LocalLow/Microsoft/Windows/AppCache/FZYO1DP2/,None,1
+addressbook.acrodata,7870,1432644357,/USERS/Jimmy Wilson/AppData/Roaming/Adobe/Acrobat/11.0/Security/,None,1
+services_rdr.dat,10240,1432644357,/USERS/Jimmy Wilson/AppData/Roaming/Adobe/Acrobat/11.0/Security/,None,1
+services_rdri.dat,24152,1432644357,/USERS/Jimmy Wilson/AppData/Roaming/Adobe/Acrobat/11.0/Security/,None,1
+services_rdrk.dat,264,1432644357,/USERS/Jimmy Wilson/AppData/Roaming/Adobe/Acrobat/11.0/Security/,None,1
+container.dat,0,1432644378,/USERS/Jimmy Wilson/AppData/Roaming/Microsoft/Windows/Cookies/,None,1
+E56PD9HR.txt,349,1432644356,/USERS/Jimmy Wilson/AppData/Roaming/Microsoft/Windows/Cookies/Low/,None,1
+LF8B2VK2.txt,178,1432644357,/USERS/Jimmy Wilson/AppData/Roaming/Microsoft/Windows/Cookies/Low/,None,1
+0H5YV964.txt,96,1432644362,/USERS/Jimmy Wilson/AppData/Roaming/Microsoft/Windows/Cookies/Low/,None,1
+22ZMGJH3.txt,195,1432644357,/USERS/Jimmy Wilson/AppData/Roaming/Microsoft/Windows/Cookies/Low/,None,1
+24IKP59G.txt,514,1432644361,/USERS/Jimmy Wilson/AppData/Roaming/Microsoft/Windows/Cookies/Low/,None,1
+2APBHYDC.txt,111,1432644359,/USERS/Jimmy Wilson/AppData/Roaming/Microsoft/Windows/Cookies/Low/,None,1
+3H89NGHX.txt,108,1432644355,/USERS/Jimmy Wilson/AppData/Roaming/Microsoft/Windows/Cookies/Low/,None,1
+3MKYM8RN.txt,126,1432644360,/USERS/Jimmy Wilson/AppData/Roaming/Microsoft/Windows/Cookies/Low/,None,1
+4OSY1ZES.txt,123,1432644357,/USERS/Jimmy Wilson/AppData/Roaming/Microsoft/Windows/Cookies/Low/,None,1
+54TQ2RJ3.txt,153,1432644360,/USERS/Jimmy Wilson/AppData/Roaming/Microsoft/Windows/Cookies/Low/,None,1
+55RXEDMH.txt,404,1432644358,/USERS/Jimmy Wilson/AppData/Roaming/Microsoft/Windows/Cookies/Low/,None,1
+57YNM7J2.txt,140,1432644357,/USERS/Jimmy Wilson/AppData/Roaming/Microsoft/Windows/Cookies/Low/,None,1
+62W7RSVU.txt,764,1432644360,/USERS/Jimmy Wilson/AppData/Roaming/Microsoft/Windows/Cookies/Low/,None,1
+6808XW00.txt,88,1432644361,/USERS/Jimmy Wilson/AppData/Roaming/Microsoft/Windows/Cookies/Low/,None,1
+6G9IPYDP.txt,124,1432644357,/USERS/Jimmy Wilson/AppData/Roaming/Microsoft/Windows/Cookies/Low/,None,1
+7ARHBWOB.txt,103,1432644355,/USERS/Jimmy Wilson/AppData/Roaming/Microsoft/Windows/Cookies/Low/,None,1
+7CGEIZE6.txt,523,1432644354,/USERS/Jimmy Wilson/AppData/Roaming/Microsoft/Windows/Cookies/Low/,None,1
+7GB6XWMV.txt,101,1432644361,/USERS/Jimmy Wilson/AppData/Roaming/Microsoft/Windows/Cookies/Low/,None,1
+7I90M8MN.txt,356,1432644355,/USERS/Jimmy Wilson/AppData/Roaming/Microsoft/Windows/Cookies/Low/,None,1
+7SMRGQI9.txt,598,1432644360,/USERS/Jimmy Wilson/AppData/Roaming/Microsoft/Windows/Cookies/Low/,None,1
+7ZZETBQQ.txt,568,1432644361,/USERS/Jimmy Wilson/AppData/Roaming/Microsoft/Windows/Cookies/Low/,None,1
+8PKR7GTR.txt,474,1432644357,/USERS/Jimmy Wilson/AppData/Roaming/Microsoft/Windows/Cookies/Low/,None,1
+9YPF46U6.txt,216,1432644358,/USERS/Jimmy Wilson/AppData/Roaming/Microsoft/Windows/Cookies/Low/,None,1
+AKN3KVBZ.txt,645,1432644357,/USERS/Jimmy Wilson/AppData/Roaming/Microsoft/Windows/Cookies/Low/,None,1
+ARAZ09BG.txt,281,1432644361,/USERS/Jimmy Wilson/AppData/Roaming/Microsoft/Windows/Cookies/Low/,None,1
+B67651O0.txt,269,1432644362,/USERS/Jimmy Wilson/AppData/Roaming/Microsoft/Windows/Cookies/Low/,None,1
+BU6TU5S3.txt,204,1432644355,/USERS/Jimmy Wilson/AppData/Roaming/Microsoft/Windows/Cookies/Low/,None,1
+C15A0XCK.txt,414,1432644361,/USERS/Jimmy Wilson/AppData/Roaming/Microsoft/Windows/Cookies/Low/,None,1
+CONL4YHB.txt,315,1432644355,/USERS/Jimmy Wilson/AppData/Roaming/Microsoft/Windows/Cookies/Low/,None,1
+container.dat,0,1432644354,/USERS/Jimmy Wilson/AppData/Roaming/Microsoft/Windows/Cookies/Low/,None,1
+DQLJJT6S.txt,188,1432644356,/USERS/Jimmy Wilson/AppData/Roaming/Microsoft/Windows/Cookies/Low/,None,1
+DS513IYR.txt,88,1432644360,/USERS/Jimmy Wilson/AppData/Roaming/Microsoft/Windows/Cookies/Low/,None,1
+DZCK2R7V.txt,108,1432644361,/USERS/Jimmy Wilson/AppData/Roaming/Microsoft/Windows/Cookies/Low/,None,1
+UXAP2N0Q.txt,0,0,/USERS/Jimmy Wilson/AppData/Roaming/Microsoft/Windows/Cookies/Low/,None,0
+YGI47C3D.txt,183,1432644358,/USERS/Jimmy Wilson/AppData/Roaming/Microsoft/Windows/Cookies/Low/,None,1
+YULMJIGM.txt,372,1432644358,/USERS/Jimmy Wilson/AppData/Roaming/Microsoft/Windows/Cookies/Low/,None,1
+EE3A8BO6.txt,98,1432644360,/USERS/Jimmy Wilson/AppData/Roaming/Microsoft/Windows/Cookies/Low/,None,1
+EZ97BXTH.txt,1394,1432644359,/USERS/Jimmy Wilson/AppData/Roaming/Microsoft/Windows/Cookies/Low/,None,1
+F5NQ7VV4.txt,525,1432644361,/USERS/Jimmy Wilson/AppData/Roaming/Microsoft/Windows/Cookies/Low/,None,1
+FE216EPH.txt,145,1432644358,/USERS/Jimmy Wilson/AppData/Roaming/Microsoft/Windows/Cookies/Low/,None,1
+GIUDYQIW.txt,749,1432644355,/USERS/Jimmy Wilson/AppData/Roaming/Microsoft/Windows/Cookies/Low/,None,1
+GWJMK01Y.txt,90,1432644360,/USERS/Jimmy Wilson/AppData/Roaming/Microsoft/Windows/Cookies/Low/,None,1
+GYYOFIEK.txt,248,1432644355,/USERS/Jimmy Wilson/AppData/Roaming/Microsoft/Windows/Cookies/Low/,None,1
+H2328RXS.txt,257,1432644360,/USERS/Jimmy Wilson/AppData/Roaming/Microsoft/Windows/Cookies/Low/,None,1
+H2O40KVO.txt,252,1432644360,/USERS/Jimmy Wilson/AppData/Roaming/Microsoft/Windows/Cookies/Low/,None,1
+H5RP0ESB.txt,145,1432644357,/USERS/Jimmy Wilson/AppData/Roaming/Microsoft/Windows/Cookies/Low/,None,1
+ICF7MR0U.txt,289,1432644360,/USERS/Jimmy Wilson/AppData/Roaming/Microsoft/Windows/Cookies/Low/,None,1
+IIHYN0FM.txt,114,1432644360,/USERS/Jimmy Wilson/AppData/Roaming/Microsoft/Windows/Cookies/Low/,None,1
+JBOKMETA.txt,553,1432644361,/USERS/Jimmy Wilson/AppData/Roaming/Microsoft/Windows/Cookies/Low/,None,1
+JH29HCAF.txt,179,1432644358,/USERS/Jimmy Wilson/AppData/Roaming/Microsoft/Windows/Cookies/Low/,None,1
+JRLX6OFK.txt,209,1432644355,/USERS/Jimmy Wilson/AppData/Roaming/Microsoft/Windows/Cookies/Low/,None,1
+K5FPDYKK.txt,270,1432644356,/USERS/Jimmy Wilson/AppData/Roaming/Microsoft/Windows/Cookies/Low/,None,1
+KYK62ZAI.txt,182,1432644361,/USERS/Jimmy Wilson/AppData/Roaming/Microsoft/Windows/Cookies/Low/,None,1
+L4E3K0KH.txt,102,1432644355,/USERS/Jimmy Wilson/AppData/Roaming/Microsoft/Windows/Cookies/Low/,None,1
+LA2ZZ79N.txt,91,1432644361,/USERS/Jimmy Wilson/AppData/Roaming/Microsoft/Windows/Cookies/Low/,None,1
+LCSXP6J0.txt,89,1432644357,/USERS/Jimmy Wilson/AppData/Roaming/Microsoft/Windows/Cookies/Low/,None,1
+M6C5UJT3.txt,0,0,/USERS/Jimmy Wilson/AppData/Roaming/Microsoft/Windows/Cookies/Low/,None,0
+M89H8FL9.txt,104,1432644358,/USERS/Jimmy Wilson/AppData/Roaming/Microsoft/Windows/Cookies/Low/,None,1
+OIWB3YPY.txt,193,1432644361,/USERS/Jimmy Wilson/AppData/Roaming/Microsoft/Windows/Cookies/Low/,None,1
+PSOWLQZ2.txt,1023,1432644359,/USERS/Jimmy Wilson/AppData/Roaming/Microsoft/Windows/Cookies/Low/,None,1
+QBP03RVV.txt,130,1432644355,/USERS/Jimmy Wilson/AppData/Roaming/Microsoft/Windows/Cookies/Low/,None,1
+RJ8RZQ9T.txt,377,1432644360,/USERS/Jimmy Wilson/AppData/Roaming/Microsoft/Windows/Cookies/Low/,None,1
+SXF1OQB7.txt,510,1432644360,/USERS/Jimmy Wilson/AppData/Roaming/Microsoft/Windows/Cookies/Low/,None,1
+TBVSWW9O.txt,110,1432644356,/USERS/Jimmy Wilson/AppData/Roaming/Microsoft/Windows/Cookies/Low/,None,1
+UR173CZ1.txt,1507,1432644361,/USERS/Jimmy Wilson/AppData/Roaming/Microsoft/Windows/Cookies/Low/,None,1
+UXAP2N0Q.txt,93,1432644357,/USERS/Jimmy Wilson/AppData/Roaming/Microsoft/Windows/Cookies/Low/,None,1
+XB70O3MC.txt,275,1432644360,/USERS/Jimmy Wilson/AppData/Roaming/Microsoft/Windows/Cookies/Low/,None,1
+XQ2Q7HY1.txt,273,1432644360,/USERS/Jimmy Wilson/AppData/Roaming/Microsoft/Windows/Cookies/Low/,None,1
+XWXITK4Y.txt,113,1432644361,/USERS/Jimmy Wilson/AppData/Roaming/Microsoft/Windows/Cookies/Low/,None,1
+LKQB0BVD.txt,823,1432644355,/USERS/Jimmy Wilson/AppData/Roaming/Microsoft/Windows/Cookies/Low/,None,1
+M1M5730T.txt,374,1432644360,/USERS/Jimmy Wilson/AppData/Roaming/Microsoft/Windows/Cookies/Low/,None,1
+M6C5UJT3.txt,114,1432644361,/USERS/Jimmy Wilson/AppData/Roaming/Microsoft/Windows/Cookies/Low/,None,1
+N3EUT0OC.txt,274,1432644361,/USERS/Jimmy Wilson/AppData/Roaming/Microsoft/Windows/Cookies/Low/,None,1
+ORI2UH0A.txt,659,1432644361,/USERS/Jimmy Wilson/AppData/Roaming/Microsoft/Windows/Cookies/Low/,None,1
+PX46NLFJ.txt,107,1432644362,/USERS/Jimmy Wilson/AppData/Roaming/Microsoft/Windows/Cookies/Low/,None,1
+T2PB0UT7.txt,103,1432644361,/USERS/Jimmy Wilson/AppData/Roaming/Microsoft/Windows/Cookies/Low/,None,1
+VH2Q617O.txt,95,1432644362,/USERS/Jimmy Wilson/AppData/Roaming/Microsoft/Windows/Cookies/Low/,None,1
+YK3EL8NN.txt,106,1432644361,/USERS/Jimmy Wilson/AppData/Roaming/Microsoft/Windows/Cookies/Low/,None,1
+container.dat,0,1432644354,/USERS/Jimmy Wilson/AppData/Roaming/Microsoft/Windows/DNTException/,None,1
+container.dat,0,1432644355,/USERS/Jimmy Wilson/AppData/Roaming/Microsoft/Windows/DNTException/Low/,None,1
+container.dat,0,1432644354,/USERS/Jimmy Wilson/AppData/Roaming/Microsoft/Windows/IECompatCache/,None,1
+container.dat,0,1432644354,/USERS/Jimmy Wilson/AppData/Roaming/Microsoft/Windows/IECompatCache/Low/,None,1
+container.dat,0,1432644354,/USERS/Jimmy Wilson/AppData/Roaming/Microsoft/Windows/IECompatUACache/,None,1
+container.dat,0,1432644354,/USERS/Jimmy Wilson/AppData/Roaming/Microsoft/Windows/IECompatUACache/Low/,None,1
+container.dat,0,1432644355,/USERS/Jimmy Wilson/AppData/Roaming/Microsoft/Windows/IEDownloadHistory/,None,1
+zxp8-datasheet-en-us.lnk,1728,1432644354,/USERS/Jimmy Wilson/AppData/Roaming/Microsoft/Windows/Recent/,None,1
+urlclassifierkey3.txt,154,1432644369,/USERS/Jimmy Wilson/AppData/Roaming/Mozilla/Firefox/Profiles/8pp14cbi.default/,None,1
+pluginreg.dat,1348,1432644369,/USERS/Jimmy Wilson/AppData/Roaming/Mozilla/Firefox/Profiles/8pp14cbi.default/,None,1
+.metadata,0,1432644369,/USERS/Jimmy Wilson/AppData/Roaming/Mozilla/Firefox/Profiles/8pp14cbi.default/storage/persistent/moz-safe-about+home/,None,1
+com.sun.star.comp.deployment.executable.PackageRegistryBackend,48,1392138871,/USERS/Jimmy Wilson/AppData/Roaming/OpenOffice/4/user/extensions/bundled/registry/,None,1
+com.sun.star.comp.deployment.executable.PackageRegistryBackend,48,1392138873,/USERS/Jimmy Wilson/AppData/Roaming/OpenOffice/4/user/extensions/shared/registry/,None,1
+com.sun.star.comp.deployment.executable.PackageRegistryBackend,48,1392138874,/USERS/Jimmy Wilson/AppData/Roaming/OpenOffice/4/user/extensions/tmp/registry/,None,1
+log.txt,640,1432644372,/USERS/Jimmy Wilson/AppData/Roaming/OpenOffice/4/user/uno_packages/cache/,None,1
+com.sun.star.comp.deployment.executable.PackageRegistryBackend,48,1392138874,/USERS/Jimmy Wilson/AppData/Roaming/OpenOffice/4/user/uno_packages/cache/registry/,None,1
+license.txt,15123,1432644372,/USERS/Jimmy Wilson/AppData/Roaming/OpenOffice/4/user/uno_packages/cache/uno_packages/sv88l7k.tmp_/dict-en.oxt/,None,1
+affDescription.txt,5221,1432644372,/USERS/Jimmy Wilson/AppData/Roaming/OpenOffice/4/user/uno_packages/cache/uno_packages/sv88l7k.tmp_/dict-en.oxt/,None,1
+changelog.txt,3181,1432644373,/USERS/Jimmy Wilson/AppData/Roaming/OpenOffice/4/user/uno_packages/cache/uno_packages/sv88l7k.tmp_/dict-en.oxt/,None,1
+README_en_GB.txt,2034,1432644372,/USERS/Jimmy Wilson/AppData/Roaming/OpenOffice/4/user/uno_packages/cache/uno_packages/sv88l7k.tmp_/dict-en.oxt/,None,1
+README_en_GB_thes.txt,63,1432644372,/USERS/Jimmy Wilson/AppData/Roaming/OpenOffice/4/user/uno_packages/cache/uno_packages/sv88l7k.tmp_/dict-en.oxt/,None,1
+README_en_US.txt,12599,1432644372,/USERS/Jimmy Wilson/AppData/Roaming/OpenOffice/4/user/uno_packages/cache/uno_packages/sv88l7k.tmp_/dict-en.oxt/,None,1
+README_en_ZA.txt,32927,1432644372,/USERS/Jimmy Wilson/AppData/Roaming/OpenOffice/4/user/uno_packages/cache/uno_packages/sv88l7k.tmp_/dict-en.oxt/,None,1
+README_hyph_en_US.txt,1815,1432644372,/USERS/Jimmy Wilson/AppData/Roaming/OpenOffice/4/user/uno_packages/cache/uno_packages/sv88l7k.tmp_/dict-en.oxt/,None,1
+WordNet_license.txt,1625,1432644372,/USERS/Jimmy Wilson/AppData/Roaming/OpenOffice/4/user/uno_packages/cache/uno_packages/sv88l7k.tmp_/dict-en.oxt/,None,1
+README.txt,2642,1432644372,/USERS/Jimmy Wilson/AppData/Roaming/OpenOffice/4/user/uno_packages/cache/uno_packages/sv88l7k.tmp_/dict-en.oxt/,None,1
+README_en_AU.txt,2268,1432644372,/USERS/Jimmy Wilson/AppData/Roaming/OpenOffice/4/user/uno_packages/cache/uno_packages/sv88l7k.tmp_/dict-en.oxt/,None,1
+README_en_CA.txt,12599,1432644372,/USERS/Jimmy Wilson/AppData/Roaming/OpenOffice/4/user/uno_packages/cache/uno_packages/sv88l7k.tmp_/dict-en.oxt/,None,1
+README_hyph_en_GB.txt,4504,1432644373,/USERS/Jimmy Wilson/AppData/Roaming/OpenOffice/4/user/uno_packages/cache/uno_packages/sv88l7k.tmp_/dict-en.oxt/,None,1
+th_en_US_v2.dat,18597793,1432644372,/USERS/Jimmy Wilson/AppData/Roaming/OpenOffice/4/user/uno_packages/cache/uno_packages/sv88l7k.tmp_/dict-en.oxt/,None,1
+BCTextEncoder.exe,1259896,1432644354,/USERS/Jimmy Wilson/Desktop/,None,1
+openoffice401.msi,2260992,1432644371,/USERS/Jimmy Wilson/Desktop/OpenOffice 4.0.1 (en-US) Installation Files/,None,1
+readme_en-US.txt,11016,1432644371,/USERS/Jimmy Wilson/Desktop/OpenOffice 4.0.1 (en-US) Installation Files/readmes/,None,1
+vcredist_x64.exe,5207896,1432644371,/USERS/Jimmy Wilson/Desktop/OpenOffice 4.0.1 (en-US) Installation Files/redist/,None,1
+vcredist_x86.exe,4479832,1432644372,/USERS/Jimmy Wilson/Desktop/OpenOffice 4.0.1 (en-US) Installation Files/redist/,None,1
+setup.exe,475136,1432644371,/USERS/Jimmy Wilson/Desktop/OpenOffice 4.0.1 (en-US) Installation Files/,None,1
+All The Madmen.txt,1971,1432644354,/USERS/Jimmy Wilson/Documents/,None,1
+Goodbye Cruel World.txt,162,1432644357,/USERS/Jimmy Wilson/Documents/,None,1
+O Death.txt,1430,1432644357,/USERS/Jimmy Wilson/Documents/,None,1
+The Width Of A Circle.txt,1783,1432644357,/USERS/Jimmy Wilson/Documents/,None,1
+zxp8-datasheet-en-us.pdf,1156717,1432644354,/USERS/Jimmy Wilson/Documents/,None,1
+ntuser.dat.LOG1,262144,1432644376,/USERS/Jimmy Wilson/,None,1
+ntuser.dat.LOG2,0,1432644376,/USERS/Jimmy Wilson/,None,1
+Indexed Locations.search-ms,248,1432644378,/USERS/Jimmy Wilson/Searches/,None,1
+$RmMetadata,336,1432641774,/$Extend/,None,1
+$IABFQJP.txt,544,1432647922,/$RECYCLE.BIN/S-1-5-21-1171287513-3642516788-2358256967-1004/,None,1
+$IEZGV91.txt,544,1432647922,/$RECYCLE.BIN/S-1-5-21-1171287513-3642516788-2358256967-1004/,None,1
+New Price List.txt,175,1432647922,/$RECYCLE.BIN/S-1-5-21-1171287513-3642516788-2358256967-1004/$R3TS6GA/,None,1
+$RABFQJP.txt,421,1432647922,/$RECYCLE.BIN/S-1-5-21-1171287513-3642516788-2358256967-1004/,None,1
+$REZGV91.txt,1042,1432647922,/$RECYCLE.BIN/S-1-5-21-1171287513-3642516788-2358256967-1004/,None,1
+WindowsUpdate,144,1247549558,/Windows/diagnostics/system/,None,1
+Windows Workflow Foundation 3.0.0.0,240,1247549558,/Windows/inf/,None,1
+FontCache-FontFace.dat,16777216,1432644449,/Windows/ServiceProfiles/LocalService/AppData/Local/,None,1
+SelfUpdate,56,1390623729,/Windows/SoftwareDistribution/,None,1
+WUClient-SelfUpdate-ActiveX~31bf3856ad364e35~amd64~~7.6.7600.256.mum,5852,1432644442,/Windows/SoftwareDistribution/SelfUpdate/,None,1
+WUClient-SelfUpdate-Aux-TopLevel~31bf3856ad364e35~amd64~~7.6.7600.256.mum,580322,1432644442,/Windows/SoftwareDistribution/SelfUpdate/,None,1
+WUClient-SelfUpdate-Core-TopLevel~31bf3856ad364e35~amd64~~7.6.7600.256.mum,856132,1432644442,/Windows/SoftwareDistribution/SelfUpdate/,None,1
+wuident.txt,1472,1432644442,/Windows/SoftwareDistribution/SelfUpdate/,None,1
+MachineGuid.txt,76,1432644443,/Windows/System32/restore/,None,1
+ValidationTask,4364,1432644446,/Windows/System32/Tasks/Microsoft/Windows/Windows Activation Technologies/,None,1
+ValidationTaskDeadline,4362,1432644446,/Windows/System32/Tasks/Microsoft/Windows/Windows Activation Technologies/,None,1
+WatAdminSvc.exe,1255736,1432644446,/Windows/System32/Wat/,None,1
+WatUX.exe,249656,1432644446,/Windows/System32/Wat/,None,1
+Microsoft-Windows-WindowsUpdateClient%4Operational.evtx,1052672,1432645047,/Windows/System32/winevt/Logs/,None,1
+WatAdminSvc.exe,1255736,1432644446,/Windows/winsxs/amd64_microsoft-windows-s..ivationtechnologies_31bf3856ad364e35_7.1.7600.16395_none_89cb1e5f7a64822b/,None,1
+WatUX.exe,249656,1432644446,/Windows/winsxs/amd64_microsoft-windows-s..ivationtechnologies_31bf3856ad364e35_7.1.7600.16395_none_89cb1e5f7a64822b/,None,1
+poqexec.log,492,1432644442,/Windows/winsxs/,None,1
+Microsoft.Windows.Diagnosis.Commands.UpdateDiagReport,48,1247549561,/$OrphanFiles/GAC_MSIL/,None,0
+Microsoft.Windows.Diagnosis.Commands.UpdateDiagReport.Resources,48,1247549867,/$OrphanFiles/GAC_MSIL/,None,0
+Microsoft.Windows.Diagnosis.Commands.UpdateDiagRootcause,48,1247549561,/$OrphanFiles/GAC_MSIL/,None,0
+Microsoft.Windows.Diagnosis.Commands.UpdateDiagRootcause.Resources,48,1247549867,/$OrphanFiles/GAC_MSIL/,None,0
+ComSvcConfig.ni.exe,410112,1432644448,/$OrphanFiles/NativeImages_v2.0.50727_32/ComSvcConfig/ca2a618435637aef503c3f43c122bca8/,None,0
+dfsvc.ni.exe,14336,1432644448,/$OrphanFiles/NativeImages_v2.0.50727_32/dfsvc/8264a928c30c29b40e6671a112f6154d/,None,0
+ehExtHost32.ni.exe,254464,1432644448,/$OrphanFiles/NativeImages_v2.0.50727_32/ehExtHost32/6afb49d1088915caeeb243a93d3c78c4/,None,0

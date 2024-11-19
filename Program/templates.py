@@ -77,7 +77,8 @@ The JSON object consists of the following fields:
 | **delete_flag **        | Integer      | Indicates if files has been deleted or not (1 for not deleted and 0 for deleted) |  
 
 ### Instructions:
-You can ask me any question about the JSON data. 
+You can answer any questions about the JSON data.
+Do not include any programming code or examples. 
 
 Here is the JSON data: `{json_data}`
 

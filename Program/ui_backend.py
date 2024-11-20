@@ -10,6 +10,7 @@ from reportlab.lib.pagesizes import letter #chat download
 from reportlab.lib.styles import getSampleStyleSheet #chat download
 import html, os, sqlite3
 from reportlab.platypus import SimpleDocTemplate, Paragraph, Spacer #chat download
+from bs4 import BeautifulSoup
 
 
 
@@ -145,20 +146,29 @@ def generate_pdf(messages):
     elements.append(title)
     elements.append(Spacer(1, 20))
 
+    # Function to sanitize HTML and replace <br> with newlines
+    def sanitize_html(input_html):
+        # Parse HTML with BeautifulSoup
+        soup = BeautifulSoup(input_html, "html.parser")
+
+        # Replace <br> tags with newline characters
+        for br_tag in soup.find_all("br"):
+            br_tag.insert_after("\n")
+            br_tag.unwrap()  # Remove the <br> tag itself
+
+        # Strip all other tags (except the <br> processed ones)
+        return soup.get_text()
+
     # Add messages
     for msg in messages:
-        # Sanitize the message by replacing <br> with a new line or Spacer
-        user_message = f"<b>User ({msg['id']}):</b> {msg['user']}"
-        ai_response = f"<b>AI:</b> {msg['response']}"
+        # Clean and format user and AI messages
+        user_message = f"User ({msg['id']}): {sanitize_html(msg['user'])}"
+        ai_response = f"AI: {sanitize_html(msg['response'])}"
 
-        # Escape HTML to avoid conflicts with reportlab's parser
         user_message = html.escape(user_message)
         ai_response = html.escape(ai_response)
 
-        # Replace <br> tags with a Spacer or simply remove them
-        user_message = user_message.replace('<br>', '&#10;')  # Replace <br> with new line
-        ai_response = ai_response.replace('<br>', '&#10;')
-
+        # Add messages to PDF
         elements.append(Paragraph(user_message, styles["BodyText"]))
         elements.append(Spacer(1, 10))  # space between messages
         elements.append(Paragraph(ai_response, styles["BodyText"]))

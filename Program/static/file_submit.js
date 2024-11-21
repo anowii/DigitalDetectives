@@ -13,49 +13,53 @@ function updateFileName() {
 // Add event listener to the file input
 document.getElementById('uploadFile').addEventListener('change', updateFileName);
 
-// Handle form submission
-document.getElementById('uploadForm').onsubmit = function(event) {
-    event.preventDefault();
-    const fileInput = document.getElementById('uploadFile');
-    const file = fileInput.files[0];
-    const uploadButton = document.getElementById('upload-btn'); // The upload button
+$(document).ready(function () {
+    $('#uploadForm').on('submit', function (event) {
+        event.preventDefault(); // Prevent default form submission
 
-    if (file) {
-        // Disable the button to prevent multiple submissions
-        uploadButton.disabled = true;
+        const fileInput = document.getElementById('uploadFile');
+        const file = fileInput.files[0];
+        const uploadButton = document.getElementById('upload-btn'); // The upload button
 
-        // Create a FormData object
-        const formData = new FormData();
-        formData.append('file', file); // Append the file
+        if (file) {
+            // Disable the button to prevent multiple submissions
+            uploadButton.disabled = true;
 
-        // Send the file to the Flask server via AJAX
-        $.ajax({
-            type: 'POST',
-            url: '/submit-file', // Flask route for file upload
-            data: formData,
-            contentType: false, // Prevent jQuery from overriding content type
-            processData: false, // Prevent jQuery from processing the data
-            success: function(response) {
-                if (response.status === "success") {
-                    alert(`File "${response.filename}" uploaded successfully!`);
+            // Update progress message
+            $('#messageContent').text("Processing your file...");
 
-                    // Reset file input and label
-                    document.querySelector('label[for="uploadFile"]').textContent = 'Choose File';
-                    fileInput.value = ''; // Clear the file input
-                } else {
-                    alert(`Error: ${response.message}`);
+            // Create a FormData object
+            const formData = new FormData(this);
+
+            // Send the file to the Flask server via AJAX
+            $.ajax({
+                type: 'POST',
+                url: '/submit-file', // Flask route for file upload
+                data: formData,
+                contentType: false, // Prevent jQuery from overriding content type
+                processData: false, // Prevent jQuery from processing the data
+                success: function (response) {
+                    if (response.status === "success") {
+                        $('#messageContent').text(`File "${response.filename}" uploaded successfully!`);
+
+                        // Reset file input and label
+                        document.querySelector('label[for="uploadFile"]').textContent = 'Choose File';
+                        fileInput.value = ''; // Clear the file input
+                    } else {
+                        $('#messageContent').text(`Error: ${response.message}`);
+                    }
+                },
+                error: function (error) {
+                    console.error('Error:', error);
+                    $('#messageContent').text('File upload failed.');
+                },
+                complete: function () {
+                    // Re-enable the button once the upload is complete
+                    uploadButton.disabled = false;
                 }
-            },
-            error: function(error) {
-                console.error('Error:', error);
-                alert('File upload failed.');
-            },
-            complete: function() {
-                // Re-enable the button once the upload is complete
-                uploadButton.disabled = false;
-            }
-        });
-    } else {
-        alert('No file selected.');
-    }
-}
+            });
+        } else {
+            alert('No file selected.');
+        }
+    });
+});

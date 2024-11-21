@@ -2,7 +2,6 @@
 from flask import Flask, render_template, request, jsonify,redirect,url_for, json, session, flash, send_file
 
 import os
-import io
 import hashlib
 from diskanalys import create_database_from_csv
 from ui_backend import send_iso,forward_message_llm, is_valid_disk_image, generate_pdf, delete_session
@@ -107,15 +106,16 @@ def submit_file():
         global UPLOADED_CSV
         UPLOADED_CSV = file_path
         create_database_from_csv(UPLOADED_CSV)
+        return jsonify({"status": "success", "message": "CSV file Loaded: ", "filename": file.filename})
 
     elif is_valid_disk_image(file_path) == True:
         send_iso(file_path)  # Call ISO handling function with file path
         UPLOADED_CSV = 'data\\db.csv'
+        return jsonify({"status": "success", "message": "Disk image processed successfully", "filename": file.filename})
     else:
-        print("Non-valid file type")
+        return jsonify({"status": "error", "message": "Invalid file type. Please upload a valid file."})
 
-    # Return a response to the client
-    return jsonify({"status": "success", "filename": file.filename})
+
 
 # Helper function to save a message to the file
 def save_message_to_file(message_object):

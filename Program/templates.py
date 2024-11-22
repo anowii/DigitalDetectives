@@ -78,7 +78,7 @@ The JSON object consists of the following fields:
 
 ### Instructions:
 You can answer any questions about the JSON data.
-Do not include any programming code or examples. 
+Do not include any programming code in your answers. 
 
 Here is the JSON data: `{json_data}`
 
@@ -121,8 +121,11 @@ car.png,23,1432650259,/user/pictures,none,1
 dir.dll, 12, 1432653585,/user/dev,keylogger,1
 """
 
-sql_correction_template = ChatPromptTemplate.from_template(template_correction)
+# LLM Templates 
 json_template = ChatPromptTemplate.from_template(template)
 json_template2 = ChatPromptTemplate.from_template(template_2)
 simple_template = ChatPromptTemplate.from_template(simple_template)
+
+# SQL Templates
 sql_template = ChatPromptTemplate.from_template(template_sql)
+sql_correction_template = ChatPromptTemplate.from_template(template_correction)

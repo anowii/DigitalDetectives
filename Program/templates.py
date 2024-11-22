@@ -116,9 +116,9 @@ It has to be a select query
 
 file_table:
 name,size,crtime,parent_path,malware_class,delete_flag
-pong.exe,4,1432645070,/user/onedrive,malicious,trojan,0
-car.png,23,1432650259,/user/pictures,suspicious,virus,1
-dir.dll, 12, 1432653585,/user/dev,undetected,,1
+pong.exe,4,1432645070,/user/onedrive,trojan,0
+car.png,23,1432650259,/user/pictures,adware,1
+dir.dll, 12, 1432653585,/user/dev,keylogger,1
 """
 
 sql_correction_template = ChatPromptTemplate.from_template(template_correction)

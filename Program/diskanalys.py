@@ -19,15 +19,15 @@ INTERESTING_TYPES =".exe|.msi|.docx|.png|.jpeg|.txt|.dat"
 
 VIRUSTOTAL_TYPES =".exe|.msi"
 VIRUSTOTAL_APIKEY = "4e4140ca9678a7e353a618f2f9aa7dd3a1ff5d70c6eaf812391bb5649b80039e"
-ALLOWED_FILEDS = ["name","size", "crtime", "parent_path", "malware_class","delete_flag"]
+ALLOWED_FILEDS = ["name","size", "crtime", "parent_path", "malware_class", "delete_flag"]
 
     ############################################
     #  delete_flag == dir_flag in tsk_files    #
     #  tsk_files {allocated, 1} = NOT deleted  #
-    #  in malware_class: 1 == not deleted      #
+    #  in delete_flag: 1 == not deleted        #
     #                                          #
     #  tsk_files {unallocated, 2} = deleted    #
-    #  in malware_class: 0 == deleted          #     
+    #  in delete_flag: 0 == deleted            #     
     ############################################
 
 
@@ -67,7 +67,7 @@ def check_with_virustotal(hash):
             if (category == 'malicious' or category == 'suspicious') and count > 5:
                 prime_category = category
                 break
-        return prime_category
+        return prime_category if prime_category != "nan" else "None"
     except TypeError:
         print("Error: Hash value is None and cannot be concatenated to the URL")
         return "None"

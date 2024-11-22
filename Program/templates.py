@@ -102,10 +102,10 @@ template_sql = """
 You are an sql agent, turn the following question into a sql query nothing else: {question}
 
 file_table:
-name,size,crtime,parent_path,mal,mal_type,delete_flag
-pong.exe,4,1432645070,/user/onedrive,malicious,trojan,0
-car.png,23,1432650259,/user/pictures,suspicious,virus,1
-dir.dll, 12, 1432653585,/user/dev,undetected,,1
+name,size,crtime,parent_path,malware_class,delete_flag
+pong.exe,4,1432645070,/user/onedrive,trojan,0
+car.png,23,1432650259,/user/pictures,adware,1
+dir.dll, 12, 1432653585,/user/dev,keylogger,1
 """
 
 template_correction = """

@@ -180,8 +180,6 @@ def generate_pdf(messages):
 
     return pdf_buffer
 
-
-
 def delete_session(messages, uploaded_csv_path):
     # Clear messages array
     messages.clear()

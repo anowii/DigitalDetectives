@@ -104,7 +104,7 @@ You are an sql agent, turn the following question into a sql query nothing else:
 file_table:
 name,size,crtime,parent_path,malware_class,delete_flag
 pong.exe,4,1432645070,/user/onedrive,trojan,0
-car.png,23,1432650259,/user/pictures,adware,1
+car.png,23,1432650259,/user/pictures,none,1
 dir.dll, 12, 1432653585,/user/dev,keylogger,1
 """
 
@@ -117,7 +117,7 @@ It has to be a select query
 file_table:
 name,size,crtime,parent_path,malware_class,delete_flag
 pong.exe,4,1432645070,/user/onedrive,trojan,0
-car.png,23,1432650259,/user/pictures,adware,1
+car.png,23,1432650259,/user/pictures,none,1
 dir.dll, 12, 1432653585,/user/dev,keylogger,1
 """
 

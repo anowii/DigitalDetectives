@@ -19,7 +19,7 @@ model = OllamaLLM(model="llama3.2")
 chain = json_template2 | model
 chain_sql = sql_template | model
 chain_sql_correction = sql_correction_template | model
-
+use_default_json = True
 # Load CSV data from filename/filepath returns it in JSON format 
 def load_json_data(filename):
     if os.path.exists(filename):
@@ -51,7 +51,17 @@ def db_response_to_html(response, column_headers):
         text = tabulate(response, headers=column_headers, tablefmt="html", numalign="left")
         print(text)
         return text
-
+def set_use_defualt_json(): # should be called by context_btn.js
+    use_default_json = True
+    return
+def reset_use_default_json(): # should be called by context_btn.js
+    use_default_json = False
+    return
+def query_to_json(query): # Not done should be called by context_btn.js
+    response, success, column_headers = send_query_to_db(query)
+    if success:
+        query_json = ""
+    return query_json
 
 def send_query_to_db(query):
     print("Query: ", query)

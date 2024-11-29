@@ -115,7 +115,7 @@ def db_to_csv():
       
             prime_category = check_with_virustotal(file[23])
             print(prime_category)
-
+            
             csv_row = {
                 "name": file[5], 
                 "size": file[15], 
@@ -124,8 +124,6 @@ def db_to_csv():
                 "malware_class" : prime_category,
                 "delete_flag": file[13] if file[13] == 1 else 0
             }
-          
-            
             files.append(csv_row)
         
     with open(CSV_PATH, 'w', newline='') as csvfile:

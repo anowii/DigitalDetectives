@@ -29,16 +29,23 @@ $(document).ready(function () {
                         $('#chat-window').empty();
 
                         // Loop through the messages and format them for display
+                        var id = 0;
                         data.forEach(function (message) {
+                            
                             message.user = message.user.replace(/\n/g, "<br/>")
                             message.response = message.response.replace(/\n/g, "<br/>")
-                           
+
                             var userMessageElement = $('<div class="message user-message"></div>').html("User: " + message.user);
-                            var responseMessageElement = $('<div class="message ai-message"></div>').html('<span class="ai-label">AI: </span>' + message.response);
-
+                            var responseMessageElement = $('<div class="message ai-message"></div>').html('<span class="ai-label">AI: </span>' + message.response).attr('id', 'ai-message-' + id);
+                            // Adds button if SQL-Agent response
+                            
                             $('#chat-window').append(userMessageElement);
+                            if ( message.user.toLowerCase().startsWith("list") && message.response.toLowerCase().startsWith("result generated from select")){
+                                var context_btn = $('<button class="context-btn"></button>').attr('id', 'context-btn-' + id)
+                                $('#chat-window').append(context_btn);
+                            }
                             $('#chat-window').append(responseMessageElement);
-
+                            id++;
                         });
 
                         clearInterval(pollInterval); // Stop polling after receiving a response

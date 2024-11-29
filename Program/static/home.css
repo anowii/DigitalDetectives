@@ -289,7 +289,26 @@ body {
     background-color: #2C2C2C; 
 }
 
-
+.context-btn {
+    z-index: 10;
+    min-width: 1px;
+    min-height: 1px;
+    margin-left:auto;
+    transform: translate(-35px, 30px) scale(32);
+    width: 1px;
+    height: 1px;
+    background: url('assets/brain.svg') no-repeat right center;
+    background-size: contain;
+    border: none;
+    cursor: pointer;
+    opacity: 0.4;
+}
+.context-btn:hover{
+    opacity: 0.6;
+}
+.context-btn.active {
+    opacity: 1;
+}
 /* Add styling for the Submit button */
 .upload button {
     background-color: #2C2C54;
@@ -329,6 +348,7 @@ body {
 
 /* Message styles */
 .message {
+    max-width: 100%;
     display: flex;
     flex-direction: column;
     padding: 10px;
@@ -346,6 +366,11 @@ body {
 }
 
 .ai-message {
+    position:relative;  
+    overflow-y: auto;
+    overflow-x: auto;
+    max-height: 600px;
+    flex-shrink: 0;
     background-color: #0e1b2eb5; 
     text-align: left; /* Align text to the left */
     color: #dad7d7;

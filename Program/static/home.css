@@ -331,7 +331,7 @@ body {
 .message-box {
     background-color: #7b7b7b17; /* Light gray background */
     border: 0.5px dashed #ccc; /* Border around the message box */
-    height: 100px;
+
 }
 
 /* Placeholder text style */
@@ -389,15 +389,15 @@ body {
 
 #loading-indicator {
     position: absolute;
-    bottom: 80px; /* 10px from the bottom of the chat window */
+    bottom: 80px; 
     left: 50%;
-    transform: translateX(-30%); /* Center it horizontally */
+    transform: translateX(-30%);
     display: flex;
-    justify-content: center; /* Center the dots */
+    justify-content: center; 
     background-color: #333;
     padding: 20px;
     border-radius: 5px;
-    width: auto; /* Adjust to fit the content */
+    width: auto;
 }
 
 .dot {
@@ -405,7 +405,7 @@ body {
     height: 10px;
     margin: 0 4px;
     border-radius: 50%;
-    background-color: #ffffff; /* Change to white for contrast */
+    background-color: #ffffff; 
     opacity: 0;
     animation: blink 1.5s infinite ease-in-out;
 }
@@ -415,11 +415,11 @@ body {
 }
 
 .dot:nth-child(2) {
-    animation-delay: 0.3s; /* Delay for second dot */
+    animation-delay: 0.3s;
 }
 
 .dot:nth-child(3) {
-    animation-delay: 0.6s; /* Delay for third dot */
+    animation-delay: 0.6s; 
 }
 
 @keyframes blink {

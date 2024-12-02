@@ -59,8 +59,14 @@ body {
 }
 
 /* Optional: Center any specific headers or paragraphs if needed */
-.chat-window h2, .chat-window h3, .chat-window p {
-    margin: 10px 0; /* Add some margin for spacing */
+.chat-window h2 {
+    margin: 10px 0; 
+    color: #ffffff;
+    font-size: xx-large;
+}
+
+.chat-window h3, .chat-window p {
+    margin: 10px 0; 
     color: #ffffff;
 }
 

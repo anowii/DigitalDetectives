@@ -20,6 +20,7 @@ chain = json_template2 | model
 chain_sql = sql_template | model
 chain_sql_correction = sql_correction_template | model
 use_default_json = True
+
 # Load CSV data from filename/filepath returns it in JSON format 
 def load_json_data(filename):
     if os.path.exists(filename):
@@ -40,7 +41,6 @@ def load_json_data(filename):
     else:
         print("File does not exist.")
         return []
-
   
 def db_response_to_html(response, column_headers):
     if not response:
@@ -51,6 +51,7 @@ def db_response_to_html(response, column_headers):
         text = tabulate(response, headers=column_headers, tablefmt="html", numalign="left")
         print(text)
         return text
+
 def set_use_defualt_json(): # should be called by context_btn.js
     use_default_json = True
     return
@@ -90,10 +91,13 @@ def send_query_to_db(query):
     return response, True, column_headers
 
 def call_sql_agent(message):
+
     query = chain_sql.invoke({"question": message})
     result, sql_success, column_headers = send_query_to_db(query)
+    
     if sql_success:
         result = "Result generated from " + query + ":<br><br>" + db_response_to_html(result, column_headers).replace("\n", "")
+        print(" call_sql_agent: ", result, query)
     elif result != "": # Try again (empty result means db connection failed)
         print(query, "failed asking LLM to correct it")
         query = chain_sql_correction.invoke({"query": query, "error": result})
@@ -120,14 +124,11 @@ def forward_message_llm(message, filepath):
     return result
 
 
-
 def send_iso(fileName): #Runs TSK on disk image file (".dd")
     run(fileName)
     print(f"Disk image {fileName} processed successfully.")
     
     return 0 
-
-
 
 
 def is_valid_disk_image(disk_image):

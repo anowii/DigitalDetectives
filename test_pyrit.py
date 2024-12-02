@@ -9,6 +9,6 @@ with OllamaChatTarget(
     model_name="llama3.2",
     ) as target_llm:
 
-    prompt = PromptRequestPiece(role="user", original_prompt_text="Test").to_prompt_request_response()
+    prompt = PromptRequestPiece(role="user", original_value="Test").to_prompt_request_response()
     
     print(target_llm.send_prompt(prompt_request=prompt))

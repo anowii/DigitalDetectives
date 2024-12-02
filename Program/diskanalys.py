@@ -86,7 +86,6 @@ def disconnect(connection):
         print(f"Error closing connection: {e}")
 
 # Check if the input file is 
-# ?? Print input file ??
 def check_input_file(target):
     print("Check "+ target)
 

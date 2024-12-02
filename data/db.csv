@@ -1,8 +1,0 @@
-name,size,crtime,parent_path,malware_class,delete_flag
-_rag1.dat,1584,1076759448,/,None,0
-_rag2.dat,3873,1076759461,/,None,0
-_ing.dat,780,1076759524,/,None,0
-_ult1.dat,3801,1076759545,/,None,0
-frag3.dat,2027,1076759646,/_ir1/dir2/,None,0
-mult2.dat,1715,1076759660,/_ir1/,None,0
-frag3.dat,2027,1076759646,/System Volume Information/_restore{A25F48CA-6632-4143-8EF8-3586A84AB5AF}/_P1/,None,0

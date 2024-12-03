@@ -1,21 +1,21 @@
-name,size,crtime,parent_path,mal,malware_type
-Sasser.exe,7804,1432645070,/Documents/School,Undetected,None
-Watermelon_Slices_on_Summer_Picnic.jpeg,4003,1432652326,/Temp,Undetected,None
-Dog_Park_Day_2023-09-05.jpeg,4748,1432650259,/Downloads,Undetected,None
-TrickBot.exe,3682,1432639650,/Temp,Undetected,None
-Sunset_Beach_California_2024-07-18.jpeg,3642,1432653585,/Documents/School,Undetected,None
-New_Year_Celebration_2024-01-01.jpeg,2124,1432651505,/,Undetected,None
-Camping_Weekend_Lake_2024-06-18.jpeg,7459,1432645928,/Documents/School,Undetected,None
-app_styles.scss,471,1432647715,/Music,Undetected,None
-Emacs.exe,4652,1432654310,/Documents,Undetected,None
-Kronos.exe,3871,1432653890,/Downloads,Undetected,None
-CryptoLocker.exe,7812,1432652554,/Downloads,Suspicious,Worm
-Call of Duty: Modern Warfare.exe,3439,1432651051,/,Undetected,None
-First_Day_of_School_Jake_2024-09-01.jpeg,2741,1432647235,/Downloads,Undetected,None
-Bouncy.exe,4886,1432645802,/Downloads,Suspicious,Ransomware
-Blaster.exe,6110,1432643458,/Temp,Undetected,None
-homepage.html,7494,1432649884,/Downloads,Undetected,None
-Grapes_on_Vine.jpeg,8055,1432647432,/Documents/School,Undetected,None
-Picnic_in_the_Park_2023-07-20.jpeg,1779,1432644862,/Downloads,Undetected,None
-Persona 5.exe,6281,1432648185,/Documents/School,Detected,Worm
-script_utilities.js,5050,1432653663,/,Undetected,None
+name,size,crtime,parent_path,malware_class,delete_flag
+Coconut_Open_on_Beach.jpeg,6240,1432647469,/Downloads,None,0
+Sekiro: Shadows Die Twice.exe,4004,1432644139,/Documents,None,1
+Skiing_Trip_Colorado_2024-02-10.jpeg,1596,1432642921,/Documents/School,None,0
+README_Installation.md,3409,1432649999,/Temp,None,1
+banana.png,1230,1432643233,/,None,0
+Sasser.exe,6962,1432643669,/Music,Trojan,0
+Divinity: Original Sin 2.exe,5881,1432648860,/,None,1
+Picnic_in_the_Park_2023-07-20.jpeg,870,1432647042,/Downloads,None,0
+CryptoLocker.exe,4122,1432642121,/Documents/School,None,1
+Baby_Shower_Susan_2024-03-25.jpeg,4075,1432647355,/Temp,None,0
+Vim.exe,2015,1432643529,/Temp,None,1
+Mango_Orchard_Visit.jpeg,3481,1432640900,/,None,1
+api_server.js,7995,1432649037,/,None,0
+Pineapple_in_Garden.jpeg,5786,1432653081,/Music,None,0
+main_controller.java,1024,1432652425,/Music,None,0
+Birthday_Surprise_For_Alice_2024-10-01.jpeg,4181,1432652611,/,None,0
+user_data.json,617,1432646914,/Music,None,0
+Sunset_Beach_California_2024-07-18.jpeg,7425,1432640610,/Documents/School,None,1
+Grapes_on_Vine.jpeg,7921,1432650012,/Documents/School,None,0
+NetBeans.exe,3851,1432643570,/Documents,Spyware,0

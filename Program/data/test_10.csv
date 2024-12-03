@@ -1,11 +1,11 @@
-name,size,crtime,parent_path,malware_type, delete_flag
-package_frontend.json,2466,1432645759,/Documents/School,None,1
-Cooking_Class_2024-03-10.jpeg,302,1432641444,/Downloads,None,0
-Grapes_on_Vine.jpeg,1558,1432651874,/Downloads,None,1
-Weekend_Getaway_to_NYC_2024-04-28.jpeg,2901,1432652435,/Documents/School,None,1
-Pet_Birthday_Party_Fido_2024-09-15.jpeg,2171,1432652018,/Temp,None,1
-CryptoLocker.exe,755,1432641568,/,Undetected,None,1
-Fresh_Apples_on_Kitchen_Counter.jpeg,1083,1432642952,/Documents/School,None,1
-Persona 5.exe,6925,1432654009,/Documents,Trojan,1
-Blaster.exe,139,1432652784,/Downloads,Keylogger,0
-Gamarue.exe,4148,1432653643,/,None,1
+name,size,crtime,parent_path,malware_class,delete_flag
+Cooking_Class_2024-03-10.jpeg,6236,1432644593,/Documents/School,None,1
+Flower_Show_2024-06-25.jpeg,4256,1432645351,/,None,0
+Wedding_Ceremony_Jane_&_Mark_2024-05-22.jpeg,1926,1432650760,/Temp,None,0
+Watermelon_Slices_on_Summer_Picnic.jpeg,3158,1432647813,/Music,None,1
+requirements_project.txt,1513,1432640432,/,None,0
+Tinba.exe,4851,1432646616,/,None,1
+Bait and Switch.exe,2842,1432650785,/Music,None,1
+Bluefish.exe,2603,1432651732,/Temp,Trojan,1
+CryptoLocker.exe,3127,1432642549,/Music,None,1
+Sunset_Beach_California_2024-07-18.jpeg,771,1432649862,/Documents/School,None,1

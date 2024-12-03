@@ -1,51 +1,51 @@
 name,size,crtime,parent_path,malware_class,delete_flag
-Sasser.exe,5359,1432643837,/,keylogger,0
-Pet_Birthday_Party_Fido_2024-09-15.jpeg,1174,1432649732,/,None,0
-main_controller.java,7251,1432649165,/Downloads,None,0
-Weekend_Getaway_to_NYC_2024-04-28.jpeg,1938,1432648076,/,None,0
-Cabal.exe,3139,1432646333,/Documents/School,adware,0
-TrickBot.exe,5173,1432646785,/Downloads,None,0
-Sublime Text.exe,7125,1432650064,/Documents/School,None,0
-CryptoLocker.exe,5477,1432645579,/Documents,None,0
-Atom.exe,6118,1432648501,/Music,None,0
-Sunset_Beach_California_2024-07-18.jpeg,2809,1432644954,/Temp,None,0
-Vim.exe,6718,1432644439,/,None,0
-Sekiro: Shadows Die Twice.exe,762,1432641248,/Music,keylogger,0
-Visual Studio Code.exe,972,1432647504,/,None,0
-Mango_Orchard_Visit.jpeg,1061,1432643766,/Documents/School,None,0
-Visit_to_Grandparents_2023-10-10.jpeg,2801,1432648682,/Documents/School,None,0
-Final Fantasy VII Remake.exe,3559,1432644035,/Documents/School,adware,0
-Dark Souls III.exe,499,1432650020,/Music,None,0
-Emacs.exe,1401,1432642893,/,None,0
-Bouncy.exe,5096,1432653731,/,None,0
-Birthday_Surprise_For_Alice_2024-10-01.jpeg,2069,1432643448,/Music,None,0
-Hiking_Trip_Mountains_2024-09-10.jpeg,2604,1432653198,/Documents/School,None,0
-Grapes_on_Vine.jpeg,7867,1432648867,/Downloads,None,0
-Valentine's_Day_Dinner_2024-02-14.jpeg,6676,1432651579,/Temp,None,0
-Blaster.exe,4066,1432652222,/,None,0
-Blueberry_Bush_Harvest.jpeg,5927,1432651638,/Temp,None,0
-banana.png,3587,1432651055,/Downloads,None,0
-Graduation_Ceremony_Emma_2024-05-01.jpeg,3331,1432640962,/Downloads,None,0
-passionfruit.png,3954,1432653904,/Music,None,0
-style_main.css,602,1432639833,/Documents,None,0
-Flower_Show_2024-06-25.jpeg,953,1432649709,/Downloads,None,0
-Ripe_Bananas_on_Tree.jpeg,2640,1432652975,/,None,0
-John_Doe_Birthday_Party_2024-10-09.jpeg,5071,1432648597,/,None,0
-package_frontend.json,5944,1432649899,/,None,0
-Kiwi_Cut_in_Half.jpeg,4219,1432639575,/Documents,None,0
-Coda.exe,116,1432648423,/Temp,None,0
-Summer_Festival_2024-08-01.jpeg,1099,1432641364,/Downloads,None,0
-Bad Rabbit.exe,2283,1432641371,/,None,0
-Counter-Strike: Global Offensive.exe,7585,1432649204,/Downloads,worm,0
-schema_definition.sql,6270,1432653268,/Music,None,1
-README_Installation.md,6955,1432650374,/Documents,None,1
-Dridex.exe,904,1432640280,/Documents,trojan,1
-Klez.exe,5983,1432639369,/,None,1
-Persona 5.exe,3949,1432649349,/Documents/School,keylogger,1
-Nimda.exe,7868,1432639547,/Documents/School,None,1
-totally_legit.exe,6605,1432643494,/Documents/School,spyware,1
-Dog_Park_Day_2023-09-05.jpeg,4186,1432653791,/Documents/School,None,1
-Easter_Egg_Hunt_2024-04-20.jpeg,1969,1432647375,/Documents/School,None,1
-Picnic_in_the_Park_2023-07-20.jpeg,8095,1432641368,/Temp,None,1
-Bait and Switch.exe,5578,1432651672,/Documents/School,None,1
-api_server.js,4741,1432646756,/Temp,None,1
+schema_definition.sql,8032,1432649294,/Music,None,1
+main_controller.java,5889,1432643933,/Downloads,None,1
+Dark Souls III.exe,3440,1432643399,/Music,None,0
+Sasser.exe,7260,1432644189,/Downloads,Adware,0
+Klez.exe,243,1432653916,/,Ransomware,1
+First_Day_of_School_Jake_2024-09-01.jpeg,3333,1432648201,/,None,1
+Visual Studio Code.exe,5994,1432647460,/,None,1
+CryptoLocker.exe,4110,1432649078,/,None,1
+Wedding_Ceremony_Jane_&_Mark_2024-05-22.jpeg,5372,1432643536,/Documents,None,1
+TextMate.exe,6268,1432647720,/Documents,None,0
+SpyEye.exe,3323,1432648669,/Documents/School,Adware,1
+Bait and Switch.exe,1497,1432646762,/Music,None,0
+NetBeans.exe,4030,1432648285,/,None,0
+Pineapple_in_Garden.jpeg,1347,1432644549,/,None,1
+Fruit_Smoothie_Bowl.jpeg,2323,1432646056,/Documents/School,None,0
+script_utilities.js,6292,1432651334,/Documents,None,0
+Conficker.exe,7350,1432650358,/Temp,Ransomware,0
+Kate.exe,797,1432651661,/Documents/School,None,0
+Family_Reunion_2023-08-13.jpeg,3419,1432648868,/,None,1
+data_analysis.py,4758,1432645367,/Documents/School,None,1
+Call of Duty: Modern Warfare.exe,1902,1432644000,/Documents/School,Keylogger,0
+Sublime Text.exe,6480,1432647218,/Temp,Adware,0
+Coda.exe,858,1432649440,/Downloads,None,0
+Bowl_of_Fresh_Fruit_Salad.jpeg,2011,1432650112,/Downloads,None,0
+Watermelon_Slices_on_Summer_Picnic.jpeg,3984,1432645183,/Music,None,0
+Bouncy.exe,1705,1432643134,/Temp,None,0
+Ransomware.exe,4857,1432652996,/Temp,None,1
+Dridex.exe,7205,1432647561,/,None,1
+Christmas_Eve_Family_2023-12-24.jpeg,4375,1432651473,/Documents,None,0
+package_frontend.json,7065,1432650768,/,None,0
+Visit_to_Grandparents_2023-10-10.jpeg,6402,1432646931,/Documents,None,1
+Dog_Park_Day_2023-09-05.jpeg,4398,1432641900,/,None,1
+The Witcher 3: Wild Hunt.exe,581,1432640966,/Music,None,1
+Valentine's_Day_Dinner_2024-02-14.jpeg,5849,1432645401,/Documents,None,0
+John_Doe_Birthday_Party_2024-10-09.jpeg,4658,1432648291,/Temp,None,0
+banana.png,1070,1432644406,/Documents/School,None,0
+Counter-Strike: Global Offensive.exe,1586,1432644584,/Documents/School,None,0
+Pet_Birthday_Party_Fido_2024-09-15.jpeg,1413,1432647042,/,None,0
+Camping_Weekend_Lake_2024-06-18.jpeg,870,1432643926,/,None,1
+Cherry_Blossoms_and_Fruit.jpeg,7825,1432644055,/,None,0
+style_main.css,3808,1432642794,/Downloads,None,0
+Graduation_Party_Mike_2024-05-30.jpeg,8094,1432640309,/Documents/School,None,1
+ILOVEYOU.exe,4918,1432654260,/Music,None,1
+Divinity: Original Sin 2.exe,2023,1432640167,/,None,0
+Beach_Vacation_Florida_2024-03-15.jpeg,6466,1432639620,/,None,0
+Notepad++.exe,4977,1432651089,/Documents/School,Adware,0
+README_Installation.md,7006,1432642486,/Downloads,None,0
+Kiwi_Cut_in_Half.jpeg,5404,1432644565,/Documents/School,None,1
+Mango_Orchard_Visit.jpeg,3290,1432645226,/,None,0
+Skyrim.exe,6681,1432652448,/Documents,Adware,0

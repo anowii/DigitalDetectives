@@ -59,8 +59,14 @@ body {
 }
 
 /* Optional: Center any specific headers or paragraphs if needed */
-.chat-window h2, .chat-window h3, .chat-window p {
-    margin: 10px 0; /* Add some margin for spacing */
+.chat-window h2 {
+    margin: 10px 0; 
+    color: #ffffff;
+    font-size: xx-large;
+}
+
+.chat-window h3, .chat-window p {
+    margin: 10px 0; 
     color: #ffffff;
 }
 
@@ -226,14 +232,14 @@ body {
 
 /* Tooltip styling */
 .tooltip {
-    visibility: hidden;                /* Hide by default */
-    background-color: #222;            /* Dark background */
-    color: #fff;                       /* White text */
+    visibility: hidden;                
+    background-color: #222;            
+    color: #fff;                       
     text-align: center;
     padding: 5px 8px;
     border-radius: 5px;
     position: absolute;
-    bottom: 70px;                      /* Position above the button */
+    bottom: 70px;                      
     left: 50%;
     transform: translateX(-50%);
     white-space: nowrap;
@@ -331,7 +337,7 @@ body {
 .message-box {
     background-color: #7b7b7b17; /* Light gray background */
     border: 0.5px dashed #ccc; /* Border around the message box */
-    height: 100px;
+
 }
 
 /* Placeholder text style */
@@ -389,15 +395,15 @@ body {
 
 #loading-indicator {
     position: absolute;
-    bottom: 80px; /* 10px from the bottom of the chat window */
+    bottom: 80px; 
     left: 50%;
-    transform: translateX(-30%); /* Center it horizontally */
+    transform: translateX(-30%);
     display: flex;
-    justify-content: center; /* Center the dots */
+    justify-content: center; 
     background-color: #333;
     padding: 20px;
     border-radius: 5px;
-    width: auto; /* Adjust to fit the content */
+    width: auto;
 }
 
 .dot {
@@ -405,7 +411,7 @@ body {
     height: 10px;
     margin: 0 4px;
     border-radius: 50%;
-    background-color: #ffffff; /* Change to white for contrast */
+    background-color: #ffffff; 
     opacity: 0;
     animation: blink 1.5s infinite ease-in-out;
 }
@@ -415,11 +421,11 @@ body {
 }
 
 .dot:nth-child(2) {
-    animation-delay: 0.3s; /* Delay for second dot */
+    animation-delay: 0.3s;
 }
 
 .dot:nth-child(3) {
-    animation-delay: 0.6s; /* Delay for third dot */
+    animation-delay: 0.6s; 
 }
 
 @keyframes blink {

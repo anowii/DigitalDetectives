@@ -24,10 +24,10 @@ ALLOWED_FILEDS = ["name","size", "crtime", "parent_path", "malware_class", "dele
     ############################################
     #  delete_flag == dir_flag in tsk_files    #
     #  tsk_files {allocated, 1} = NOT deleted  #
-    #  in delete_flag: 1 == not deleted        #
+    #  in delete_flag: 0 == not deleted        #
     #                                          #
     #  tsk_files {unallocated, 2} = deleted    #
-    #  in delete_flag: 0 == deleted            #     
+    #  in delete_flag: 1 == deleted            #     
     ############################################
 
 
@@ -86,16 +86,13 @@ def disconnect(connection):
         print(f"Error closing connection: {e}")
 
 # Check if the input file is 
-# ?? Print input file ??
 def check_input_file(target):
     print("Check "+ target)
 
 def run_sleuth_on_file(target):
     print("Check "+ target)
-    # subprocess.run(["rm",SLEUTH_DB], text=True)
     if os.path.exists(SLEUTH_DB):
         os.remove(SLEUTH_DB)
-    # subprocess.run(["rm",CSV_PATH], text=True)
     if os.path.exists(CSV_PATH):
         os.remove(CSV_PATH)
     res = subprocess.run(["tsk_loaddb","-h","-d", SLEUTH_DB, target], shell=True)
@@ -116,13 +113,20 @@ def db_to_csv():
             prime_category = check_with_virustotal(file[23])
             print(prime_category)
             
+            #Ensure delete_flag is corectly assigned
+            delete_flag = -1
+            if file[13] == 1:
+                delete_flag = 0
+            elif file[13] == 2:
+                delete_flag = 1
+
             csv_row = {
                 "name": file[5], 
                 "size": file[15], 
                 "crtime": file[17], 
                 "parent_path": file[25],
                 "malware_class" : prime_category,
-                "delete_flag": file[13] if file[13] == 1 else 0
+                "delete_flag": delete_flag
             }
             files.append(csv_row)
         
@@ -138,8 +142,18 @@ def create_database_from_csv(csv_path):
     if os.path.exists(USER_DB):
         os.remove(USER_DB)
         print(f"Existing database '{USER_DB}' has been removed.")
-    fields = ["name","size", "crtime", "parent_path", "malware_class","delete_flag"]
-    
+    fields = ["name", "size", "crtime", "parent_path", "malware_class", "delete_flag"]
+   
+   # Define column types 
+    column_types = {
+        "name": "TEXT",
+        "size": "INTEGER",
+        "crtime": "INTEGER",
+        "parent_path": "TEXT",
+        "malware_class": "TEXT",
+        "delete_flag": "INTEGER"
+    }
+
     # Connect to SQLite database (it will create a new database if it doesn't exist)
     conn = sqlite3.connect(USER_DB)
     cursor = conn.cursor()
@@ -149,10 +163,14 @@ def create_database_from_csv(csv_path):
         reader = csv.reader(csv_file)
         header = next(reader)  # Skip header row
         
-        if(fields == header):
+
+        if(fields == header): 
+            # Build the columns and types for the table
+            columns = ', '.join([f"{col} {column_types.get(col, 'TEXT')}" for col in header])
+
             # Create table based on the CSV header
-            columns = ', '.join([col.replace(' ', '_') for col in header])  # Clean column names
             cursor.execute(f"CREATE TABLE IF NOT EXISTS file_table ({columns})")
+            print(f"Table created with columns: {columns}")
 
             # Insert data into the table
             for row in reader:

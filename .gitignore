@@ -2,3 +2,5 @@
 /.venv
 *.dd
 *.pyc
+PyRIT/pyrit.egg-info/dependency_links.txt
+/PyRIT

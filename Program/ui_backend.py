@@ -211,6 +211,8 @@ def generate_pdf(messages):
 
 def delete_session(messages, uploaded_csv_path):
     # Clear messages array
+    global use_default_json
+    use_default_json = True
     messages.clear()
     uploaded_csv_path = ''
 

@@ -20,19 +20,31 @@
     <!-- Main container -->
     <div class="container">
         
+        
         <!-- Sidebar -->
         <div class="sidebar">
-            <!-- User greeting -->
-            <div class="greeting">
-                {% if session.get('logged_in') %}
-                    <button>Hi, {{ session['username'] }};</button>
-                {% else %}
-                    <button>Hi, Guest;</button>
-                {% endif %}
-            </div>
-  
             <!-- Margin aligner -->
             <div class="empty-one">
+                <!-- User greeting -->
+                <div class="greeting">
+                    {% if session.get('logged_in') %}
+                        <button>Hi, {{ session['username'] }};</button>
+                    {% else %}
+                        <button>Hi, Guest;</button>
+                    {% endif %}
+                </div>
+    
+                <!-- Info BOX -->
+                <div class="info-box">
+                    <p id="content">📁 Start by uploading a disk image</em></p>
+                    <p id="content">Then ask the chatbot to:</em></p>
+                    <ul id="content">
+                        <li id="content">List all .exe/.txt/.dat  files </li>
+                        <li id="content">....</li>
+                        <li id="content">....</li>
+                    </ul>
+                    <p id="content">Use keyword LIST to:</p>
+                </div>
                 <!-- Message box for displaying progress and error messages-->
                 <div  class="message-box">
                     <p id="messageContent">Messages will appear here...</p>
@@ -75,22 +87,16 @@
             <!-- Chat window -->
             <div id="chat-window" class="chat-window">
                 
-                <h2>Welcome to Digital Detective! </h2>
-                <p>🚀 <strong>Your investigative assistant powered by Llama 3.1</strong> 🚀</p>
+                <h2> Welcome to Digital Detective 🕵️ </h2>
+                <h3>🚀<strong>Your investigative assistant powered by Llama 3.1</strong> 🚀</h3>
                 <h3>🔍 What you can do:</h3>
                 <ul>
                     <li>Upload a CSV file containing digital forensic data (from The Sleuth Kit).</li>
                     <li>Ask questions related to the contents of the file, and get answers using cutting-edge AI technology.</li>
                 </ul>
-                <p>📁 <em>Start by uploading your CSV file, then ask relevant questions like:</em></p>
-                <ul>
-                    <li>"What are the most recent access times in the file?"</li>
-                    <li>"Can you summarize the file system information?"</li>
-                </ul>
                 <p><em>We're here to help you uncover the clues. Ask away!</em></p>
                 
             </div>
-            
             <!-- Loading indicator -->
             <div id="loading-indicator" style="display: none;">
                 <span class="dot"></span>

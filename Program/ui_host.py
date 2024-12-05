@@ -187,7 +187,7 @@ def delete_session_route():
 
 def main():
     app.secret_key = os.urandom(12)
-    app.run('localhost', 5000)
+    app.run('localhost', 5000,debug=True)
     
 
 if __name__ == '__main__':

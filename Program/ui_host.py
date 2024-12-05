@@ -4,7 +4,7 @@ from flask import Flask, render_template, request, jsonify,redirect,url_for, jso
 import os
 import hashlib
 from diskanalys import create_database_from_csv
-from ui_backend import send_iso,forward_message_llm, is_valid_disk_image, generate_pdf, delete_session
+from ui_backend import send_iso,forward_message_llm, is_valid_disk_image, generate_pdf, delete_session, set_use_defualt_json, reset_use_default_json, query_to_json
 
 
 
@@ -158,6 +158,19 @@ def get_messages():
     # Return the list of user messages and LLM responses to the client
     return jsonify(messages)
 
+@app.route('/set_json_data', methods=['POST'])
+def set_query_data():
+    data = request.json
+    query = data.get('query', '')
+    reset_use_default_json()
+    query_to_json(query)
+    return jsonify({"status": "success", "message": "Query data set"})
+
+@app.route('/reset_json_data', methods=['POST'])
+def reset_query_data():
+    set_use_defualt_json()
+    return jsonify({"status": "success", "message": "Query data reset"})
+
 @app.route('/download_chat', methods=['GET'])
 def download_chat():
     pdf_buffer = generate_pdf(messages)
@@ -170,6 +183,8 @@ def delete_session_route():
     # Call the delete_session function from ui_backend
     return delete_session(messages, UPLOADED_CSV)
 
+@app.route('/set query_data')
+
 def main():
     app.secret_key = os.urandom(12)
     app.run('localhost', 5000)
@@ -177,5 +192,3 @@ def main():
 
 if __name__ == '__main__':
     main()
-    
-

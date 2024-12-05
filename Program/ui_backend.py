@@ -1,11 +1,12 @@
 import pandas as pd
 from langchain_ollama import OllamaLLM
-from templates import json_template2, sql_template, sql_correction_template
+from templates import json_template2, sql_template, sql_correction_template, simple_template
 from diskanalys import run, USER_DB
 from tabulate import tabulate
 from flask import jsonify
 
-from io import BytesIO #chat download
+import csv
+from io import BytesIO, StringIO #chat download
 from reportlab.lib.pagesizes import letter #chat download
 from reportlab.lib.styles import getSampleStyleSheet #chat download
 import html, os, sqlite3
@@ -15,12 +16,12 @@ from bs4 import BeautifulSoup
 
 
 model = OllamaLLM(model="llama3.2")
-#chain = json_template | model
+chain_simple = simple_template | model
 chain = json_template2 | model
 chain_sql = sql_template | model
 chain_sql_correction = sql_correction_template | model
 use_default_json = True
-
+query_json_data = ""
 # Load CSV data from filename/filepath returns it in JSON format 
 def load_json_data(filename):
     if os.path.exists(filename):
@@ -41,6 +42,7 @@ def load_json_data(filename):
     else:
         print("File does not exist.")
         return []
+
   
 def db_response_to_html(response, column_headers):
     if not response:
@@ -51,18 +53,31 @@ def db_response_to_html(response, column_headers):
         text = tabulate(response, headers=column_headers, tablefmt="html", numalign="left")
         print(text)
         return text
-
 def set_use_defualt_json(): # should be called by context_btn.js
+    global use_default_json
     use_default_json = True
+    print("Switching to Default json")
     return
 def reset_use_default_json(): # should be called by context_btn.js
+    global use_default_json
     use_default_json = False
+    print("Switching to Modifed json")
     return
 def query_to_json(query): # Not done should be called by context_btn.js
     response, success, column_headers = send_query_to_db(query)
+    
     if success:
-        query_json = ""
-    return query_json
+        # Turn data into json format
+        json_content = "["
+        json_content += ",".join(
+            "{" + ",".join(f'"{key}": "{value}"' for key, value in zip(column_headers, row)) + "}"
+            for row in response
+        )
+        json_content += "]"
+        global query_json_data
+        query_json_data = json_content
+    else:
+        print("Query Failed")
 
 def send_query_to_db(query):
     print("Query: ", query)
@@ -91,13 +106,10 @@ def send_query_to_db(query):
     return response, True, column_headers
 
 def call_sql_agent(message):
-
     query = chain_sql.invoke({"question": message})
     result, sql_success, column_headers = send_query_to_db(query)
-    
     if sql_success:
         result = "Result generated from " + query + ":<br><br>" + db_response_to_html(result, column_headers).replace("\n", "")
-        print(" call_sql_agent: ", result, query)
     elif result != "": # Try again (empty result means db connection failed)
         print(query, "failed asking LLM to correct it")
         query = chain_sql_correction.invoke({"query": query, "error": result})
@@ -108,7 +120,7 @@ def call_sql_agent(message):
 
 # Function to handle message forwarding to LLM
 def forward_message_llm(message, filepath):
-    
+    global use_default_json
     json_data = load_json_data(filepath)  # Initialize JSON data as empty
     print(f"JSON Data: {json_data}")  # Log the JSON data
 
@@ -119,9 +131,13 @@ def forward_message_llm(message, filepath):
 
     # If sql query fails or it dosn't start with "list" answer the question normally with json data
     if message.lower().startswith("list") == False or sql_success == False:
-        result = chain.invoke({"json_data": json_data ,"question": message})    
-    
+        print("Use default json is:", use_default_json)
+        if use_default_json:
+            result = chain.invoke({"json_data": json_data ,"question": message})
+        else:
+            result = chain_simple.invoke({"json_data": query_json_data ,"question": message}) 
     return result
+
 
 
 def send_iso(fileName): #Runs TSK on disk image file (".dd")
@@ -129,6 +145,8 @@ def send_iso(fileName): #Runs TSK on disk image file (".dd")
     print(f"Disk image {fileName} processed successfully.")
     
     return 0 
+
+
 
 
 def is_valid_disk_image(disk_image):
@@ -193,6 +211,8 @@ def generate_pdf(messages):
 
 def delete_session(messages, uploaded_csv_path):
     # Clear messages array
+    global use_default_json
+    use_default_json = True
     messages.clear()
     uploaded_csv_path = ''
 

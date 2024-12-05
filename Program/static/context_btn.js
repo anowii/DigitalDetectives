@@ -5,7 +5,20 @@ document.addEventListener("DOMContentLoaded", function() {
         if ($(this).hasClass('active')) {
             // If it's active, deactivate it
             $(this).removeClass('active');
-            // Call python function to reset json mode(bool) to default
+            fetch('/reset_json_data', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({})  // Send an empty body for reset
+            })
+            .then(response => response.json())
+            .then(data => {
+                console.log('Reset Query Data Success:', data);  // Handle success
+            })
+            .catch((error) => {
+                console.error('Error:', error);  // Handle any errors
+            });
         } else {
             // If it's not active, deactivate all buttons and activate the clicked one
             $('.context-btn').removeClass('active');
@@ -24,8 +37,20 @@ document.addEventListener("DOMContentLoaded", function() {
             
             console.log('Button clicked:', $(this).attr('id'), query);
             if (start !== -1){
-                // Call python function to create json from query here
-                // Call python function to set json mode (bool) to "context" or something similar
+                fetch('/set_json_data', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({ query: query })  // Send query to Flask
+                })
+                .then(response => response.json())
+                .then(data => {
+                    console.log('Set Query Data Success:', data);  // Handle success
+                })
+                .catch((error) => {
+                    console.error('Error:', error);  // Handle any errors
+                });
             }else{
                 console.log('No Query found');
             }

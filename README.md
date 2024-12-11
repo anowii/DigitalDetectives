@@ -4,13 +4,3 @@
 - **app_test_3.0.py**: Omvandlar csv till JSON format i försökt att minska hallucinationer.
 - **tsk/code/proj/diskanalys.py**: 
 
-## File Structure
-
-- **Intergrated/**
-  - `main.py`: Entry point for the application.
-  - `utils.py`: Helper functions.
-- **WebUI/**
-  - `input.csv`: Input data file.
-  - `output.csv`: Processed data file.
-- **tsk/**
-  - `test_main.py`: Unit tests for main functions.

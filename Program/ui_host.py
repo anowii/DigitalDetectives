@@ -18,7 +18,7 @@ UPLOADED_CSV = '' #filepath for CSV
 # Store chat messages in memory for now, per session
 messages = []
 MESSAGE_FILE = 'messages.json'
-next_id = 1  # Initialize the message ID
+next_id = 0  # Initialize the message ID
 
 # Default route 
 @app.route('/')
@@ -28,13 +28,13 @@ def home():
     
     return redirect(url_for('chat'))
 
-@app.route('/login')      #CURRENTLY NOT WORKING, SHOULD REDIRECT USER TO HOME WHEN PRESSING SUBMIT (TEMPORARY WHEN NO LOGIN DETAILS)
+@app.route('/login')      
 def login():
     return render_template('login.html')
 
 
 # Login handling
-@app.route('/login', methods=['POST'])      #CURRENTLY NOT WORKING, SHOULD REDIRECT USER TO HOME WHEN PRESSING SUBMIT (TEMPORARY WHEN NO LOGIN DETAILS)
+@app.route('/login', methods=['POST'])      
 def login_post():
     result = request.form['password']
     result = hashlib.md5(result.encode())

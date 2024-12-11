@@ -129,11 +129,11 @@ def create_a_csv(csv_file_path="test.csv", length=10):
     crtime_arg = 1432644354 #make a random minus or plus for this number
     path_arg = ["/", "/Documents", "/Music", "/Downloads", "/Documents/School", "/Temp", "/"]
     mal_arg = ["Undetected", "Detected", "Suspicious"]
-    mal_type_arg = ["Trojan", "Worm", "Keylogger", "Adware", "Ransomware", "Spyware", ]
-
+    mal_type_arg = ["Trojan", "Worm", "Keylogger", "Adware", "Ransomware", "Spyware", "None"]
+    del_flag = [0,1]
     
     data = [[]]
-    data[0] = ["name", "size", "crtime", "parent_path", "mal", "malware_type"]
+    data[0] = ["name", "size", "crtime", "parent_path", "malware_class", "delete_flag"]
     for i in range(length):
         temp_data = []
         
@@ -156,16 +156,16 @@ def create_a_csv(csv_file_path="test.csv", length=10):
         #if file is .exe random if virus
         if (temp[temp.find(".")::] == ".exe"):
             if (randrange(0, 100) < 40):
-                temp_data.append(mal_arg[randrange(1, 3)])
+                #temp_data.append(mal_arg[randrange(1, 3)])
                 temp_data.append(random.choice(mal_type_arg))
             else:
-                temp_data.append(mal_arg[0])
+                #temp_data.append(mal_arg[0])
                 temp_data.append("None")
         else:
-            temp_data.append(mal_arg[0])
+            #temp_data.append(mal_arg[0])
             temp_data.append("None")
 
-
+        temp_data.append(random.choice(del_flag))
         data.append(temp_data)
 
     # Open the file in write mode

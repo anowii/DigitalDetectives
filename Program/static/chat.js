@@ -2,8 +2,8 @@ $(document).ready(function () {
     var pollingActive = false;  // Polling is inactive initially
     var pollInterval = null;    // Poll interval holder
 
-     // Function to show loading indicator
-     function showLoadingIndicator() {
+    // Function to show loading indicator
+    function showLoadingIndicator() {
         $('#loading-indicator').show();
     }
 
@@ -69,6 +69,9 @@ $(document).ready(function () {
         if (message.trim() !== "") {
             // Clear the input field
             $('#text-input').val('');
+
+            var userMessageElement = $('<div class="message user-message"></div>').html("User: " + message);
+            $('#chat-window').append(userMessageElement)
 
             // Show loading indicator when sending message
             showLoadingIndicator();

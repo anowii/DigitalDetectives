@@ -1,21 +1,21 @@
-name,size,crtime,parent_path,mal,malware_type
-Sasser.exe,7804,1432645070,/Documents/School,Undetected,None
-Watermelon_Slices_on_Summer_Picnic.jpeg,4003,1432652326,/Temp,Undetected,None
-Dog_Park_Day_2023-09-05.jpeg,4748,1432650259,/Downloads,Undetected,None
-TrickBot.exe,3682,1432639650,/Temp,Undetected,None
-Sunset_Beach_California_2024-07-18.jpeg,3642,1432653585,/Documents/School,Undetected,None
-New_Year_Celebration_2024-01-01.jpeg,2124,1432651505,/,Undetected,None
-Camping_Weekend_Lake_2024-06-18.jpeg,7459,1432645928,/Documents/School,Undetected,None
-app_styles.scss,471,1432647715,/Music,Undetected,None
-Emacs.exe,4652,1432654310,/Documents,Undetected,None
-Kronos.exe,3871,1432653890,/Downloads,Undetected,None
-CryptoLocker.exe,7812,1432652554,/Downloads,Suspicious,Worm
-Call of Duty: Modern Warfare.exe,3439,1432651051,/,Undetected,None
-First_Day_of_School_Jake_2024-09-01.jpeg,2741,1432647235,/Downloads,Undetected,None
-Bouncy.exe,4886,1432645802,/Downloads,Suspicious,Ransomware
-Blaster.exe,6110,1432643458,/Temp,Undetected,None
-homepage.html,7494,1432649884,/Downloads,Undetected,None
-Grapes_on_Vine.jpeg,8055,1432647432,/Documents/School,Undetected,None
-Picnic_in_the_Park_2023-07-20.jpeg,1779,1432644862,/Downloads,Undetected,None
-Persona 5.exe,6281,1432648185,/Documents/School,Detected,Worm
-script_utilities.js,5050,1432653663,/,Undetected,None
+name,size,crtime,parent_path,malware_class,delete_flag
+requirements_project.txt,3387,1432642164,/Music,None,1
+Emotet.exe,3820,1432652021,/Documents/School,Keylogger,1
+Dridex.exe,800,1432648409,/Documents,None,1
+Zeus.exe,2740,1432648131,/Documents/School,None,0
+package_frontend.json,4415,1432652344,/,None,0
+Picnic_in_the_Park_2023-07-20.jpeg,5715,1432642844,/,None,0
+Watermelon_Slices_on_Summer_Picnic.jpeg,4398,1432648916,/Temp,None,0
+Hiking_Trip_Mountains_2024-09-10.jpeg,1055,1432645323,/,None,0
+Bluefish.exe,136,1432650354,/Documents/School,Worm,1
+schema_definition.sql,2380,1432644584,/Documents,None,1
+main_controller.java,1351,1432641881,/Temp,None,0
+Valentine's_Day_Dinner_2024-02-14.jpeg,1791,1432647998,/Documents,None,1
+Pet_Birthday_Party_Fido_2024-09-15.jpeg,1755,1432646261,/Documents/School,None,1
+Christmas_Eve_Family_2023-12-24.jpeg,4869,1432642399,/Temp,None,0
+Dragon Age: Inquisition.exe,6687,1432652512,/Documents,Adware,1
+Colorful_Fruit_Platter_for_Party.jpeg,1317,1432651085,/,None,1
+Graduation_Party_Mike_2024-05-30.jpeg,2782,1432639703,/Temp,None,1
+Family_Reunion_2023-08-13.jpeg,7465,1432652812,/Music,None,1
+Persona 5.exe,5897,1432644441,/Documents/School,None,0
+Weekend_Getaway_to_NYC_2024-04-28.jpeg,607,1432645259,/Documents,None,0

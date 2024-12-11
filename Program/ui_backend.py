@@ -22,6 +22,7 @@ chain_sql = sql_template | model
 chain_sql_correction = sql_correction_template | model
 use_default_json = True
 query_json_data = ""
+
 # Load CSV data from filename/filepath returns it in JSON format 
 def load_json_data(filename):
     if os.path.exists(filename):
@@ -53,16 +54,19 @@ def db_response_to_html(response, column_headers):
         text = tabulate(response, headers=column_headers, tablefmt="html", numalign="left")
         print(text)
         return text
+    
 def set_use_defualt_json(): # should be called by context_btn.js
     global use_default_json
     use_default_json = True
     print("Switching to Default json")
-    return
+    
+    
 def reset_use_default_json(): # should be called by context_btn.js
     global use_default_json
     use_default_json = False
     print("Switching to Modifed json")
     return
+
 def query_to_json(query): # Not done should be called by context_btn.js
     response, success, column_headers = send_query_to_db(query)
     
@@ -121,9 +125,9 @@ def call_sql_agent(message):
 # Function to handle message forwarding to LLM
 def forward_message_llm(message, filepath):
     global use_default_json
-    json_data = load_json_data(filepath)  # Initialize JSON data as empty
-    print(f"JSON Data: {json_data}")  # Log the JSON data
-
+    json_data = load_json_data(filepath) 
+    print(f"JSON Data: {json_data}")  # Log the JSON data to terminal
+    
     # Determine weather to invoke sql agent or json chain
     if message.lower().startswith("list"):
         print("List detected in question: running sql agent")
@@ -136,6 +140,7 @@ def forward_message_llm(message, filepath):
             result = chain.invoke({"json_data": json_data ,"question": message})
         else:
             result = chain_simple.invoke({"json_data": query_json_data ,"question": message}) 
+ 
     return result
 
 

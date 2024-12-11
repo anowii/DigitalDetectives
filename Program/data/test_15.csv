@@ -1,16 +1,16 @@
-name,size,crtime,parent_path,mal,malware_type
-Sekiro: Shadows Die Twice.exe,3208,1432652112,/Downloads,Undetected,None
-Pet_Birthday_Party_Fido_2024-09-15.jpeg,3997,1432651107,/Documents/School,Undetected,None
-Coconut_Open_on_Beach.jpeg,2514,1432645787,/Documents,Undetected,None
-Watermelon_Slices_on_Summer_Picnic.jpeg,2189,1432650243,/Documents/School,Undetected,None
-main_controller.java,7024,1432645196,/Temp,Undetected,None
-TextMate.exe,4305,1432640671,/Temp,Suspicious,Worm
-MyDoom.exe,6711,1432652299,/Music,Undetected,None
-Camping_Weekend_Lake_2024-06-18.jpeg,1811,1432641077,/Downloads,Undetected,None
-Cyberpunk 2077.exe,7884,1432647610,/,Undetected,None
-Cabal.exe,4576,1432654330,/Downloads,Suspicious,Spyware
-Divinity: Original Sin 2.exe,4398,1432651914,/Downloads,Detected,Keylogger
-Dragon Age: Inquisition.exe,1021,1432639571,/Music,Undetected,None
-Melissa.exe,3781,1432646379,/,Undetected,None
-Halloween_Costume_Party_2023-10-31.jpeg,840,1432652825,/Documents/School,Undetected,None
-data_analysis.py,3306,1432649460,/Documents,Undetected,None
+name,size,crtime,parent_path,malware_class,delete_flag
+Concert_Night_Rock_Band_2024-04-12.jpeg,7532,1432652219,/,None,0
+Ransomware.exe,6362,1432640927,/,None,0
+Bouncy.exe,6377,1432642584,/,None,1
+Dockerfile_service,4140,1432648589,/Documents/School,None,1
+app_styles.scss,399,1432642590,/Documents,None,0
+Counter-Strike: Global Offensive.exe,3801,1432642406,/Documents,None,1
+Vacation_Paris_2024-06-15.jpeg,2517,1432645647,/Temp,None,0
+Dog_Park_Day_2023-09-05.jpeg,993,1432644890,/,None,1
+Valentine's_Day_Dinner_2024-02-14.jpeg,6051,1432649016,/,None,1
+totally_legit.exe,5371,1432643849,/Downloads,None,1
+style_main.css,3779,1432639785,/Documents,None,0
+Blaster.exe,2277,1432639480,/,Spyware,0
+Conficker.exe,677,1432652413,/Downloads,None,1
+Cabal.exe,1291,1432646095,/Documents,Spyware,0
+Skiing_Trip_Colorado_2024-02-10.jpeg,7147,1432650189,/Documents,None,0

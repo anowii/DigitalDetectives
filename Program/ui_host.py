@@ -4,7 +4,7 @@ from flask import Flask, render_template, request, jsonify,redirect,url_for, jso
 import os
 import hashlib
 from diskanalys import create_database_from_csv
-from ui_backend import send_iso,forward_message_llm, is_valid_disk_image, generate_pdf, delete_session, set_use_defualt_json, reset_use_default_json, query_to_json
+from ui_backend import send_iso,forward_message_llm, is_valid_disk_image, generate_pdf, delete_session, set_use_defualt_json, reset_use_default_json, query_to_json, save_message_to_file
 
 
 
@@ -17,7 +17,6 @@ UPLOADED_CSV = '' #filepath for CSV
 
 # Store chat messages in memory for now, per session
 messages = []
-MESSAGE_FILE = 'messages.json'
 next_id = 0  # Initialize the message ID
 
 # Default route 
@@ -114,13 +113,6 @@ def submit_file():
         return jsonify({"status": "success", "message": "Disk image processed successfully", "filename": file.filename})
     else:
         return jsonify({"status": "error", "message": "Invalid file type. Please upload a valid file."})
-
-
-
-# Helper function to save a message to the file
-def save_message_to_file(message_object):
-    with open(MESSAGE_FILE, 'a') as f:
-        f.write(json.dumps(message_object) + ',\n')
 
 # Forwards message to LLM
 @app.route('/forward_message', methods=['POST'])

@@ -5,14 +5,14 @@ from diskanalys import run, USER_DB
 from tabulate import tabulate
 from flask import jsonify
 
-import csv
+import csv,json
 from io import BytesIO, StringIO #chat download
 from reportlab.lib.pagesizes import letter #chat download
 from reportlab.lib.styles import getSampleStyleSheet #chat download
 import html, os, sqlite3
 from reportlab.platypus import SimpleDocTemplate, Paragraph, Spacer #chat download
 from bs4 import BeautifulSoup
-
+MESSAGE_FILE = 'messages.json'
 
 
 model = OllamaLLM(model="llama3.2")
@@ -22,6 +22,13 @@ chain_sql = sql_template | model
 chain_sql_correction = sql_correction_template | model
 use_default_json = True
 query_json_data = ""
+
+
+# Helper function to save a message to the file
+def save_message_to_file(message_object):
+    with open(MESSAGE_FILE, 'a') as f:
+        f.write(json.dumps(message_object) + '\n')
+
 
 # Load CSV data from filename/filepath returns it in JSON format 
 def load_json_data(filename):
@@ -144,13 +151,11 @@ def forward_message_llm(message, filepath):
     return result
 
 
-
 def send_iso(fileName): #Runs TSK on disk image file (".dd")
     run(fileName)
     print(f"Disk image {fileName} processed successfully.")
     
     return 0 
-
 
 
 

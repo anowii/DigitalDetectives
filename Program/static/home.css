@@ -162,8 +162,13 @@ body {
 .info-box p {
     color: #E0E0E0; 
     font-size: 13px;
-    margin: 2px ; 
-    padding: 5px;
+}
+
+.info-box h3 {
+    color: #E0E0E0; 
+    font-size: small;
+    text-transform: uppercase;
+
 }
 
 .info-box ul li {

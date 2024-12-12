@@ -4,7 +4,8 @@ from flask import Flask, render_template, request, jsonify,redirect,url_for, jso
 import os
 import hashlib
 from diskanalys import create_database_from_csv
-from ui_backend import send_iso,forward_message_llm, is_valid_disk_image, generate_pdf, delete_session, set_use_defualt_json, reset_use_default_json, query_to_json, save_message_to_file
+from ui_backend import send_iso,forward_message_llm, is_valid_disk_image, generate_pdf, delete_session, set_use_defualt_json, reset_use_default_json, query_to_json
+from ui_backend import save_message_to_file
 
 
 

@@ -1,4 +1,4 @@
-#This module should take in a path in the run function,
+# This module should take in a path in the run function,
 # the file input gets processed by sleuthkit and a csv is created
 # with the relevant information. 
 
@@ -15,11 +15,11 @@ USER_DB = "data\\user.db"
 CSV_PATH = "data\\db.csv"
 
 # Files types that will be included in CSV
-INTERESTING_TYPES =".exe|.msi|.docx|.png|.jpeg|.txt|.dat" 
+INTERESTING_TYPES = ".exe|.msi|.docx|.png|.jpeg|.txt|.dat" 
 
 VIRUSTOTAL_TYPES =".exe|.msi"
 VIRUSTOTAL_APIKEY = "4e4140ca9678a7e353a618f2f9aa7dd3a1ff5d70c6eaf812391bb5649b80039e"
-ALLOWED_FILEDS = ["name","size", "crtime", "parent_path", "malware_class", "delete_flag"]
+ALLOWED_FIELDS = ["name","size", "crtime", "parent_path", "malware_class", "delete_flag"]
 
     ############################################
     #  delete_flag == dir_flag in tsk_files    #
@@ -78,13 +78,6 @@ def connect():
     cur = con.cursor()
     return con, cur
 
-# Diconnects from ANY database 
-def disconnect(connection):
-    try:
-        connection.close()
-    except Exception as e:
-        print(f"Error closing connection: {e}")
-
 # Check if the input file is 
 def check_input_file(target):
     print("Check "+ target)
@@ -99,15 +92,16 @@ def run_sleuth_on_file(target):
     return res
 
 def db_to_csv():
+    
     con, cur = connect()
     res = cur.execute("SELECT * FROM tsk_files")
     db_files = res.fetchall()
     con.close()
+
     print("\ntsk_files\n")
-    fields = ["name","size", "crtime", "parent_path", "malware_class","delete_flag"]
+    global ALLOWED_FIELDS
     files = []
     for file in db_files:
-        name = file[5]
         if re.search(INTERESTING_TYPES,file[5]) and file[5].find("slack") == -1:
       
             prime_category = check_with_virustotal(file[23])
@@ -131,18 +125,18 @@ def db_to_csv():
             files.append(csv_row)
         
     with open(CSV_PATH, 'w', newline='') as csvfile:
-        writer = csv.DictWriter(csvfile, fieldnames=fields)
+        writer = csv.DictWriter(csvfile, fieldnames=ALLOWED_FIELDS)
         writer.writeheader()
         writer.writerows(files)
     csvfile.close()
 
 def create_database_from_csv(csv_path):
 
+    global ALLOWED_FIELDS
    # Remove the database file if it already exists
     if os.path.exists(USER_DB):
         os.remove(USER_DB)
         print(f"Existing database '{USER_DB}' has been removed.")
-    fields = ["name", "size", "crtime", "parent_path", "malware_class", "delete_flag"]
    
    # Define column types 
     column_types = {
@@ -164,7 +158,7 @@ def create_database_from_csv(csv_path):
         header = next(reader)  # Skip header row
         
 
-        if(fields == header): 
+        if(ALLOWED_FIELDS == header): 
             # Build the columns and types for the table
             columns = ', '.join([f"{col} {column_types.get(col, 'TEXT')}" for col in header])
 
@@ -172,10 +166,13 @@ def create_database_from_csv(csv_path):
             cursor.execute(f"CREATE TABLE IF NOT EXISTS file_table ({columns})")
             print(f"Table created with columns: {columns}")
 
-            # Insert data into the table
             for row in reader:
-                placeholders = ', '.join(['?'] * len(row))  # Create placeholders for the values
-                cursor.execute(f"INSERT INTO file_table ({', '.join(header)}) VALUES ({placeholders})", row)
+                # Replace empty fields with None (which will be NULL in SQLite)
+                row_with_nulls = [None if field == 'None' else field for field in row]
+
+                # Create placeholders for the values
+                placeholders = ', '.join(['?'] * len(row))
+                cursor.execute(f"INSERT INTO file_table ({', '.join(header)}) VALUES ({placeholders})", row_with_nulls)
     csv_file.close()
 
     # Commit changes and close the connection

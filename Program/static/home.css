@@ -154,7 +154,7 @@ body {
 /* Style for the message box */
 .info-box {
     background-color: #7b7b7b17; 
-    height: 250px;
+    height: fit-content;
     border-radius: 10px;  
 }
 

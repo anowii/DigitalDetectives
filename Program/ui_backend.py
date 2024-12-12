@@ -134,20 +134,22 @@ def forward_message_llm(message, filepath):
     global use_default_json
     json_data = load_json_data(filepath) 
     print(f"JSON Data: {json_data}")  # Log the JSON data to terminal
-    
-    # Determine weather to invoke sql agent or json chain
-    if message.lower().startswith("list"):
-        print("List detected in question: running sql agent")
-        result, sql_success = call_sql_agent(message)
+    try:
+        # Determine weather to invoke sql agent or json chain
+        if message.lower().startswith("list"):
+            print("List detected in question: running sql agent")
+            result, sql_success = call_sql_agent(message)
 
-    # If sql query fails or it dosn't start with "list" answer the question normally with json data
-    if message.lower().startswith("list") == False or sql_success == False:
-        print("Use default json is:", use_default_json)
-        if use_default_json:
-            result = chain.invoke({"json_data": json_data ,"question": message})
-        else:
-            result = chain_simple.invoke({"json_data": query_json_data ,"question": message}) 
- 
+        # If sql query fails or it dosn't start with "list" answer the question normally with json data
+        if message.lower().startswith("list") == False or sql_success == False:
+            print("Use default json is:", use_default_json)
+            if use_default_json:
+                result = chain.invoke({"json_data": json_data ,"question": message})
+            else:
+                result = chain_simple.invoke({"json_data": query_json_data ,"question": message}) 
+    except Exception as e:
+        print(f"Error: {e}")
+        result = "Unable to connect to your AI. Please make sure your model is up and running."
     return result
 
 

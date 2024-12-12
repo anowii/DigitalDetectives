@@ -103,9 +103,9 @@ You are an sql agent, turn the following question into a sql query nothing else:
 
 file_table:
 name,size,crtime,parent_path,malware_class,delete_flag
-pong.exe,4,1432645070,/user/onedrive,trojan,0
-car.png,23,1432650259,/user/pictures,none,1
-dir.dll, 12, 1432653585,/user/dev,keylogger,1
+pong.exe,4,1432645070,/user/onedrive,Trojan,0
+car.png,23,1432650259,/user/pictures,None,1
+dir.dll, 12, 1432653585,/user/dev,Keylogger,1
 """
 
 template_correction = """
@@ -116,9 +116,9 @@ It has to be a select query
 
 file_table:
 name,size,crtime,parent_path,malware_class,delete_flag
-pong.exe,4,1432645070,/user/onedrive,trojan,0
-car.png,23,1432650259,/user/pictures,none,1
-dir.dll, 12, 1432653585,/user/dev,keylogger,1
+pong.exe,4,1432645070,/user/onedrive,Trojan,0
+car.png,23,1432650259,/user/pictures,None,1
+dir.dll, 12, 1432653585,/user/dev,Keylogger,1
 """
 
 # LLM Templates 

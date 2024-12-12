@@ -30,13 +30,13 @@ def test_database(db_name):
             return
 
         # Query the table to find rows where delete_flag = 0
-        cursor.execute("SELECT name FROM file_table WHERE delete_flag = 0;")
-        rows = cursor.fetchall()
-
+        res = cursor.execute("SELECT * FROM file_table WHERE malware_class  IS NOT NULL;")
+        rows = res.fetchall()
+        files = []
         if rows:
             print("Rows with delete_flag = 0:")
-            for row in rows:
-                print(f"File: {row[0]}")
+            for file in rows:
+                print(f"File: {file},{'NULL' if file[4] is None else file[4]}")
         else:
             print("No rows found with delete_flag = 0.")
 

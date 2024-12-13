@@ -10,8 +10,8 @@ There are three branches, on for each sprint.
   - `DigitalDetectives-DV1512.zip`
   - `config_manual.md`: Installation and configuration manual
 - **project-sprint1/**
-  - Branch for working in sprint 1
+  - Branch for work done in sprint 1
 - **project-sprint2/**
-  - Branch for working in sprint 2
+  - Branch for work done in sprint 2
 - **project-sprint3/**
-  - Branch for working in sprint 3
+  - Branch for work done in sprint 3

@@ -61,7 +61,7 @@ body {
 .chat-window h2 {
     margin: 10px 0; 
     color: #ffffff;
-    font-size:xxx-large;
+    font-size: xxx-large;
 }
 
 .chat-window h3, .chat-window p {
@@ -446,7 +446,7 @@ body {
     margin: 0 4px;
     border-radius: 50%;
     background-color: #ffffff; 
-    opacity: 0;
+    opacity: 100;
     animation: blink 1.5s infinite ease-in-out;
 }
 

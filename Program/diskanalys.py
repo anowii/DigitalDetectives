@@ -168,7 +168,7 @@ def create_database_from_csv(csv_path):
 
             for row in reader:
                 # Replace empty fields with None (which will be NULL in SQLite)
-                row_with_nulls = [None if field == 'None' else field for field in row]
+                row_with_nulls = [None if (field == 'None' or field == '') else field for field in row]
 
                 # Create placeholders for the values
                 placeholders = ', '.join(['?'] * len(row))

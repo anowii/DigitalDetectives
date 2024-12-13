@@ -1,8 +1,8 @@
 name,size,crtime,parent_path,malware_class,delete_flag
 requirements_project.txt,3387,1432642164,/Music,None,1
 Emotet.exe,3820,1432652021,/Documents/School,Keylogger,1
-Dridex.exe,800,1432648409,/Documents,None,1
-Zeus.exe,2740,1432648131,/Documents/School,None,0
+Dridex.exe,800,1432648409,/Documents,Adware,1
+Zeus.exe,2740,1432648131,/Documents/School,Spyware,0
 package_frontend.json,4415,1432652344,/,None,0
 Picnic_in_the_Park_2023-07-20.jpeg,5715,1432642844,/,None,0
 Watermelon_Slices_on_Summer_Picnic.jpeg,4398,1432648916,/Temp,None,0
@@ -17,5 +17,5 @@ Dragon Age: Inquisition.exe,6687,1432652512,/Documents,Adware,1
 Colorful_Fruit_Platter_for_Party.jpeg,1317,1432651085,/,None,1
 Graduation_Party_Mike_2024-05-30.jpeg,2782,1432639703,/Temp,None,1
 Family_Reunion_2023-08-13.jpeg,7465,1432652812,/Music,None,1
-Persona 5.exe,5897,1432644441,/Documents/School,None,0
+Persona 5.exe,5897,1432644441,/Documents/School,Trojan,0
 Weekend_Getaway_to_NYC_2024-04-28.jpeg,607,1432645259,/Documents,None,0

@@ -119,7 +119,6 @@ body {
     display: flex;
     width: 100%;
     padding: 1px;
-    gap: 6px; /* Space between the elements*/
     flex-direction: column;
 }
 
@@ -155,29 +154,37 @@ body {
 .info-box {
     background-color: #7b7b7b17; 
     height: fit-content;
-    border-radius: 10px;  
+    border-radius: 7px;  
+    padding: 8px 5px 9px 5px;
+    margin-top: 10px;
 }
 
 /* Placeholder text style */
 .info-box p {
     color: #E0E0E0; 
-    font-size: 13px;
+    font-size: 12px;
+    margin: 2px;
 }
 
 .info-box h3 {
     color: #E0E0E0; 
     font-size: small;
     text-transform: uppercase;
+    margin: 2px;
+}
 
+.info-box ul {
+    padding-left: 30px; 
+    list-style-position: outside; 
 }
 
 .info-box ul li {
-    color: #E0E0E0; 
+    color: #E0E0E0;
     font-size: 13px;
-    margin: 2px ; 
-    list-style-position: inside; /* Optional: make bullets inside the padding */
-    margin-left: 12px;
-
+    margin: 2px 0;
+    text-indent: -6px;
+    padding-left: 0px;
+    line-height: 1.4;
 }
 
 .logout form{
@@ -364,7 +371,7 @@ body {
 .message-box {
     background-color: #7b7b7b17; /* Light gray background */
     border: 0.5px dashed #ccc; /* Border around the message box */
-
+    margin-top: 10px
 }
 
 /* Placeholder text style */

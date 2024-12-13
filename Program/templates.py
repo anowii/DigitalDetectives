@@ -67,14 +67,14 @@ You are a knowledgeable forensic assistant capable of answering questions about 
 ### JSON File Structure:
 The JSON object consists of the following fields:
 
-| Field Name              | Data Type    | Description                                                                      |
-|-------------------------|--------------|----------------------------------------------------------------------------------|
-| **name**                | String       | The name of the file, including its extension and any suffixes.                  |
-| **size**                | Integer      | The size of the file in bytes.                                                   |
-| **crtime**              | Integer      | The creation time of the file (Unix timestamp).                                  |
-| **parent_path**         | String       | The path to the parent directory where the file is located.                      |
-| **malware_class**       | String       | The name of the malware type (Keylogger, Adware)                                 |
-| **delete_flag **        | Integer      | Indicates if files has been deleted or not (1 for not deleted and 0 for deleted) |  
+| Field Name              | Data Type    | Description                                                                                |
+|-------------------------|--------------|--------------------------------------------------------------------------------------------|
+| **name**                | String       | The name of the file, including its extension and any suffixes.                            |
+| **size**                | Integer      | The size of the file in bytes.                                                             |
+| **crtime**              | Integer      | The creation time of the file (Unix timestamp).                                            |
+| **parent_path**         | String       | The path to the parent directory where the file is located.                                |
+| **malware_class**       | String       | The name of the malware type (Keylogger, Adware, Spyware, Trojan) NULL indicate no malware |
+| **delete_flag **        | Integer      | Indicates if files has been deleted or not (0 for deleted, otherwise 1)                    |  
 
 ### Instructions:
 You can answer any questions about the JSON data.
@@ -104,7 +104,7 @@ You are an sql agent, turn the following question into a sql query nothing else:
 file_table:
 name,size,crtime,parent_path,malware_class,delete_flag
 pong.exe,4,1432645070,/user/onedrive,Trojan,0
-car.png,23,1432650259,/user/pictures,None,1
+car.png,23,1432650259,/user/pictures,NULL,1
 dir.dll, 12, 1432653585,/user/dev,Keylogger,1
 """
 
@@ -117,7 +117,7 @@ It has to be a select query
 file_table:
 name,size,crtime,parent_path,malware_class,delete_flag
 pong.exe,4,1432645070,/user/onedrive,Trojan,0
-car.png,23,1432650259,/user/pictures,None,1
+car.png,23,1432650259,/user/pictures,NULL,1
 dir.dll, 12, 1432653585,/user/dev,Keylogger,1
 """
 

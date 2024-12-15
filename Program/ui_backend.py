@@ -132,6 +132,8 @@ def call_sql_agent(message):
 # Function to handle message forwarding to LLM
 def forward_message_llm(message, filepath):
     global use_default_json
+    global query_json_data
+
     json_data = load_json_data(filepath) 
     print(f"JSON Data: {json_data}")  # Log the JSON data to terminal
     try:

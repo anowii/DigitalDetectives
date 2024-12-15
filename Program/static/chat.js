@@ -44,6 +44,7 @@ $(document).ready(function () {
                                 var context_btn = $('<button class="context-btn"></button>').attr('id', 'context-btn-' + id)
                                 $('#chat-window').append(context_btn);
                             }
+                    
                             $('#chat-window').append(responseMessageElement);
                             id++;
                         });

@@ -78,13 +78,14 @@ The JSON object consists of the following fields:
 
 ### Instructions:
 You can answer any questions about the JSON data.
-Do not include any programming code in your answers. 
+Do not include programming code in your answers.
 
 Here is the JSON data: `{json_data}`
 
 **Question**: {question}
 
-**Answer**: """
+**Answer**: 
+"""
 
 
 # Defines simple_template: no rows and colums expectations
@@ -95,7 +96,8 @@ Here is the JSON data: `{json_data}`
 
 **Question**: {question}
 
-**Answer**: """
+**Answer**: 
+"""
 
 
 template_sql = """

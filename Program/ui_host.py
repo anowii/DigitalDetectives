@@ -1,3 +1,4 @@
+#Application hosting and handling for flask
 
 from flask import Flask, render_template, request, jsonify,redirect,url_for, json, session, flash, send_file
 
@@ -28,6 +29,7 @@ def home():
     
     return redirect(url_for('chat'))
 
+#Login route
 @app.route('/login')      
 def login():
     return render_template('login.html')
@@ -59,7 +61,7 @@ def login_post():
     return home()
 
 
-
+#Logout handling
 @app.route('/logout', methods=['POST'])
 def logout_post():
     if session['logged_in'] == False:
@@ -125,7 +127,7 @@ def forward_message():
     if message:
         response = forward_message_llm(message,UPLOADED_CSV)  # Forward to Langchain-based LLM
         
-        # Mostly for loggin/debug purposes 
+        #logging/debug
         message_object = {
             "id": next_id, 
             "csv": UPLOADED_CSV if UPLOADED_CSV else "empty",
@@ -151,6 +153,7 @@ def get_messages():
     # Return the list of user messages and LLM responses to the client
     return jsonify(messages)
 
+#Agent handling
 @app.route('/set_json_data', methods=['POST'])
 def set_query_data():
     data = request.json
@@ -164,11 +167,13 @@ def reset_query_data():
     set_use_defualt_json()
     return jsonify({"status": "success", "message": "Query data reset"})
 
+#Download chat handling
 @app.route('/download_chat', methods=['GET'])
 def download_chat():
     pdf_buffer = generate_pdf(messages)
     return send_file(pdf_buffer,as_attachment=True,download_name="chat_history.pdf",mimetype="application/pdf")
 
+#Delete session handling
 @app.route('/delete_session', methods=['POST'])
 def delete_session_route():
     global messages, UPLOADED_CSV
@@ -176,8 +181,8 @@ def delete_session_route():
     # Call the delete_session function from ui_backend
     return delete_session(messages, UPLOADED_CSV)
 
-@app.route('/set query_data')
 
+@app.route('/set query_data')
 def main():
     app.secret_key = os.urandom(12)
     app.run('localhost', 5000,debug=True)

@@ -107,7 +107,7 @@ def db_to_csv():
             prime_category = check_with_virustotal(file[23])
             print(prime_category)
             
-            #Ensure delete_flag is corectly assigned
+            #Ensure delete_flag is correctly assigned
             delete_flag = -1
             if file[13] == 1:
                 delete_flag = 0

@@ -94,7 +94,7 @@ def send_query_to_db(query):
     print("Query: ", query)
     if query.lower().startswith("select") == False: # Select check
         return "Error: query has to be a select", False, []
-    # Connect to the db'
+    # Connect to the db
     try:
         con = sqlite3.connect(USER_DB)
         cursor = con.cursor()
@@ -168,7 +168,7 @@ def is_valid_disk_image(disk_image):
     Checks if a given disk image path is valid by verifying its file extension.
     Returns True if the file extension is valid, False otherwise.
     """
-    #valid_extensions =[".img",  ".iso", ".vdi", ".vmdk", ".vhd", ".dmg",".qcow2", ".dd"] # Add more file types
+    #valid_extensions =[".img",  ".iso", ".vdi", ".vmdk", ".vhd", ".dmg",".qcow2", ".dd"] # Add more file types depending on usage
     valid_extensions = [".dd"]
     _,ext = os.path.splitext(disk_image)
     if ext.lower() not in valid_extensions:
@@ -176,7 +176,7 @@ def is_valid_disk_image(disk_image):
 
     return True
 
-
+#Generate a PDF of chat messages for download
 def generate_pdf(messages):
     pdf_buffer = BytesIO()
     doc = SimpleDocTemplate(pdf_buffer, pagesize=letter)
@@ -223,6 +223,7 @@ def generate_pdf(messages):
 
     return pdf_buffer
 
+#Delete session data handling
 def delete_session(messages, uploaded_csv_path):
     # Clear messages array
     global use_default_json

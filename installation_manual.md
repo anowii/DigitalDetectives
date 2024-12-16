@@ -4,7 +4,7 @@ This documentation is tailored for a Windows system already configured with VSCo
 
 You will configure and install the following:
 1. The Sleuth Kit
-2. Ollama and the model llama3.18b
+2. Ollama and the model llama3.2
 3. A virtual enviroment (Optional)
 
 **Windows Powershell** can sometimes be fussy, so make sure to run it as an administrator. If you still encounter issues even with admin privileges, try running the following command to resolve them:
@@ -49,7 +49,7 @@ usage: C:\Program Files (x86)\sleuthkit-4.12.1-win32\bin\fls.exe
 Start by dowloading and installing Ollama from the link (https://ollama.com/download). 
 When the installation is ready open up a powershell and run:
 ```
-> ollama pull llama3.1:8b 
+> ollama pull llama3.2
 ```
 
 ## Virtual Enviroment 

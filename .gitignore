@@ -1,0 +1,4 @@
+
+/.venv
+*.dd
+/Program/__pycache__

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat App</title>
+    <link rel="stylesheet" href="../static/home.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!--file upload handling-->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="../static/file_submit.js" defer></script>
+    <script src="../static/chat.js" defer></script>
+    <script src="../static/delete_button.js" defer></script>
+    <script src="../static/download_chat.js" defer></script>
+    <script src="../static/context_btn.js"></script>
+    <title>Digital Detective</title>
+
+</head>
+<body>
+    <!-- Main container -->
+    <div class="container">
+        
+        
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <!-- Margin aligner -->
+            <div class="empty-one">
+                <!-- User greeting -->
+                <div class="greeting">
+                    {% if session.get('logged_in') %}
+                        <button>Hi, {{ session['username'] }};</button>
+                    {% else %}
+                        <button>Hi, Guest;</button>
+                    {% endif %}
+                </div>
+    
+                <!-- Info BOX -->
+                <div class="info-box">
+                    <h3 id="content"><strong>Ask the AI questions:</strong></h3>
+                    <ul id="content">
+                        <li id="content">What can you tell me about the disk image?</li>
+                        <li id="content">Are there any suspicous files on the disk?</li>
+                    </ul>
+                    <h3 id="content"><strong>To invoke the SQL Agent:</strong></h3>
+                    <p id="content">Start your question with the keyword LIST </p>
+                    <ul id="content">
+                        <li id="content">List everything</li>
+                        <li id="content">List all .exe/.txt/.dat files </li>
+                        <li id="content">List the deleted files</li>
+                    </ul>
+                </div>
+                <!-- Message box for displaying progress and error messages-->
+                <div  class="message-box">
+                    <p id="messageContent">Messages will appear here...</p>
+                 </div>
+    
+                <!-- Upload file -->
+                <div class="upload">
+                    <form id="uploadForm" enctype="multipart/form-data">
+                        <input type="file" id="uploadFile" name="file" accept=".dd,.csv">
+                        <label for="uploadFile", id="uploadLable">Choose File</label>
+                        <button type="submit" id="upload-btn">Submit</button>
+                    </form>
+                </div> 
+            </div>
+            
+            <!-- Margin aligner -->
+            <div class="empty-two">
+                <!-- Delete Button -->
+                <button class="trash-button" aria-label="Delete">
+                    <span class="tooltip">Delete Session</span>
+                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M3 6h18M8 6V4a2 2 0 012-2h4a2 2 0 012 2v2m1 0v14a2 2 0 01-2 2H9a2 2 0 01-2-2V6h10zM10 11v6M14 11v6"
+                              stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>   
+                </button>
+    
+                <!-- Logout button -->
+                <div class="logout">
+                    <form action="/logout" method="POST">
+                    <button type="submit" value="Login">Log out</button>
+                </div>
+                </form>
+            </div>
+
+            
+        </div>
+
+        <!-- Main Chat Section -->
+        <div class="main-content">
+                <!-- Chat window -->
+            <div id="chat-window" class="chat-window">
+                <h2> Welcome to Digital Detective 🕵️ </h2>
+                <h3> What you can do: 🔍</h3>
+                <ul>
+                    <li> Upload a CSV file containing digital forensic data (from The Sleuth Kit).</li>
+                    <li> Upload a disk image containing digital forensic data (from The Sleuth Kit).</li>
+                    <li> Ask questions related to the contents of the file, and get answers using cutting-edge AI technology.</li>
+                </ul>
+                <p>We're here to help you uncover the clues. Ask away!</p>
+                
+            </div>
+            <!-- Loading indicator -->
+            <div id="loading-indicator" style="display: none;">
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+            </div>
+             
+            <!-- Bottom Bar -->
+            <div class="bottom-bar">
+                <button id="download-chat-btn">Download Chat</button>
+                <input id="text-input" type="text" placeholder="Write questions here">
+                <button id="send-btn">Send</button>
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>

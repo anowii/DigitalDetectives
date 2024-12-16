@@ -8,7 +8,8 @@ There are three branches, on for each sprint.
 - **master/**
   - **Pre-study/**: Testing done in the pre-study
   - **Final-program/**: The final project 
-  - `config_manual.md`: Installation and configuration manual
+  - `installation_manual.md`: Installation manual
+  - **Configuration**: Configuration manual is provided in the final documentation under 7. Usage
 - **project-sprint1/**
   - Branch for work done in sprint 1
 - **project-sprint2/**

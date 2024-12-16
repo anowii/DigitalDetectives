@@ -1,4 +1,4 @@
-# Installation and Configuration Manual
+# Installation Manual
 
 This documentation is tailored for a Windows system already configured with VSCode and Python.
 

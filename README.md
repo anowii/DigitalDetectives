@@ -10,7 +10,7 @@ Our team consists of 6 members:
 ## Project focus 
 LLM-powered Digital Forensic tool. It should be a module to Autopsy (written in Python) that can parse all the files and objects extracted from HDD images and answer the questions.
 
-## Branch Structure
+## GitHub and Branch Structure
 There are three branches, on for each sprint.
 
 - **master/**

@@ -18,7 +18,7 @@ There are three branches, on for each sprint.
   - **Final-program/**: The final project 
   - `installation_manual.md`: Installation manual
   - **Configuration Manual**: is provided in the final documentation under 7. Usage
-  - **reports**: Download the report to veiw it in the correct format
+  - **Reports**: Download the report to veiw it in the correct format
     - OWASP ZAP: `2024-12-09-ZAP-Report-.html`
 - **project-sprint1/**
   - Branch for work done in sprint 1

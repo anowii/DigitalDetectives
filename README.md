@@ -1,7 +1,7 @@
 ## Team 1: Digital Detectives 
 Our team consists of 6 members: 
 - Anna Almgren
-- Jakob Nawrouzi
+- Jacob Nawrouzi
 - Adrian Adborn
 - Viktor Listi
 - William Knutsson

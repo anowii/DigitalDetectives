@@ -6,7 +6,7 @@
 - `app_test_2.0.py`: Hallucinerar svar ibland.
 - `app_test_3.0.py`: Omvandlar csv till JSON format i försök att minska hallucinationer.
 - `conversation_history.py`:
-- `make_csv.py`: creats a bunch of test files automatically
+- `make_csv.py`: creates a bunch of test files automatically
 - `requierments.txt`:
 - `saving_conversation.py`
 

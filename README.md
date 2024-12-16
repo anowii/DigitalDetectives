@@ -8,7 +8,7 @@ Our team consists of 6 members:
 - David Tammpere _(team leader and scrum master)_
 
 ## Project focus 
-LLM-powered Digital Forensic tool. It should be a module to Autopsy (written in Python) that can parse all the files and objects extracted from HDD images and answer the questions.
+Our project aims to develop an LLM-powered forensic tool capable of parsing all files and objects extracted from an HDD image. Additionally, it provides the functionality to answer questions about the disk image.
 
 ## GitHub and Branch Structure
 There are three branches, on for each sprint.

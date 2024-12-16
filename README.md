@@ -1,4 +1,12 @@
-# Team 1: Digital Detectives 
+## Team 1: Digital Detectives 
+Our team consists of 6 members: 
+- Anna Almgren
+- Jakob Nawrouzi
+- Adrian Adborn
+- Viktor Listi
+- William Knutsson
+- David Tammpere _(team leader and scrum master)_
+
 ## Project focus 
 LLM-powered Digital Forensic tool. It should be a module to Autopsy (written in Python) that can parse all the files and objects extracted from HDD images and answer the questions.
 

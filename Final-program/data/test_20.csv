@@ -1,0 +1,21 @@
+name,size,crtime,parent_path,malware_class,delete_flag
+requirements_project.txt,3387,1432642164,/Music,None,1
+Emotet.exe,3820,1432652021,/Documents/School,Keylogger,1
+Dridex.exe,800,1432648409,/Documents,Adware,1
+Zeus.exe,2740,1432648131,/Documents/School,Spyware,0
+package_frontend.json,4415,1432652344,/,None,0
+Picnic_in_the_Park_2023-07-20.jpeg,5715,1432642844,/,None,0
+Watermelon_Slices_on_Summer_Picnic.jpeg,4398,1432648916,/Temp,None,0
+Hiking_Trip_Mountains_2024-09-10.jpeg,1055,1432645323,/,None,0
+Bluefish.exe,136,1432650354,/Documents/School,Worm,1
+schema_definition.sql,2380,1432644584,/Documents,None,1
+main_controller.java,1351,1432641881,/Temp,None,0
+Valentine's_Day_Dinner_2024-02-14.jpeg,1791,1432647998,/Documents,None,1
+Pet_Birthday_Party_Fido_2024-09-15.jpeg,1755,1432646261,/Documents/School,None,1
+Christmas_Eve_Family_2023-12-24.jpeg,4869,1432642399,/Temp,None,0
+Dragon Age: Inquisition.exe,6687,1432652512,/Documents,Adware,1
+Colorful_Fruit_Platter_for_Party.jpeg,1317,1432651085,/,None,1
+Graduation_Party_Mike_2024-05-30.jpeg,2782,1432639703,/Temp,None,1
+Family_Reunion_2023-08-13.jpeg,7465,1432652812,/Music,None,1
+Persona 5.exe,5897,1432644441,/Documents/School,Trojan,0
+Weekend_Getaway_to_NYC_2024-04-28.jpeg,607,1432645259,/Documents,None,0

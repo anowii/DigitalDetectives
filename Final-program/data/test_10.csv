@@ -1,0 +1,11 @@
+name,size,crtime,parent_path,malware_class,delete_flag
+Tinba.exe,5748,1432647031,/,None,0
+NetBeans.exe,696,1432649465,/Music,None,0
+Locky.exe,5559,1432650421,/Downloads,Trojan,0
+Valentine's_Day_Dinner_2024-02-14.jpeg,2550,1432650630,/Music,None,1
+Blueberry_Bush_Harvest.jpeg,5874,1432640802,/Downloads,None,0
+Christmas_Eve_Family_2023-12-24.jpeg,7770,1432646418,/,None,1
+app_config.yaml,1751,1432642258,/,None,0
+homepage.html,5938,1432649538,/Music,None,0
+Baby_Shower_Susan_2024-03-25.jpeg,2071,1432646946,/Documents,None,0
+totally_legit.exe,5364,1432643120,/Downloads,Trojan,1

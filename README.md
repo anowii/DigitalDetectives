@@ -1,4 +1,19 @@
 # Project Sprint 2
+
+**Folders**
+- **data\\**: Stores uploaded disk image/csv, user.db and analysis.db which SleuthKit creates.
+- **static\\**: Javascript files
+- **templates\\** HTML files
+
+**Important Files**
+- `diskanalysis.py`: Runs Sleuth Kit and Virustotal, also creates user.db
+- `requirements.txt`: Requirements for running the program
+- `templates.py`: Prompt templates for the LLM
+- `messages.json`: Logs the messages written during a session
+- `ui_backend.py`: Backend functionality to ui_host.py
+- `ui_host.py`: Hosts the webb application 
+
+**Folder Overveiw**
 ```
 Program
 ├── data

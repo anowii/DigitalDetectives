@@ -1,4 +1,4 @@
-## Project Sprint 3
+## Final Delivery Project
 
 **Folders**
 - **data\\**: Stores uploaded disk image/csv, user.db and analysis.db which SleuthKit creates.

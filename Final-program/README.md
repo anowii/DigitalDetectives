@@ -19,8 +19,6 @@ Program
 ├── data
 |   |── assets
 |   |   |── brain.svg 
-│   ├── analys.db
-│   ├── user.db
 ├── static
 │   ├── chat.js
 │   ├── context_btn.js 
@@ -33,7 +31,9 @@ Program
 │   ├── home.html
 │   ├── index.html
 ├── diskanalysis.py
+├── messages.json
 ├── requirements.txt
+├── templates.py
 ├── ui_backend.py
 ├── ui_host.py
 ```

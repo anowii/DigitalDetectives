@@ -2,3 +2,4 @@
 /.venv
 *.dd
 /Program/__pycache__
+/Final-program/__pycache__

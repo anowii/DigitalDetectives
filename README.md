@@ -1,4 +1,4 @@
-## Team 1: Digital Detectives 
+# Team 1: Digital Detectives 
 Our team consists of 6 members: 
 - Anna Almgren
 - Jacob Nawrouzi
@@ -27,9 +27,9 @@ There are three branches, on for each sprint.
 - **project-sprint3/**
   - Branch for work done in sprint 3
 
-### Contents of Final Program 
+## Final Program: Overview
 
-#### Folders
+### Folders
 - **data\\**: Stores uploaded disk image/csv, user.db and analysis.db which SleuthKit creates.
 - **static\\**: Javascript files
 - **templates\\** HTML files
@@ -39,16 +39,13 @@ There are three branches, on for each sprint.
     -  `test_30.csv`
     -  `test_40.csv`
     -  `test_50.csv`
-
-#### Other test data
-
+      
+### Other Test Data
 A disk image from CFReDS was also used to prefrom some of the testing: 
+- Link to the disk image in EO1 format ➡️ [disk image](https://cfreds.nist.gov/all/DFIR_AB/ForensicsImageTestimage)
+- Link to the disk image converted to .dd format on our drive ➡️ [.dd Format Link](https://drive.google.com/file/d/1Fd1pX1r4waRkD6Z2O8J5cRZyeSNU5-SY/view)
 
-Link to the disk image in EO1 format ➡️ [disk image](https://cfreds.nist.gov/all/DFIR_AB/ForensicsImageTestimage)
-
-Link to the disk image converted to .dd format on our drive ➡️ [.dd Format Link](https://drive.google.com/file/d/1Fd1pX1r4waRkD6Z2O8J5cRZyeSNU5-SY/view)
-
-#### Important Files
+### Important Files
 - `diskanalysis.py`: Runs Sleuth Kit and Virustotal, also creates user.db
 - `requirements.txt`: Requirements for running the program
 - `templates.py`: Prompt templates for the LLM
@@ -56,7 +53,7 @@ Link to the disk image converted to .dd format on our drive ➡️ [.dd Format L
 - `ui_backend.py`: Backend functionality to ui_host.py
 - `ui_host.py`: Hosts the webb application 
 
-#### Folder Overveiw
+### Folder Overveiw
 ```
 Program
 ├── data

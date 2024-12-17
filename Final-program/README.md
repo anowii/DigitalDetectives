@@ -4,6 +4,12 @@
 - **data\\**: Stores uploaded disk image/csv, user.db and analysis.db which SleuthKit creates.
 - **static\\**: Javascript files
 - **templates\\** HTML files
+- **test-data\\**: Feel free to use the provided testfiles
+    -  `test_10.csv`
+    -  `test_20.csv`
+    -  `test_30.csv`
+    -  `test_40.csv`
+    -  `test_50.csv`
 
 **Important Files**
 - `diskanalysis.py`: Runs Sleuth Kit and Virustotal, also creates user.db

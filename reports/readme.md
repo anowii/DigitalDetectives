@@ -1,2 +1,2 @@
-Here are report from security testing
+Here you can find the reports from security testing
 
